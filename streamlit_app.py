@@ -36,9 +36,13 @@ inputs[dropdown_var] = True  # Set the chosen scenario to True
 # Checkbox for Priority
 inputs["Priority"] = st.checkbox("Priority")
 
+# Dropdown menu for Preference
+preference_options = ["FCFS", "Voorkeur", "Model"]
+inputs["Preference"] = st.selectbox("Preference", preference_options)
+
 # Create input boxes for the rest of the variables
 for var in variables:
-    if var != "Priority":  # Skip the Priority variable as it's handled above
+    if var not in ["Priority", "Preference"]:  # Skip the Priority and Preference variables as they're handled above
         inputs[var] = st.number_input(var, value=0)
 
 # Button to display the dataframe
