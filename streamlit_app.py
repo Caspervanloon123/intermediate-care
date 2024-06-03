@@ -1,6 +1,46 @@
 import streamlit as st 
 import pandas as pd
 
+# Inject custom CSS
+st.markdown("""
+    <style>
+    .stButton>button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+    .stButton>button:hover {
+        background-color: #45a049;
+    }
+    .stNumberInput>div>div input {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 8px;
+    }
+    .stSelectbox>div>div input {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 8px;
+    }
+    .stCheckbox>div>div input {
+        width: 20px;
+        height: 20px;
+    }
+    .st-expander {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
 # Titel van de applicatie
 st.title("STRC Waiting Time Calculator")
 
