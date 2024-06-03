@@ -4,8 +4,7 @@ import pandas as pd
 # Titel van de applicatie
 st.title("STRC Waiting Time Calculator")
 
-# Streamlit interface
-st.title('Simulation Inputs')
+
 
 # List of scenario variables
 scenario_vars = [
