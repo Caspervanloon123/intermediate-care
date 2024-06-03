@@ -24,8 +24,6 @@ def show_arrival_inputs():
     st.subheader("Aankomsten Low Complex:")
     arrival_GPR_Low = st.number_input("Arrival GPR Low per dag", value=1.91)
 
-# Title of the application
-st.title("STRC Waiting Time Calculator")
 
 # Flag to track the visibility of the arrival inputs
 show_inputs = st.checkbox("Aankomsten")
@@ -62,8 +60,6 @@ def show_or_hide_service_inputs(flag):
     else:
         st.write("")  # Empty placeholder to hide the inputs
 
-# Title of the application
-st.title("STRC Waiting Time Calculator")
 
 # Checkbox to toggle the visibility of the service inputs
 show_service_inputs = st.checkbox("Ligduur")
@@ -71,3 +67,89 @@ show_service_inputs = st.checkbox("Ligduur")
 # Show or hide the service inputs based on the checkbox state
 if show_service_inputs:
     show_or_hide_service_inputs(show_service_inputs)
+# Function to show or hide the extra inputs based on a boolean flag
+def show_or_hide_extra_inputs(flag):
+    if flag:
+        st.subheader("Percentage uitstroom High Complex:")
+        p_Home_HC = st.number_input("Percentage uitstroom Home (%) High Complex", value=57.8)
+        p_HwA_HC = st.number_input("Percentage uitstroom Home with adjustments (%) High Complex", value=10.7)
+        p_pall_HC = st.number_input("Percentage uitstroom GRZV care (%) High Complex", value=3.4)
+        p_wlz_HC = st.number_input("Percentage uitstroom WLZ (%) High Complex", value=19.8)
+        p_wmo_HC = st.number_input("Percentage uitstroom WMO (%) High Complex", value=2.3)
+        p_dead_HC = st.number_input("Percentage uitstroom Dead (%) High Complex", value=6)
+
+        st.subheader("Percentage uitstroom GRZ:")
+        p_Home_GRZ = st.number_input("Percentage uitstroom Home (%) GRZ", value=60)
+        p_HwA_GRZ = st.number_input("Percentage uitstroom Home with adjustments (%) GRZ", value=10.7)
+        p_pall_GRZ = st.number_input("Percentage uitstroom GRZV care (%) GRZ", value=0)
+        p_wlz_GRZ = st.number_input("Percentage uitstroom WLZ (%) GRZ", value=21)
+        p_wmo_GRZ = st.number_input("Percentage uitstroom WMO (%) GRZ", value=2.3)
+        p_dead_GRZ = st.number_input("Percentage uitstroom Dead (%) GRZ", value=6)
+
+        st.subheader("Percentage uitstroom Low Complex:")
+        p_Home_LC = st.number_input("Percentage uitstroom Home (%) Low Complex", value=70)
+        p_HwA_LC = st.number_input("Percentage uitstroom Home with adjustments (%) Low Complex", value=14)
+        p_pall_LC = st.number_input("Percentage uitstroom GRZV care (%) Low Complex", value=2)
+        p_wlz_LC = st.number_input("Percentage uitstroom WLZ (%) Low Complex", value=10)
+        p_wmo_LC = st.number_input("Percentage uitstroom WMO (%) Low Complex", value=2)
+        p_dead_LC = st.number_input("Percentage uitstroom Dead (%) Low Complex", value=2)
+    else:
+        st.write("")  # Empty placeholder to hide the inputs
+
+
+
+# Checkbox to toggle the visibility of the extra inputs
+show_extra_inputs = st.checkbox("Extra input (hidden by default)")
+
+# Show or hide the extra inputs based on the checkbox state
+if show_extra_inputs:
+    show_or_hide_extra_inputs(show_extra_inputs)
+
+
+# Function to show or hide the opening hours inputs based on a boolean flag
+def show_or_hide_opening_hours_inputs(flag):
+    if flag:
+        st.subheader("Openingstijd EMD:")
+        opening_time_EMD_start = st.number_input("Openingstijd EMD start", min_value=0, max_value=24, value=0)
+        opening_time_EMD_end = st.number_input("Openingstijd EMD end", min_value=0, max_value=24, value=24)
+
+        st.subheader("Openingstijd Huisarts:")
+        opening_time_Huisarts_start = st.number_input("Openingstijd Huisarts start", min_value=0, max_value=24, value=8)
+        opening_time_Huisarts_end = st.number_input("Openingstijd Huisarts end", min_value=0, max_value=24, value=17)
+
+        st.subheader("Openingstijd ELV:")
+        opening_time_ELV_start = st.number_input("Openingstijd ELV start", min_value=0, max_value=24, value=8)
+        opening_time_ELV_end = st.number_input("Openingstijd ELV end", min_value=0, max_value=24, value=17)
+
+        open_in_weekend = st.checkbox("Open in weekend", value=False)
+    else:
+        st.write("")  # Empty placeholder to hide the inputs
+
+
+
+# Checkbox to toggle the visibility of the opening hours inputs
+show_opening_hours_inputs = st.checkbox("Openingstijden")
+
+# Show or hide the opening hours inputs based on the checkbox state
+if show_opening_hours_inputs:
+    show_or_hide_opening_hours_inputs(show_opening_hours_inputs)
+
+# Function to show or hide the "Overig" inputs based on a boolean flag
+def show_or_hide_overig_inputs(flag):
+    if flag:
+        st.subheader("Overig:")
+        subrun = st.number_input("Aantal subruns", value=1)
+        k_per_sub = st.number_input("Aantal patienten per subrun", value=1000)
+        pat_warm = st.number_input("Aantal patienten voor warming", value=500)
+        max_TRW = st.number_input("Maximaal aantal dagen TRW", value=14)
+        Adm_days = st.number_input("Admission days", value=1.5)
+        n_p_nurs = st.number_input("Number of patients per nurse", value=2)
+    else:
+        st.write("")  # Empty placeholder to hide the inputs
+
+# Checkbox to toggle the visibility of the "Overig" inputs
+show_overig_inputs = st.checkbox("Overig")
+
+# Show or hide the "Overig" inputs based on the checkbox state
+if show_overig_inputs:
+    show_or_hide_overig_inputs(show_overig_inputs)
