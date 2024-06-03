@@ -5,7 +5,6 @@ import pandas as pd
 st.title("STRC Waiting Time Calculator")
 # Function to display bed share inputs
 def display_bed_share_inputs(value, num_locations):
-    beds_input = []
     high_complex_beds = []
     high_complex_nurses = []
     grz_beds = []
@@ -21,7 +20,7 @@ def display_bed_share_inputs(value, num_locations):
     trw_beds = []
 
     if not num_locations or num_locations == 0:
-        return beds_input, [], [], [], [], [], [], [], [], [], [], [], [], []
+        return [], [], [], [], [], [], [], [], [], [], [], [], [], []
 
     for i in range(num_locations):
         if value == 'none':
@@ -63,10 +62,68 @@ def display_bed_share_inputs(value, num_locations):
             emergency_beds.append(st.number_input(f'Location {i+1} _ Emergency Beds:', value=0, key=f'emergency_beds_{i}'))
         # Add conditions for other bed share types if any
 
-    return (beds_input, high_complex_beds, high_complex_nurses, grz_beds, grz_nurses, shared_beds,
+    return (high_complex_beds, high_complex_nurses, grz_beds, grz_nurses, shared_beds,
             elv_low_complex_beds, elv_low_complex_nurses, emergency_beds, elv_high_complex_beds,
             elv_high_complex_nurses, total_beds, total_nurses, trw_beds)
 
+# Streamlit interface
+st.title('Simulation Inputs')
+
+# Dropdown menu for the bed share type
+bed_share_type = st.selectbox("Choose Bed Share Type", ['none', 'full', 'partial', 'total', 'trw'])
+
+# Input for number of locations
+num_locations = st.number_input("Number of Locations", min_value=0, step=1, value=0)
+
+# Display inputs dynamically based on user selection
+if 'generate_inputs' not in st.session_state:
+    st.session_state['generate_inputs'] = False
+
+if st.button('Generate Inputs'):
+    st.session_state['generate_inputs'] = True
+
+if st.session_state['generate_inputs']:
+    high_complex_beds, high_complex_nurses, grz_beds, grz_nurses, shared_beds,
+    elv_low_complex_beds, elv_low_complex_nurses, emergency_beds, elv_high_complex_beds,
+    elv_high_complex_nurses, total_beds, total_nurses, trw_beds = display_bed_share_inputs(bed_share_type, num_locations)
+
+    if bed_share_type == 'none':
+        st.write("Inputs for High Complex Beds: ", high_complex_beds)
+        st.write("Inputs for High Complex Nurses: ", high_complex_nurses)
+        st.write("Inputs for GRZ Beds: ", grz_beds)
+        st.write("Inputs for GRZ Nurses: ", grz_nurses)
+        st.write("Inputs for Shared Beds: ", shared_beds)
+        st.write("Inputs for ELV Low Complex Beds: ", elv_low_complex_beds)
+        st.write("Inputs for ELV Low Complex Nurses: ", elv_low_complex_nurses)
+        st.write("Inputs for Emergency Beds: ", emergency_beds)
+    elif bed_share_type == 'full':
+        st.write("Inputs for ELV High Complex Beds: ", elv_high_complex_beds)
+        st.write("Inputs for ELV High Complex Nurses: ", elv_high_complex_nurses)
+        st.write("Inputs for ELV Low Complex Beds: ", elv_low_complex_beds)
+        st.write("Inputs for ELV Low Complex Nurses: ", elv_low_complex_nurses)
+        st.write("Inputs for Emergency Beds: ", emergency_beds)
+    elif bed_share_type == 'partial':
+        st.write("Inputs for High Complex Beds: ", high_complex_beds)
+        st.write("Inputs for High Complex Nurses: ", high_complex_nurses)
+        st.write("Inputs for GRZ Beds: ", grz_beds)
+        st.write("Inputs for GRZ Nurses: ", grz_nurses)
+        st.write("Inputs for Shared Beds: ", shared_beds)
+        st.write("Inputs for ELV Low Complex Beds: ", elv_low_complex_beds)
+        st.write("Inputs for ELV Low Complex Nurses: ", elv_low_complex_nurses)
+        st.write("Inputs for Emergency Beds: ", emergency_beds)
+    elif bed_share_type == 'total':
+        st.write("Inputs for Total Beds: ", total_beds)
+        st.write("Inputs for Total Nurses: ", total_nurses)
+        st.write("Inputs for Emergency Beds: ", emergency_beds)
+    elif bed_share_type == 'trw':
+        st.write("Inputs for High Complex Beds: ", high_complex_beds)
+        st.write("Inputs for High Complex Nurses: ", high_complex_nurses)
+        st.write("Inputs for GRZ Beds: ", grz_beds)
+        st.write("Inputs for GRZ Nurses: ", grz_nurses)
+        st.write("Inputs for TRW Beds: ", trw_beds)
+        st.write("Inputs for ELV Low Complex Beds: ", elv_low_complex_beds)
+        st.write("Inputs for ELV Low Complex Nurses: ", elv_low_complex_nurses)
+        st.write("Inputs for Emergency Beds: ", emergency_beds)
 # Streamlit interface
 st.title('Simulation Inputs')
 
