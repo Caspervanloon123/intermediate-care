@@ -17,27 +17,27 @@ st.markdown("""
         cursor: pointer;
         border-radius: 8px;
     }
-    .stButton>button:hover {
-        background-color: #45a049;
-    }
+    # .stButton>button:hover {
+    #     background-color: #45a049;
+    # }
     # .stNumberInput>div>div input {
     #     border-radius: 5px;
     #     border: 1px solid #ccc;
     #     padding: 8px;
     # }
-    .stSelectbox>div>div input {
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        padding: 8px;
-    }
-    .stCheckbox>div>div input {
-        width: 20px;
-        height: 20px;
-    }
-    .st-expander {
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
+    # .stSelectbox>div>div input {
+    #     border-radius: 5px;
+    #     border: 1px solid #ccc;
+    #     padding: 8px;
+    # }
+    # .stCheckbox>div>div input {
+    #     width: 20px;
+    #     height: 20px;
+    # }
+    # .st-expander {
+    #     border: 1px solid #ccc;
+    #     border-radius: 5px;
+    # }
     </style>
     """, unsafe_allow_html=True)
 
