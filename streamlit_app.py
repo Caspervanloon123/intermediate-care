@@ -165,17 +165,22 @@ def display_bed_share_inputs(value, num_locations):
         return beds_input  # Return an empty list if no locations are provided
 
     for i in range(num_locations):
+        col1, col2 = st.columns(2)  # Split the layout into two columns
         if value in ['none']:
-            beds_input.extend([
-                st.text_input(f'Location {i+1} _ High Complex Beds:', key=f'loc_{i+1}_high_complex_beds'),
-                st.text_input(f'Location {i+1} _ High Complex Nurses:', key=f'loc_{i+1}_high_complex_nurses'),
-                st.text_input(f'Location {i+1} _ GRZ Beds:', key=f'loc_{i+1}_grz_beds'),
-                st.text_input(f'Location {i+1} _ GRZ Nurses:', key=f'loc_{i+1}_grz_nurses'),
-                st.text_input(f'Location {i+1} _ Shared Beds:', key=f'loc_{i+1}_shared_beds'),
-                st.text_input(f'Location {i+1} _ ELV Low Complex Beds:', key=f'loc_{i+1}_elv_low_complex_beds'),
-                st.text_input(f'Location {i+1} _ ELV Low Complex Nurses:', key=f'loc_{i+1}_elv_low_complex_nurses'),
-                st.text_input(f'Location {i+1} _ Emergency Beds:', key=f'loc_{i+1}_emergency_beds')
-            ])
+            with col1:
+                beds_input.extend([
+                    st.text_input(f'Location {i+1} _ High Complex Beds:', key=f'loc_{i+1}_high_complex_beds'),
+                    st.text_input(f'Location {i+1} _ GRZ Beds:', key=f'loc_{i+1}_grz_beds'),
+                    st.text_input(f'Location {i+1} _ Shared Beds:', key=f'loc_{i+1}_shared_beds'),
+                    st.text_input(f'Location {i+1} _ ELV Low Complex Beds:', key=f'loc_{i+1}_elv_low_complex_beds'),
+                    st.text_input(f'Location {i+1} _ Emergency Beds:', key=f'loc_{i+1}_emergency_beds')
+                ])
+            with col2:
+                beds_input.extend([
+                    st.text_input(f'Location {i+1} _ High Complex Nurses:', key=f'loc_{i+1}_high_complex_nurses'),
+                    st.text_input(f'Location {i+1} _ GRZ Nurses:', key=f'loc_{i+1}_grz_nurses'),
+                    st.text_input(f'Location {i+1} _ ELV Low Complex Nurses:', key=f'loc_{i+1}_elv_low_complex_nurses')
+                ])
         # Add conditions for other bed share types
 
     return beds_input
