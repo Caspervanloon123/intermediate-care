@@ -165,21 +165,23 @@ def display_bed_share_inputs(value, num_locations):
         return beds_input  # Return an empty list if no locations are provided
 
     for i in range(num_locations):
-        location_inputs = []  # Store inputs for each location
+        col1, col2 = st.columns(2)  # Split the layout into two columns
         if value in ['none']:
-            location_inputs.extend([
-                st.text_input(f'Location {i+1} _ High Complex Beds:', key=f'loc_{i+1}_high_complex_beds'),
-                st.text_input(f'Location {i+1} _ GRZ Beds:', key=f'loc_{i+1}_grz_beds'),
-                st.text_input(f'Location {i+1} _ Shared Beds:', key=f'loc_{i+1}_shared_beds'),
-                st.text_input(f'Location {i+1} _ ELV Low Complex Beds:', key=f'loc_{i+1}_elv_low_complex_beds'),
-                st.text_input(f'Location {i+1} _ Emergency Beds:', key=f'loc_{i+1}_emergency_beds'),
-                st.text_input(f'Location {i+1} _ High Complex Nurses:', key=f'loc_{i+1}_high_complex_nurses'),
-                st.text_input(f'Location {i+1} _ GRZ Nurses:', key=f'loc_{i+1}_grz_nurses'),
-                st.text_input(f'Location {i+1} _ ELV Low Complex Nurses:', key=f'loc_{i+1}_elv_low_complex_nurses')
-            ])
+            with col1:
+                beds_input.extend([
+                    st.text_input(f'Location {i+1} _ High Complex Beds:', key=f'loc_{i+1}_high_complex_beds'),
+                    st.text_input(f'Location {i+1} _ GRZ Beds:', key=f'loc_{i+1}_grz_beds'),
+                    st.text_input(f'Location {i+1} _ Shared Beds:', key=f'loc_{i+1}_shared_beds'),
+                    st.text_input(f'Location {i+1} _ ELV Low Complex Beds:', key=f'loc_{i+1}_elv_low_complex_beds'),
+                    st.text_input(f'Location {i+1} _ Emergency Beds:', key=f'loc_{i+1}_emergency_beds')
+                ])
+            with col2:
+                beds_input.extend([
+                    st.text_input(f'Location {i+1} _ High Complex Nurses:', key=f'loc_{i+1}_high_complex_nurses'),
+                    st.text_input(f'Location {i+1} _ GRZ Nurses:', key=f'loc_{i+1}_grz_nurses'),
+                    st.text_input(f'Location {i+1} _ ELV Low Complex Nurses:', key=f'loc_{i+1}_elv_low_complex_nurses')
+                ])
         # Add conditions for other bed share types
-        
-        beds_input.append(location_inputs)
 
     return beds_input
 
@@ -189,5 +191,157 @@ selected_bed_share = st.selectbox("Select Bed Share", ['none', 'full', 'partial'
 bed_share_inputs = display_bed_share_inputs(selected_bed_share, num_locations)
 
 # Display the inputs
-for location_inputs in bed_share_inputs:
-    st.write(location_inputs)
+for input_element in bed_share_inputs:
+    st.write(input_element)
+
+import pandas as pd
+
+# Function to save inputs to DataFrame
+def save_inputs_to_dataframe(bed_share, num_locations, preference_type, priority_holds, beds_input, arr_GRZ, arr_HOS_High, arr_EMD, arr_GPR_High, arr_GPR_Low, serv_High_Home, serv_High_Hwa, serv_High_WLZ,serv_High_WMO,serv_High_Dead,serv_High_GRZV,serv_GRZ_Home, serv_GRZ_Hwa, serv_GRZ_WLZ,serv_GRZ_WMO,serv_GRZ_Dead,serv_GRZ_GRZV,serv_Low_Home, serv_Low_Hwa, serv_Low_WLZ,serv_Low_WMO,serv_Low_Dead,serv_Low_GRZV, p_Home_HC, p_HwA_HC, p_pall_HC, p_wlz_HC, p_wmo_HC, p_dead_HC,p_Home_LC, p_HwA_LC, p_pall_LC, p_wlz_LC, p_wmo_LC, p_dead_LC,p_Home_GRZ, p_HwA_GRZ, p_pall_GRZ, p_wlz_GRZ, p_wmo_GRZ, p_dead_GRZ,\
+               opening_time_EMD_start,opening_time_EMD_end,opening_time_Huisarts_start,opening_time_Huisarts_end,opening_time_ELV_start,opening_time_ELV_end,open_in_weekend,subrun,k_per_sub,pat_warm,max_TRW,Adm_days,n_p_nurs):
+    # Initialize dictionaries to store bed and nurse values for each location
+    bed_values_dict = {f'{care_type}_beds': [] for care_type in ['elv_high_complex', 'high_complex', 'grz', 'shared', 'elv_low_complex', 'trw', 'total','emergency']}
+    nurse_values_dict = {f'{care_type}_nurses': [] for care_type in ['elv_high_complex', 'high_complex', 'grz', 'shared', 'elv_low_complex', 'trw', 'total']}
+
+    # Iterate through each location
+    for i in range(1, num_locations + 1):
+        # Initialize lists for the current location
+        bed_values = {f'{care_type}_beds': 0 for care_type in ['elv_high_complex', 'high_complex', 'grz', 'shared', 'elv_low_complex', 'trw', 'total','emergency']}
+        nurse_values = {f'{care_type}_nurses': 0 for care_type in ['elv_high_complex', 'high_complex', 'grz', 'shared', 'elv_low_complex', 'trw', 'total']}
+
+        # Populate lists based on inputs received for the current location
+        for item in beds_input:
+            if isinstance(item, dict) and item['type'] == 'Input':
+                input_id = item['props']['id']
+                value = item['props']['value']
+                location = int(input_id.split('_')[1])
+                if location == i:
+                    if 'elv' in input_id:
+                        care_type = input_id.split('_')[2] +'_'+input_id.split('_')[3] + '_' + input_id.split('_')[4]
+                    elif 'high' in input_id:
+                        care_type = input_id.split('_')[2] + '_' + input_id.split('_')[3]
+                    else:
+                        care_type = input_id.split('_')[2]
+                    if value:  # Check if the value is not empty
+                        if 'nurses' in input_id:
+                            nurse_values[f'{care_type}_nurses'] = int(value)
+                        else:
+                            bed_values[f'{care_type}_beds'] = int(value)
+                            
+        # Append values to the dictionaries
+        for key in bed_values:
+            bed_values_dict[key].append(bed_values[key])
+        for key in nurse_values:
+            nurse_values_dict[key].append(nurse_values[key])
+
+    # Create a DataFrame
+    df = pd.DataFrame(bed_values_dict)
+    df_nurses = pd.DataFrame(nurse_values_dict)
+
+    # Combine the nurse values DataFrame with the bed values DataFrame
+    df = pd.concat([df, df_nurses], axis=1)
+
+    # Creating a new DataFrame with each column containing a list of values from the corresponding column in df
+    df1 = pd.DataFrame()
+    for col in df.columns:
+        if '_nurses' in col:
+            df1[col] = [df[col][:2].tolist()]
+        else:
+            df1[col] = [df[col][:2].tolist()]
+
+    # Add additional information to the DataFrame
+    df1['Scen_full_bed_share'] = True if bed_share in ['full'] else False
+    df1['Scen_part_bed_share'] = True if bed_share == 'partial' else False
+    df1['Scen_NO_bed_share'] = True if bed_share in ['none','trw'] else False
+    df1['Scen_total_bed_share'] = True if bed_share == 'total' else False
+    df1['Scen_TRW'] = True if bed_share == 'trw' else False
+
+    df1['Preference Type'] = preference_type
+    df1['Priority Holds'] = 'priority_holds' in priority_holds
+    df1['Number of Locations'] = num_locations
+    
+    df1['Arrival GRZ per dag'] = arr_GRZ
+    df1['Arrival HOS High per dag'] = arr_HOS_High
+    df1['Arrival EMD per dag'] = arr_EMD
+    df1['Arrival GPR High per dag'] = arr_GPR_High
+    df1['Arrival GPR Low per dag'] = arr_GPR_Low
+    
+    df1['Ligduur High complex care Home'] = serv_High_Home
+    df1['Ligduur High complex care Hwa'] = serv_High_Hwa
+    df1['Ligduur High complex care WLZ'] = serv_High_WLZ
+    df1['Ligduur High complex care WMO'] = serv_High_WMO
+    df1['Ligduur High complex care Dead'] = serv_High_Dead
+    df1['Ligduur High complex care GRZV'] = serv_High_GRZV
+    
+    df1['Ligduur GRZ care Home'] = serv_GRZ_Home
+    df1['Ligduur GRZ care Hwa'] = serv_GRZ_Hwa
+    df1['Ligduur GRZ care WLZ'] = serv_GRZ_WLZ
+    df1['Ligduur GRZ care WMO'] = serv_GRZ_WMO
+    df1['Ligduur GRZ care Dead'] = serv_GRZ_Dead
+    df1['Ligduur GRZ care GRZV'] = serv_GRZ_GRZV
+    
+    df1['Ligduur laag complex care Home'] = serv_Low_Home
+    df1['Ligduur laag complex care Hwa'] = serv_Low_Hwa
+    df1['Ligduur laag complex care WLZ'] = serv_Low_WLZ
+    df1['Ligduur laag complex care WMO'] = serv_Low_WMO
+    df1['Ligduur laag complex care Dead'] = serv_Low_Dead
+    df1['Ligduur laag complex care GRZV'] = serv_Low_GRZV
+    
+    df1['Percentage uitstroom Home High Complex'] = p_Home_HC/100
+    df1['Percentage uitstroom Home with adjustments High Complex'] = p_HwA_HC/100
+    df1['Percentage uitstroom GRZ care High Complex'] = p_pall_HC/100
+    df1['Percentage uitstroom WLZ High Complex'] = p_wlz_HC/100
+    df1['Percentage uitstroom WMO High Complex'] = p_wmo_HC/100
+    df1['Percentage uitstroom Dead High Complex'] = p_dead_HC/100
+    df1['Percentage uitstroom Home Low Complex'] = p_Home_LC/100
+    df1['Percentage uitstroom Home with adjustments Low Complex'] = p_HwA_LC/100
+    df1['Percentage uitstroom GRZ care Low Complex'] = p_pall_LC/100
+    df1['Percentage uitstroom WLZ Low Complex'] = p_wlz_LC/100
+    df1['Percentage uitstroom WMO Low Complex'] = p_wmo_LC/100
+    df1['Percentage uitstroom Dead Low Complex'] = p_dead_LC/100
+    df1['Percentage uitstroom Home GRZ'] = p_Home_GRZ/100
+    df1['Percentage uitstroom Home with adjustments GRZ'] = p_HwA_GRZ/100
+    df1['Percentage uitstroom GRZ care GRZ'] = p_pall_GRZ/100
+    df1['Percentage uitstroom WLZ GRZ'] = p_wlz_GRZ/100
+    df1['Percentage uitstroom WMO GRZ'] = p_wmo_GRZ/100
+    df1['Percentage uitstroom Dead GRZ'] = p_dead_GRZ/100
+
+    df1['EMD starttijd'] =opening_time_EMD_start 
+    df1['EMD eindtijd'] = opening_time_EMD_end
+    df1['ELV starttijd'] = opening_time_ELV_start
+    df1['ELV eindtijd'] = opening_time_ELV_end
+    df1['Huisarts starttijd'] = opening_time_Huisarts_start
+    df1['Huisarts eindtijd'] = opening_time_Huisarts_end
+    df1['Open weekend'] = 1 if open_in_weekend else 0
+    df1['n_subruns'] = subrun
+    df1['patienten per subrun'] = k_per_sub
+    df1['patienten voor warming'] = pat_warm
+    df1['Max dagen TRW'] = max_TRW
+    df1['Adm_days'] = Adm_days
+    df1['Number of patients per nurse']= n_p_nurs
+    df1['Maximaal aantal dagen TRW'] = max_TRW
+    df1['n_loc'] = num_locations
+    
+    # Saving the DataFrame to a CSV file
+    df1.to_csv('inputs.csv', index=False)
+
+# Main Streamlit app
+def main():
+    st.title('Simulation Inputs')
+
+    # Input fields for simulation parameters
+    bed_share = st.radio('Bed Share Type', ['full', 'partial', 'none', 'total', 'trw'])
+    num_locations = st.number_input('Number of Locations', min_value=1, step=1, value=1)
+    preference_type = st.selectbox('Preference Type', ['type1', 'type2', 'type3'])
+    priority_holds = st.multiselect('Priority Holds', ['hold1', 'hold2', 'hold3'])
+
+    # Other input fields for each location
+    for i in range(num_locations):
+        st.header(f'Location {i+1}')
+        # Add input fields here for each location
+
+    # Button to save inputs and run simulation
+    if st.button('Save Inputs'):
+        save_inputs_to_dataframe(bed_share, num_locations, preference_type, priority_holds, beds_input, arr_GRZ, arr_HOS_High, arr_EMD, arr_GPR_High, arr_GPR_Low, serv_High_Home, serv_High_Hwa, serv_High_WLZ,serv_High_WMO,serv_High_Dead,serv_High_GRZV,serv_GRZ_Home, serv_GRZ_Hwa, serv_GRZ_WLZ,serv_GRZ_WMO,serv_GRZ_Dead,serv_GRZ_GRZV,serv_Low_Home, serv_Low_Hwa, serv_Low_WLZ,serv_Low_WMO,serv_Low_Dead,serv_Low_GRZV, p_Home_HC, p_HwA_HC, p_pall_HC, p_wlz_HC, p_wmo_HC, p_dead_HC,p_Home_LC, p_HwA_LC, p_pall_LC, p_wlz_LC, p_wmo_LC, p_dead_LC,p_Home_GRZ, p_HwA_GRZ, p_pall_GRZ, p_wlz_GRZ, p_wmo_GRZ, p_dead_GRZ,\
+               opening_time_EMD_start,opening_time_EMD_end,opening_time_Huisarts_start,opening_time_Huisarts_end,opening_time_ELV_start,opening_time_ELV_end,open_in_weekend,subrun,k_per_sub,pat_warm,max_TRW,Adm_days,n_p_nurs)
+        st.success('Inputs saved successfully!')
