@@ -25,8 +25,17 @@ inputs = {}
 # Streamlit interface
 st.title('Simulation Inputs')
 
-# Create input boxes for each variable
-for var in variables:
+# Dropdown menu for the first set of variables
+dropdown_var = st.selectbox("Choose Scenario", [
+    "Scen_shared_beds_Full", "Scen_NO_Sharing", "Scen_Part_bed_share", "Scen_Triage_ward", "Scen_Total_Sharing"
+])
+inputs[dropdown_var] = st.number_input(f"{dropdown_var} Value", value=0)
+
+# Checkbox for Priority
+inputs["Priority"] = st.checkbox("Priority")
+
+# Create input boxes for the rest of the variables
+for var in variables[6:]:  # Skip the first 6 since they are handled above
     inputs[var] = st.number_input(var, value=0)
 
 # Button to display the dataframe
@@ -34,4 +43,3 @@ if st.button('Display DataFrame'):
     # Convert the inputs dictionary to a DataFrame
     df1 = pd.DataFrame([inputs])
     st.write(df1)
-
