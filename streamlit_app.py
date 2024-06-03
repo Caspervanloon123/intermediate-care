@@ -167,119 +167,20 @@ def display_bed_share_inputs(value, num_locations):
     for i in range(num_locations):
         if value in ['none']:
             beds_input.extend([
-                html.Label(f'Location {i+1} _ High Complex Beds:'),
-                dcc.Input(id=f'loc_{i+1}_high_complex_beds', type='number', value='', placeholder='High Complex Beds', className='input_field'),
-                html.Label(f'Location {i+1} _ High Complex Nurses:'),
-                dcc.Input(id=f'loc_{i+1}_high_complex_nurses', type='number', value='', placeholder='High Complex Nurses', className='input_field')
+                st.text_input(f'Location {i+1} _ High Complex Beds:', key=f'loc_{i+1}_high_complex_beds'),
+                st.text_input(f'Location {i+1} _ High Complex Nurses:', key=f'loc_{i+1}_high_complex_nurses'),
+                st.text_input(f'Location {i+1} _ GRZ Beds:', key=f'loc_{i+1}_grz_beds'),
+                st.text_input(f'Location {i+1} _ GRZ Nurses:', key=f'loc_{i+1}_grz_nurses'),
+                st.text_input(f'Location {i+1} _ Shared Beds:', key=f'loc_{i+1}_shared_beds'),
+                st.text_input(f'Location {i+1} _ ELV Low Complex Beds:', key=f'loc_{i+1}_elv_low_complex_beds'),
+                st.text_input(f'Location {i+1} _ ELV Low Complex Nurses:', key=f'loc_{i+1}_elv_low_complex_nurses'),
+                st.text_input(f'Location {i+1} _ Emergency Beds:', key=f'loc_{i+1}_emergency_beds')
             ])
-            beds_input.extend([
-                html.Label(f'Location {i+1} _ GRZ Beds:'),
-                dcc.Input(id=f'loc_{i+1}_grz_beds', type='number', value='', placeholder='GRZ Beds', className='input_field'),
-                html.Label(f'Location {i+1} _ GRZ Nurses:'),
-                dcc.Input(id=f'loc_{i+1}_grz_nurses', type='number', value='', placeholder='GRZ Nurses', className='input_field')
-            ])
-            beds_input.extend([
-                html.Label(f'Location {i+1} _ Shared Beds:'),
-                dcc.Input(id=f'loc_{i+1}_shared_beds', type='number', value='', placeholder='Shared Beds', className='input_field'),
-            ])
-            beds_input.extend([
-                html.Label(f'Location {i+1} _ ELV Low Complex Beds:'),
-                dcc.Input(id=f'loc_{i+1}_elv_low_complex_beds', type='number', value='', placeholder='ELV Low Complex Beds', className='input_field'),
-                html.Label(f'Location {i+1} _ ELV Low Complex Nurses:'),
-                dcc.Input(id=f'loc_{i+1}_elv_low_complex_nurses', type='number', value='', placeholder='ELV Low Complex Nurses', className='input_field')
-            ])
-            beds_input.extend([
-                html.Label(f'Location {i+1} _ Emergency Beds:'),
-                dcc.Input(id=f'loc_{i+1}_emergency_beds', type='number', value='', placeholder='Emergency Beds', className='input_field'),
-            ])
-        elif value == 'full':
-            beds_input.extend([
-                html.Label(f'Location {i+1} _ ELV High Complex Beds:'),
-                dcc.Input(id=f'loc_{i+1}_elv_high_complex_beds', type='number', value='', placeholder='ELV High Complex Beds', className='input_field'),
-                html.Label(f'Location {i+1} _ ELV High Complex Nurses:'),
-                dcc.Input(id=f'loc_{i+1}_elv_high_complex_nurses', type='number', value='', placeholder='ELV High Complex Nurses', className='input_field')
-            ])
-            beds_input.extend([
-                html.Label(f'Location {i+1} _ ELV Low Complex Beds:'),
-                dcc.Input(id=f'loc_{i+1}_elv_low_complex_beds', type='number', value='', placeholder='ELV Low Complex Beds', className='input_field'),
-                html.Label(f'Location {i+1} _ ELV Low Complex Nurses:'),
-                dcc.Input(id=f'loc_{i+1}_elv_low_complex_nurses', type='number', value='', placeholder='ELV Low Complex Nurses', className='input_field')
-            ])
-            beds_input.extend([
-                html.Label(f'Location {i+1} _ Emergency Beds:'),
-                dcc.Input(id=f'loc_{i+1}_emergency_beds', type='number', value='', placeholder='Emergency Beds', className='input_field'),
-            ])
-        elif value == 'partial':
-            beds_input.extend([
-                # Add input fields for partial bed share
-                html.Label(f'Location {i+1} _ High Complex Beds:'),
-                dcc.Input(id=f'loc_{i+1}_high_complex_beds', type='number', value='', placeholder='High Complex Beds', className='input_field'),
-                html.Label(f'Location {i+1} _ High Complex Nurses:'),
-                dcc.Input(id=f'loc_{i+1}_high_complex_nurses', type='number', value='', placeholder='High Complex Nurses', className='input_field')
-            ])
-            beds_input.extend([
-                html.Label(f'Location {i+1} _ GRZ Beds:'),
-                dcc.Input(id=f'loc_{i+1}_grz_beds', type='number', value='', placeholder='GRZ Beds', className='input_field'),
-                html.Label(f'Location {i+1} _ GRZ Nurses:'),
-                dcc.Input(id=f'loc_{i+1}_grz_nurses', type='number', value='', placeholder='GRZ Nurses', className='input_field')
-            ])
-            beds_input.extend([
-                html.Label(f'Location {i+1} _ Shared Beds:'),
-                dcc.Input(id=f'loc_{i+1}_shared_beds', type='number', value='', placeholder='Shared Beds', className='input_field'),
-                
-            ])
-            beds_input.extend([
-                html.Label(f'Location {i+1} _ ELV Low Complex Beds:'),
-                dcc.Input(id=f'loc_{i+1}_elv_low_complex_beds', type='number', value='', placeholder='ELV Low Complex Beds', className='input_field'),
-                html.Label(f'Location {i+1} _ ELV Low Complex Nurses:'),
-                dcc.Input(id=f'loc_{i+1}_elv_low_complex_nurses', type='number', value='', placeholder='ELV Low Complex Nurses', className='input_field')
-            ])
-            beds_input.extend([
-                html.Label(f'Location {i+1} _ Emergency Beds:'),
-                dcc.Input(id=f'loc_{i+1}_emergency_beds', type='number', value='', placeholder='Emergency Beds', className='input_field'),
-            ])
-        elif value == 'total':
-            beds_input.extend([
-                # Add input fields for total bed share
-                html.Label(f'Location {i+1} _ Total Beds:'),
-                dcc.Input(id=f'loc_{i+1}_total_beds', type='number', value='', placeholder='Total Beds', className='input_field'),
-                html.Label(f'Location {i+1} _ Total Nurses:'),
-                dcc.Input(id=f'loc_{i+1}_total_nurses', type='number', value='', placeholder='Total Nurses', className='input_field')
-            ])
-            beds_input.extend([
-                html.Label(f'Location {i+1} _ Emergency Beds:'),
-                dcc.Input(id=f'loc_{i+1}_emergency_beds', type='number', value='', placeholder='Emergency Beds', className='input_field'),
-            ])
-        elif value == 'trw':
-            beds_input.extend([
-                # Add input fields for triage ward
-                html.Label(f'Location {i+1} _ High Complex Beds:'),
-                dcc.Input(id=f'loc_{i+1}_high_complex_beds', type='number', value='', placeholder='High Complex Beds', className='input_field'),
-                html.Label(f'Location {i+1} _ High Complex Nurses:'),
-                dcc.Input(id=f'loc_{i+1}_high_complex_nurses', type='number', value='', placeholder='High Complex Nurses', className='input_field')
-            ])
-            beds_input.extend([
-                html.Label(f'Location {i+1} _ GRZ Beds:'),
-                dcc.Input(id=f'loc_{i+1}_grz_beds', type='number', value='', placeholder='GRZ Beds', className='input_field'),
-                html.Label(f'Location {i+1} _ GRZ Nurses:'),
-                dcc.Input(id=f'loc_{i+1}_grz_nurses', type='number', value='', placeholder='GRZ Nurses', className='input_field')
-            ])
-            beds_input.extend([
-                html.Label(f'Location {i+1} _ TRW Beds:'),
-                dcc.Input(id=f'loc_{i+1}_trw_beds', type='number', value='', placeholder='TRW Beds', className='input_field'),
-            ])
-            beds_input.extend([
-                html.Label(f'Location {i+1} _ ELV Low Complex Beds:'),
-                dcc.Input(id=f'loc_{i+1}_elv_low_complex_beds', type='number', value='', placeholder='ELV Low Complex Beds', className='input_field'),
-                html.Label(f'Location {i+1} _ ELV Low Complex Nurses:'),
-                dcc.Input(id=f'loc_{i+1}_elv_low_complex_nurses', type='number', value='', placeholder='ELV Low Complex Nurses', className='input_field')
-            ])
-            beds_input.extend([
-                html.Label(f'Location {i+1} _ Emergency Beds:'),
-                dcc.Input(id=f'loc_{i+1}_emergency_beds', type='number', value='', placeholder='Emergency Beds', className='input_field'),
-            ])
+        # Add conditions for other bed share types
 
     return beds_input
+
+# Example usage
 num_locations = st.number_input("Number of Locations", min_value=0, value=1, step=1)
 selected_bed_share = st.selectbox("Select Bed Share", ['none', 'full', 'partial', 'total', 'trw'])  # Add other options if needed
 bed_share_inputs = display_bed_share_inputs(selected_bed_share, num_locations)
