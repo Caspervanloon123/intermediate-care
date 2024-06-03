@@ -39,10 +39,14 @@ inputs = {var: False for var in scenario_vars}  # Initialize scenario variables 
 
 # Streamlit interface
 st.title('Simulation Inputs')
-
+# Input for number of locations (integer only)
+n_loc = st.number_input("Number of Locations", min_value=0, step=1, value=0, format="%d")
 # Dropdown menu for the scenario variables
 dropdown_var = st.selectbox("Choose Scenario", scenario_vars)
 inputs[dropdown_var] = True  # Set the chosen scenario to True
+bed_share = dropdown_var
+
+
 
 # Checkbox for Priority
 inputs["Priority"] = st.checkbox("Priority")
