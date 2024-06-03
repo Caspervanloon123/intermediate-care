@@ -51,7 +51,7 @@ inputs["Preference"] = st.selectbox("Preference", preference_options)
 
 # Expanders for grouped variables
 for group_name, group_vars in groups.items():
-    with st.beta_expander(group_name):
+    with st.expander(group_name):
         for var in group_vars:
             inputs[var] = st.number_input(var, value=0)
 
