@@ -70,35 +70,10 @@ def display_bed_share_inputs(value, num_locations):
 # Streamlit interface
 st.title('Simulation Inputs')
 
-# Dropdown menu for the scenario variables
-bed_share_type = st.selectbox("Choose Bed Share Type", ['none', 'full', 'partial', 'total', 'trw'])
-
-# Input for number of locations
-num_locations = st.number_input("Number of Locations", min_value=0, step=1, value=0)
-
-# Display inputs dynamically based on user selection
-if 'generate_inputs' not in st.session_state:
-    st.session_state['generate_inputs'] = False
-
-if st.button('Generate Inputs'):
-    st.session_state['generate_inputs'] = True
-
-if st.session_state['generate_inputs']:
-    beds_input, high_complex_beds, high_complex_nurses, grz_beds, grz_nurses, shared_beds, elv_low_complex_beds, elv_low_complex_nurses, emergency_beds, elv_high_complex_beds, elv_high_complex_nurses, total_beds, total_nurses, trw_beds = display_bed_share_inputs(bed_share_type, num_locations)
-
-    st.write("Inputs for High Complex Beds: ", high_complex_beds)
-    st.write("Inputs for High Complex Nurses: ", high_complex_nurses)
-    st.write("Inputs for GRZ Beds: ", grz_beds)
-    st.write("Inputs for GRZ Nurses: ", grz_nurses)
-    st.write("Inputs for Shared Beds: ", shared_beds)
-    st.write("Inputs for ELV Low Complex Beds: ", elv_low_complex_beds)
-    st.write("Inputs for ELV Low Complex Nurses: ", elv_low_complex_nurses)
-    st.write("Inputs for Emergency Beds: ", emergency_beds)
-    st.write("Inputs for ELV High Complex Beds: ", elv_high_complex_beds)
-    st.write("Inputs for ELV High Complex Nurses: ", elv_high_complex_nurses)
-    st.write("Inputs for Total Beds: ", total_beds)
-    st.write("Inputs for Total Nurses: ", total_nurses)
-    st.write("Inputs for TRW Beds: ", trw_beds)
+# List of scenario variables
+scenario_vars = [
+    "Scen_shared_beds_Full", "Scen_NO_Sharing", "Scen_Part_bed_share", "Scen_Triage_ward", "Scen_Total_Sharing"
+]
 
 # Grouped variables
 groups = {
