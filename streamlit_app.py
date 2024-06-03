@@ -41,6 +41,7 @@ inputs = {var: False for var in scenario_vars}  # Initialize scenario variables 
 st.title('Simulation Inputs')
 # Input for number of locations (integer only)
 n_loc = st.number_input("Number of Locations", min_value=0, step=1, value=0, format="%d")
+inputs["n_loc"] = n_loc
 # Dropdown menu for the scenario variables
 dropdown_var = st.selectbox("Choose Scenario", scenario_vars)
 inputs[dropdown_var] = True  # Set the chosen scenario to True
