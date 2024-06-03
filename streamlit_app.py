@@ -190,9 +190,7 @@ num_locations = st.number_input("Number of Locations", min_value=0, value=1, ste
 selected_bed_share = st.selectbox("Select Bed Share", ['none', 'full', 'partial', 'total', 'trw'])  # Add other options if needed
 bed_share_inputs = display_bed_share_inputs(selected_bed_share, num_locations)
 
-# Display the inputs
-for input_element in bed_share_inputs:
-    st.write(input_element)
+
 
 import pandas as pd
 
