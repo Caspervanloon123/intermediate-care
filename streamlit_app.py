@@ -99,7 +99,7 @@ def show_or_hide_extra_inputs(flag):
 
 
 # Checkbox to toggle the visibility of the extra inputs
-show_extra_inputs = st.checkbox("Extra input (hidden by default)")
+show_extra_inputs = st.checkbox("Uitstroomkansen")
 
 # Show or hide the extra inputs based on the checkbox state
 if show_extra_inputs:
@@ -153,3 +153,11 @@ show_overig_inputs = st.checkbox("Overig")
 # Show or hide the "Overig" inputs based on the checkbox state
 if show_overig_inputs:
     show_or_hide_overig_inputs(show_overig_inputs)
+
+# Bed Share Dropdown
+bed_share_options = ['Total bed share', 'Full bed share', 'Partial bed share', 'No bed share', 'Triage ward']
+selected_bed_share = st.selectbox('Select Bed Share:', bed_share_options, index=0)
+
+# Preference Type Dropdown
+preference_type_options = ['First Come First Serve', 'Only Preference', 'Balance']
+selected_preference_type = st.selectbox('Select Preference Type:', preference_type_options, index=0)
