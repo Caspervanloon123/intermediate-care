@@ -4,9 +4,13 @@ import pandas as pd
 # Titel van de applicatie
 st.title("STRC Waiting Time Calculator")
 
-# List of variables
+# List of scenario variables
+scenario_vars = [
+    "Scen_shared_beds_Full", "Scen_NO_Sharing", "Scen_Part_bed_share", "Scen_Triage_ward", "Scen_Total_Sharing"
+]
+
+# List of remaining variables
 variables = [
-    "Scen_shared_beds_Full", "Scen_NO_Sharing", "Scen_Part_bed_share", "Scen_Triage_ward", "Scen_Total_Sharing",
     "Priority", "Preference", "n_loc", "n_subruns", "n_clients_per_subrun", "n_clients_for_warming",
     "arr_HOS_High", "arr_GPR_High", "arr_EMD", "arr_HOS_GRZ", "arr_GPR_Low",
     "out_p_Home_High", "out_p_Home_GRZ", "out_p_Dead_High", "out_p_Dead_GRZ", "out_p_WMO_High", "out_p_WMO_GRZ",
@@ -20,23 +24,22 @@ variables = [
 ]
 
 # Dictionary to store the inputs
-inputs = {}
+inputs = {var: False for var in scenario_vars}  # Initialize scenario variables to False
 
 # Streamlit interface
 st.title('Simulation Inputs')
 
-# Dropdown menu for the first set of variables
-dropdown_var = st.selectbox("Choose Scenario", [
-    "Scen_shared_beds_Full", "Scen_NO_Sharing", "Scen_Part_bed_share", "Scen_Triage_ward", "Scen_Total_Sharing"
-])
-inputs[dropdown_var] = st.number_input(f"{dropdown_var} Value", value=0)
+# Dropdown menu for the scenario variables
+dropdown_var = st.selectbox("Choose Scenario", scenario_vars)
+inputs[dropdown_var] = True  # Set the chosen scenario to True
 
 # Checkbox for Priority
 inputs["Priority"] = st.checkbox("Priority")
 
 # Create input boxes for the rest of the variables
-for var in variables[6:]:  # Skip the first 6 since they are handled above
-    inputs[var] = st.number_input(var, value=0)
+for var in variables:
+    if var != "Priority":  # Skip the Priority variable as it's handled above
+        inputs[var] = st.number_input(var, value=0)
 
 # Button to display the dataframe
 if st.button('Display DataFrame'):
