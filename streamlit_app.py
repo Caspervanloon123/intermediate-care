@@ -22,6 +22,65 @@ st.markdown("""
     }
     </style>
     """, unsafe_allow_html=True)
+from decimal import Decimal
+
+# Define default decimal values for all variables
+default_values = {
+    "Aankomst Hoog Complex vanuit ziekenhuis per dag": Decimal('3.1'),
+    "Aankomst vanaf Huisarts Hoog Complex per dag": Decimal('0.0'),
+    "Aankomst vanaf de Spoedeisendehulp per dag": Decimal('0.0'),
+    "Aankomst Geriatrische Zorg in Ziekenhuis per dag": Decimal('0.0'),
+    "Aankomst Laag Complexe zorg vanaf de Huisarts": Decimal('0.0'),
+    "Ligduur Hoog Complex naar Huis": Decimal('0.0'),
+    "Ligduur Geriatrische Zorg naar Huis": Decimal('0.0'),
+    "Ligduur Hoog Complex Dood": Decimal('0.0'),
+    "Ligduur Geriatrische Zorg Dood": Decimal('0.0'),
+    "Ligduur Hoog Complex naar Geriatrische Zorg": Decimal('0.0'),
+    "Ligduur Hoog Complex naar Huis met aanpassingen": Decimal('0.0'),
+    "Ligduur Geriatrische Zorg naar Huis met aanpassingen": Decimal('0.0'),
+    "Ligduur Hoog Complex WMO": Decimal('0.0'),
+    "Ligduur Hoog Complex WLZ": Decimal('0.0'),
+    "Ligduur Geriatrische zorg WMO": Decimal('0.0'),
+    "Ligduur Geriatrische Zorg WLZ": Decimal('0.0'),
+    "Ligduur Laag Complex naar Huis": Decimal('0.0'),
+    "Ligduur Laag Complex Dood": Decimal('0.0'),
+    "Ligduur Laag Complex Geriatrische Zorg": Decimal('0.0'),
+    "Ligduur Laag Complex naar Huis met aanpassingen": Decimal('0.0'),
+    "Ligduur Laag Complex WMO": Decimal('0.0'),
+    "Ligduur Laag Complex WLZ": Decimal('0.0'),
+    "Percentage Hoog Complex naar Huis": Decimal('0.0'),
+    "Percentage Geriatrische Zorg naar Huis": Decimal('0.0'),
+    "Percentage Hoog Complex Dood": Decimal('0.0'),
+    "Percentage Geriatrische Zorg Dood": Decimal('0.0'),
+    "Percentage Hoog Complex WMO": Decimal('0.0'),
+    "Percentage Geriatrische Zorg WMO": Decimal('0.0'),
+    "Percentage Hoog Complex WLZ": Decimal('0.0'),
+    "Percentage Geriatrische Zorg WLZ": Decimal('0.0'),
+    "Percentage Hoog Complex naar Geriatrische Zorg": Decimal('0.0'),
+    "Percentage Hoog Complex naar Huis met aanpassingen": Decimal('0.0'),
+    "Percentage Geriatrische Zorg naar Huis met aanpassingen": Decimal('0.0'),
+    "Percentage Laag Complex naar Huis": Decimal('0.0'),
+    "Percentage Laag Complex Dood": Decimal('0.0'),
+    "Percentage Laag Complex WMO": Decimal('0.0'),
+    "Percentage Laag Complex WLZ": Decimal('0.0'),
+    "Percentage Laag Complex naar Geriatrische Zorg": Decimal('0.0'),
+    "Percentage Laag Complex naar Huis met aanpassingen": Decimal('0.0'),
+    "Opening_weekday": Decimal('0.0'),
+    "Spoedeisendehulp openingstijd": Decimal('0.0'),
+    "Spoedeisendehulp sluitingstijd": Decimal('0.0'),
+    "Openingstijd Huisarts": Decimal('0.0'),
+    "Sluittijd Huisarts": Decimal('0.0'),
+    "Opname in het weekend": Decimal('0.0'),
+    "Openingstijd ELV": Decimal('0.0'),
+    "Sluitingstijd ELV": Decimal('0.0'),
+    "Aantal patienten per verpleegkundige": Decimal('0.0'),
+    "Transfertijd": Decimal('0.0'),
+    "Maximaal aantal dagen observatie": Decimal('0.0'),
+    "Aantal subruns": Decimal('0.0'),
+    "Aantal patienten per subrun": Decimal('0.0'),
+    "Aantal patienten voor warming": Decimal('0.0'),
+}
+
 
 # Titel van de applicatie
 st.title("STRC Waiting Time Calculator")
@@ -110,11 +169,11 @@ preference_options = ["FCFS", "Voorkeur", "Model"]
 preference = st.selectbox("Allocatie", preference_options)
 Inputs_1.loc[0,"preference"] = preference
 
-# Expanders for grouped variables
 for group_name, group_vars in groups.items():
     with st.expander(group_name):
         for var in group_vars:
-            Inputs_1.loc[0,var] = st.number_input(var, value=0)
+            default_value = default_values.get(var, 0)  # Get default value for the variable
+            Inputs_1.loc[0, var] = st.number_input(var, value=default_value)
 
  
 if bed_share == "Volledige beddeldeling":
