@@ -6196,6 +6196,7 @@ if st.button('Display DataFrame'):
     # Convert the inputs dictionary to a DataFrame
     df1 = df_tot
     output_df = simulate(df1)
+    st.write(df1)
     st.write(output_df)
-    #st.write(df1)
+    
 
