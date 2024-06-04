@@ -69,50 +69,50 @@ inputs["n_loc"] = n_loc
 dropdown_var = st.selectbox("Beddeling", scenario_vars_1)
 bed_share = dropdown_var
 if dropdown_var == "Volledige beddeldeling":
-    inputs["Scen_shared_beds_Full"] == True
-    inputs["Scen_Total_Sharing"] == False
-    inputs["Scen_Triage_ward"] == False
-    inputs["Scen_NO_Sharing"] == False
-    inputs["Scen_Part_bed_share"] == False
+    inputs.loc[0,"Scen_shared_beds_Full"] == True
+    inputs.loc[0,"Scen_Total_Sharing"] == False
+    inputs.loc[0,"Scen_Triage_ward"] == False
+    inputs.loc[0,"Scen_NO_Sharing"] == False
+    inputs.loc[0,"Scen_Part_bed_share"] == False
 elif dropdown_var == "Totale beddendeling":
-    inputs["Scen_shared_beds_Full"] == False
-    inputs["Scen_Total_Sharing"] == True
-    inputs["Scen_Triage_ward"] == False
-    inputs["Scen_NO_Sharing"] == False
-    inputs["Scen_Part_bed_share"] == False
+    inputs.loc[0,"Scen_shared_beds_Full"] == False
+    inputs.loc[0,"Scen_Total_Sharing"] == True
+    inputs.loc[0,"Scen_Triage_ward"] == False
+    inputs.loc[0,"Scen_NO_Sharing"] == False
+    inputs.loc[0,"Scen_Part_bed_share"] == False
 elif dropdown_var == "Observatiebedden":
-    inputs["Scen_shared_beds_Full"] == False
-    inputs["Scen_Total_Sharing"] == False
-    inputs["Scen_Triage_ward"] == True
-    inputs["Scen_NO_Sharing"] == True
-    inputs["Scen_Part_bed_share"] == False
+    inputs.loc[0,"Scen_shared_beds_Full"] == False
+    inputs.loc[0,"Scen_Total_Sharing"] == False
+    inputs.loc[0,"Scen_Triage_ward"] == True
+    inputs.loc[0,"Scen_NO_Sharing"] == True
+    inputs.loc[0,"Scen_Part_bed_share"] == False
 elif dropdown_var == "Partiële beddendeling":
-    inputs["Scen_shared_beds_Full"] == False
-    inputs["Scen_Total_Sharing"] == False
-    inputs["Scen_Triage_ward"] == False
-    inputs["Scen_NO_Sharing"] == False
-    inputs["Scen_Part_bed_share"] == True
+    inputs.loc[0,"Scen_shared_beds_Full"] == False
+    inputs.loc[0,"Scen_Total_Sharing"] == False
+    inputs.loc[0,"Scen_Triage_ward"] == False
+    inputs.loc[0,"Scen_NO_Sharing"] == False
+    inputs.loc[0,"Scen_Part_bed_share"] == True
 elif dropdown_var == "Geen beddendeling":
-    inputs["Scen_shared_beds_Full"] == False
-    inputs["Scen_Total_Sharing"] == False
-    inputs["Scen_Triage_ward"] == False
-    inputs["Scen_NO_Sharing"] == True
-    inputs["Scen_Part_bed_share"] == False
+    inputs.loc[0,"Scen_shared_beds_Full"] == False
+    inputs.loc[0,"Scen_Total_Sharing"] == False
+    inputs.loc[0,"Scen_Triage_ward"] == False
+    inputs.loc[0,"Scen_NO_Sharing"] == True
+    inputs.loc[0,"Scen_Part_bed_share"] == False
 
 
 
 # Checkbox for Priority
-inputs["Priority"] = st.checkbox("Priority")
+inputs.loc[0,"Priority"] = st.checkbox("Prioriteit")
 
 # Dropdown menu for Preference
 preference_options = ["FCFS", "Voorkeur", "Model"]
-inputs["Preference"] = st.selectbox("Allocatie", preference_options)
+inputs.loc[0,"Preference"] = st.selectbox("Allocatie", preference_options)
 
 # Expanders for grouped variables
 for group_name, group_vars in groups.items():
     with st.expander(group_name):
         for var in group_vars:
-            inputs[var] = st.number_input(var, value=0)
+            inputs.loc[0,var] = st.number_input(var, value=0)
 
 
 if bed_share == "Scen_shared_beds_Full":
@@ -134,23 +134,23 @@ if bed_share == "Scen_shared_beds_Full":
         nurs_low.append(nurs_ELV_Low)
         nurs_high.append(nurs_ELV_High)
         beds_EMRD.append(beds_ELV_EMRD)
-    inputs["elv_high_complex_beds"]  = beds_High
-    inputs["elv_low_complex_beds"] = beds_Low
-    inputs["high_complex_beds"] = listofzeros
-    inputs["grz_beds"] = listofzeros
-    inputs["shared_beds"] =listofzeros
-    inputs["trw_beds"] = listofzeros
-    inputs["total_beds"] = listofzeros
+    inputs.loc[0,"elv_high_complex_beds"]  = beds_High
+    inputs.loc[0,"elv_low_complex_beds"] = beds_Low
+    inputs.loc[0,"high_complex_beds"] = listofzeros
+    inputs.loc[0,"grz_beds"] = listofzeros
+    inputs.loc[0,"shared_beds"] =listofzeros
+    inputs.loc[0,"trw_beds"] = listofzeros
+    inputs.loc[0,"total_beds"] = listofzeros
     
-    inputs["elv_high_complex_nurses"] = nurs_high
-    inputs["elv_low_complex_nurses"] = nurs_low
-    inputs["high_complex_nurses"] = listofzeros
-    inputs["grz_nurses"] = listofzeros
-    inputs["shared_nurses"] = listofzeros
-    inputs["trw_nurses"] = listofzeros
-    inputs["total_nurses"] = listofzeros
+    inputs.loc[0,"elv_high_complex_nurses"] = nurs_high
+    inputs.loc[0,"elv_low_complex_nurses"] = nurs_low
+    inputs.loc[0,"high_complex_nurses"] = listofzeros
+    inputs.loc[0,"grz_nurses"] = listofzeros
+    inputs.loc[0,"shared_nurses"] = listofzeros
+    inputs.loc[0,"trw_nurses"] = listofzeros
+    inputs.loc[0,"total_nurses"] = listofzeros
 
-    inputs["emergency_beds"] = beds_EMRD
+    inputs.loc[0,"emergency_beds"] = beds_EMRD
 
 elif bed_share == "Scen_NO_Sharing":
     listofzeros = [0] * n_loc
@@ -178,23 +178,23 @@ elif bed_share == "Scen_NO_Sharing":
         nurs_high.append(nurs_High_Complex)
         beds_EMRD.append(beds_ELV_EMRD)
         
-    inputs["elv_high_complex_beds"]  = listofzeros
-    inputs["elv_low_complex_beds"] = beds_low
-    inputs["high_complex_beds"] = beds_High
-    inputs["grz_beds"] = beds_G
-    inputs["shared_beds"] =listofzeros
-    inputs["trw_beds"] = listofzeros
-    inputs["total_beds"] = listofzeros
+    inputs.loc[0,"elv_high_complex_beds"]  = listofzeros
+    inputs.loc[0,"elv_low_complex_beds"] = beds_low
+    inputs.loc[0,"high_complex_beds"] = beds_High
+    inputs.loc[0,"grz_beds"] = beds_G
+    inputs.loc[0,"shared_beds"] =listofzeros
+    inputs.loc[0,"trw_beds"] = listofzeros
+    inputs.loc[0,"total_beds"] = listofzeros
     
-    inputs["elv_high_complex_nurses"] = listofzeros
-    inputs["elv_low_complex_nurses"] = nurs_low
-    inputs["high_complex_nurses"] = nurs_high
-    inputs["grz_nurses"] = nurs_G
-    inputs["shared_nurses"] = listofzeros
-    inputs["trw_nurses"] = listofzeros
-    inputs["total_nurses"] = listofzeros
+    inputs.loc[0,"elv_high_complex_nurses"] = listofzeros
+    inputs.loc[0,"elv_low_complex_nurses"] = nurs_low
+    inputs.loc[0,"high_complex_nurses"] = nurs_high
+    inputs.loc[0,"grz_nurses"] = nurs_G
+    inputs.loc[0,"shared_nurses"] = listofzeros
+    inputs.loc[0,"trw_nurses"] = listofzeros
+    inputs.loc[0,"total_nurses"] = listofzeros
 
-    inputs["emergency_beds"] = beds_EMRD
+    inputs.loc[0,"emergency_beds"] = beds_EMRD
 elif bed_share == "Scen_Part_bed_share":
     listofzeros = [0] * n_loc
     beds_G = []
@@ -223,21 +223,21 @@ elif bed_share == "Scen_Part_bed_share":
         nurs_high.append(nurs_High_Complex)
         beds_shared.append(beds_ELV_Shared)
         beds_EMRD.append(beds_ELV_EMRD)
-    inputs["elv_high_complex_beds"]  = listofzeros
-    inputs["elv_low_complex_beds"] = beds_low
-    inputs["high_complex_beds"] = beds_High
-    inputs["grz_beds"] = beds_G
-    inputs["shared_beds"] =beds_shared
-    inputs["trw_beds"] = listofzeros
-    inputs["total_beds"] = listofzeros
+    inputs.loc[0,"elv_high_complex_beds"]  = listofzeros
+    inputs.loc[0,"elv_low_complex_beds"] = beds_low
+    inputs.loc[0,"high_complex_beds"] = beds_High
+    inputs.loc[0,"grz_beds"] = beds_G
+    inputs.loc[0,"shared_beds"] =beds_shared
+    inputs.loc[0,"trw_beds"] = listofzeros
+    inputs.loc[0,"total_beds"] = listofzeros
     
-    inputs["elv_high_complex_nurses"] = listofzeros
-    inputs["elv_low_complex_nurses"] = nurs_low
-    inputs["high_complex_nurses"] = nurs_high
-    inputs["grz_nurses"] = nurs_G
-    inputs["shared_nurses"] = listofzeros
-    inputs["trw_nurses"] = listofzeros
-    inputs["total_nurses"] = listofzeros
+    inputs.loc[0,"elv_high_complex_nurses"] = listofzeros
+    inputs.loc[0,"elv_low_complex_nurses"] = nurs_low
+    inputs.loc[0,"high_complex_nurses"] = nurs_high
+    inputs.loc[0,"grz_nurses"] = nurs_G
+    inputs.loc[0,"shared_nurses"] = listofzeros
+    inputs.loc[0,"trw_nurses"] = listofzeros
+    inputs.loc[0,"total_nurses"] = listofzeros
 
     inputs["emergency_beds"] = beds_EMRD
 elif bed_share == "Scen_Triage_ward":
@@ -268,23 +268,23 @@ elif bed_share == "Scen_Triage_ward":
         nurs_high.append(nurs_High_Complex)
         beds_TRW.append(beds_ELV_TRW)
         beds_EMRD.append(beds_ELV_EMRD)
-    inputs["elv_high_complex_beds"]  = listofzeros
-    inputs["elv_low_complex_beds"] = beds_low
-    inputs["high_complex_beds"] = beds_High
-    inputs["grz_beds"] = beds_G
-    inputs["shared_beds"] =listofzeros
-    inputs["trw_beds"] = beds_TRW
-    inputs["total_beds"] = listofzeros
+    inputs.loc[0,"elv_high_complex_beds"]  = listofzeros
+    inputs.loc[0,"elv_low_complex_beds"] = beds_low
+    inputs.loc[0,"high_complex_beds"] = beds_High
+    inputs.loc[0,"grz_beds"] = beds_G
+    inputs.loc[0,"shared_beds"] =listofzeros
+    inputs.loc[0,"trw_beds"] = beds_TRW
+    inputs.loc[0,"total_beds"] = listofzeros
     
-    inputs["elv_high_complex_nurses"] = listofzeros
-    inputs["elv_low_complex_nurses"] = nurs_low
-    inputs["high_complex_nurses"] = nurs_high
-    inputs["grz_nurses"] = nurs_G
-    inputs["shared_nurses"] = listofzeros
-    inputs["trw_nurses"] = listofzeros
-    inputs["total_nurses"] = listofzeros
+    inputs.loc[0,"elv_high_complex_nurses"] = listofzeros
+    inputs.loc[0,"elv_low_complex_nurses"] = nurs_low
+    inputs.loc[0,"high_complex_nurses"] = nurs_high
+    inputs.loc[0,"grz_nurses"] = nurs_G
+    inputs.loc[0,"shared_nurses"] = listofzeros
+    inputs.loc[0,"trw_nurses"] = listofzeros
+    inputs.loc[0,"total_nurses"] = listofzeros
 
-    inputs["emergency_beds"] = beds_EMRD
+    inputs.loc[0,"emergency_beds"] = beds_EMRD
 elif bed_share == "Scen_Total_Sharing":
     listofzeros = [0] * n_loc
     beds_Total = []
@@ -298,23 +298,23 @@ elif bed_share == "Scen_Total_Sharing":
         beds_Total.append(beds_ELV_Total)
         nurs_Total.append(beds_ELV_Total) 
         beds_EMRD.append(beds_ELV_EMRD)
-    inputs["elv_high_complex_beds"]  = listofzeros
-    inputs["elv_low_complex_beds"] = listofzeros
-    inputs["high_complex_beds"] = listofzeros
-    inputs["grz_beds"] = listofzeros
-    inputs["shared_beds"] =listofzeros
-    inputs["trw_beds"] = listofzeros
-    inputs["total_beds"] = beds_Total
+    inputs.loc[0,"elv_high_complex_beds"]  = listofzeros
+    inputs.loc[0,"elv_low_complex_beds"] = listofzeros
+    inputs.loc[0,"high_complex_beds"] = listofzeros
+    inputs.loc[0,"grz_beds"] = listofzeros
+    inputs.loc[0,"shared_beds"] =listofzeros
+    inputs.loc[0,"trw_beds"] = listofzeros
+    inputs.loc[0,"total_beds"] = beds_Total
     
-    inputs["elv_high_complex_nurses"] = listofzeros
-    inputs["elv_low_complex_nurses"] = listofzeros
-    inputs["high_complex_nurses"] = listofzeros
-    inputs["grz_nurses"] = listofzeros
-    inputs["shared_nurses"] = listofzeros
-    inputs["trw_nurses"] = listofzeros
-    inputs["total_nurses"] = nurs_Total
+    inputs.loc[0,"elv_high_complex_nurses"] = listofzeros
+    inputs.loc[0,"elv_low_complex_nurses"] = listofzeros
+    inputs.loc[0,"high_complex_nurses"] = listofzeros
+    inputs.loc[0,"grz_nurses"] = listofzeros
+    inputs.loc[0,"shared_nurses"] = listofzeros
+    inputs.loc[0,"trw_nurses"] = listofzeros
+    inputs.loc[0,"total_nurses"] = nurs_Total
 
-    inputs["emergency_beds"] = beds_EMRD
+    inputs.loc[0,"emergency_beds"] = beds_EMRD
 # def Simulate(input):
 #     for loop_nr in range(len(input)):
 #         from datetime import datetime
