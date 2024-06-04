@@ -20,7 +20,7 @@ st.markdown(page_bg_img,unsafe_allow_html = True)
 
 # st.set_page_config(layout="wide")
 st.title("ELV SIMULATIE")
-col1, col2, col3 = st.columns((2, 3, 3)) 
+col1, col2, col3 , col4 = st.columns((2, 3, 3,3)) 
 
 with col1:
     # Inject custom CSS
@@ -6265,6 +6265,7 @@ with col3:
         #with col3:
         st.write(table1.T)
         st.bar_chart(table1.T, y = 'Wachttijd (dagen)',use_container_width = True)
+with col4:
         st.write(table2.T)
         st.write(table3.T)
         st.write(table4.T)
