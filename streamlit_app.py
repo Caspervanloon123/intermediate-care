@@ -5,8 +5,9 @@ import pandas as pd
 
 
 st.set_page_config(layout="wide")
-col1, col2, col3 = st.columns((2, 3, 3)) 
 st.title("ELV SIMULATIE")
+col1, col2, col3 = st.columns((2, 3, 3)) 
+
 with col1:
     # Inject custom CSS
     st.markdown("""
