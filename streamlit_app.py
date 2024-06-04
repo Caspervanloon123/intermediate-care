@@ -437,8 +437,8 @@ def simulate(input):
     
         print_modus = False  
     
-        arr_HOS_High =  input.loc[loop_nr,'Aankomst Hoog complex vanuit ziekenhuis per dag']
-        arr_HOS_GRZ = input.loc[loop_nr,'Aankomst Geriatrische zorg in Ziekenhuis per dag']
+        arr_HOS_High =  input.loc[loop_nr,'Aankomst Hoog Complex vanuit ziekenhuis per dag']
+        arr_HOS_GRZ = input.loc[loop_nr,'Aankomst Geriatrische Zorg in Ziekenhuis per dag']
         arr_GPR_High = input.loc[loop_nr,'Aankomst vanaf Huisarts Hoog Complex per dag']
         arr_GPR_Low = input.loc[loop_nr,'Aankomst Laag Complexe zorg vanaf de Huisarts']
     
