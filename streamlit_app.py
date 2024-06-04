@@ -61,9 +61,9 @@ groups = {
 st.title('Simulation Inputs')
 
 # Input for number of locations (integer only)
-inputs_1 = pd.DataFrame()
+Inputs_1 = pd.DataFrame()
 n_loc = st.number_input("Aantal locaties", min_value=0, step=1, value=0, format="%d")
-inputs_1.loc[0,"n_loc"] = n_loc
+Inputs_1.loc[0,"n_loc"] = n_loc
 
 # Dropdown menu for the scenario variables
 dropdown_var = st.selectbox("Beddeling", scenario_vars_1)
