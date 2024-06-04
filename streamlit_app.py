@@ -65,12 +65,11 @@ default_values = {
     "Percentage Laag Complex WLZ": 10.0,
     "Percentage Laag Complex naar Geriatrische Zorg": 2.0,
     "Percentage Laag Complex naar Huis met aanpassingen": 14.0,
-    "Opening_weekday": 0.0,
     "Spoedeisendehulp openingstijd": 0,
     "Spoedeisendehulp sluitingstijd": 24,
     "Openingstijd Huisarts": 8.0,
     "Sluittijd Huisarts": 17.0,
-    "Opname in het weekend": 0.0,
+    "Opname in het weekend": False,
     "Openingstijd ELV": 8.0,
     "Sluitingstijd ELV": 17.0,
     "Aantal patienten per verpleegkundige": 3,
@@ -108,7 +107,7 @@ groups = {
         "Percentage Laag Complex naar Huis", "Percentage Laag Complex Dood", "Percentage Laag Complex WMO", "Percentage Laag Complex WLZ", "Percentage Laag Complex naar Geriatrische Zorg", "Percentage Laag Complex naar Huis met aanpassingen"
     ],
     "Openingstijden": [
-        "Opening_weekday", "Spoedeisendehulp openingstijd", "Spoedeisendehulp sluitingstijd", "Openingstijd Huisarts",
+        "Spoedeisendehulp openingstijd", "Spoedeisendehulp sluitingstijd", "Openingstijd Huisarts",
         "Sluittijd Huisarts", "Opname in het weekend", "Openingstijd ELV", "Sluitingstijd ELV"
     ],
     "Overig": [
