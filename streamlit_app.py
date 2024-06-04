@@ -488,7 +488,7 @@ def simulate(input):
         
         p_opn_weekend = 1 if input.loc[loop_nr,'Opname in het weekend'] else 0
     
-        Scen_tr_ward = input.loc[loop_nr,'Scen_Triage_Ward']
+        Scen_tr_ward = input.loc[loop_nr,'Scen_Triage_ward']
         Scen_shared_beds_Full = input.loc[loop_nr,'Scen_full_bed_share']
         Scen_NO_Sharing = input.loc[loop_nr,'Scen_NO_bed_share']
         Scen_part_bed_Share = input.loc[loop_nr,'Scen_part_bed_share']
