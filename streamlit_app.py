@@ -154,5 +154,5 @@ if st.button('Display DataFrame'):
     # Convert the inputs dictionary to a DataFrame
     df1 = pd.DataFrame([inputs])
     st.write(simulate(df1))
-    #st.write(df1)
+    st.write(df1)
 
