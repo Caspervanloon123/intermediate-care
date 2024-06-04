@@ -483,7 +483,7 @@ def simulate(input):
         EMD_start_time = input.loc[loop_nr,'Spoedeisendehulp openingstijd']/24
         EMD_end_time = input.loc[loop_nr,'Spoedeisendehulp sluitingstijd']/24
         GPR_start_time = input.loc[loop_nr,'Openingstijd Huisarts']/24
-        GPR_end_time = input.loc[loop_nr,'Sluitingstijd Huisarts']/24
+        GPR_end_time = input.loc[loop_nr,'Sluittijd Huisarts']/24
     
         
         p_opn_weekend = 1 if input.loc[loop_nr,'Opname in het weekend'] else 0
