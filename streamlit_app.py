@@ -167,7 +167,7 @@ with col1:
     preference_options = ["FCFS", "Voorkeur", "Model"]
     preference = st.selectbox("Allocatie", preference_options)
     Inputs_1.loc[0,"preference"] = preference
-with col2:
+
     for group_name, group_vars in groups.items():
         with st.expander(group_name):
             for var in group_vars:
@@ -176,7 +176,7 @@ with col2:
                     Inputs_1.loc[0, var] = st.checkbox(var)
                 else:
                     Inputs_1.loc[0, var] = st.number_input(var, value=default_value)
-    
+with col2:
     # with col2:
     if bed_share == "Volledige beddeldeling":
         listofzeros = 0
