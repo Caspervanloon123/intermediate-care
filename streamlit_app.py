@@ -6117,7 +6117,7 @@ elif bed_share == "Totale beddendeling":
 # Button to display the dataframe
 if st.button('Display DataFrame'):
     # Convert the inputs dictionary to a DataFrame
-    df1 = pd.DataFrame([inputs])
+    df1 = inputs
     output_df = simulate(df1)
     st.write(output_df)
     #st.write(df1)
