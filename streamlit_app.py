@@ -109,14 +109,14 @@ Priority = st.checkbox("Priority")
 preference_options = ["FCFS", "Voorkeur", "Model"]
 preference =st.selectbox("Allocatie", preference_options)
 
-data = {
-    Priority : Priority,
-    preference: preference,
+data_p = {
+    Priority: [Priority],
+    preference: [preference],
 }
-df = pd.DataFrame(data)
+df_p = pd.DataFrame(data_p)
 
 # Concatenate the DataFrame with the existing DataFrame
-inputs = pd.concat([inputs, df], ignore_index=True)
+inputs = pd.concat([inputs, df_p], ignore_index=True)
 # Expanders for grouped variables
 for group_name, group_vars in groups.items():
     with st.expander(group_name):
