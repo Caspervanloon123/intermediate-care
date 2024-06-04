@@ -6242,10 +6242,10 @@ with col2:
       table4.index = ['Aantal']
       #st.write(df1)
       with col3:
-           st.write(table1.T)
-           st.bar_chart(table1.T, y = 'Wachttijd (dagen)')
-           st.write(table2.T)
-           st.write(table3.T)
-           st.write(table4.T)
-   
+       st.write(table1.T)
+       st.bar_chart(table1.T, y = 'Wachttijd (dagen)')
+       st.write(table2.T)
+       st.write(table3.T)
+       st.write(table4.T)
+ 
 
