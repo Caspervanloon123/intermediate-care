@@ -476,8 +476,8 @@ def simulate(input):
         serv_WLZ_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex care WLZ']
     
         
-        time_max_opn_ELV = input.loc[loop_nr,'Openingstijd ELV']/24
-        ELV_start_time = input.loc[loop_nr,'Sluitingstijd ELV']/24
+        time_max_opn_ELV = input.loc[loop_nr,'Sluitingstijd ELV']/24
+        ELV_start_time = input.loc[loop_nr,'Openingstijd ELV']/24
     
         EMD_start_time = input.loc[loop_nr,'Openingstijd EMD']/24
         EMD_end_time = input.loc[loop_nr,'Sluitingstijd EMD']/24
