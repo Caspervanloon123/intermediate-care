@@ -6230,7 +6230,7 @@ if st.button('Start Simulation'):
     table1.index = ['Wachttijd (dagen)']
     #st.write(df1)
     st.write(table1)
-    st.bar_chart(table1.T, x = "Bron", y = "Wachttijd (dagen)")
+    st.bar_chart(table1.T, y = 'Wachttijd (dagen)')
     st.write(table2)
     st.write(table3)
     st.write(table4)
