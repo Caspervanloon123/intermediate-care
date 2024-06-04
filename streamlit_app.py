@@ -117,7 +117,7 @@ with col1:
     }
     
     # Streamlit interface
-with col2:
+
     # Input for number of locations (integer only)
     Inputs_1 = pd.DataFrame()
     inputs = pd.DataFrame()
@@ -167,7 +167,7 @@ with col2:
     preference_options = ["FCFS", "Voorkeur", "Model"]
     preference = st.selectbox("Allocatie", preference_options)
     Inputs_1.loc[0,"preference"] = preference
-    
+with col2:
     for group_name, group_vars in groups.items():
         with st.expander(group_name):
             for var in group_vars:
