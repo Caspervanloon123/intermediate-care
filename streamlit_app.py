@@ -6221,7 +6221,7 @@ if st.button('Start Simulation'):
     table3 = pd.DataFrame(output_df[table3_columns])
     table4 = pd.DataFrame(output_df[table4_columns])
     # Hernoem de kolommen
-    table1.rename(columns = {'Wt_from_HOSP_GRZ':'Ziekenhuis GRZ'})
+    table1.rename(columns = {'Wt_from_HOSP_GRZ':'Ziekenhuis GRZ'},inplace = True)
     #st.write(df1)
     st.write(table1)
     st.bar_chart(table1.T)
