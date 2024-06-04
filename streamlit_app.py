@@ -81,17 +81,17 @@ for group_name, group_vars in groups.items():
     with st.expander(group_name):
         for var in group_vars:
             inputs[var] = st.number_input(var, value=0)
-beds_input = {'high_complex': [], 'grz': [], 'shared': [],  'elv_high_complex': [], 'elv_low_complex':[], 'trw': [], 'total_elv_beds':[], 'emergency':[]}
+#beds_input = {'high_complex': [], 'grz': [], 'shared': [],  'elv_high_complex': [], 'elv_low_complex':[], 'trw': [], 'total_elv_beds':[], 'emergency':[]}
 if bed_share == "Scen_shared_beds_Full":
     for i in range(1,n_loc):
         st.number_input("Number of ELV High Complex beds location, "{i}, min_value=0, step=1, value=0, format="%d")
-elif bed_share == :
+# elif bed_share == :
 
-elif bed_share == :
+# elif bed_share == :
 
-elif bed_share == :
+# elif bed_share == :
 
-elif bed_share == :
+# elif bed_share == :
 # Button to display the dataframe
 if st.button('Display DataFrame'):
     # Convert the inputs dictionary to a DataFrame
