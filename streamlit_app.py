@@ -115,7 +115,7 @@ for group_name, group_vars in groups.items():
             inputs[var] = st.number_input(var, value=0)
 
 
-if bed_share == "Scen_shared_beds_Full":
+if bed_share == "Volledige beddeldeling":
     listofzeros = [0] * n_loc
     beds_High = []
     beds_Low = []
@@ -152,7 +152,7 @@ if bed_share == "Scen_shared_beds_Full":
 
     inputs["emergency_beds"] = beds_EMRD
 
-elif bed_share == "Scen_NO_Sharing":
+elif bed_share == "Geen beddendeling":
     listofzeros = [0] * n_loc
     beds_G = []
     beds_High = []
@@ -193,9 +193,9 @@ elif bed_share == "Scen_NO_Sharing":
     inputs["shared_nurses"] = listofzeros
     inputs["trw_nurses"] = listofzeros
     inputs["total_nurses"] = listofzeros
-
+ 
     inputs["emergency_beds"] = beds_EMRD
-elif bed_share == "Scen_Part_bed_share":
+elif bed_share == "Partiële beddendeling":
     listofzeros = [0] * n_loc
     beds_G = []
     beds_High = []
@@ -240,7 +240,7 @@ elif bed_share == "Scen_Part_bed_share":
     inputs["total_nurses"] = listofzeros
 
     inputs["emergency_beds"] = beds_EMRD
-elif bed_share == "Scen_Triage_ward":
+elif bed_share == "Observatiebedden":
     listofzeros = [0] * n_loc
     beds_G = []
     beds_High = []
@@ -285,7 +285,7 @@ elif bed_share == "Scen_Triage_ward":
     inputs["total_nurses"] = listofzeros
 
     inputs["emergency_beds"] = beds_EMRD
-elif bed_share == "Scen_Total_Sharing":
+elif bed_share == "Totale beddendeling":
     listofzeros = [0] * n_loc
     beds_Total = []
     nurs_Total = []
