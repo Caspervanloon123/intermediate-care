@@ -6197,7 +6197,27 @@ if st.button('Display DataFrame'):
     # Convert the inputs dictionary to a DataFrame
     df1 = df_tot
     output_df = simulate(df1)
+    table1_columns = ['Wait_time_ELV_High', 'Wait_time_ELV_Low', 'Wait_time_ELV_TOT', 'Wt_from_HOSP_GRZ',
+    'Wt_from_HOSP_High', 'Wt_from_GPR_High', 'Wt_from_GPR_Low', 'Wt_to_TRW', 'WT_from_EMD']
+    
+    table2_columns = ['Perc_with_HOSP_adm', 'Number with hosp adm EMD', 'Perc_with_HOSP_adm_HOSP',
+    'Number with hosp adm HOSP', 'nr_pat_repl']
+    
+    table3_columns = ['serv_level', 'nr_pat_repl', 'los_ELV_High', 'los_ELV_Low', 'bez_gr_total',
+    'bez_gr_High', 'bez_gr_Low']
+    
+    table4_columns = ['Number of Locations ELV', 'Number of beds ELV_High', 'Number of beds ELV_Low',
+    'Number of beds GRZ', 'Number of beds High Complex', 'Number of shared beds', 'Number of TRW beds', 'Number of beds ELV Total']
+    # Create tables
+    table1 = pd.DataFrame(output_df[table1_columns])
+    table2 = pd.DataFrame(output_df[table2_columns])
+    table3 = pd.DataFrame(output_df[table3_columns])
+    table4 = pd.DataFrame(output_df[table4_columns])
+    
     #st.write(df1)
-    st.write(output_df)
+    st.write(table1)
+    st.write(table2)
+    st.write(table3)
+    st.write(table4)
     
 
