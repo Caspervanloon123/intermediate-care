@@ -62,7 +62,7 @@ inputs = pd.DataFrame()  # Initialize scenario variables to False
 inputs = pd.DataFrame(columns=["n_loc", "Scen_shared_beds_Full", "Scen_Total_Sharing", "Scen_Triage_ward", "Scen_NO_Sharing", "Scen_Part_bed_share", "Priority", "Preference",
                                  "elv_high_complex_beds", "elv_low_complex_beds", "high_complex_beds", "grz_beds", "shared_beds", "trw_beds", "total_beds",
                                  "elv_high_complex_nurses", "elv_low_complex_nurses", "high_complex_nurses", "grz_nurses", "shared_nurses", "trw_nurses", "total_nurses",
-                                 "emergency_beds"])
+                                 "emergency_beds","n_loc"])
 
 # Add column names from the grouped variables
 for group_vars in groups.values():
