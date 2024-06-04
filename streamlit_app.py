@@ -139,29 +139,22 @@ if bed_share == "Volledige beddeldeling":
         "elv_low_complex_beds": [beds_Low],
         "elv_high_complex_nurses": [nurs_high],
         "elv_low_complex_nurses": [nurs_low],
-        "emergency_beds": [beds_EMRD]
+        "emergency_beds": [beds_EMRD],
+        "high_complex_beds": [0],
+        "grz_beds": [0],
+        "shared_beds": [0],
+        "trw_beds": [0],
+        "total_beds": [0],
+        "high_complex_nurses": [0],
+        "grz_nurses": [0],
+        "shared_nurses": [0],
+        "trw_nurses": [0],
+        "total_nurses": [0]
     }
     df = pd.DataFrame(data)
 
     # Concatenate the DataFrame with the existing DataFrame
     inputs = pd.concat([inputs, df], ignore_index=True)
-    # inputs.loc[0,"elv_high_complex_beds"]  = beds_High
-    # inputs.loc[0,"elv_low_complex_beds"] = beds_Low
-    # # inputs.loc[0,"high_complex_beds"] = listofzeros
-    # # inputs.loc[0,"grz_beds"] = listofzeros
-    # # inputs.loc[0,"shared_beds"] =listofzeros
-    # # inputs.loc[0,"trw_beds"] = listofzeros
-    # # inputs.loc[0,"total_beds"] = listofzeros
-    
-    # inputs.loc[0,"elv_high_complex_nurses"] = nurs_high
-    # inputs.loc[0,"elv_low_complex_nurses"] = nurs_low
-    # # inputs["high_complex_nurses"] = listofzeros
-    # # inputs["grz_nurses"] = listofzeros
-    # # inputs["shared_nurses"] = listofzeros
-    # # inputs["trw_nurses"] = listofzeros
-    # # inputs["total_nurses"] = listofzeros
-
-    # inputs["emergency_beds"] = beds_EMRD
 
 elif bed_share == "Geen beddendeling":
     listofzeros = 0
@@ -189,23 +182,27 @@ elif bed_share == "Geen beddendeling":
         nurs_high.append(nurs_High_Complex)
         beds_EMRD.append(beds_ELV_EMRD)
         
-    # inputs["elv_high_complex_beds"]  = listofzeros
-    inputs["elv_low_complex_beds"] = beds_low
-    inputs["high_complex_beds"] = beds_High
-    inputs["grz_beds"] = beds_G
-    # inputs["shared_beds"] =listofzeros
-    # inputs["trw_beds"] = listofzeros
-    # inputs["total_beds"] = listofzeros
-    
-    # inputs["elv_high_complex_nurses"] = listofzeros
-    inputs["elv_low_complex_nurses"] = nurs_low
-    inputs["high_complex_nurses"] = nurs_high
-    inputs["grz_nurses"] = nurs_G
-    # inputs["shared_nurses"] = listofzeros
-    # inputs["trw_nurses"] = listofzeros
-    # inputs["total_nurses"] = listofzeros
- 
-    inputs["emergency_beds"] = beds_EMRD
+    data = {
+        "elv_high_complex_beds": [0],
+        "elv_low_complex_beds": [beds_ELV_Low],
+        "elv_high_complex_nurses": [0],
+        "elv_low_complex_nurses": [nurs_ELV_Low],
+        "emergency_beds": [beds_ELV_EMRD],
+        "high_complex_beds": [beds_High_Complex],
+        "grz_beds": [beds_GRZ],
+        "shared_beds": [0],
+        "trw_beds": [0],
+        "total_beds": [0],
+        "high_complex_nurses": [nurs_High_Complex],
+        "grz_nurses": [nurs_GRZ],
+        "shared_nurses": [0],
+        "trw_nurses": [0],
+        "total_nurses": [0]
+    }
+    df = pd.DataFrame(data)
+
+    # Concatenate the DataFrame with the existing DataFrame
+    inputs = pd.concat([inputs, df], ignore_index=True)
 elif bed_share == "Partiële beddendeling":
     listofzeros = 0
     beds_G = []
@@ -234,23 +231,27 @@ elif bed_share == "Partiële beddendeling":
         nurs_high.append(nurs_High_Complex)
         beds_shared.append(beds_ELV_Shared)
         beds_EMRD.append(beds_ELV_EMRD)
-    # inputs["elv_high_complex_beds"]  = listofzeros
-    inputs["elv_low_complex_beds"] = beds_low
-    inputs["high_complex_beds"] = beds_High
-    inputs["grz_beds"] = beds_G
-    inputs["shared_beds"] =beds_shared
-    # inputs["trw_beds"] = listofzeros
-    # inputs["total_beds"] = listofzeros
-    
-    # inputs["elv_high_complex_nurses"] = listofzeros
-    inputs["elv_low_complex_nurses"] = nurs_low
-    inputs["high_complex_nurses"] = nurs_high
-    inputs["grz_nurses"] = nurs_G
-    # inputs["shared_nurses"] = listofzeros
-    # inputs["trw_nurses"] = listofzeros
-    # inputs["total_nurses"] = listofzeros
+    data = {
+        "elv_high_complex_beds": [0],
+        "elv_low_complex_beds": [beds_ELV_Low],
+        "elv_high_complex_nurses": [0],
+        "elv_low_complex_nurses": [nurs_ELV_Low],
+        "emergency_beds": [beds_ELV_EMRD],
+        "high_complex_beds": [beds_High_Complex],
+        "grz_beds": [beds_GRZ],
+        "shared_beds": [beds_shared],
+        "trw_beds": [0],
+        "total_beds": [0],
+        "high_complex_nurses": [nurs_High_Complex],
+        "grz_nurses": [nurs_GRZ],
+        "shared_nurses": [0],
+        "trw_nurses": [0],
+        "total_nurses": [0]
+    }
+    df = pd.DataFrame(data)
 
-    inputs["emergency_beds"] = beds_EMRD
+    # Concatenate the DataFrame with the existing DataFrame
+    inputs = pd.concat([inputs, df], ignore_index=True)
 elif bed_share == "Observatiebedden":
     listofzeros = 0
     beds_G = []
@@ -279,23 +280,27 @@ elif bed_share == "Observatiebedden":
         nurs_high.append(nurs_High_Complex)
         beds_TRW.append(beds_ELV_TRW)
         beds_EMRD.append(beds_ELV_EMRD)
-    # inputs["elv_high_complex_beds"]  = listofzeros
-    inputs["elv_low_complex_beds"] = beds_low
-    inputs["high_complex_beds"] = beds_High
-    inputs["grz_beds"] = beds_G
-    # inputs["shared_beds"] =listofzeros
-    inputs["trw_beds"] = beds_TRW
-    # inputs["total_beds"] = listofzeros
-    
-    # inputs["elv_high_complex_nurses"] = listofzeros
-    inputs["elv_low_complex_nurses"] = nurs_low
-    inputs["high_complex_nurses"] = nurs_high
-    inputs["grz_nurses"] = nurs_G
-    # inputs["shared_nurses"] = listofzeros
-    # inputs["trw_nurses"] = listofzeros
-    # inputs["total_nurses"] = listofzeros
+    data = {
+        "elv_high_complex_beds": [0],
+        "elv_low_complex_beds": [beds_ELV_Low],
+        "elv_high_complex_nurses": [0],
+        "elv_low_complex_nurses": [nurs_ELV_Low],
+        "emergency_beds": [beds_ELV_EMRD],
+        "high_complex_beds": [beds_High_Complex],
+        "grz_beds": [beds_GRZ],
+        "shared_beds": [0],
+        "trw_beds": [beds_TRW],
+        "total_beds": [0],
+        "high_complex_nurses": [nurs_High_Complex],
+        "grz_nurses": [nurs_GRZ],
+        "shared_nurses": [0],
+        "trw_nurses": [0],
+        "total_nurses": [0]
+    }
+    df = pd.DataFrame(data)
 
-    inputs["emergency_beds"] = beds_EMRD
+    # Concatenate the DataFrame with the existing DataFrame
+    inputs = pd.concat([inputs, df], ignore_index=True)
 elif bed_share == "Totale beddendeling":
     listofzeros = 0
     beds_Total = []
@@ -309,23 +314,27 @@ elif bed_share == "Totale beddendeling":
         beds_Total.append(beds_ELV_Total)
         nurs_Total.append(beds_ELV_Total) 
         beds_EMRD.append(beds_ELV_EMRD)
-    # inputs["elv_high_complex_beds"]  = listofzeros
-    # inputs["elv_low_complex_beds"] = listofzeros
-    # inputs["high_complex_beds"] = listofzeros
-    # inputs["grz_beds"] = listofzeros
-    # inputs["shared_beds"] =listofzeros
-    # inputs["trw_beds"] = listofzeros
-    inputs["total_beds"] = beds_Total
-    
-    # inputs["elv_high_complex_nurses"] = listofzeros
-    # inputs["elv_low_complex_nurses"] = listofzeros
-    # inputs["high_complex_nurses"] = listofzeros
-    # inputs["grz_nurses"] = listofzeros
-    # inputs["shared_nurses"] = listofzeros
-    # inputs["trw_nurses"] = listofzeros
-    inputs["total_nurses"] = nurs_Total
+     data = {
+        "elv_high_complex_beds": [0],
+        "elv_low_complex_beds": [0],
+        "elv_high_complex_nurses": [0],
+        "elv_low_complex_nurses": [0],
+        "emergency_beds": [beds_EMRD],
+        "high_complex_beds": [0],
+        "grz_beds": [0],
+        "shared_beds": [0],
+        "trw_beds": [0],
+        "total_beds": [beds_Total],
+        "high_complex_nurses": [0],
+        "grz_nurses": [0],
+        "shared_nurses": [0],
+        "trw_nurses": [0],
+        "total_nurses": [nurs_Total]
+    }
+    df = pd.DataFrame(data)
 
-    inputs["emergency_beds"] = beds_EMRD
+    # Concatenate the DataFrame with the existing DataFrame
+    inputs = pd.concat([inputs, df], ignore_index=True)
 # def Simulate(input):
 #     for loop_nr in range(len(input)):
 #         from datetime import datetime
