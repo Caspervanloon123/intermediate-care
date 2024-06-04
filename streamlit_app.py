@@ -83,55 +83,55 @@ for group_name, group_vars in groups.items():
             inputs[var] = st.number_input(var, value=0)
             
 
-if bed_share == "Scen_shared_beds_Full":
-    for i in range(1,n_loc):
-        st.title('Location ', i)
-        beds_ELV_High = st.number_input("Number of ELV High Complex beds location", min_value=0, step=1, value=0, format="%d")
-        nurs_ELV_High = st.number_input("Number of ELV High Complex nurses location", min_value=0, step=1, value=0, format="%d")
-        beds_ELV_Low = st.number_input("Number of ELV Low Complex beds location", min_value=0, step=1, value=0, format="%d")
-        nurs_ELV_Low = st.number_input("Number of ELV Low Complex nurses location", min_value=0, step=1, value=0, format="%d")
-        beds_ELV_EMRD = st.number_input("Number of Emergency beds", min_value=0, step=1, value=0, format="%d")
+# if bed_share == "Scen_shared_beds_Full":
+#     for i in range(1,n_loc):
+#         st.title('Location ', i)
+#         beds_ELV_High = st.number_input("Number of ELV High Complex beds location", min_value=0, step=1, value=0, format="%d")
+#         nurs_ELV_High = st.number_input("Number of ELV High Complex nurses location", min_value=0, step=1, value=0, format="%d")
+#         beds_ELV_Low = st.number_input("Number of ELV Low Complex beds location", min_value=0, step=1, value=0, format="%d")
+#         nurs_ELV_Low = st.number_input("Number of ELV Low Complex nurses location", min_value=0, step=1, value=0, format="%d")
+#         beds_ELV_EMRD = st.number_input("Number of Emergency beds", min_value=0, step=1, value=0, format="%d")
         
-elif bed_share == "Scen_NO_Sharing":
-    for i in range(1,n_loc):
-        st.title('Location ', i)
-        beds_GRZ = st.number_input("Number of GRZ beds location", min_value=0, step=1, value=0, format="%d")
-        nurs_GRZ = st.number_input("Number of GRZ nurses location", min_value=0, step=1, value=0, format="%d")
-        beds_High_Complex = st.number_input("Number of High Complex beds location", min_value=0, step=1, value=0, format="%d")
-        nurs_High_Complex = st.number_input("Number of High Complex nurses location", min_value=0, step=1, value=0, format="%d")
-        beds_ELV_Low = st.number_input("Number of ELV Low Complex beds location", min_value=0, step=1, value=0, format="%d")
-        nurs_ELV_Low = st.number_input("Number of ELV Low Complex nurses location", min_value=0, step=1, value=0, format="%d")
-        beds_ELV_EMRD = st.number_input("Number of Emergency beds", min_value=0, step=1, value=0, format="%d")
-elif bed_share == "Scen_Part_bed_share":
-    for i in range(1,n_loc):
-        st.title('Location ', i)
-        beds_GRZ = st.number_input("Number of GRZ beds location", min_value=0, step=1, value=0, format="%d")
-        nurs_GRZ = st.number_input("Number of GRZ nurses location", min_value=0, step=1, value=0, format="%d")
-        beds_High_Complex = st.number_input("Number of High Complex beds location", min_value=0, step=1, value=0, format="%d")
-        nurs_High_Complex = st.number_input("Number of High Complex nurses location", min_value=0, step=1, value=0, format="%d")
-        beds_Shared = st.number_input("Number of Shared beds location", min_value=0, step=1, value=0, format="%d")
-        beds_ELV_Low = st.number_input("Number of ELV Low Complex beds location", min_value=0, step=1, value=0, format="%d")
-        nurs_ELV_Low = st.number_input("Number of ELV Low Complex nurses location", min_value=0, step=1, value=0, format="%d")
-        beds_ELV_EMRD = st.number_input("Number of Emergency beds", min_value=0, step=1, value=0, format="%d")
+# elif bed_share == "Scen_NO_Sharing":
+#     for i in range(1,n_loc):
+#         st.title('Location ', i)
+#         beds_GRZ = st.number_input("Number of GRZ beds location", min_value=0, step=1, value=0, format="%d")
+#         nurs_GRZ = st.number_input("Number of GRZ nurses location", min_value=0, step=1, value=0, format="%d")
+#         beds_High_Complex = st.number_input("Number of High Complex beds location", min_value=0, step=1, value=0, format="%d")
+#         nurs_High_Complex = st.number_input("Number of High Complex nurses location", min_value=0, step=1, value=0, format="%d")
+#         beds_ELV_Low = st.number_input("Number of ELV Low Complex beds location", min_value=0, step=1, value=0, format="%d")
+#         nurs_ELV_Low = st.number_input("Number of ELV Low Complex nurses location", min_value=0, step=1, value=0, format="%d")
+#         beds_ELV_EMRD = st.number_input("Number of Emergency beds", min_value=0, step=1, value=0, format="%d")
+# elif bed_share == "Scen_Part_bed_share":
+#     for i in range(1,n_loc):
+#         st.title('Location ', i)
+#         beds_GRZ = st.number_input("Number of GRZ beds location", min_value=0, step=1, value=0, format="%d")
+#         nurs_GRZ = st.number_input("Number of GRZ nurses location", min_value=0, step=1, value=0, format="%d")
+#         beds_High_Complex = st.number_input("Number of High Complex beds location", min_value=0, step=1, value=0, format="%d")
+#         nurs_High_Complex = st.number_input("Number of High Complex nurses location", min_value=0, step=1, value=0, format="%d")
+#         beds_Shared = st.number_input("Number of Shared beds location", min_value=0, step=1, value=0, format="%d")
+#         beds_ELV_Low = st.number_input("Number of ELV Low Complex beds location", min_value=0, step=1, value=0, format="%d")
+#         nurs_ELV_Low = st.number_input("Number of ELV Low Complex nurses location", min_value=0, step=1, value=0, format="%d")
+#         beds_ELV_EMRD = st.number_input("Number of Emergency beds", min_value=0, step=1, value=0, format="%d")
 
-elif bed_share == "Scen_Triage_ward":
-    for i in range(1,n_loc):
-        st.title('Location ', i)
-        beds_GRZ = st.number_input("Number of GRZ beds location", min_value=0, step=1, value=0, format="%d")
-        nurs_GRZ = st.number_input("Number of GRZ nurses location", min_value=0, step=1, value=0, format="%d")
-        beds_High_Complex = st.number_input("Number of High Complex beds location", min_value=0, step=1, value=0, format="%d")
-        nurs_High_Complex = st.number_input("Number of High Complex nurses location", min_value=0, step=1, value=0, format="%d")
-        beds_TRW = st.number_input("Number of Observation beds location", min_value=0, step=1, value=0, format="%d")
-        beds_ELV_Low = st.number_input("Number of ELV Low Complex beds location", min_value=0, step=1, value=0, format="%d")
-        nurs_ELV_Low = st.number_input("Number of ELV Low Complex nurses location", min_value=0, step=1, value=0, format="%d")
-        beds_ELV_EMRD = st.number_input("Number of Emergency beds", min_value=0, step=1, value=0, format="%d")
+# elif bed_share == "Scen_Triage_ward":
+#     for i in range(1,n_loc):
+#         st.title('Location ', i)
+#         beds_GRZ = st.number_input("Number of GRZ beds location", min_value=0, step=1, value=0, format="%d")
+#         nurs_GRZ = st.number_input("Number of GRZ nurses location", min_value=0, step=1, value=0, format="%d")
+#         beds_High_Complex = st.number_input("Number of High Complex beds location", min_value=0, step=1, value=0, format="%d")
+#         nurs_High_Complex = st.number_input("Number of High Complex nurses location", min_value=0, step=1, value=0, format="%d")
+#         beds_TRW = st.number_input("Number of Observation beds location", min_value=0, step=1, value=0, format="%d")
+#         beds_ELV_Low = st.number_input("Number of ELV Low Complex beds location", min_value=0, step=1, value=0, format="%d")
+#         nurs_ELV_Low = st.number_input("Number of ELV Low Complex nurses location", min_value=0, step=1, value=0, format="%d")
+#         beds_ELV_EMRD = st.number_input("Number of Emergency beds", min_value=0, step=1, value=0, format="%d")
 
-elif bed_share == "Scen_Total_Sharing":
-    for i in range(1,n_loc):
-        st.title('Location ', i)
-        beds_ELV_Total = st.number_input("Number of Total beds location", min_value=0, step=1, value=0, format="%d")
-        nurs_ELV_Total = st.number_input("Number of Total nurses location", min_value=0, step=1, value=0, format="%d")
-        beds_ELV_EMRD = st.number_input("Number of Emergency beds", min_value=0, step=1, value=0, format="%d")
+# elif bed_share == "Scen_Total_Sharing":
+#     for i in range(1,n_loc):
+#         st.title('Location ', i)
+#         beds_ELV_Total = st.number_input("Number of Total beds location", min_value=0, step=1, value=0, format="%d")
+#         nurs_ELV_Total = st.number_input("Number of Total nurses location", min_value=0, step=1, value=0, format="%d")
+#         beds_ELV_EMRD = st.number_input("Number of Emergency beds", min_value=0, step=1, value=0, format="%d")
 
 # Button to display the dataframe
 if st.button('Display DataFrame'):
