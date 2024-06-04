@@ -62,9 +62,7 @@ inputs = pd.DataFrame()  # Initialize scenario variables to False
 
 # Streamlit interface
 st.title('Simulation Inputs')
-# Input for number of locations (integer only)
-n_loc = st.number_input("Number of Locations", min_value=0, step=1, value=0, format="%d")
-inputs.loc[1,"n_loc"] = n_loc
+
 # Dropdown menu for the scenario variables
 dropdown_var = st.selectbox("Beddeling", scenario_vars_1)
 bed_share = dropdown_var
@@ -335,6 +333,9 @@ elif bed_share == "Totale beddendeling":
 
     # Concatenate the DataFrame with the existing DataFrame
     inputs = pd.concat([inputs, df], ignore_index=True)
+# Input for number of locations (integer only)
+n_loc = st.number_input("Number of Locations", min_value=0, step=1, value=0, format="%d")
+inputs["n_loc"] = n_loc
 # def Simulate(input):
 #     for loop_nr in range(len(input)):
 #         from datetime import datetime
