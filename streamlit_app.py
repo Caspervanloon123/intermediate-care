@@ -6216,6 +6216,7 @@ if st.button('Display DataFrame'):
     
     #st.write(df1)
     st.write(table1)
+    st.bar_chart(table1)
     st.write(table2)
     st.write(table3)
     st.write(table4)
