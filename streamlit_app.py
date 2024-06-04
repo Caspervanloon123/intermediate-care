@@ -99,11 +99,11 @@ if bed_share == "Scen_shared_beds_Full":
         nurs_low.append(nurs_ELV_Low)
         nurs_high.append(nurs_ELV_High)
         beds_EMRD.append(beds_ELV_EMRD)
-    inputs["elv_high_complex_beds"]  = beds_ELV_High
-    inputs["elv_low_complex_beds"] = beds_ELV_Low
-    inputs["elv_high_complex_nurses"] = nurs_ELV_High
-    inputs["elv_low_complex_nurses"] = nurs_ELV_Low
-    inputs["emergency_beds"] = beds_ELV_EMRD
+    inputs["elv_high_complex_beds"]  = beds_High
+    inputs["elv_low_complex_beds"] = beds_Low
+    inputs["elv_high_complex_nurses"] = nurs_high
+    inputs["elv_low_complex_nurses"] = nurs_low
+    inputs["emergency_beds"] = beds_EMRD
         
 # if bed_share == "Scen_shared_beds_Full":
 #     for i in range(1,n_loc):
