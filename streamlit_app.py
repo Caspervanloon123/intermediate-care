@@ -20,7 +20,7 @@ st.markdown(page_bg_img,unsafe_allow_html = True)
 
 # st.set_page_config(layout="wide")
 st.title("ELV SIMULATIE")
-col1, col2, col3 , col4 = st.columns((2, 3, 3,3)) 
+col1, col2, col3 = st.columns((2, 3, 3)) 
 
 with col1:
     # Inject custom CSS
