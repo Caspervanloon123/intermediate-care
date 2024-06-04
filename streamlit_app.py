@@ -6215,7 +6215,7 @@ if st.button('Display DataFrame'):
     table4 = pd.DataFrame(output_df[table4_columns])
     
     #st.write(df1)
-    st.write(table1)
+    st.write(table1.T)
     st.bar_chart(table1)
     st.write(table2)
     st.write(table3)
