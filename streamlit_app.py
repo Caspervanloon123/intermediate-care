@@ -41,7 +41,7 @@ default_values = {
     "Ligduur Geriatrische Zorg naar Huis met aanpassingen": 43.9,
     "Ligduur Hoog Complex WMO": 22.9,
     "Ligduur Hoog Complex WLZ": 47.8,
-    "Ligduur Geriatrische zorg WMO": 22.9,
+    "Ligduur Geriatrische Zorg WMO": 22.9,
     "Ligduur Geriatrische Zorg WLZ": 47.8,
     "Ligduur Laag Complex naar Huis": 31.1,
     "Ligduur Laag Complex Dood": 22.9,
