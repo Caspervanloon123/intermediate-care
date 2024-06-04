@@ -480,8 +480,8 @@ def simulate(input):
         time_max_opn_ELV = input.loc[loop_nr,'Sluitingstijd ELV']/24
         ELV_start_time = input.loc[loop_nr,'Openingstijd ELV']/24
     
-        EMD_start_time = input.loc[loop_nr,'Openingstijd EMD']/24
-        EMD_end_time = input.loc[loop_nr,'Sluitingstijd EMD']/24
+        EMD_start_time = input.loc[loop_nr,'Spoedeisendehulp openingstijd']/24
+        EMD_end_time = input.loc[loop_nr,'Spoedeisendehulp sluitingstijd']/24
         GPR_start_time = input.loc[loop_nr,'Openingstijd Huisarts']/24
         GPR_end_time = input.loc[loop_nr,'Sluitingstijd Huisarts']/24
     
