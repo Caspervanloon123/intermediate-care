@@ -114,7 +114,7 @@ elif bed_share == "Scen_NO_Sharing":
     nurs_high = []
     nurs_G = []
     beds_EMRD = []
-    for i in range(0,n_loc):
+    for i in range(0, n_loc):
         st.title('Location ', i)
         beds_GRZ = st.number_input(f"Number of GRZ beds location {i+1}", min_value=0, step=1, value=0, format="%d")
         nurs_GRZ = st.number_input(f"Number of GRZ nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
@@ -146,7 +146,7 @@ elif bed_share == "Scen_Part_bed_share":
     nurs_G = []
     beds_shared = []
     beds_EMRD = []
-    for i in range(0,n_loc):
+    for i in range(0, n_loc):
         st.title('Location ', i)
         beds_GRZ = st.number_input(f"Number of GRZ beds location {i+1}", min_value=0, step=1, value=0, format="%d")
         nurs_GRZ = st.number_input(f"Number of GRZ nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
@@ -181,7 +181,7 @@ elif bed_share == "Scen_Triage_ward":
     nurs_G = []
     beds_TRW = []
     beds_EMRD = []
-    for i in range(0,n_loc):
+    for i in range(0, n_loc):
         st.title('Location ', i)
         beds_GRZ = st.number_input(f"Number of GRZ beds location {i+1}", min_value=0, step=1, value=0, format="%d")
         nurs_GRZ = st.number_input(f"Number of GRZ nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
