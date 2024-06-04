@@ -102,11 +102,13 @@ elif dropdown_var == "Geen beddendeling":
 
 
 # Checkbox for Priority
-inputs["Priority"] = st.checkbox("Priority")
+Priority = st.checkbox("Priority")
+inputs["Priority"] = Priority
 
 # Dropdown menu for Preference
 preference_options = ["FCFS", "Voorkeur", "Model"]
-inputs["Preference"] = st.selectbox("Allocatie", preference_options)
+preference =st.selectbox("Allocatie", preference_options)
+inputs["Preference"] = preference
 
 # Expanders for grouped variables
 for group_name, group_vars in groups.items():
