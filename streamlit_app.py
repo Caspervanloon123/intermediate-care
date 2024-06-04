@@ -172,7 +172,10 @@ for group_name, group_vars in groups.items():
     with st.expander(group_name):
         for var in group_vars:
             default_value = default_values[var]  # Get default value for the variable
-            Inputs_1.loc[0, var] = st.number_input(var, value=default_value)
+            if var == "Opname in het weekend":
+                Inputs_1.loc[0, var] = st.checkbox(var)
+            else:
+                Inputs_1.loc[0, var] = st.number_input(var, value=default_value)
 
  
 if bed_share == "Volledige beddeldeling":
