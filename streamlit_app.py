@@ -98,7 +98,7 @@ groups = {
     "Aankomst": ["Aankomst Hoog Complex vanuit ziekenhuis per dag", "Aankomst vanaf Huisarts Hoog Complex per dag", "Aankomst vanaf de Spoedeisendehulp per dag", "Aankomst Geriatrische Zorg in Ziekenhuis per dag", "Aankomst Laag Complexe zorg vanaf de Huisarts"],
     "Ligduur": [
         "Ligduur Hoog Complex naar Huis", "Ligduur Geriatrische Zorg naar Huis", "Ligduur Hoog Complex Dood", "Ligduur Geriatrische Zorg Dood", "Ligduur Hoog Complex naar Geriatrische Zorg",
-         "Ligduur Hoog Complex naar Huis met aanpassingen", "Ligduur Geriatrische Zorg naar Huis met aanpassingen", "Ligduur Hoog Complex WMO", "Ligduur Hoog Complex WLZ", "Ligduur Geriatrische zorg WMO",
+         "Ligduur Hoog Complex naar Huis met aanpassingen", "Ligduur Geriatrische Zorg naar Huis met aanpassingen", "Ligduur Hoog Complex WMO", "Ligduur Hoog Complex WLZ", "Ligduur Geriatrische Zorg WMO",
         "Ligduur Geriatrische Zorg WLZ", "Ligduur Laag Complex naar Huis", "Ligduur Laag Complex Dood", "Ligduur Laag Complex Geriatrische Zorg", "Ligduur Laag Complex naar Huis met aanpassingen", "Ligduur Laag Complex WMO",
         "Ligduur Laag Complex WLZ"
     ],
