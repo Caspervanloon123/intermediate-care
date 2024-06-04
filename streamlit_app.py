@@ -59,19 +59,6 @@ groups = {
 
 # Dictionary to store the inputs
 inputs = pd.DataFrame()  # Initialize scenario variables to False
-inputs = pd.DataFrame(columns=["n_loc", "Scen_shared_beds_Full", "Scen_Total_Sharing", "Scen_Triage_ward", "Scen_NO_Sharing", "Scen_Part_bed_share", "Priority", "Preference",
-                                 "elv_high_complex_beds", "elv_low_complex_beds", "high_complex_beds", "grz_beds", "shared_beds", "trw_beds", "total_beds",
-                                 "elv_high_complex_nurses", "elv_low_complex_nurses", "high_complex_nurses", "grz_nurses", "shared_nurses", "trw_nurses", "total_nurses",
-                                 "emergency_beds","n_loc","Aankomst Hoog Complex vanuit ziekenhuis per dag", "Aankomst vanaf Huisarts Hoog Complex per dag", "Aankomst vanaf de Spoedeisendehulp per dag", "Aankomst Geriatrische Zorg in Ziekenhuis per dag", "Aankomst Laag Complexe zorg vanaf de Huisarts",
-                              "Ligduur Hoog Complex naar Huis", "Ligduur Geriatrische Zorg naar Huis", "Ligduur Hoog Complex Dood", "Ligduur Geriatrische Zorg Dood", "Ligduur Hoog Complex naar Geriatrische Zorg",
-         "Ligduur Hoog Complex naar Huis met aanpassingen", "Ligduur Geriatrische Zorg naar Huis met aanpassingen", "Ligduur Hoog Complex WMO", "Ligduur Hoog Complex WLZ", "Ligduur Geriatrische zorg WMO",
-        "Ligduur Geriatrische Zorg WLZ", "Ligduur Laag Complex naar Huis", "Ligduur Laag Complex Dood", "Ligduur Laag Complex Geriatrische Zorg", "Ligduur Laag Complex naar Huis met aanpassingen", "Ligduur Laag Complex WMO",
-        "Ligduur Laag Complex WLZ", "Percentage Hoog Complex naar Huis", "Percentage Geriatrische Zorg naar Huis", "Percentage Hoog Complex Dood", "Percentage Geriatrische Zorg Dood", "Percentage Hoog Complex WMO", "Percentage Geriatrische Zorg WMO",
-        "Percentage Hoog Complex WLZ", "Percentage Geriatrische Zorg WLZ", "Percentage Hoog Complex naar Geriatrische Zorg", "Percentage Hoog Complex naar Huis met aanpassingen", "Percentage Geriatrische Zorg naar Huis met aanpassingen",
-        "Percentage Laag Complex naar Huis", "Percentage Laag Complex Dood", "Percentage Laag Complex WMO", "Percentage Laag Complex WLZ", "Percentage Laag Complex naar Geriatrische Zorg", "Percentage Laag Complex naar Huis met aanpassingen",
-                              "Opening_weekday", "Spoedeisendehulp openingstijd", "Spoedeisendehulp sluitingstijd", "Openingstijd Huisarts",
-        "Sluittijd Huisarts", "Opname in het weekend", "Openingstijd ELV", "Sluitingstijd ELV",
-                              "Aantal patienten per verpleegkundige", "Transfertijd", "Maximaal aantal dagen observatie", "Aantal subruns", "Aantal patienten per subrun", "Aantal patienten voor warming"])
 
 # Streamlit interface
 st.title('Simulation Inputs')
@@ -82,40 +69,40 @@ inputs["n_loc"] = n_loc
 dropdown_var = st.selectbox("Beddeling", scenario_vars_1)
 bed_share = dropdown_var
 if dropdown_var == "Volledige beddeldeling":
-    inputs["Scen_shared_beds_Full"] = True
-    inputs["Scen_Total_Sharing"] = False
-    inputs["Scen_Triage_ward"] = False
-    inputs["Scen_NO_Sharing"] = False
-    inputs["Scen_Part_bed_share"] = False
+    inputs["Scen_shared_beds_Full"] == True
+    inputs["Scen_Total_Sharing"] == False
+    inputs["Scen_Triage_ward"] == False
+    inputs["Scen_NO_Sharing"] == False
+    inputs["Scen_Part_bed_share"] == False
 elif dropdown_var == "Totale beddendeling":
-    inputs["Scen_shared_beds_Full"] = False
-    inputs["Scen_Total_Sharing"] = True
-    inputs["Scen_Triage_ward"] = False
-    inputs["Scen_NO_Sharing"] = False
-    inputs["Scen_Part_bed_share"] = False
+    inputs["Scen_shared_beds_Full"] == False
+    inputs["Scen_Total_Sharing"] == True
+    inputs["Scen_Triage_ward"] == False
+    inputs["Scen_NO_Sharing"] == False
+    inputs["Scen_Part_bed_share"] == False
 elif dropdown_var == "Observatiebedden":
-    inputs["Scen_shared_beds_Full"] = False
-    inputs["Scen_Total_Sharing"] = False
-    inputs["Scen_Triage_ward"] = True
-    inputs["Scen_NO_Sharing"] = True
-    inputs["Scen_Part_bed_share"] = False
+    inputs["Scen_shared_beds_Full"] == False
+    inputs["Scen_Total_Sharing"] == False
+    inputs["Scen_Triage_ward"] == True
+    inputs["Scen_NO_Sharing"] == True
+    inputs["Scen_Part_bed_share"] == False
 elif dropdown_var == "Partiële beddendeling":
-    inputs["Scen_shared_beds_Full"] = False
-    inputs["Scen_Total_Sharing"] = False
-    inputs["Scen_Triage_ward"] = False
-    inputs["Scen_NO_Sharing"] = False
-    inputs["Scen_Part_bed_share"] = True
+    inputs["Scen_shared_beds_Full"] == False
+    inputs["Scen_Total_Sharing"] == False
+    inputs["Scen_Triage_ward"] == False
+    inputs["Scen_NO_Sharing"] == False
+    inputs["Scen_Part_bed_share"] == True
 elif dropdown_var == "Geen beddendeling":
-    inputs["Scen_shared_beds_Full"] = False
-    inputs["Scen_Total_Sharing"] = False
-    inputs["Scen_Triage_ward"] = False
-    inputs["Scen_NO_Sharing"] = True
-    inputs["Scen_Part_bed_share"] = False
+    inputs["Scen_shared_beds_Full"] == False
+    inputs["Scen_Total_Sharing"] == False
+    inputs["Scen_Triage_ward"] == False
+    inputs["Scen_NO_Sharing"] == True
+    inputs["Scen_Part_bed_share"] == False
 
 
 
 # Checkbox for Priority
-inputs["Priority"] = st.checkbox("Prioriteit")
+inputs["Priority"] = st.checkbox("Priority")
 
 # Dropdown menu for Preference
 preference_options = ["FCFS", "Voorkeur", "Model"]
@@ -128,7 +115,7 @@ for group_name, group_vars in groups.items():
             inputs[var] = st.number_input(var, value=0)
 
 
-if bed_share == "Volledige beddeldeling":
+if bed_share == "Scen_shared_beds_Full":
     listofzeros = [0] * n_loc
     beds_High = []
     beds_Low = []
@@ -165,7 +152,7 @@ if bed_share == "Volledige beddeldeling":
 
     inputs["emergency_beds"] = beds_EMRD
 
-elif bed_share == "Geen beddendeling":
+elif bed_share == "Scen_NO_Sharing":
     listofzeros = [0] * n_loc
     beds_G = []
     beds_High = []
@@ -208,7 +195,7 @@ elif bed_share == "Geen beddendeling":
     inputs["total_nurses"] = listofzeros
 
     inputs["emergency_beds"] = beds_EMRD
-elif bed_share == "Partiële beddendeling":
+elif bed_share == "Scen_Part_bed_share":
     listofzeros = [0] * n_loc
     beds_G = []
     beds_High = []
@@ -253,7 +240,7 @@ elif bed_share == "Partiële beddendeling":
     inputs["total_nurses"] = listofzeros
 
     inputs["emergency_beds"] = beds_EMRD
-elif bed_share == "Observatiebedden":
+elif bed_share == "Scen_Triage_ward":
     listofzeros = [0] * n_loc
     beds_G = []
     beds_High = []
@@ -298,7 +285,7 @@ elif bed_share == "Observatiebedden":
     inputs["total_nurses"] = listofzeros
 
     inputs["emergency_beds"] = beds_EMRD
-elif bed_share == "Totale beddendeling":
+elif bed_share == "Scen_Total_Sharing":
     listofzeros = [0] * n_loc
     beds_Total = []
     nurs_Total = []
