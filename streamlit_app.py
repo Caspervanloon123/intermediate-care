@@ -84,16 +84,21 @@ for group_name, group_vars in groups.items():
 #beds_input = {'high_complex': [], 'grz': [], 'shared': [],  'elv_high_complex': [], 'elv_low_complex':[], 'trw': [], 'total_elv_beds':[], 'emergency':[]}
 if bed_share == "Scen_shared_beds_Full":
     for i in range(1,n_loc):
+        st.title('Location ', i)
         beds_ELV_High = st.number_input("Number of ELV High Complex beds location", min_value=0, step=1, value=0, format="%d")
+        nurs_ELV_High = st.number_input("Number of ELV High Complex nurses location", min_value=0, step=1, value=0, format="%d")
         beds_ELV_Low = st.number_input("Number of ELV Low Complex beds location", min_value=0, step=1, value=0, format="%d")
+        nurs_ELV_Low = st.number_input("Number of ELV Low Complex nurses location", min_value=0, step=1, value=0, format="%d")
         beds_ELV_EMRD = st.number_input("Number of Emergency beds", min_value=0, step=1, value=0, format="%d")
-# elif bed_share == :
+        
+# elif bed_share == "Scen_NO_Sharing":
 
-# elif bed_share == :
+# elif bed_share == "Scen_Part_bed_share":
 
-# elif bed_share == :
+# elif bed_share == "Scen_Triage_ward":
 
-# elif bed_share == :
+# elif bed_share == "Scen_Total_Sharing":
+
 # Button to display the dataframe
 if st.button('Display DataFrame'):
     # Convert the inputs dictionary to a DataFrame
