@@ -69,35 +69,35 @@ inputs["n_loc"] = n_loc
 dropdown_var = st.selectbox("Beddeling", scenario_vars_1)
 bed_share = dropdown_var
 if dropdown_var == "Volledige beddeldeling":
-    inputs["Scen_shared_beds_Full"] == True
-    inputs["Scen_Total_Sharing"] == False
-    inputs["Scen_Triage_ward"] == False
-    inputs["Scen_NO_Sharing"] == False
-    inputs["Scen_Part_bed_share"] == False
+    inputs["Scen_shared_beds_Full"] = True
+    inputs["Scen_Total_Sharing"] = False
+    inputs["Scen_Triage_ward"] = False
+    inputs["Scen_NO_Sharing"] = False
+    inputs["Scen_Part_bed_share"] = False
 elif dropdown_var == "Totale beddendeling":
-    inputs["Scen_shared_beds_Full"] == False
-    inputs["Scen_Total_Sharing"] == True
-    inputs["Scen_Triage_ward"] == False
-    inputs["Scen_NO_Sharing"] == False
-    inputs["Scen_Part_bed_share"] == False
+    inputs["Scen_shared_beds_Full"] = False
+    inputs["Scen_Total_Sharing"] = True
+    inputs["Scen_Triage_ward"] = False
+    inputs["Scen_NO_Sharing"] = False
+    inputs["Scen_Part_bed_share"] = False
 elif dropdown_var == "Observatiebedden":
-    inputs["Scen_shared_beds_Full"] == False
-    inputs["Scen_Total_Sharing"] == False
-    inputs["Scen_Triage_ward"] == True
-    inputs["Scen_NO_Sharing"] == True
-    inputs["Scen_Part_bed_share"] == False
+    inputs["Scen_shared_beds_Full"] = False
+    inputs["Scen_Total_Sharing"] = False
+    inputs["Scen_Triage_ward"] = True
+    inputs["Scen_NO_Sharing"] = True
+    inputs["Scen_Part_bed_share"] = False
 elif dropdown_var == "Partiële beddendeling":
-    inputs["Scen_shared_beds_Full"] == False
-    inputs["Scen_Total_Sharing"] == False
-    inputs["Scen_Triage_ward"] == False
-    inputs["Scen_NO_Sharing"] == False
-    inputs["Scen_Part_bed_share"] == True
+    inputs["Scen_shared_beds_Full"] = False
+    inputs["Scen_Total_Sharing"] = False
+    inputs["Scen_Triage_ward"] = False
+    inputs["Scen_NO_Sharing"] = False
+    inputs["Scen_Part_bed_share"]= True
 elif dropdown_var == "Geen beddendeling":
-    inputs["Scen_shared_beds_Full"] == False
-    inputs["Scen_Total_Sharing"] == False
-    inputs["Scen_Triage_ward"] == False
-    inputs["Scen_NO_Sharing"] == True
-    inputs["Scen_Part_bed_share"] == False
+    inputs["Scen_shared_beds_Full"] = False
+    inputs["Scen_Total_Sharing"] = False
+    inputs["Scen_Triage_ward"] = False
+    inputs["Scen_NO_Sharing"] = True
+    inputs["Scen_Part_bed_share"] = False
 
 
 
