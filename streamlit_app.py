@@ -70,35 +70,35 @@ inputs["n_loc"] = n_loc
 dropdown_var = st.selectbox("Beddeling", scenario_vars_1)
 bed_share = dropdown_var
 if dropdown_var == "Volledige beddeldeling":
-    inputs.loc[0,"Scen_shared_beds_Full"] == True
-    inputs.loc[0,"Scen_Total_Sharing"] == False
-    inputs.loc[0,"Scen_Triage_ward"] == False
-    inputs.loc[0,"Scen_NO_Sharing"] == False
-    inputs.loc[0,"Scen_Part_bed_share"] == False
+    inputs.loc[0,"Scen_shared_beds_Full"] = True
+    inputs.loc[0,"Scen_Total_Sharing"] = False
+    inputs.loc[0,"Scen_Triage_ward"] = False
+    inputs.loc[0,"Scen_NO_Sharing"] = False
+    inputs.loc[0,"Scen_Part_bed_share"] = False
 elif dropdown_var == "Totale beddendeling":
-    inputs.loc[0,"Scen_shared_beds_Full"] == False
-    inputs.loc[0,"Scen_Total_Sharing"] == True
-    inputs.loc[0,"Scen_Triage_ward"] == False
-    inputs.loc[0,"Scen_NO_Sharing"] == False
-    inputs.loc[0,"Scen_Part_bed_share"] == False
+    inputs.loc[0,"Scen_shared_beds_Full"] = False
+    inputs.loc[0,"Scen_Total_Sharing"] = True
+    inputs.loc[0,"Scen_Triage_ward"] = False
+    inputs.loc[0,"Scen_NO_Sharing"] = False
+    inputs.loc[0,"Scen_Part_bed_share"] = False
 elif dropdown_var == "Observatiebedden":
-    inputs.loc[0,"Scen_shared_beds_Full"] == False
-    inputs.loc[0,"Scen_Total_Sharing"] == False
-    inputs.loc[0,"Scen_Triage_ward"] == True
-    inputs.loc[0,"Scen_NO_Sharing"] == True
-    inputs.loc[0,"Scen_Part_bed_share"] == False
+    inputs.loc[0,"Scen_shared_beds_Full"] = False
+    inputs.loc[0,"Scen_Total_Sharing"] = False
+    inputs.loc[0,"Scen_Triage_ward"] = True
+    inputs.loc[0,"Scen_NO_Sharing"] = True
+    inputs.loc[0,"Scen_Part_bed_share"] = False
 elif dropdown_var == "Partiële beddendeling":
-    inputs.loc[0,"Scen_shared_beds_Full"] == False
-    inputs.loc[0,"Scen_Total_Sharing"] == False
-    inputs.loc[0,"Scen_Triage_ward"] == False
-    inputs.loc[0,"Scen_NO_Sharing"] == False
-    inputs.loc[0,"Scen_Part_bed_share"] == True
+    inputs.loc[0,"Scen_shared_beds_Full"] = False
+    inputs.loc[0,"Scen_Total_Sharing"] = False
+    inputs.loc[0,"Scen_Triage_ward"] = False
+    inputs.loc[0,"Scen_NO_Sharing"] = False
+    inputs.loc[0,"Scen_Part_bed_share"] = True
 elif dropdown_var == "Geen beddendeling":
-    inputs.loc[0,"Scen_shared_beds_Full"] == False
-    inputs.loc[0,"Scen_Total_Sharing"] == False
-    inputs.loc[0,"Scen_Triage_ward"] == False
-    inputs.loc[0,"Scen_NO_Sharing"] == True
-    inputs.loc[0,"Scen_Part_bed_share"] == False
+    inputs.loc[0,"Scen_shared_beds_Full"] = False
+    inputs.loc[0,"Scen_Total_Sharing"] = False
+    inputs.loc[0,"Scen_Triage_ward"] = False
+    inputs.loc[0,"Scen_NO_Sharing"] = True
+    inputs.loc[0,"Scen_Part_bed_share"] = False
 
 
 
