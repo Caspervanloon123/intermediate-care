@@ -2,16 +2,17 @@
 import streamlit as st 
 import pandas as pd
 
-page_bg_img = ""
+page_bg_img = """
 <style>
 [data-testid="header-permalink-button"]{
-background-color: #f7ebe6;
-opacity: 0.8;
-background-image: radial-gradient(#f74567 0.5px, #f7ebe6 0.5px);
+background-color: #f7e6e6;
+opacity: 1;
+background-size: 4px 4px;
+background-image: repeating-linear-gradient(45deg, #f79b45 0, #f79b45 0.4px, #f7e6e6 0, #f7e6e6 50%);
 
 }
 </style> 
-""
+"""
 st.markdown(page_bg_img,unsafe_allow_html = True)
 
 # st.set_page_config(layout="wide")
