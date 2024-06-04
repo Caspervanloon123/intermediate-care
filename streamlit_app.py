@@ -3,9 +3,10 @@ import streamlit as st
 import pandas as pd
 
 
-#col1, col2, col3 = st.columns((2, 3, 3)) 
 
 st.set_page_config(layout="wide")
+col1, col2, col3 = st.columns((2, 3, 3)) 
+
 # Inject custom CSS
 st.markdown("""
     <style>
