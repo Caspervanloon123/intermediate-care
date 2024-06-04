@@ -474,7 +474,7 @@ def simulate(input):
         serv_GRZV_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex Geriatrische Zorg']
         serv_Pall_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex naar Huis met aanpassingen']
         serv_WMO_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex WMO']
-        serv_WLZ_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex care WLZ']
+        serv_WLZ_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex WLZ']
     
         
         time_max_opn_ELV = input.loc[loop_nr,'Sluitingstijd ELV']/24
