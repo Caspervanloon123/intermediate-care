@@ -58,7 +58,7 @@ groups = {
 }
 
 # Dictionary to store the inputs
-inputs = Pd.DataFrame()  # Initialize scenario variables to False
+inputs = pd.DataFrame()  # Initialize scenario variables to False
 
 # Streamlit interface
 st.title('Simulation Inputs')
