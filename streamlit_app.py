@@ -88,8 +88,13 @@ if bed_share == "Scen_shared_beds_Full":
         nurs_ELV_High = st.number_input(f"Number of ELV High Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
         beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
         nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
-        beds_ELV_EMRD = st.number_input(f"Number of Emergency beds {i+1}", min_value=0, step=1, value=0, format="%d")             
-
+        beds_ELV_EMRD = st.number_input(f"Number of Emergency beds location {i+1}", min_value=0, step=1, value=0, format="%d")             
+    inputs["elv_high_complex_beds"]  = beds_ELV_High
+    inputs["elv_low_complex_beds"] = beds_ELV_Low
+    inputs["elv_high_complex_nurses"] = nurs_ELV_High
+    inputs["elv_low_complex_nurses"] = nurs_ELV_Low
+    inputs["emergency_beds"] = beds_ELV_EMRD
+        
 # if bed_share == "Scen_shared_beds_Full":
 #     for i in range(1,n_loc):
 #         st.title('Location ', i)
