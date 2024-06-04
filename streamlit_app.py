@@ -85,9 +85,6 @@ with col1:
     }
     
     
-    # Titel van de applicatie
-    st.title("ELV SIMULATIE")
-with col2:
     # List of scenario variables
     scenario_vars_1 = [
         "Volledige beddeldeling", "Geen beddendeling", "Partiële beddendeling", "Observatiebedden", "Totale beddendeling"
@@ -120,7 +117,7 @@ with col2:
     }
     
     # Streamlit interface
-    
+with col2:
     # Input for number of locations (integer only)
     Inputs_1 = pd.DataFrame()
     inputs = pd.DataFrame()
