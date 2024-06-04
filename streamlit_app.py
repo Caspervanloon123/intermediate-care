@@ -8,7 +8,7 @@ page_bg_img = """
 background-color: #f7ebe6;
 opacity: 0.8;
 background-image: radial-gradient(#f74567 0.5px, #f7ebe6 0.5px);
-background-size: 10px 10px;
+
 }
 </style> 
 """
