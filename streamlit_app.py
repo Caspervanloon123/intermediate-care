@@ -6263,7 +6263,7 @@ with col3:
         #st.write(df1)
         #with col3:
         st.write(table1.T)
-        st.bar_chart(table1.T, y = 'Wachttijd (dagen)')
+        st.bar_chart(table1.T, y = 'Wachttijd (dagen)',use_container_width = True)
         st.write(table2.T)
         st.write(table3.T)
         st.write(table4.T)
