@@ -134,16 +134,16 @@ if bed_share == "Volledige beddeldeling":
         nurs_low.append(nurs_ELV_Low)
         nurs_high.append(nurs_ELV_High)
         beds_EMRD.append(beds_ELV_EMRD)
-    inputs["elv_high_complex_beds"]  = beds_High
-    inputs["elv_low_complex_beds"] = beds_Low
-    # inputs["high_complex_beds"] = listofzeros
-    # inputs["grz_beds"] = listofzeros
-    # inputs["shared_beds"] =listofzeros
-    # inputs["trw_beds"] = listofzeros
-    # inputs["total_beds"] = listofzeros
+    inputs.loc[0,"elv_high_complex_beds"]  = beds_High
+    inputs.loc[0,"elv_low_complex_beds"] = beds_Low
+    # inputs.loc[0,"high_complex_beds"] = listofzeros
+    # inputs.loc[0,"grz_beds"] = listofzeros
+    # inputs.loc[0,"shared_beds"] =listofzeros
+    # inputs.loc[0,"trw_beds"] = listofzeros
+    # inputs.loc[0,"total_beds"] = listofzeros
     
-    inputs["elv_high_complex_nurses"] = nurs_high
-    inputs["elv_low_complex_nurses"] = nurs_low
+    inputs.loc[0,"elv_high_complex_nurses"] = nurs_high
+    inputs.loc[0,"elv_low_complex_nurses"] = nurs_low
     # inputs["high_complex_nurses"] = listofzeros
     # inputs["grz_nurses"] = listofzeros
     # inputs["shared_nurses"] = listofzeros
