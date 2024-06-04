@@ -471,7 +471,7 @@ def simulate(input):
         serv_Home_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex naar Huis']
         serv_Dead_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex Dood']
         
-        serv_GRZV_Low = 1/input.loc[loop_nr,'Ligduur Laag complex naar Geriatrische Zorg']
+        serv_GRZV_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex naar Geriatrische Zorg']
         serv_Pall_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex naar Huis met aanpassingen']
         serv_WMO_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex WMO']
         serv_WLZ_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex care WLZ']
