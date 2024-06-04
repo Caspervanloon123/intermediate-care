@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 
 
-col1, col2, col3 = st.columns((2, 3, 3)) 
+#col1, col2, col3 = st.columns((2, 3, 3)) 
 
 st.set_page_config(layout="wide")
 # Inject custom CSS
