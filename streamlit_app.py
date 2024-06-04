@@ -147,7 +147,7 @@ if bed_share == "Scen_shared_beds_Full":
 
 
 def simulate(df1):
-    print("hallo")
+    return 1
 
 # Button to display the dataframe
 if st.button('Display DataFrame'):
