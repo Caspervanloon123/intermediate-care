@@ -4,14 +4,17 @@ import pandas as pd
 
 page_bg_img = """
 <style>
-[data-testid="header-permalink-button"]{
-background-color: #f7e6e6;
-opacity: 1;
-background-size: 4px 4px;
-background-image: repeating-linear-gradient(45deg, #f79b45 0, #f79b45 0.4px, #f7e6e6 0, #f7e6e6 50%);
-
-}
-</style> 
+[data-testid="header-permalink-button"]> .main {{
+background-image: url("https://i.postimg.cc/4xgNnkfX/Untitled-design.png");
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: local;
+}}
+[data-testid="stHeader"] {{
+background: rgba(0,0,0,0);
+}}
+</style>
 """
 st.markdown(page_bg_img,unsafe_allow_html = True)
 
