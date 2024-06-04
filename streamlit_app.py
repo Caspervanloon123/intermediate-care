@@ -6,6 +6,7 @@ import pandas as pd
 
 st.set_page_config(layout="wide")
 col1, col2, col3 = st.columns((2, 3, 3)) 
+st.title("ELV SIMULATIE")
 with col1:
     # Inject custom CSS
     st.markdown("""
@@ -86,7 +87,7 @@ with col1:
     
     # Titel van de applicatie
     st.title("ELV SIMULATIE")
-    #with col1:
+with col2:
     # List of scenario variables
     scenario_vars_1 = [
         "Volledige beddeldeling", "Geen beddendeling", "Partiële beddendeling", "Observatiebedden", "Totale beddendeling"
