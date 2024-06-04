@@ -59,7 +59,7 @@ groups = {
 
 # Dictionary to store the inputs
 inputs = pd.DataFrame()  # Initialize scenario variables to False
-inputs.loc[0] = None
+inputs = pd.DataFrame(columns=["Scen_shared_beds_Full", "Scen_Total_Sharing", "Scen_Triage_ward", "Scen_NO_Sharing", "Scen_Part_bed_share"])
 
 # Streamlit interface
 st.title('Simulation Inputs')
