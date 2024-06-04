@@ -7,7 +7,7 @@ import pandas as pd
 # [data-testid="header-permalink-button"]> .main {{ 
 # background-image: url("https://i.postimg.cc/4xgNnkfX/Untitled-design.png");
 # background-size: cover;
-# background-position: center center;
+# background-position: center center; 
 # background-repeat: no-repeat;
 # background-attachment: local; 
 # }}
