@@ -134,23 +134,34 @@ if bed_share == "Volledige beddeldeling":
         nurs_low.append(nurs_ELV_Low)
         nurs_high.append(nurs_ELV_High)
         beds_EMRD.append(beds_ELV_EMRD)
-    inputs.loc[0,"elv_high_complex_beds"]  = beds_High
-    inputs.loc[0,"elv_low_complex_beds"] = beds_Low
-    # inputs.loc[0,"high_complex_beds"] = listofzeros
-    # inputs.loc[0,"grz_beds"] = listofzeros
-    # inputs.loc[0,"shared_beds"] =listofzeros
-    # inputs.loc[0,"trw_beds"] = listofzeros
-    # inputs.loc[0,"total_beds"] = listofzeros
-    
-    inputs.loc[0,"elv_high_complex_nurses"] = nurs_high
-    inputs.loc[0,"elv_low_complex_nurses"] = nurs_low
-    # inputs["high_complex_nurses"] = listofzeros
-    # inputs["grz_nurses"] = listofzeros
-    # inputs["shared_nurses"] = listofzeros
-    # inputs["trw_nurses"] = listofzeros
-    # inputs["total_nurses"] = listofzeros
+    data = {
+        "elv_high_complex_beds": [beds_High],
+        "elv_low_complex_beds": [beds_Low],
+        "elv_high_complex_nurses": [nurs_high],
+        "elv_low_complex_nurses": [nurs_low],
+        "emergency_beds": [beds_EMRD]
+    }
+    df = pd.DataFrame(data)
 
-    inputs["emergency_beds"] = beds_EMRD
+    # Concatenate the DataFrame with the existing DataFrame
+    inputs = pd.concat([inputs, df], ignore_index=True)
+    # inputs.loc[0,"elv_high_complex_beds"]  = beds_High
+    # inputs.loc[0,"elv_low_complex_beds"] = beds_Low
+    # # inputs.loc[0,"high_complex_beds"] = listofzeros
+    # # inputs.loc[0,"grz_beds"] = listofzeros
+    # # inputs.loc[0,"shared_beds"] =listofzeros
+    # # inputs.loc[0,"trw_beds"] = listofzeros
+    # # inputs.loc[0,"total_beds"] = listofzeros
+    
+    # inputs.loc[0,"elv_high_complex_nurses"] = nurs_high
+    # inputs.loc[0,"elv_low_complex_nurses"] = nurs_low
+    # # inputs["high_complex_nurses"] = listofzeros
+    # # inputs["grz_nurses"] = listofzeros
+    # # inputs["shared_nurses"] = listofzeros
+    # # inputs["trw_nurses"] = listofzeros
+    # # inputs["total_nurses"] = listofzeros
+
+    # inputs["emergency_beds"] = beds_EMRD
 
 elif bed_share == "Geen beddendeling":
     listofzeros = 0
