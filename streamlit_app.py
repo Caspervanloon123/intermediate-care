@@ -177,6 +177,7 @@ with col1:
                     Inputs_1.loc[0, var] = st.checkbox(var)
                 else:
                     Inputs_1.loc[0, var] = st.number_input(var, value=default_value)
+    st.button('Start Simulation')
 with col2:
     # with col2:
     if bed_share == "Volledige beddeldeling":
