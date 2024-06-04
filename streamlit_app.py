@@ -173,7 +173,7 @@ for group_name, group_vars in groups.items():
     with st.expander(group_name):
         for var in group_vars:
             default_value = default_values[var]  # Get default value for the variable
-            Inputs_1.loc[0, var] = st.number_input(var,min_value = 0.0,step = 1.0, value=default_value, format="%f")
+            Inputs_1.loc[0, var] = st.number_input(var, value=default_value, format="%f")
 
  
 if bed_share == "Volledige beddeldeling":
