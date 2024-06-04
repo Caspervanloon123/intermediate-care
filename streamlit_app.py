@@ -6228,9 +6228,6 @@ if st.button('Start Simulation'):
     table4.rename(columns = {'Number of Locations ELV':'Aantal ELV Locaties', 'Number of beds ELV_High':'Aantal ELV Hoog Complex bedden', 'Number of beds ELV_Low':'Aantal ELV Laag Complex bedden',
     'Number of beds GRZ':'Aantal bedden Geriatrische Zorg', 'Number of beds High Complex':'Aantal Hoog Complexe bedden', 'Number of shared beds':'Aantal gedeelde bedden', 'Number of TRW beds':'Aantal bedden voor observatie', 'Number of beds ELV Total':'Aantal bedden ELV Totaal'},inplace =True)
     #st.write(df1)
-    bar = st.progress(50)
-    time.sleep(3)
-    bar.progress(100)
     st.write(table1)
     st.bar_chart(table1.T)
     st.write(table2)
