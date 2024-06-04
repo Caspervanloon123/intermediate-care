@@ -59,6 +59,7 @@ groups = {
 
 # Dictionary to store the inputs
 inputs = pd.DataFrame()  # Initialize scenario variables to False
+inputs.loc[0] = None
 
 # Streamlit interface
 st.title('Simulation Inputs')
