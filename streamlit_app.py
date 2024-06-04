@@ -3,6 +3,7 @@ import streamlit as st
 import pandas as pd
 
 
+col1, col2, col3, col4 = st.beta_columns((2,1,1,1))
 
 st.set_page_config(layout="wide")
 # Inject custom CSS
@@ -84,322 +85,322 @@ default_values = {
 
 # Titel van de applicatie
 st.title("ELV SIMULATIE")
-
-# List of scenario variables
-scenario_vars_1 = [
-    "Volledige beddeldeling", "Geen beddendeling", "Partiële beddendeling", "Observatiebedden", "Totale beddendeling"
-]
-scenario_vars = [
-    "Scen_shared_beds_Full","Scen_Total_Sharing","Scen_Triage_ward","Scen_NO_Sharing","Scen_Part_bed_share"
-]
-
-# Grouped variables
-groups = {
-    "Aankomst": ["Aankomst Hoog Complex vanuit ziekenhuis per dag", "Aankomst vanaf Huisarts Hoog Complex per dag", "Aankomst vanaf de Spoedeisendehulp per dag", "Aankomst Geriatrische Zorg in Ziekenhuis per dag", "Aankomst Laag Complexe zorg vanaf de Huisarts"],
-    "Ligduur": [
-        "Ligduur Hoog Complex naar Huis", "Ligduur Geriatrische Zorg naar Huis", "Ligduur Hoog Complex Dood", "Ligduur Geriatrische Zorg Dood", "Ligduur Hoog Complex naar Geriatrische Zorg",
-         "Ligduur Hoog Complex naar Huis met aanpassingen", "Ligduur Geriatrische Zorg naar Huis met aanpassingen", "Ligduur Hoog Complex WMO", "Ligduur Hoog Complex WLZ", "Ligduur Geriatrische Zorg WMO",
-        "Ligduur Geriatrische Zorg WLZ", "Ligduur Laag Complex naar Huis", "Ligduur Laag Complex Dood", "Ligduur Laag Complex Geriatrische Zorg", "Ligduur Laag Complex naar Huis met aanpassingen", "Ligduur Laag Complex WMO",
-        "Ligduur Laag Complex WLZ"
-    ],
-    "Uitstroomkansen": [
-        "Percentage Hoog Complex naar Huis", "Percentage Geriatrische Zorg naar Huis", "Percentage Hoog Complex Dood", "Percentage Geriatrische Zorg Dood", "Percentage Hoog Complex WMO", "Percentage Geriatrische Zorg WMO",
-        "Percentage Hoog Complex WLZ", "Percentage Geriatrische Zorg WLZ", "Percentage Hoog Complex naar Geriatrische Zorg", "Percentage Hoog Complex naar Huis met aanpassingen", "Percentage Geriatrische Zorg naar Huis met aanpassingen",
-        "Percentage Laag Complex naar Huis", "Percentage Laag Complex Dood", "Percentage Laag Complex WMO", "Percentage Laag Complex WLZ", "Percentage Laag Complex naar Geriatrische Zorg", "Percentage Laag Complex naar Huis met aanpassingen"
-    ],
-    "Openingstijden": [
-        "Spoedeisendehulp openingstijd", "Spoedeisendehulp sluitingstijd", "Openingstijd Huisarts",
-        "Sluittijd Huisarts", "Opname in het weekend", "Openingstijd ELV", "Sluitingstijd ELV"
-    ],
-    "Overig": [
-        "Aantal patienten per verpleegkundige", "Transfertijd", "Maximaal aantal dagen observatie", "Aantal subruns", "Aantal patienten per subrun", "Aantal patienten voor warming"
+with col1:
+    # List of scenario variables
+    scenario_vars_1 = [
+        "Volledige beddeldeling", "Geen beddendeling", "Partiële beddendeling", "Observatiebedden", "Totale beddendeling"
     ]
-}
-
-# Streamlit interface
-
-# Input for number of locations (integer only)
-Inputs_1 = pd.DataFrame()
-inputs = pd.DataFrame()
-
-n_loc = st.number_input("Aantal locaties", min_value=0, step=1, value=0, format="%d")
-Inputs_1.loc[0,"n_loc"] = n_loc
-
-# Dropdown menu for the scenario variables
-dropdown_var = st.selectbox("Beddeling", scenario_vars_1)
-bed_share = dropdown_var
-if dropdown_var == "Volledige beddeldeling":
-    Inputs_1.loc[0,"Scen_shared_beds_Full"] = True
-    Inputs_1.loc[0,"Scen_Total_Sharing"] = False
-    Inputs_1.loc[0,"Scen_Triage_ward"] = False
-    Inputs_1.loc[0,"Scen_NO_Sharing"] = False
-    Inputs_1.loc[0,"Scen_Part_bed_share"] = False
-elif dropdown_var == "Totale beddendeling":
-    Inputs_1.loc[0,"Scen_shared_beds_Full"] = False
-    Inputs_1.loc[0,"Scen_Total_Sharing"] = True
-    Inputs_1.loc[0,"Scen_Triage_ward"] = False
-    Inputs_1.loc[0,"Scen_NO_Sharing"] = False
-    Inputs_1.loc[0,"Scen_Part_bed_share"] = False
-elif dropdown_var == "Observatiebedden":
-    Inputs_1.loc[0,"Scen_shared_beds_Full"] = False
-    Inputs_1.loc[0,"Scen_Total_Sharing"] = False
-    Inputs_1.loc[0,"Scen_Triage_ward"] = True
-    Inputs_1.loc[0,"Scen_NO_Sharing"] = True
-    Inputs_1.loc[0,"Scen_Part_bed_share"] = False
-elif dropdown_var == "Partiële beddendeling":
-    Inputs_1.loc[0,"Scen_shared_beds_Full"] = False
-    Inputs_1.loc[0,"Scen_Total_Sharing"] = False
-    Inputs_1.loc[0,"Scen_Triage_ward"] = False
-    Inputs_1.loc[0,"Scen_NO_Sharing"] = False
-    Inputs_1.loc[0,"Scen_Part_bed_share"]= True
-elif dropdown_var == "Geen beddendeling":
-    Inputs_1.loc[0,"Scen_shared_beds_Full"] = False
-    Inputs_1.loc[0,"Scen_Total_Sharing"] = False
-    Inputs_1.loc[0,"Scen_Triage_ward"] = False
-    Inputs_1.loc[0,"Scen_NO_Sharing"] = True
-    Inputs_1.loc[0,"Scen_Part_bed_share"] = False
-
-# Checkbox for Priority
-Priority = st.checkbox("Priority")
-Inputs_1.loc[0,"Priority"] = Priority
-
-# Dropdown menu for Preference
-preference_options = ["FCFS", "Voorkeur", "Model"]
-preference = st.selectbox("Allocatie", preference_options)
-Inputs_1.loc[0,"preference"] = preference
-
-for group_name, group_vars in groups.items():
-    with st.expander(group_name):
-        for var in group_vars:
-            default_value = default_values[var]  # Get default value for the variable
-            if var == "Opname in het weekend":
-                Inputs_1.loc[0, var] = st.checkbox(var)
-            else:
-                Inputs_1.loc[0, var] = st.number_input(var, value=default_value)
-
- 
-if bed_share == "Volledige beddeldeling":
-    listofzeros = 0
-    beds_High = []
-    beds_Low = []
-    nurs_low = []
-    nurs_high = []
-    beds_EMRD = []
-    for i in range(0, n_loc):
-        st.title('Location ' + str(i+1))
-        beds_ELV_High = st.number_input(f"Number of ELV High Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-        nurs_ELV_High = st.number_input(f"Number of ELV High Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
-        beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-        nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
-        beds_ELV_EMRD = st.number_input(f"Number of Emergency beds location {i+1}", min_value=0, step=1, value=0, format="%d")   
-        beds_High.append(beds_ELV_High)
-        beds_Low.append(beds_ELV_Low) 
-        nurs_low.append(nurs_ELV_Low)
-        nurs_high.append(nurs_ELV_High)
-        beds_EMRD.append(beds_ELV_EMRD)
-    data = {
-        "elv_high_complex_beds": [beds_High],
-        "elv_low_complex_beds": [beds_Low],
-        "elv_high_complex_nurses": [nurs_high],
-        "elv_low_complex_nurses": [nurs_low],
-        "emergency_beds": [beds_EMRD],
-        "high_complex_beds": [0],
-        "grz_beds": [0],
-        "shared_beds": [0],
-        "trw_beds": [0],
-        "total_beds": [0],
-        "high_complex_nurses": [0],
-        "grz_nurses": [0],
-        "shared_nurses": [0],
-        "trw_nurses": [0],
-        "total_nurses": [0]
+    scenario_vars = [
+        "Scen_shared_beds_Full","Scen_Total_Sharing","Scen_Triage_ward","Scen_NO_Sharing","Scen_Part_bed_share"
+    ]
+    
+    # Grouped variables
+    groups = {
+        "Aankomst": ["Aankomst Hoog Complex vanuit ziekenhuis per dag", "Aankomst vanaf Huisarts Hoog Complex per dag", "Aankomst vanaf de Spoedeisendehulp per dag", "Aankomst Geriatrische Zorg in Ziekenhuis per dag", "Aankomst Laag Complexe zorg vanaf de Huisarts"],
+        "Ligduur": [
+            "Ligduur Hoog Complex naar Huis", "Ligduur Geriatrische Zorg naar Huis", "Ligduur Hoog Complex Dood", "Ligduur Geriatrische Zorg Dood", "Ligduur Hoog Complex naar Geriatrische Zorg",
+             "Ligduur Hoog Complex naar Huis met aanpassingen", "Ligduur Geriatrische Zorg naar Huis met aanpassingen", "Ligduur Hoog Complex WMO", "Ligduur Hoog Complex WLZ", "Ligduur Geriatrische Zorg WMO",
+            "Ligduur Geriatrische Zorg WLZ", "Ligduur Laag Complex naar Huis", "Ligduur Laag Complex Dood", "Ligduur Laag Complex Geriatrische Zorg", "Ligduur Laag Complex naar Huis met aanpassingen", "Ligduur Laag Complex WMO",
+            "Ligduur Laag Complex WLZ"
+        ],
+        "Uitstroomkansen": [
+            "Percentage Hoog Complex naar Huis", "Percentage Geriatrische Zorg naar Huis", "Percentage Hoog Complex Dood", "Percentage Geriatrische Zorg Dood", "Percentage Hoog Complex WMO", "Percentage Geriatrische Zorg WMO",
+            "Percentage Hoog Complex WLZ", "Percentage Geriatrische Zorg WLZ", "Percentage Hoog Complex naar Geriatrische Zorg", "Percentage Hoog Complex naar Huis met aanpassingen", "Percentage Geriatrische Zorg naar Huis met aanpassingen",
+            "Percentage Laag Complex naar Huis", "Percentage Laag Complex Dood", "Percentage Laag Complex WMO", "Percentage Laag Complex WLZ", "Percentage Laag Complex naar Geriatrische Zorg", "Percentage Laag Complex naar Huis met aanpassingen"
+        ],
+        "Openingstijden": [
+            "Spoedeisendehulp openingstijd", "Spoedeisendehulp sluitingstijd", "Openingstijd Huisarts",
+            "Sluittijd Huisarts", "Opname in het weekend", "Openingstijd ELV", "Sluitingstijd ELV"
+        ],
+        "Overig": [
+            "Aantal patienten per verpleegkundige", "Transfertijd", "Maximaal aantal dagen observatie", "Aantal subruns", "Aantal patienten per subrun", "Aantal patienten voor warming"
+        ]
     }
-    df = pd.DataFrame(data)
-
-    # Concatenate the DataFrame with the existing DataFrame
-    inputs = pd.concat([inputs, df], ignore_index=True)
-
-elif bed_share == "Geen beddendeling":
-    listofzeros = 0
-    beds_G = []
-    beds_High = []
-    beds_low = []
-    nurs_low = []
-    nurs_high = []
-    nurs_G = []
-    beds_EMRD = []
-    for i in range(0, n_loc):
-        st.title('Location '+ str(i+1))
-        beds_GRZ = st.number_input(f"Number of GRZ beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-        nurs_GRZ = st.number_input(f"Number of GRZ nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
-        beds_High_Complex = st.number_input(f"Number of High Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-        nurs_High_Complex = st.number_input(f"Number of High Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
-        beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-        nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
-        beds_ELV_EMRD = st.number_input(f"Number of Emergency beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-        beds_High.append(beds_High_Complex)
-        beds_low.append(beds_ELV_Low)
-        beds_G.append(beds_GRZ)
-        nurs_G.append(nurs_GRZ)
-        nurs_low.append(nurs_ELV_Low)
-        nurs_high.append(nurs_High_Complex)
-        beds_EMRD.append(beds_ELV_EMRD)
-        
-    data = {
-        "elv_high_complex_beds": [0],
-        "elv_low_complex_beds": [beds_low],
-        "elv_high_complex_nurses": [0],
-        "elv_low_complex_nurses": [nurs_low],
-        "emergency_beds": [beds_EMRD],
-        "high_complex_beds": [beds_High],
-        "grz_beds": [beds_G],
-        "shared_beds": [0],
-        "trw_beds": [0],
-        "total_beds": [0],
-        "high_complex_nurses": [nurs_high],
-        "grz_nurses": [nurs_G],
-        "shared_nurses": [0],
-        "trw_nurses": [0],
-        "total_nurses": [0]
-    }
-    df = pd.DataFrame(data)
-
-    # Concatenate the DataFrame with the existing DataFrame
-    inputs = pd.concat([inputs, df], ignore_index=True)
-elif bed_share == "Partiële beddendeling":
-    listofzeros = 0
-    beds_G = []
-    beds_High = []
-    beds_low = []
-    nurs_low = []
-    nurs_high = []
-    nurs_G = []
-    beds_shared = []
-    beds_EMRD = []
-    for i in range(0, n_loc):
-        st.title('Location '+ str(i+1))
-        beds_GRZ = st.number_input(f"Number of GRZ beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-        nurs_GRZ = st.number_input(f"Number of GRZ nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
-        beds_High_Complex = st.number_input(f"Number of High Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-        nurs_High_Complex = st.number_input(f"Number of High Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
-        beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-        nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
-        beds_ELV_Shared = st.number_input(f"Number of Shared beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-        beds_ELV_EMRD = st.number_input(f"Number of Emergency beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-        beds_High.append(beds_High_Complex)
-        beds_low.append(beds_ELV_Low)
-        beds_G.append(beds_GRZ)
-        nurs_G.append(nurs_GRZ)
-        nurs_low.append(nurs_ELV_Low)
-        nurs_high.append(nurs_High_Complex)
-        beds_shared.append(beds_ELV_Shared)
-        beds_EMRD.append(beds_ELV_EMRD)
-    data = {
-        "elv_high_complex_beds": [0],
-        "elv_low_complex_beds": [beds_low],
-        "elv_high_complex_nurses": [0],
-        "elv_low_complex_nurses": [nurs_low],
-        "emergency_beds": [beds_EMRD],
-        "high_complex_beds": [beds_High],
-        "grz_beds": [beds_G],
-        "shared_beds": [beds_shared],
-        "trw_beds": [0],
-        "total_beds": [0],
-        "high_complex_nurses": [nurs_high],
-        "grz_nurses": [nurs_GRZ],
-        "shared_nurses": [0],
-        "trw_nurses": [0],
-        "total_nurses": [0]
-    }
-    df = pd.DataFrame(data)
-
-    # Concatenate the DataFrame with the existing DataFrame
-    inputs = pd.concat([inputs, df], ignore_index=True)
-elif bed_share == "Observatiebedden":
-    listofzeros = 0
-    beds_G = []
-    beds_High = []
-    beds_low = []
-    nurs_low = []
-    nurs_high = []
-    nurs_G = []
-    beds_TRW = []
-    beds_EMRD = []
-    for i in range(0, n_loc):
-        st.title('Location '+ str(i+1))
-        beds_GRZ = st.number_input(f"Number of GRZ beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-        nurs_GRZ = st.number_input(f"Number of GRZ nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
-        beds_High_Complex = st.number_input(f"Number of High Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-        nurs_High_Complex = st.number_input(f"Number of High Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
-        beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-        nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
-        beds_ELV_TRW = st.number_input(f"Number of Observation beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-        beds_ELV_EMRD = st.number_input(f"Number of Emergency beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-        beds_High.append(beds_High_Complex)
-        beds_low.append(beds_ELV_Low)
-        beds_G.append(beds_GRZ)
-        nurs_G.append(nurs_GRZ)
-        nurs_low.append(nurs_ELV_Low)
-        nurs_high.append(nurs_High_Complex)
-        beds_TRW.append(beds_ELV_TRW)
-        beds_EMRD.append(beds_ELV_EMRD)
-    data = {
-        "elv_high_complex_beds": [0],
-        "elv_low_complex_beds": [beds_low],
-        "elv_high_complex_nurses": [0],
-        "elv_low_complex_nurses": [nurs_low],
-        "emergency_beds": [beds_EMRD],
-        "high_complex_beds": [beds_High],
-        "grz_beds": [beds_G],
-        "shared_beds": [0],
-        "trw_beds": [beds_TRW],
-        "total_beds": [0],
-        "high_complex_nurses": [nurs_high],
-        "grz_nurses": [nurs_GRZ],
-        "shared_nurses": [0],
-        "trw_nurses": [0],
-        "total_nurses": [0]
-    }
-    df = pd.DataFrame(data)
-
-    # Concatenate the DataFrame with the existing DataFrame
-    inputs = pd.concat([inputs, df], ignore_index=True)
-elif bed_share == "Totale beddendeling":
-    listofzeros = 0
-    beds_Total = []
-    nurs_Total = []
-    beds_EMRD = []
-    for i in range(0, n_loc):
-        st.title('Location ' + str(i+1))
-        beds_ELV_Total = st.number_input(f"Number of ELV Total beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-        nurs_ELV_Total = st.number_input(f"Number of ELV Total nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
-        beds_ELV_EMRD = st.number_input(f"Number of Emergency beds location {i+1}", min_value=0, step=1, value=0, format="%d")   
-        beds_Total.append(beds_ELV_Total)
-        nurs_Total.append(beds_ELV_Total) 
-        beds_EMRD.append(beds_ELV_EMRD)
-    data = {
-        "elv_high_complex_beds": [0],
-        "elv_low_complex_beds": [0],
-        "elv_high_complex_nurses": [0],
-        "elv_low_complex_nurses": [0],
-        "emergency_beds": [beds_EMRD],
-        "high_complex_beds": [0],
-        "grz_beds": [0],
-        "shared_beds": [0],
-        "trw_beds": [0],
-        "total_beds": [beds_Total],
-        "high_complex_nurses": [0],
-        "grz_nurses": [0],
-        "shared_nurses": [0],
-        "trw_nurses": [0],
-        "total_nurses": [nurs_Total]
-    }
-    df = pd.DataFrame(data)
-
-    # Concatenate the DataFrame with the existing DataFrame
-    inputs = pd.concat([inputs, df], ignore_index=True)
-
-df_tot = pd.concat([Inputs_1,inputs],axis = 1)
+    
+    # Streamlit interface
+    
+    # Input for number of locations (integer only)
+    Inputs_1 = pd.DataFrame()
+    inputs = pd.DataFrame()
+    
+    n_loc = st.number_input("Aantal locaties", min_value=0, step=1, value=0, format="%d")
+    Inputs_1.loc[0,"n_loc"] = n_loc
+    
+    # Dropdown menu for the scenario variables
+    dropdown_var = st.selectbox("Beddeling", scenario_vars_1)
+    bed_share = dropdown_var
+    if dropdown_var == "Volledige beddeldeling":
+        Inputs_1.loc[0,"Scen_shared_beds_Full"] = True
+        Inputs_1.loc[0,"Scen_Total_Sharing"] = False
+        Inputs_1.loc[0,"Scen_Triage_ward"] = False
+        Inputs_1.loc[0,"Scen_NO_Sharing"] = False
+        Inputs_1.loc[0,"Scen_Part_bed_share"] = False
+    elif dropdown_var == "Totale beddendeling":
+        Inputs_1.loc[0,"Scen_shared_beds_Full"] = False
+        Inputs_1.loc[0,"Scen_Total_Sharing"] = True
+        Inputs_1.loc[0,"Scen_Triage_ward"] = False
+        Inputs_1.loc[0,"Scen_NO_Sharing"] = False
+        Inputs_1.loc[0,"Scen_Part_bed_share"] = False
+    elif dropdown_var == "Observatiebedden":
+        Inputs_1.loc[0,"Scen_shared_beds_Full"] = False
+        Inputs_1.loc[0,"Scen_Total_Sharing"] = False
+        Inputs_1.loc[0,"Scen_Triage_ward"] = True
+        Inputs_1.loc[0,"Scen_NO_Sharing"] = True
+        Inputs_1.loc[0,"Scen_Part_bed_share"] = False
+    elif dropdown_var == "Partiële beddendeling":
+        Inputs_1.loc[0,"Scen_shared_beds_Full"] = False
+        Inputs_1.loc[0,"Scen_Total_Sharing"] = False
+        Inputs_1.loc[0,"Scen_Triage_ward"] = False
+        Inputs_1.loc[0,"Scen_NO_Sharing"] = False
+        Inputs_1.loc[0,"Scen_Part_bed_share"]= True
+    elif dropdown_var == "Geen beddendeling":
+        Inputs_1.loc[0,"Scen_shared_beds_Full"] = False
+        Inputs_1.loc[0,"Scen_Total_Sharing"] = False
+        Inputs_1.loc[0,"Scen_Triage_ward"] = False
+        Inputs_1.loc[0,"Scen_NO_Sharing"] = True
+        Inputs_1.loc[0,"Scen_Part_bed_share"] = False
+    
+    # Checkbox for Priority
+    Priority = st.checkbox("Priority")
+    Inputs_1.loc[0,"Priority"] = Priority
+    
+    # Dropdown menu for Preference
+    preference_options = ["FCFS", "Voorkeur", "Model"]
+    preference = st.selectbox("Allocatie", preference_options)
+    Inputs_1.loc[0,"preference"] = preference
+    
+    for group_name, group_vars in groups.items():
+        with st.expander(group_name):
+            for var in group_vars:
+                default_value = default_values[var]  # Get default value for the variable
+                if var == "Opname in het weekend":
+                    Inputs_1.loc[0, var] = st.checkbox(var)
+                else:
+                    Inputs_1.loc[0, var] = st.number_input(var, value=default_value)
+    
+with col2:
+    if bed_share == "Volledige beddeldeling":
+        listofzeros = 0
+        beds_High = []
+        beds_Low = []
+        nurs_low = []
+        nurs_high = []
+        beds_EMRD = []
+        for i in range(0, n_loc):
+            st.title('Location ' + str(i+1))
+            beds_ELV_High = st.number_input(f"Number of ELV High Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
+            nurs_ELV_High = st.number_input(f"Number of ELV High Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
+            beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
+            nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
+            beds_ELV_EMRD = st.number_input(f"Number of Emergency beds location {i+1}", min_value=0, step=1, value=0, format="%d")   
+            beds_High.append(beds_ELV_High)
+            beds_Low.append(beds_ELV_Low) 
+            nurs_low.append(nurs_ELV_Low)
+            nurs_high.append(nurs_ELV_High)
+            beds_EMRD.append(beds_ELV_EMRD)
+        data = {
+            "elv_high_complex_beds": [beds_High],
+            "elv_low_complex_beds": [beds_Low],
+            "elv_high_complex_nurses": [nurs_high],
+            "elv_low_complex_nurses": [nurs_low],
+            "emergency_beds": [beds_EMRD],
+            "high_complex_beds": [0],
+            "grz_beds": [0],
+            "shared_beds": [0],
+            "trw_beds": [0],
+            "total_beds": [0],
+            "high_complex_nurses": [0],
+            "grz_nurses": [0],
+            "shared_nurses": [0],
+            "trw_nurses": [0],
+            "total_nurses": [0]
+        }
+        df = pd.DataFrame(data)
+    
+        # Concatenate the DataFrame with the existing DataFrame
+        inputs = pd.concat([inputs, df], ignore_index=True)
+    
+    elif bed_share == "Geen beddendeling":
+        listofzeros = 0
+        beds_G = []
+        beds_High = []
+        beds_low = []
+        nurs_low = []
+        nurs_high = []
+        nurs_G = []
+        beds_EMRD = []
+        for i in range(0, n_loc):
+            st.title('Location '+ str(i+1))
+            beds_GRZ = st.number_input(f"Number of GRZ beds location {i+1}", min_value=0, step=1, value=0, format="%d")
+            nurs_GRZ = st.number_input(f"Number of GRZ nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
+            beds_High_Complex = st.number_input(f"Number of High Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
+            nurs_High_Complex = st.number_input(f"Number of High Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
+            beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
+            nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
+            beds_ELV_EMRD = st.number_input(f"Number of Emergency beds location {i+1}", min_value=0, step=1, value=0, format="%d")
+            beds_High.append(beds_High_Complex)
+            beds_low.append(beds_ELV_Low)
+            beds_G.append(beds_GRZ)
+            nurs_G.append(nurs_GRZ)
+            nurs_low.append(nurs_ELV_Low)
+            nurs_high.append(nurs_High_Complex)
+            beds_EMRD.append(beds_ELV_EMRD)
+            
+        data = {
+            "elv_high_complex_beds": [0],
+            "elv_low_complex_beds": [beds_low],
+            "elv_high_complex_nurses": [0],
+            "elv_low_complex_nurses": [nurs_low],
+            "emergency_beds": [beds_EMRD],
+            "high_complex_beds": [beds_High],
+            "grz_beds": [beds_G],
+            "shared_beds": [0],
+            "trw_beds": [0],
+            "total_beds": [0],
+            "high_complex_nurses": [nurs_high],
+            "grz_nurses": [nurs_G],
+            "shared_nurses": [0],
+            "trw_nurses": [0],
+            "total_nurses": [0]
+        }
+        df = pd.DataFrame(data)
+    
+        # Concatenate the DataFrame with the existing DataFrame
+        inputs = pd.concat([inputs, df], ignore_index=True)
+    elif bed_share == "Partiële beddendeling":
+        listofzeros = 0
+        beds_G = []
+        beds_High = []
+        beds_low = []
+        nurs_low = []
+        nurs_high = []
+        nurs_G = []
+        beds_shared = []
+        beds_EMRD = []
+        for i in range(0, n_loc):
+            st.title('Location '+ str(i+1))
+            beds_GRZ = st.number_input(f"Number of GRZ beds location {i+1}", min_value=0, step=1, value=0, format="%d")
+            nurs_GRZ = st.number_input(f"Number of GRZ nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
+            beds_High_Complex = st.number_input(f"Number of High Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
+            nurs_High_Complex = st.number_input(f"Number of High Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
+            beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
+            nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
+            beds_ELV_Shared = st.number_input(f"Number of Shared beds location {i+1}", min_value=0, step=1, value=0, format="%d")
+            beds_ELV_EMRD = st.number_input(f"Number of Emergency beds location {i+1}", min_value=0, step=1, value=0, format="%d")
+            beds_High.append(beds_High_Complex)
+            beds_low.append(beds_ELV_Low)
+            beds_G.append(beds_GRZ)
+            nurs_G.append(nurs_GRZ)
+            nurs_low.append(nurs_ELV_Low)
+            nurs_high.append(nurs_High_Complex)
+            beds_shared.append(beds_ELV_Shared)
+            beds_EMRD.append(beds_ELV_EMRD)
+        data = {
+            "elv_high_complex_beds": [0],
+            "elv_low_complex_beds": [beds_low],
+            "elv_high_complex_nurses": [0],
+            "elv_low_complex_nurses": [nurs_low],
+            "emergency_beds": [beds_EMRD],
+            "high_complex_beds": [beds_High],
+            "grz_beds": [beds_G],
+            "shared_beds": [beds_shared],
+            "trw_beds": [0],
+            "total_beds": [0],
+            "high_complex_nurses": [nurs_high],
+            "grz_nurses": [nurs_GRZ],
+            "shared_nurses": [0],
+            "trw_nurses": [0],
+            "total_nurses": [0]
+        }
+        df = pd.DataFrame(data)
+    
+        # Concatenate the DataFrame with the existing DataFrame
+        inputs = pd.concat([inputs, df], ignore_index=True)
+    elif bed_share == "Observatiebedden":
+        listofzeros = 0
+        beds_G = []
+        beds_High = []
+        beds_low = []
+        nurs_low = []
+        nurs_high = []
+        nurs_G = []
+        beds_TRW = []
+        beds_EMRD = []
+        for i in range(0, n_loc):
+            st.title('Location '+ str(i+1))
+            beds_GRZ = st.number_input(f"Number of GRZ beds location {i+1}", min_value=0, step=1, value=0, format="%d")
+            nurs_GRZ = st.number_input(f"Number of GRZ nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
+            beds_High_Complex = st.number_input(f"Number of High Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
+            nurs_High_Complex = st.number_input(f"Number of High Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
+            beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
+            nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
+            beds_ELV_TRW = st.number_input(f"Number of Observation beds location {i+1}", min_value=0, step=1, value=0, format="%d")
+            beds_ELV_EMRD = st.number_input(f"Number of Emergency beds location {i+1}", min_value=0, step=1, value=0, format="%d")
+            beds_High.append(beds_High_Complex)
+            beds_low.append(beds_ELV_Low)
+            beds_G.append(beds_GRZ)
+            nurs_G.append(nurs_GRZ)
+            nurs_low.append(nurs_ELV_Low)
+            nurs_high.append(nurs_High_Complex)
+            beds_TRW.append(beds_ELV_TRW)
+            beds_EMRD.append(beds_ELV_EMRD)
+        data = {
+            "elv_high_complex_beds": [0],
+            "elv_low_complex_beds": [beds_low],
+            "elv_high_complex_nurses": [0],
+            "elv_low_complex_nurses": [nurs_low],
+            "emergency_beds": [beds_EMRD],
+            "high_complex_beds": [beds_High],
+            "grz_beds": [beds_G],
+            "shared_beds": [0],
+            "trw_beds": [beds_TRW],
+            "total_beds": [0],
+            "high_complex_nurses": [nurs_high],
+            "grz_nurses": [nurs_GRZ],
+            "shared_nurses": [0],
+            "trw_nurses": [0],
+            "total_nurses": [0]
+        }
+        df = pd.DataFrame(data)
+    
+        # Concatenate the DataFrame with the existing DataFrame
+        inputs = pd.concat([inputs, df], ignore_index=True)
+    elif bed_share == "Totale beddendeling":
+        listofzeros = 0
+        beds_Total = []
+        nurs_Total = []
+        beds_EMRD = []
+        for i in range(0, n_loc):
+            st.title('Location ' + str(i+1))
+            beds_ELV_Total = st.number_input(f"Number of ELV Total beds location {i+1}", min_value=0, step=1, value=0, format="%d")
+            nurs_ELV_Total = st.number_input(f"Number of ELV Total nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
+            beds_ELV_EMRD = st.number_input(f"Number of Emergency beds location {i+1}", min_value=0, step=1, value=0, format="%d")   
+            beds_Total.append(beds_ELV_Total)
+            nurs_Total.append(beds_ELV_Total) 
+            beds_EMRD.append(beds_ELV_EMRD)
+        data = {
+            "elv_high_complex_beds": [0],
+            "elv_low_complex_beds": [0],
+            "elv_high_complex_nurses": [0],
+            "elv_low_complex_nurses": [0],
+            "emergency_beds": [beds_EMRD],
+            "high_complex_beds": [0],
+            "grz_beds": [0],
+            "shared_beds": [0],
+            "trw_beds": [0],
+            "total_beds": [beds_Total],
+            "high_complex_nurses": [0],
+            "grz_nurses": [0],
+            "shared_nurses": [0],
+            "trw_nurses": [0],
+            "total_nurses": [nurs_Total]
+        }
+        df = pd.DataFrame(data)
+    
+        # Concatenate the DataFrame with the existing DataFrame
+        inputs = pd.concat([inputs, df], ignore_index=True)
+    
+    df_tot = pd.concat([Inputs_1,inputs],axis = 1)
 def simulate(input):
     for loop_nr in range(len(input)):
         from datetime import datetime
@@ -6192,56 +6193,57 @@ def simulate(input):
     
 
 # Button to display the dataframe
-if st.button('Start Simulation'):
-    # Convert the inputs dictionary to a DataFrame
-    df1 = df_tot
-    output_df = simulate(df1)
-    table1_columns = [ 'Wt_from_HOSP_GRZ',
-    'Wt_from_HOSP_High', 'Wt_from_GPR_High', 'Wt_from_GPR_Low', 'Wt_to_TRW', 'WT_from_EMD']
-    table1_right_names = [ 'Ziekenhuis GRZ',
-    'Ziekenhuis Hoog Complex', 'Huisarts Hoog Complex', 'Huisarts Laag Complex', 'Observatie', 'Spoedeisendehulp']
+with col3:
+    if st.button('Start Simulation'):
+        # Convert the inputs dictionary to a DataFrame
+        df1 = df_tot
+        output_df = simulate(df1)
+        table1_columns = [ 'Wt_from_HOSP_GRZ',
+        'Wt_from_HOSP_High', 'Wt_from_GPR_High', 'Wt_from_GPR_Low', 'Wt_to_TRW', 'WT_from_EMD']
+        table1_right_names = [ 'Ziekenhuis GRZ',
+        'Ziekenhuis Hoog Complex', 'Huisarts Hoog Complex', 'Huisarts Laag Complex', 'Observatie', 'Spoedeisendehulp']
+        
+        table2_columns = ['Perc_with_HOSP_adm', 'Number with hosp adm EMD', 'Perc_with_HOSP_adm_HOSP',
+        'Number with hosp adm HOSP', 'nr_pat_repl']
+        table2_right_names = ['Percentage met ziekenhuisopname vanaf spoedeisendehulp', 'Aantal met ziekenhuisopname vanaf spoedeisendehulp', 'Percentage met ziekenhuisopname vanaf het ziekenhuis',
+        'Aantal met ziekenhuisopname vanaf het ziekenhuis', 'Aantal verplaatsingen']
+        
+        table3_columns = ['serv_level', 'los_ELV_High', 'los_ELV_Low', 'bez_gr_total',
+        'bez_gr_High', 'bez_gr_Low']
+        table3_right_names = ['Service level', 'Gemiddelde verplijfduur Hoog Complex', 'Gemiddelde verblijfduur Laag Complex', 'Bezettingsgraad totaal',
+        'Bezettingsgraad Hoog Complex', 'Bezettingsgraad Laag Complex']
+        
+        table4_columns = ['Number of Locations ELV', 'Number of beds ELV_High', 'Number of beds ELV_Low',
+        'Number of beds GRZ', 'Number of beds High Complex', 'Number of shared beds', 'Number of TRW beds', 'Number of beds ELV Total']
+        table4_right_names = ['Aantal ELV Locaties', 'Aantal ELV Hoog Complex bedden', 'Aantal ELV Laag Complex bedden',
+        'Aantal bedden Geriatrische Zorg', 'Aantal Hoog Complexe bedden', 'Aantal gedeelde bedden', 'Aantal bedden voor observatie', 'Aantal bedden ELV Totaal']
+        # Create tables
+        table1 = pd.DataFrame(output_df[table1_columns])
+        table2 = pd.DataFrame(output_df[table2_columns])
+        table3 = pd.DataFrame(output_df[table3_columns])
+        table4 = pd.DataFrame(output_df[table4_columns])
+        table2['Perc_with_HOSP_adm'] = table2['Perc_with_HOSP_adm']*100
+        table2['Perc_with_HOSP_adm_HOSP'] = table2['Perc_with_HOSP_adm_HOSP']*100
+        table3['serv_level'] = table3['serv_level']*100
+        table3['bez_gr_total'] = table3['bez_gr_total']*100
+        table3['bez_gr_High'] = table3['bez_gr_High']*100
+        table3['bez_gr_Low'] = table3['bez_gr_Low']*100
+        # Hernoem de kolommen
+        table1.rename(columns = {'Wt_from_HOSP_GRZ':'Ziekenhuis GRZ', 'Wt_from_HOSP_High':'Ziekenhuis Hoog Complex', 'Wt_from_GPR_High':'Huisarts Hoog Complex', 'Wt_from_GPR_Low':'Huisarts Laag Complex', 'Wt_to_TRW':'Observatie', 'WT_from_EMD':'Spoedeisendehulp'},inplace = True)
+        table2.rename(columns = {'Perc_with_HOSP_adm':'Percentage met ziekenhuisopname vanaf spoedeisendehulp (%)', 'Number with hosp adm EMD':'Aantal met ziekenhuisopname vanaf spoedeisendehulp', 'Perc_with_HOSP_adm_HOSP':'Percentage met ziekenhuisopname vanaf het ziekenhuis (%)','Number with hosp adm HOSP':'Aantal met ziekenhuisopname vanaf het ziekenhuis', 'nr_pat_repl':'Aantal verplaatsingen'}, inplace = True)
+        table3.rename(columns = {'serv_level':'Service level (Geholpen < 3 dagen) (%)', 'los_ELV_High':'Gemiddelde verplijfduur Hoog Complex', 'los_ELV_Low':'Gemiddelde verblijfduur Laag Complex', 'bez_gr_total':'Bezettingsgraad totaal (%)',
+        'bez_gr_High':'Bezettingsgraad Hoog Complex (%)', 'bez_gr_Low':'Bezettingsgraad Laag Complex (%)'}, inplace =True)
+        table4.rename(columns = {'Number of Locations ELV':'Aantal ELV Locaties', 'Number of beds ELV_High':'Aantal ELV Hoog Complex bedden', 'Number of beds ELV_Low':'Aantal ELV Laag Complex bedden',
+        'Number of beds GRZ':'Aantal bedden Geriatrische Zorg', 'Number of beds High Complex':'Aantal Hoog Complexe bedden', 'Number of shared beds':'Aantal gedeelde bedden', 'Number of TRW beds':'Aantal bedden voor observatie', 'Number of beds ELV Total':'Aantal bedden ELV Totaal'},inplace =True)
+        table1.index = ['Wachttijd (dagen)']
+        table2.index = ['Percentages en aantallen']
+        table3.index = ['Levels']
+        table4.index = ['Aantal']
+        #st.write(df1) 
+        st.write(table1.T)
+        st.bar_chart(table1.T, y = 'Wachttijd (dagen)')
+        st.write(table2.T)
+        st.write(table3.T)
+        st.write(table4.T)
+        
     
-    table2_columns = ['Perc_with_HOSP_adm', 'Number with hosp adm EMD', 'Perc_with_HOSP_adm_HOSP',
-    'Number with hosp adm HOSP', 'nr_pat_repl']
-    table2_right_names = ['Percentage met ziekenhuisopname vanaf spoedeisendehulp', 'Aantal met ziekenhuisopname vanaf spoedeisendehulp', 'Percentage met ziekenhuisopname vanaf het ziekenhuis',
-    'Aantal met ziekenhuisopname vanaf het ziekenhuis', 'Aantal verplaatsingen']
-    
-    table3_columns = ['serv_level', 'los_ELV_High', 'los_ELV_Low', 'bez_gr_total',
-    'bez_gr_High', 'bez_gr_Low']
-    table3_right_names = ['Service level', 'Gemiddelde verplijfduur Hoog Complex', 'Gemiddelde verblijfduur Laag Complex', 'Bezettingsgraad totaal',
-    'Bezettingsgraad Hoog Complex', 'Bezettingsgraad Laag Complex']
-    
-    table4_columns = ['Number of Locations ELV', 'Number of beds ELV_High', 'Number of beds ELV_Low',
-    'Number of beds GRZ', 'Number of beds High Complex', 'Number of shared beds', 'Number of TRW beds', 'Number of beds ELV Total']
-    table4_right_names = ['Aantal ELV Locaties', 'Aantal ELV Hoog Complex bedden', 'Aantal ELV Laag Complex bedden',
-    'Aantal bedden Geriatrische Zorg', 'Aantal Hoog Complexe bedden', 'Aantal gedeelde bedden', 'Aantal bedden voor observatie', 'Aantal bedden ELV Totaal']
-    # Create tables
-    table1 = pd.DataFrame(output_df[table1_columns])
-    table2 = pd.DataFrame(output_df[table2_columns])
-    table3 = pd.DataFrame(output_df[table3_columns])
-    table4 = pd.DataFrame(output_df[table4_columns])
-    table2['Perc_with_HOSP_adm'] = table2['Perc_with_HOSP_adm']*100
-    table2['Perc_with_HOSP_adm_HOSP'] = table2['Perc_with_HOSP_adm_HOSP']*100
-    table3['serv_level'] = table3['serv_level']*100
-    table3['bez_gr_total'] = table3['bez_gr_total']*100
-    table3['bez_gr_High'] = table3['bez_gr_High']*100
-    table3['bez_gr_Low'] = table3['bez_gr_Low']*100
-    # Hernoem de kolommen
-    table1.rename(columns = {'Wt_from_HOSP_GRZ':'Ziekenhuis GRZ', 'Wt_from_HOSP_High':'Ziekenhuis Hoog Complex', 'Wt_from_GPR_High':'Huisarts Hoog Complex', 'Wt_from_GPR_Low':'Huisarts Laag Complex', 'Wt_to_TRW':'Observatie', 'WT_from_EMD':'Spoedeisendehulp'},inplace = True)
-    table2.rename(columns = {'Perc_with_HOSP_adm':'Percentage met ziekenhuisopname vanaf spoedeisendehulp (%)', 'Number with hosp adm EMD':'Aantal met ziekenhuisopname vanaf spoedeisendehulp', 'Perc_with_HOSP_adm_HOSP':'Percentage met ziekenhuisopname vanaf het ziekenhuis (%)','Number with hosp adm HOSP':'Aantal met ziekenhuisopname vanaf het ziekenhuis', 'nr_pat_repl':'Aantal verplaatsingen'}, inplace = True)
-    table3.rename(columns = {'serv_level':'Service level (Geholpen < 3 dagen) (%)', 'los_ELV_High':'Gemiddelde verplijfduur Hoog Complex', 'los_ELV_Low':'Gemiddelde verblijfduur Laag Complex', 'bez_gr_total':'Bezettingsgraad totaal (%)',
-    'bez_gr_High':'Bezettingsgraad Hoog Complex (%)', 'bez_gr_Low':'Bezettingsgraad Laag Complex (%)'}, inplace =True)
-    table4.rename(columns = {'Number of Locations ELV':'Aantal ELV Locaties', 'Number of beds ELV_High':'Aantal ELV Hoog Complex bedden', 'Number of beds ELV_Low':'Aantal ELV Laag Complex bedden',
-    'Number of beds GRZ':'Aantal bedden Geriatrische Zorg', 'Number of beds High Complex':'Aantal Hoog Complexe bedden', 'Number of shared beds':'Aantal gedeelde bedden', 'Number of TRW beds':'Aantal bedden voor observatie', 'Number of beds ELV Total':'Aantal bedden ELV Totaal'},inplace =True)
-    table1.index = ['Wachttijd (dagen)']
-    table2.index = ['Percentages en aantallen']
-    table3.index = ['Levels']
-    table4.index = ['Aantal']
-    #st.write(df1) 
-    st.write(table1.T)
-    st.bar_chart(table1.T, y = 'Wachttijd (dagen)')
-    st.write(table2.T)
-    st.write(table3.T)
-    st.write(table4.T)
-    
-
