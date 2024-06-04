@@ -6265,7 +6265,7 @@ with col3:
         #with col3:
         st.write(table1.T)
         st.bar_chart(table1.T, y = 'Wachttijd (dagen)',use_container_width = True)
-with col4:
+
         st.write(table2.T)
         st.write(table3.T)
         st.write(table4.T)
