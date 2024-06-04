@@ -513,7 +513,7 @@ def simulate(input):
         out_p_WMO_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg WMO']
         out_p_WLZ_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg WLZ']
         out_p_GRZV_GRZ = 0# input.loc[loop_nr,'Percentage Geriatrische Zorg GRZ care GRZ']
-        out_p_Pall_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg naar huis met aanpassingen']
+        out_p_Pall_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg naar Huis met aanpassingen']
         
         serv_Home_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg naar Huis']
         serv_Dead_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg Dood']
