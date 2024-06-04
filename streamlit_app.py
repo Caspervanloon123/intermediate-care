@@ -6216,15 +6216,12 @@ if st.button('Start Simulation'):
     table4_right_names = ['Aantal ELV Locaties', 'Aantal ELV Hoog Complex bedden', 'Aantal ELV Laag Complex bedden',
     'Aantal bedden Geriatrische Zorg', 'Aantal Hoog Complexe bedden', 'Aantal gedeelde bedden', 'Aantal bedden voor observatie', 'Aantal bedden ELV Totaal']
     # Create tables
-    table1 = pd.DataFrame(output_df[table1_columns],names = table1_right_names)
+    table1 = pd.DataFrame(output_df[table1_columns])
     table2 = pd.DataFrame(output_df[table2_columns])
     table3 = pd.DataFrame(output_df[table3_columns])
     table4 = pd.DataFrame(output_df[table4_columns])
     # Hernoem de kolommen
-    # table1.rename(columns=table1_right_names, inplace=False)
-    # table2.rename(columns=table2_right_names, inplace=False)
-    # table3.rename(columns=table3_right_names, inplace=False)
-    # table4.rename(columns=table4_right_names, inplace=False)
+    table1.rename(columns = {'Wt_from_HOSP_GRZ':'Ziekenhuis GRZ'})
     #st.write(df1)
     st.write(table1)
     st.bar_chart(table1.T)
