@@ -6198,21 +6198,33 @@ if st.button('Start Simulation'):
     output_df = simulate(df1)
     table1_columns = [ 'Wt_from_HOSP_GRZ',
     'Wt_from_HOSP_High', 'Wt_from_GPR_High', 'Wt_from_GPR_Low', 'Wt_to_TRW', 'WT_from_EMD']
+    table1_right_names = [ 'Ziekenhuis GRZ',
+    'Ziekenhuis Hoog Complex', 'Huisarts Hoog Complex', 'Huisarts Laag Complex', 'Observatie', 'Spoedeisendehulp']
     
     table2_columns = ['Perc_with_HOSP_adm', 'Number with hosp adm EMD', 'Perc_with_HOSP_adm_HOSP',
     'Number with hosp adm HOSP', 'nr_pat_repl']
+    table2_right_names = ['Percentage met ziekenhuisopname vanaf spoedeisendehulp', 'Aantal met ziekenhuisopname vanaf spoedeisendehulp', 'Percentage met ziekenhuisopname vanaf het ziekenhuis',
+    'Aantal met ziekenhuisopname vanaf het ziekenhuis', 'Aantal verplaatsingen']
     
-    table3_columns = ['serv_level', 'nr_pat_repl', 'los_ELV_High', 'los_ELV_Low', 'bez_gr_total',
+    table3_columns = ['serv_level', 'los_ELV_High', 'los_ELV_Low', 'bez_gr_total',
     'bez_gr_High', 'bez_gr_Low']
+    table3_right_names = ['Service level', 'Gemiddelde verplijfduur Hoog Complex', 'Gemiddelde verblijfduur Laag Complex', 'Bezettingsgraad totaal',
+    'Bezettingsgraad Hoog Complex', 'Bezettingsgraad Laag Complex']
     
     table4_columns = ['Number of Locations ELV', 'Number of beds ELV_High', 'Number of beds ELV_Low',
     'Number of beds GRZ', 'Number of beds High Complex', 'Number of shared beds', 'Number of TRW beds', 'Number of beds ELV Total']
+    table4_right_names = ['Aantal ELV Locaties', 'Aantal ELV Hoog Complex bedden', 'Aantal ELV Laag Complex bedden',
+    'Aantal bedden Geriatrische Zorg', 'Aantal Hoog Complexe bedden', 'Aantal gedeelde bedden', 'Aantal bedden voor observatie', 'Aantal bedden ELV Totaal']
     # Create tables
     table1 = pd.DataFrame(output_df[table1_columns])
     table2 = pd.DataFrame(output_df[table2_columns])
     table3 = pd.DataFrame(output_df[table3_columns])
     table4 = pd.DataFrame(output_df[table4_columns])
-    
+    # Hernoem de kolommen
+    table1.rename(columns=table1_right_names, inplace=True)
+    table2.rename(columns=table2_right_names, inplace=True)
+    table3.rename(columns=table3_right_names, inplace=True)
+    table4.rename(columns=table4_right_names, inplace=True)
     #st.write(df1)
     st.write(table1)
     st.bar_chart(table1.T)
