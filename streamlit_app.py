@@ -145,9 +145,14 @@ if bed_share == "Scen_shared_beds_Full":
 #         nurs_ELV_Total = st.number_input("Number of Total nurses location", min_value=0, step=1, value=0, format="%d")
 #         beds_ELV_EMRD = st.number_input("Number of Emergency beds", min_value=0, step=1, value=0, format="%d")
 
+
+def simulate(df1):
+    print("hallo")
+
 # Button to display the dataframe
 if st.button('Display DataFrame'):
     # Convert the inputs dictionary to a DataFrame
     df1 = pd.DataFrame([inputs])
-    st.write(df1)
+    Simulate(df1)
+    #st.write(df1)
 
