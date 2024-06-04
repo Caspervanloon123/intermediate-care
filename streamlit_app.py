@@ -6193,11 +6193,11 @@ def simulate(input):
     
 
 # Button to display the dataframe
-if st.button('Display DataFrame'):
+if st.button('Run Simulation'):
     # Convert the inputs dictionary to a DataFrame
     df1 = df_tot
     output_df = simulate(df1)
-    table1_columns = ['Wait_time_ELV_High', 'Wait_time_ELV_Low', 'Wait_time_ELV_TOT', 'Wt_from_HOSP_GRZ',
+    table1_columns = [ 'Wt_from_HOSP_GRZ',
     'Wt_from_HOSP_High', 'Wt_from_GPR_High', 'Wt_from_GPR_Low', 'Wt_to_TRW', 'WT_from_EMD']
     
     table2_columns = ['Perc_with_HOSP_adm', 'Number with hosp adm EMD', 'Perc_with_HOSP_adm_HOSP',
