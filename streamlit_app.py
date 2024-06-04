@@ -6130,7 +6130,7 @@ for group_name, group_vars in groups.items():
 # Button to display the dataframe
 if st.button('Display DataFrame'):
     # Convert the inputs dictionary to a DataFrame
-    df1 = inputs_1
+    df1 = Inputs_1
     # output_df = simulate(df1)
     # st.write(output_df)
     st.write(df1)
