@@ -504,7 +504,7 @@ def simulate(input):
         adm_days = 1/input.loc[loop_nr,'Transfertijd']
     
         
-        max_days_TRW = input.loc[loop_nr,'Maximaal aantal dagen observatie ']
+        max_days_TRW = input.loc[loop_nr,'Maximaal aantal dagen observatie']
     
     
         
