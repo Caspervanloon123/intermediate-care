@@ -27,8 +27,11 @@ st.title("STRC Waiting Time Calculator")
 
 
 # List of scenario variables
-scenario_vars = [
+scenario_vars_1 = [
     "Volledige beddeldeling", "Geen beddendeling", "Partiële beddendeling", "Observatiebedden", "Totale beddendeling"
+]
+scenario_vars = [
+    "Scen_shared_beds_Full","Scen_Total_Sharing","Scen_Triage_ward","Scen_NO_Sharing","Scen_Part_bed_share"
 ]
 
 # Grouped variables
