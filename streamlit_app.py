@@ -6227,6 +6227,7 @@ if st.button('Start Simulation'):
     'bez_gr_High':'Bezettingsgraad Hoog Complex', 'bez_gr_Low':'Bezettingsgraad Laag Complex'}, inplace =True)
     table4.rename(columns = {'Number of Locations ELV':'Aantal ELV Locaties', 'Number of beds ELV_High':'Aantal ELV Hoog Complex bedden', 'Number of beds ELV_Low':'Aantal ELV Laag Complex bedden',
     'Number of beds GRZ':'Aantal bedden Geriatrische Zorg', 'Number of beds High Complex':'Aantal Hoog Complexe bedden', 'Number of shared beds':'Aantal gedeelde bedden', 'Number of TRW beds':'Aantal bedden voor observatie', 'Number of beds ELV Total':'Aantal bedden ELV Totaal'},inplace =True)
+    table1.index('Wachttijd (dagen)')
     #st.write(df1)
     st.write(table1)
     st.bar_chart(table1.T)
