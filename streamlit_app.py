@@ -203,7 +203,7 @@ with col2:
         beds_EMRD = []
         for i in range(0, n_loc):
             with st.expander('Location ' + str(i+1)):
-                #st.title('Location ' + str(i+1))
+                st.title('Location ' + str(i+1))
                 beds_ELV_High = st.number_input(f"Number of ELV High Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
                 nurs_ELV_High = st.number_input(f"Number of ELV High Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
                 beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
@@ -247,7 +247,7 @@ with col2:
         beds_EMRD = []
         for i in range(0, n_loc):
             with st.expander('Location ' + str(i+1)):
-                #st.title('Location '+ str(i+1))
+                st.title('Location '+ str(i+1))
                 beds_GRZ = st.number_input(f"Number of GRZ beds location {i+1}", min_value=0, step=1, value=0, format="%d")
                 nurs_GRZ = st.number_input(f"Number of GRZ nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
                 beds_High_Complex = st.number_input(f"Number of High Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
@@ -296,7 +296,7 @@ with col2:
         beds_EMRD = []
         for i in range(0, n_loc):
             with st.expander('Location ' + str(i+1)):
-                #st.title('Location '+ str(i+1))
+                st.title('Location '+ str(i+1))
                 beds_GRZ = st.number_input(f"Number of GRZ beds location {i+1}", min_value=0, step=1, value=0, format="%d")
                 nurs_GRZ = st.number_input(f"Number of GRZ nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
                 beds_High_Complex = st.number_input(f"Number of High Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
@@ -346,7 +346,7 @@ with col2:
         beds_EMRD = []
         for i in range(0, n_loc):
             with st.expander('Location ' + str(i+1)):
-                #st.title('Location '+ str(i+1))
+                st.title('Location '+ str(i+1))
                 beds_GRZ = st.number_input(f"Number of GRZ beds location {i+1}", min_value=0, step=1, value=0, format="%d")
                 nurs_GRZ = st.number_input(f"Number of GRZ nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
                 beds_High_Complex = st.number_input(f"Number of High Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
@@ -391,7 +391,7 @@ with col2:
         beds_EMRD = []
         for i in range(0, n_loc):
             with st.expander('Location ' + str(i+1)):
-                #st.title('Location ' + str(i+1))
+                st.title('Location ' + str(i+1))
                 beds_ELV_Total = st.number_input(f"Number of ELV Total beds location {i+1}", min_value=0, step=1, value=0, format="%d")
                 nurs_ELV_Total = st.number_input(f"Number of ELV Total nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
                 beds_ELV_EMRD = st.number_input(f"Number of Emergency beds location {i+1}", min_value=0, step=1, value=0, format="%d")   
