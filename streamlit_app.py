@@ -82,9 +82,9 @@ for group_name, group_vars in groups.items():
         for var in group_vars:
             inputs[var] = st.number_input(var, value=0)
 if bed_share == "Scen_shared_beds_Full":
-    for i in range(1, n_loc):
-        st.title('Location ' + str(i))
-        beds_ELV_High = st.number_input("Number of ELV High Complex beds location", min_value=0, step=1, value=0, format="%d")
+    for i in range(0, n_loc):
+        st.title('Location ' + str(i+1))
+        beds_ELV_High = st.number_input("Number of ELV High Complex beds location {i}", min_value=0, step=1, value=0, format="%d")
         nurs_ELV_High = st.number_input("Number of ELV High Complex nurses location", min_value=0, step=1, value=0, format="%d")
         beds_ELV_Low = st.number_input("Number of ELV Low Complex beds location", min_value=0, step=1, value=0, format="%d")
         nurs_ELV_Low = st.number_input("Number of ELV Low Complex nurses location", min_value=0, step=1, value=0, format="%d")
