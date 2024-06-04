@@ -153,6 +153,6 @@ def simulate(df1):
 if st.button('Display DataFrame'):
     # Convert the inputs dictionary to a DataFrame
     df1 = pd.DataFrame([inputs])
-    Simulate(df1)
+    simulate(df1)
     #st.write(df1)
 
