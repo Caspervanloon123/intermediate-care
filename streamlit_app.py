@@ -392,9 +392,9 @@ with col2:
         for i in range(0, n_loc):
             with st.expander(st.text_input("",value="Location "+str(i+1))):
                 
-                beds_ELV_Total = st.number_input("Number of ELV Total beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-                nurs_ELV_Total = st.number_input("Number of ELV Total nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
-                beds_ELV_EMRD = st.number_input("Number of Emergency beds location {i+1}", min_value=0, step=1, value=0, format="%d")   
+                beds_ELV_Total = st.number_input(f"Number of ELV Total beds location {i+1}", min_value=0, step=1, value=0, format="%d")
+                nurs_ELV_Total = st.number_input(f"Number of ELV Total nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
+                beds_ELV_EMRD = st.number_input(f"Number of Emergency beds location {i+1}", min_value=0, step=1, value=0, format="%d")   
                 beds_Total.append(beds_ELV_Total)
                 nurs_Total.append(beds_ELV_Total) 
                 beds_EMRD.append(beds_ELV_EMRD)
