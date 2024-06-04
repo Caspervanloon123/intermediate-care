@@ -203,7 +203,8 @@ with col2:
         beds_EMRD = []
         for i in range(0, n_loc):
             with st.expander('Location ' + str(i+1)):
-                st.title('Location ' + str(i+1))
+                st.text_input(value="Location "+str(i+1))
+                #st.title('Location ' + str(i+1))
                 beds_ELV_High = st.number_input(f"Number of ELV High Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
                 nurs_ELV_High = st.number_input(f"Number of ELV High Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
                 beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
