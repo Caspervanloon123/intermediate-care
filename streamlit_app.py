@@ -6243,7 +6243,7 @@ with col3:
         table3['bez_gr_Low'] = table3['bez_gr_Low']*100
         # Hernoem de kolommen
         table1.rename(columns = {'Wt_from_HOSP_GRZ':'Ziekenhuis GRZ', 'Wt_from_HOSP_High':'Ziekenhuis Hoog Complex', 'Wt_from_GPR_High':'Huisarts Hoog Complex', 'Wt_from_GPR_Low':'Huisarts Laag Complex', 'Wt_to_TRW':'Observatie', 'WT_from_EMD':'Spoedeisendehulp'},inplace = True)
-        table2.rename(columns = {'Perc_with_HOSP_adm':'Percentage met ziekenhuisopname vanaf spoedeisendehulp (%)', 'Number with hosp adm EMD':'Aantal met ziekenhuisopname vanaf spoedeisendehulp', 'Perc_with_HOSP_adm_HOSP':'Percentage met ziekenhuisopname vanaf het ziekenhuis (%)','Number with hosp adm HOSP':'Aantal met ziekenhuisopname vanaf het ziekenhuis', 'nr_pat_repl':'Aantal verplaatsingen'}, inplace = True)
+        table2.rename(columns = {'Perc_with_HOSP_adm':'Percentage ziekenhuisopname vanaf spoedeisendehulp (%)', 'Number with hosp adm EMD':'Aantal ziekenhuisopname vanaf spoedeisendehulp', 'Perc_with_HOSP_adm_HOSP':'Percentage ziekenhuisopname vanaf het ziekenhuis (%)','Number with hosp adm HOSP':'Aantal ziekenhuisopname vanaf het ziekenhuis', 'nr_pat_repl':'Aantal verplaatsingen'}, inplace = True)
         table3.rename(columns = {'serv_level':'Service level (Geholpen < 3 dagen) (%)', 'los_ELV_High':'Gemiddelde verplijfduur Hoog Complex', 'los_ELV_Low':'Gemiddelde verblijfduur Laag Complex', 'bez_gr_total':'Bezettingsgraad totaal (%)',
         'bez_gr_High':'Bezettingsgraad Hoog Complex (%)', 'bez_gr_Low':'Bezettingsgraad Laag Complex (%)'}, inplace =True)
         table4.rename(columns = {'Number of Locations ELV':'Aantal ELV Locaties', 'Number of beds ELV_High':'Aantal ELV Hoog Complex bedden', 'Number of beds ELV_Low':'Aantal ELV Laag Complex bedden',
