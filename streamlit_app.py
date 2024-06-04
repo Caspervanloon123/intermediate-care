@@ -4,7 +4,7 @@ import pandas as pd
 
 
 
-
+st.set_page_config(layout="wide")
 # Inject custom CSS
 st.markdown("""
     <style>
