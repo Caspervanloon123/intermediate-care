@@ -87,13 +87,13 @@ if bed_share == "Scen_shared_beds_Full":
         beds_ELV_High = st.number_input("Number of ELV High Complex beds location", min_value=0, step=1, value=0, format="%d")
         beds_ELV_Low = st.number_input("Number of ELV Low Complex beds location", min_value=0, step=1, value=0, format="%d")
         beds_ELV_EMRD = st.number_input("Number of Emergency beds", min_value=0, step=1, value=0, format="%d")
-elif bed_share == :
+# elif bed_share == :
 
-elif bed_share == :
+# elif bed_share == :
 
-elif bed_share == :
+# elif bed_share == :
 
-elif bed_share == :
+# elif bed_share == :
 # Button to display the dataframe
 if st.button('Display DataFrame'):
     # Convert the inputs dictionary to a DataFrame
