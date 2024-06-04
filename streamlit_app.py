@@ -82,7 +82,7 @@ for group_name, group_vars in groups.items():
         for var in group_vars:
             inputs[var] = st.number_input(var, value=0)
 if bed_share == "Scen_shared_beds_Full":
-    listofzeros = [0] * n
+    listofzeros = [0] * n_loc
     beds_High = []
     beds_Low = []
     nurs_low = []
@@ -119,7 +119,7 @@ if bed_share == "Scen_shared_beds_Full":
     inputs["emergency_beds"] = beds_EMRD
 
 elif bed_share == "Scen_NO_Sharing":
-    listofzeros = [0] * n
+    listofzeros = [0] * n_loc
     beds_G = []
     beds_High = []
     beds_low = []
@@ -162,7 +162,7 @@ elif bed_share == "Scen_NO_Sharing":
 
     inputs["emergency_beds"] = beds_EMRD
 elif bed_share == "Scen_Part_bed_share":
-    listofzeros = [0] * n
+    listofzeros = [0] * n_loc
     beds_G = []
     beds_High = []
     beds_low = []
@@ -207,7 +207,7 @@ elif bed_share == "Scen_Part_bed_share":
 
     inputs["emergency_beds"] = beds_EMRD
 elif bed_share == "Scen_Triage_ward":
-    listofzeros = [0] * n
+    listofzeros = [0] * n_loc
     beds_G = []
     beds_High = []
     beds_low = []
@@ -252,7 +252,7 @@ elif bed_share == "Scen_Triage_ward":
 
     inputs["emergency_beds"] = beds_EMRD
 elif bed_share == "Scen_Total_Sharing":
-    listofzeros = [0] * n
+    listofzeros = [0] * n_loc
     beds_Total = []
     nurs_Total = []
     beds_EMRD = []
