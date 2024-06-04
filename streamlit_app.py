@@ -110,8 +110,8 @@ preference_options = ["FCFS", "Voorkeur", "Model"]
 preference =st.selectbox("Allocatie", preference_options)
 
 data_p = {
-    Priority: [Priority],
-    preference: [preference],
+    "Priority": [Priority],
+    "preference": [preference],
 }
 df_p = pd.DataFrame(data_p)
 
