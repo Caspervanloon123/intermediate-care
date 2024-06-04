@@ -64,7 +64,7 @@ inputs = pd.DataFrame()  # Initialize scenario variables to False
 st.title('Simulation Inputs')
 # Input for number of locations (integer only)
 n_loc = st.number_input("Number of Locations", min_value=0, step=1, value=0, format="%d")
-inputs["n_loc"] = n_loc
+inputs.loc[0,"n_loc"] = n_loc
 # Dropdown menu for the scenario variables
 dropdown_var = st.selectbox("Beddeling", scenario_vars_1)
 bed_share = dropdown_var
