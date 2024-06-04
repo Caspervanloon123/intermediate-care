@@ -325,7 +325,7 @@ with col2:
             "trw_beds": [0],
             "total_beds": [0],
             "high_complex_nurses": [nurs_high],
-            "grz_nurses": [nurs_GRZ],
+            "grz_nurses": [nurs_G],
             "shared_nurses": [0],
             "trw_nurses": [0],
             "total_nurses": [0]
@@ -375,7 +375,7 @@ with col2:
             "trw_beds": [beds_TRW],
             "total_beds": [0],
             "high_complex_nurses": [nurs_high],
-            "grz_nurses": [nurs_GRZ],
+            "grz_nurses": [nurs_G],
             "shared_nurses": [0],
             "trw_nurses": [0],
             "total_nurses": [0]
