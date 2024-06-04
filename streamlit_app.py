@@ -175,7 +175,7 @@ with col1:
         Inputs_1.loc[0,"Scen_Part_bed_share"] = False
     
     # Checkbox for Priority
-    Priority = st.checkbox("Priority")
+    Priority = st.checkbox("Prioriteit")
     Inputs_1.loc[0,"Priority"] = Priority
     
     # Dropdown menu for Preference
