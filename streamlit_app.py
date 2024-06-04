@@ -6133,7 +6133,7 @@ df_tot = pd.concat([Inputs_1,inputs],ignore_index = True)
 # Button to display the dataframe
 if st.button('Display DataFrame'):
     # Convert the inputs dictionary to a DataFrame
-    df1 = Inputs_1
+    df1 = df_tot
     # output_df = simulate(df1)
     # st.write(output_df)
     st.write(df1)
