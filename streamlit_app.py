@@ -2180,9 +2180,9 @@ with col2:
                
                 
                                                         p_acc_opn = np.random.uniform(0,1)
-                                                        if (current_time - math.floor(current_time) <= time_max_opn_EMD and math.floor(current_time) % 7 in [1,2,3,4,5]) or p_acc_opn <= p_opn_weekend: # voor 17h
+                                                        if (current_time - math.floor(current_time) <= EMD_end_time and math.floor(current_time) % 7 in [1,2,3,4,5]) or p_acc_opn <= p_opn_weekend: # voor 17h
             
-                                                            event_dict['HOSP_adm_' + target_client] = math.floor(current_time) + time_max_opn_EMD
+                                                            event_dict['HOSP_adm_' + target_client] = math.floor(current_time) + EMD_end_time
             
                                                             if print_modus:
                                                                 print('patient from EMD en voor 17 doordeweeks dus evt HOSP opname om ', event_dict['HOSP_adm_' + target_client])
@@ -2200,9 +2200,9 @@ with col2:
                                                     if (math.floor(current_time) % 7 in [6,0] or  current_time - math.floor(current_time) > time_max_opn_ELV )and (count_patients('ELV_EMDR')+count_place_reserved('ELV_EMDR') <beds_Emergency_list[extract_number(target_client)]): 
                                                         move_to_ELV_Emergency(target_client,0)
                                                     
-                                                    elif (current_time - math.floor(current_time) <= time_max_opn_EMD and math.floor(current_time) % 7 in [1,2,3,4,5]) or p_acc_opn <= p_opn_weekend: # voor 17h
+                                                    elif (current_time - math.floor(current_time) <= EMD_end_time and math.floor(current_time) % 7 in [1,2,3,4,5]) or p_acc_opn <= p_opn_weekend: # voor 17h
             
-                                                        event_dict['HOSP_adm_' + target_client] = math.floor(current_time) + time_max_opn_EMD
+                                                        event_dict['HOSP_adm_' + target_client] = math.floor(current_time) + EMD_end_time
             
                                                         if print_modus:
                                                             print('patient from EMD en voor 17 doordeweeks dus evt HOSP opname om ', event_dict['HOSP_adm_' + target_client])
