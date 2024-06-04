@@ -66,7 +66,7 @@ st.title('Simulation Inputs')
 n_loc = st.number_input("Number of Locations", min_value=0, step=1, value=0, format="%d")
 inputs["n_loc"] = n_loc
 # Dropdown menu for the scenario variables
-dropdown_var = st.selectbox("Beddeling", scenario_vars)
+dropdown_var = st.selectbox("Beddeling", scenario_vars_1)
 if dropdown_var == "Volledige beddeldeling":
     inputs["Scen_shared_beds_Full"] == True
 elif dropdown_var == "Totale beddendeling":
