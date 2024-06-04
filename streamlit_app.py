@@ -63,7 +63,7 @@ inputs = pd.DataFrame()  # Initialize scenario variables to False
 # Streamlit interface
 st.title('Simulation Inputs')
 # Input for number of locations (integer only)
-n_loc = st.number_input("Number of Locations", min_value=0, step=1, value=0, format="%d")
+n_loc = st.number_input("Aantal locaties", min_value=0, step=1, value=0, format="%d")
 inputs["n_loc"] = n_loc
 # Dropdown menu for the scenario variables
 dropdown_var = st.selectbox("Beddeling", scenario_vars_1)
@@ -103,20 +103,13 @@ elif dropdown_var == "Geen beddendeling":
 
 # Checkbox for Priority
 Priority = st.checkbox("Priority")
-
+inputs["Priority"]
 
 # Dropdown menu for Preference
 preference_options = ["FCFS", "Voorkeur", "Model"]
 preference =st.selectbox("Allocatie", preference_options)
+inputs["preference"]
 
-data_p = {
-    "Priority": [Priority],
-    "preference": [preference],
-}
-df_p = pd.DataFrame(data_p)
-
-# Concatenate the DataFrame with the existing DataFrame
-inputs = pd.concat([inputs, df_p], ignore_index=True)
 # Expanders for grouped variables
 for group_name, group_vars in groups.items():
     with st.expander(group_name):
