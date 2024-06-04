@@ -58,7 +58,7 @@ groups = {
 }
 
 # Dictionary to store the inputs
-inputs = {var: False for var in scenario_vars}  # Initialize scenario variables to False
+inputs = {}  # Initialize scenario variables to False
 
 # Streamlit interface
 st.title('Simulation Inputs')
@@ -70,15 +70,34 @@ dropdown_var = st.selectbox("Beddeling", scenario_vars_1)
 bed_share = dropdown_var
 if dropdown_var == "Volledige beddeldeling":
     inputs["Scen_shared_beds_Full"] == True
+    inputs["Scen_Total_Sharing"] == False
+    inputs["Scen_Triage_ward"] == False
+    inputs["Scen_NO_Sharing"] == False
+    inputs["Scen_Part_bed_share"] == False
 elif dropdown_var == "Totale beddendeling":
+    inputs["Scen_shared_beds_Full"] == False
     inputs["Scen_Total_Sharing"] == True
+    inputs["Scen_Triage_ward"] == False
+    inputs["Scen_NO_Sharing"] == False
+    inputs["Scen_Part_bed_share"] == False
 elif dropdown_var == "Observatiebedden":
+    inputs["Scen_shared_beds_Full"] == False
+    inputs["Scen_Total_Sharing"] == False
     inputs["Scen_Triage_ward"] == True
     inputs["Scen_NO_Sharing"] == True
+    inputs["Scen_Part_bed_share"] == False
 elif dropdown_var == "Partiële beddendeling":
+    inputs["Scen_shared_beds_Full"] == False
+    inputs["Scen_Total_Sharing"] == False
+    inputs["Scen_Triage_ward"] == False
+    inputs["Scen_NO_Sharing"] == False
     inputs["Scen_Part_bed_share"] == True
 elif dropdown_var == "Geen beddendeling":
+    inputs["Scen_shared_beds_Full"] == False
+    inputs["Scen_Total_Sharing"] == False
+    inputs["Scen_Triage_ward"] == False
     inputs["Scen_NO_Sharing"] == True
+    inputs["Scen_Part_bed_share"] == False
 
 
 
@@ -87,7 +106,7 @@ inputs["Priority"] = st.checkbox("Priority")
 
 # Dropdown menu for Preference
 preference_options = ["FCFS", "Voorkeur", "Model"]
-inputs["Preference"] = st.selectbox("Preference", preference_options)
+inputs["Preference"] = st.selectbox("Allocatie", preference_options)
 
 # Expanders for grouped variables
 for group_name, group_vars in groups.items():
