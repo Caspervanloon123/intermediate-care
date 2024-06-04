@@ -6221,7 +6221,12 @@ if st.button('Start Simulation'):
     table3 = pd.DataFrame(output_df[table3_columns])
     table4 = pd.DataFrame(output_df[table4_columns])
     # Hernoem de kolommen
-    table1.rename(columns = {'Wt_from_HOSP_GRZ':'Ziekenhuis GRZ'},inplace = True)
+    table1.rename(columns = {'Wt_from_HOSP_GRZ':'Ziekenhuis GRZ', 'Wt_from_HOSP_High':'Ziekenhuis Hoog Complex', 'Wt_from_GPR_High':'Huisarts Hoog Complex', 'Wt_from_GPR_Low':'Huisarts Laag Complex', 'Wt_to_TRW':'Observatie', 'WT_from_EMD':'Spoedeisendehulp'},inplace = True)
+    table2.rename(columns = {'Perc_with_HOSP_adm':'Percentage met ziekenhuisopname vanaf spoedeisendehulp', 'Number with hosp adm EMD':'Aantal met ziekenhuisopname vanaf spoedeisendehulp', 'Perc_with_HOSP_adm_HOSP':'Percentage met ziekenhuisopname vanaf het ziekenhuis','Number with hosp adm HOSP':'Aantal met ziekenhuisopname vanaf het ziekenhuis', 'nr_pat_repl':'Aantal verplaatsingen'}, inplace = True)
+    table3.rename(columns = {'serv_level':'Service level', 'los_ELV_High':'Gemiddelde verplijfduur Hoog Complex', 'los_ELV_Low':'Gemiddelde verblijfduur Laag Complex', 'bez_gr_total':'Bezettingsgraad totaal',
+    'bez_gr_High':'Bezettingsgraad Hoog Complex', 'bez_gr_Low':'Bezettingsgraad Laag Complex'}, inplace =True)
+    table4.rename(columns = {'Number of Locations ELV':'Aantal ELV Locaties', 'Number of beds ELV_High':'Aantal ELV Hoog Complex bedden', 'Number of beds ELV_Low':'Aantal ELV Laag Complex bedden',
+    'Number of beds GRZ':'Aantal bedden Geriatrische Zorg', 'Number of beds High Complex':'Aantal Hoog Complexe bedden', 'Number of shared beds':'Aantal gedeelde bedden', 'Number of TRW beds':'Aantal bedden voor observatie', 'Number of beds ELV Total':'Aantal bedden ELV Totaal'},inplace =True)
     #st.write(df1)
     st.write(table1)
     st.bar_chart(table1.T)
