@@ -6229,10 +6229,10 @@ if st.button('Start Simulation'):
     'Number of beds GRZ':'Aantal bedden Geriatrische Zorg', 'Number of beds High Complex':'Aantal Hoog Complexe bedden', 'Number of shared beds':'Aantal gedeelde bedden', 'Number of TRW beds':'Aantal bedden voor observatie', 'Number of beds ELV Total':'Aantal bedden ELV Totaal'},inplace =True)
     table1.index = ['Wachttijd (dagen)']
     #st.write(df1)
-    st.write(table1)
+    st.write(table1.T)
     st.bar_chart(table1.T, y = 'Wachttijd (dagen)')
-    st.write(table2)
-    st.write(table3)
-    st.write(table4)
+    st.write(table2.T)
+    st.write(table3.T)
+    st.write(table4.T)
     
 
