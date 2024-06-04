@@ -314,7 +314,7 @@ elif bed_share == "Totale beddendeling":
         beds_Total.append(beds_ELV_Total)
         nurs_Total.append(beds_ELV_Total) 
         beds_EMRD.append(beds_ELV_EMRD)
-     data = {
+    data = {
         "elv_high_complex_beds": [0],
         "elv_low_complex_beds": [0],
         "elv_high_complex_nurses": [0],
