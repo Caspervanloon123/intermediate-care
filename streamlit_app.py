@@ -116,7 +116,7 @@ for group_name, group_vars in groups.items():
 
 
 if bed_share == "Volledige beddeldeling":
-    listofzeros = [0] * n_loc
+    listofzeros = 0
     beds_High = []
     beds_Low = []
     nurs_low = []
@@ -153,7 +153,7 @@ if bed_share == "Volledige beddeldeling":
     inputs["emergency_beds"] = beds_EMRD
 
 elif bed_share == "Geen beddendeling":
-    listofzeros = [0] * n_loc
+    listofzeros = 0
     beds_G = []
     beds_High = []
     beds_low = []
@@ -196,7 +196,7 @@ elif bed_share == "Geen beddendeling":
  
     inputs["emergency_beds"] = beds_EMRD
 elif bed_share == "Partiële beddendeling":
-    listofzeros = [0] * n_loc
+    listofzeros = 0
     beds_G = []
     beds_High = []
     beds_low = []
@@ -241,7 +241,7 @@ elif bed_share == "Partiële beddendeling":
 
     inputs["emergency_beds"] = beds_EMRD
 elif bed_share == "Observatiebedden":
-    listofzeros = [0] * n_loc
+    listofzeros = 0
     beds_G = []
     beds_High = []
     beds_low = []
@@ -286,7 +286,7 @@ elif bed_share == "Observatiebedden":
 
     inputs["emergency_beds"] = beds_EMRD
 elif bed_share == "Totale beddendeling":
-    listofzeros = [0] * n_loc
+    listofzeros = 0
     beds_Total = []
     nurs_Total = []
     beds_EMRD = []
