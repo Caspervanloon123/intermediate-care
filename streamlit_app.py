@@ -6259,7 +6259,7 @@ with col3:
         table1.index = ['Wachttijd (dagen)']
         table2.index = ['Aantallen']
         table3.index = ['Levels']
-        table4.index = ['Aantal']
+        table4.index = ['Aantal bedden ELV']
         #st.write(df1)
         #with col3:
         st.write(table1.T)
