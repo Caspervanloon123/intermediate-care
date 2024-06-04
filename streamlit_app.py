@@ -62,11 +62,16 @@ inputs = pd.DataFrame()  # Initialize scenario variables to False
 inputs = pd.DataFrame(columns=["n_loc", "Scen_shared_beds_Full", "Scen_Total_Sharing", "Scen_Triage_ward", "Scen_NO_Sharing", "Scen_Part_bed_share", "Priority", "Preference",
                                  "elv_high_complex_beds", "elv_low_complex_beds", "high_complex_beds", "grz_beds", "shared_beds", "trw_beds", "total_beds",
                                  "elv_high_complex_nurses", "elv_low_complex_nurses", "high_complex_nurses", "grz_nurses", "shared_nurses", "trw_nurses", "total_nurses",
-                                 "emergency_beds","n_loc"])
-
-# Add column names from the grouped variables
-for group_vars in groups.values():
-    inputs = inputs.reindex(columns=inputs.columns.union(group_vars))
+                                 "emergency_beds","n_loc","Aankomst Hoog Complex vanuit ziekenhuis per dag", "Aankomst vanaf Huisarts Hoog Complex per dag", "Aankomst vanaf de Spoedeisendehulp per dag", "Aankomst Geriatrische Zorg in Ziekenhuis per dag", "Aankomst Laag Complexe zorg vanaf de Huisarts",
+                              "Ligduur Hoog Complex naar Huis", "Ligduur Geriatrische Zorg naar Huis", "Ligduur Hoog Complex Dood", "Ligduur Geriatrische Zorg Dood", "Ligduur Hoog Complex naar Geriatrische Zorg",
+         "Ligduur Hoog Complex naar Huis met aanpassingen", "Ligduur Geriatrische Zorg naar Huis met aanpassingen", "Ligduur Hoog Complex WMO", "Ligduur Hoog Complex WLZ", "Ligduur Geriatrische zorg WMO",
+        "Ligduur Geriatrische Zorg WLZ", "Ligduur Laag Complex naar Huis", "Ligduur Laag Complex Dood", "Ligduur Laag Complex Geriatrische Zorg", "Ligduur Laag Complex naar Huis met aanpassingen", "Ligduur Laag Complex WMO",
+        "Ligduur Laag Complex WLZ", "Percentage Hoog Complex naar Huis", "Percentage Geriatrische Zorg naar Huis", "Percentage Hoog Complex Dood", "Percentage Geriatrische Zorg Dood", "Percentage Hoog Complex WMO", "Percentage Geriatrische Zorg WMO",
+        "Percentage Hoog Complex WLZ", "Percentage Geriatrische Zorg WLZ", "Percentage Hoog Complex naar Geriatrische Zorg", "Percentage Hoog Complex naar Huis met aanpassingen", "Percentage Geriatrische Zorg naar Huis met aanpassingen",
+        "Percentage Laag Complex naar Huis", "Percentage Laag Complex Dood", "Percentage Laag Complex WMO", "Percentage Laag Complex WLZ", "Percentage Laag Complex naar Geriatrische Zorg", "Percentage Laag Complex naar Huis met aanpassingen",
+                              "Opening_weekday", "Spoedeisendehulp openingstijd", "Spoedeisendehulp sluitingstijd", "Openingstijd Huisarts",
+        "Sluittijd Huisarts", "Opname in het weekend", "Openingstijd ELV", "Sluitingstijd ELV",
+                              "Aantal patienten per verpleegkundige", "Transfertijd", "Maximaal aantal dagen observatie", "Aantal subruns", "Aantal patienten per subrun", "Aantal patienten voor warming"])
 
 # Streamlit interface
 st.title('Simulation Inputs')
