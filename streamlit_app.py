@@ -82,13 +82,23 @@ for group_name, group_vars in groups.items():
         for var in group_vars:
             inputs[var] = st.number_input(var, value=0)
 if bed_share == "Scen_shared_beds_Full":
+    beds_High = []
+    beds_Low = []
+    nurs_low = []
+    nurs_high = []
+    beds_EMRD = []
     for i in range(0, n_loc):
         st.title('Location ' + str(i+1))
         beds_ELV_High = st.number_input(f"Number of ELV High Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
         nurs_ELV_High = st.number_input(f"Number of ELV High Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
         beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
         nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
-        beds_ELV_EMRD = st.number_input(f"Number of Emergency beds location {i+1}", min_value=0, step=1, value=0, format="%d")             
+        beds_ELV_EMRD = st.number_input(f"Number of Emergency beds location {i+1}", min_value=0, step=1, value=0, format="%d")   
+        beds_High.append(beds_ELV_High)
+        beds_Low.append(beds_ELV_Low) 
+        nurs_low.append(nurs_ELV_Low)
+        nurs_high.append(nurs_ELV_High)
+        beds_EMRD.append(beds_ELV_EMRD)
     inputs["elv_high_complex_beds"]  = beds_ELV_High
     inputs["elv_low_complex_beds"] = beds_ELV_Low
     inputs["elv_high_complex_nurses"] = nurs_ELV_High
