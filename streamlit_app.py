@@ -1,18 +1,8 @@
 import streamlit as st 
 import pandas as pd
 
-# Function to initialize session state
-def init_session_state():
-    return {
-        "inputs": pd.DataFrame()
-    }
 
-# Initialize session state
-if "session_state" not in st.session_state:
-    st.session_state["session_state"] = init_session_state()
 
-# Retrieve inputs from session state
-inputs = st.session_state.session_state["inputs"]
 
 # Inject custom CSS
 st.markdown("""
@@ -71,6 +61,7 @@ groups = {
 st.title('Simulation Inputs')
 
 # Input for number of locations (integer only)
+Inputs = pd.DataFrame()
 n_loc = st.number_input("Aantal locaties", min_value=0, step=1, value=0, format="%d")
 inputs["n_loc"] = n_loc
 
@@ -122,9 +113,6 @@ for group_name, group_vars in groups.items():
     with st.expander(group_name):
         for var in group_vars:
             inputs[var] = st.number_input(var, value=0)
-
-# Update session state
-st.session_state.session_state["inputs"] = inputs
 
  
 # if bed_share == "Volledige beddeldeling":
