@@ -414,9 +414,9 @@ def simulate(input):
         import bisect
         import time
         #import matplotlib.pyplot as plt
-        import scipy.stats
-        import ast
-        import os
+        #import scipy.stats
+        #import ast
+        #import os
         from random import randrange
         import json
         import random
