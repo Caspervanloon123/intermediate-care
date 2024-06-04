@@ -400,7 +400,7 @@ elif bed_share == "Totale beddendeling":
     inputs = pd.concat([inputs, df], ignore_index=True)
 
 df_tot = pd.concat([Inputs_1,inputs],axis = 1)
-def Simulate(input):
+def simulate(input):
     for loop_nr in range(len(input)):
         from datetime import datetime
 
