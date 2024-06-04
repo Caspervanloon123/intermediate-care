@@ -103,13 +103,20 @@ elif dropdown_var == "Geen beddendeling":
 
 # Checkbox for Priority
 Priority = st.checkbox("Priority")
-inputs["Priority"] = Priority
+
 
 # Dropdown menu for Preference
 preference_options = ["FCFS", "Voorkeur", "Model"]
 preference =st.selectbox("Allocatie", preference_options)
-inputs["Preference"] = preference
 
+data = {
+    Priority : Priority,
+    preference: preference,
+}
+df = pd.DataFrame(data)
+
+# Concatenate the DataFrame with the existing DataFrame
+inputs = pd.concat([inputs, df], ignore_index=True)
 # Expanders for grouped variables
 for group_name, group_vars in groups.items():
     with st.expander(group_name):
