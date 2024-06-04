@@ -4,7 +4,7 @@ import pandas as pd
 
 page_bg_img = """
 <style>
-[data-testid="header-permalink-button"]> .main {{
+[data-testid="header-permalink-button"]> .main {{ 
 background-image: url("https://i.postimg.cc/4xgNnkfX/Untitled-design.png");
 background-size: cover;
 background-position: center center;
