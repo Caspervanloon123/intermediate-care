@@ -618,7 +618,7 @@ def simulate(input):
         trans_list = []
         
         
-        n_loc = int(input.loc[loop_nr,'Number of Locations'])
+        n_loc = int(input.loc[loop_nr,'n_loc'])
         
         def sum_lists(list_a,list_b):
             c= []
