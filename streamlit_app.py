@@ -1,3 +1,4 @@
+#import matplotlib.pyplot as plt
 import streamlit as st 
 import pandas as pd
 
@@ -412,7 +413,7 @@ def simulate(input):
         import operator
         import bisect
         import time
-        import matplotlib.pyplot as plt
+        #import matplotlib.pyplot as plt
         import scipy.stats
         import ast
         import os
