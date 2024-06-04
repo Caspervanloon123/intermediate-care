@@ -6193,7 +6193,7 @@ with col2:
         
     
     # Button to display the dataframe
-    #with col3:
+with col3:
     if st.button('Start Simulation'):
         # Convert the inputs dictionary to a DataFrame
         df1 = df_tot
