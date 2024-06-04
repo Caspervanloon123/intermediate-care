@@ -61,58 +61,58 @@ groups = {
 st.title('Simulation Inputs')
 
 # Input for number of locations (integer only)
-Inputs = pd.DataFrame()
+Inputs_1 = pd.DataFrame()
 n_loc = st.number_input("Aantal locaties", min_value=0, step=1, value=0, format="%d")
-inputs["n_loc"] = n_loc
+inputs_1.loc[0,"n_loc"] = n_loc
 
 # Dropdown menu for the scenario variables
 dropdown_var = st.selectbox("Beddeling", scenario_vars_1)
 bed_share = dropdown_var
 if dropdown_var == "Volledige beddeldeling":
-    inputs["Scen_shared_beds_Full"] = True
-    inputs["Scen_Total_Sharing"] = False
-    inputs["Scen_Triage_ward"] = False
-    inputs["Scen_NO_Sharing"] = False
-    inputs["Scen_Part_bed_share"] = False
+    Inputs_1.loc[0,"Scen_shared_beds_Full"] = True
+    Inputs_1.loc[0,"Scen_Total_Sharing"] = False
+    Inputs_1.loc[0,"Scen_Triage_ward"] = False
+    Inputs_1.loc[0,"Scen_NO_Sharing"] = False
+    Inputs_1.loc[0,"Scen_Part_bed_share"] = False
 elif dropdown_var == "Totale beddendeling":
-    inputs["Scen_shared_beds_Full"] = False
-    inputs["Scen_Total_Sharing"] = True
-    inputs["Scen_Triage_ward"] = False
-    inputs["Scen_NO_Sharing"] = False
-    inputs["Scen_Part_bed_share"] = False
+    Inputs_1.loc[0,"Scen_shared_beds_Full"] = False
+    Inputs_1.loc[0,"Scen_Total_Sharing"] = True
+    Inputs_1.loc[0,"Scen_Triage_ward"] = False
+    Inputs_1.loc[0,"Scen_NO_Sharing"] = False
+    Inputs_1.loc[0,"Scen_Part_bed_share"] = False
 elif dropdown_var == "Observatiebedden":
-    inputs["Scen_shared_beds_Full"] = False
-    inputs["Scen_Total_Sharing"] = False
-    inputs["Scen_Triage_ward"] = True
-    inputs["Scen_NO_Sharing"] = True
-    inputs["Scen_Part_bed_share"] = False
+    Inputs_1.loc[0,"Scen_shared_beds_Full"] = False
+    Inputs_1.loc[0,"Scen_Total_Sharing"] = False
+    Inputs_1.loc[0,"Scen_Triage_ward"] = True
+    Inputs_1.loc[0,"Scen_NO_Sharing"] = True
+    Inputs_1.loc[0,"Scen_Part_bed_share"] = False
 elif dropdown_var == "Partiële beddendeling":
-    inputs["Scen_shared_beds_Full"] = False
-    inputs["Scen_Total_Sharing"] = False
-    inputs["Scen_Triage_ward"] = False
-    inputs["Scen_NO_Sharing"] = False
-    inputs["Scen_Part_bed_share"]= True
+    Inputs_1.loc[0,"Scen_shared_beds_Full"] = False
+    Inputs_1.loc[0,"Scen_Total_Sharing"] = False
+    Inputs_1.loc[0,"Scen_Triage_ward"] = False
+    Inputs_1.loc[0,"Scen_NO_Sharing"] = False
+    Inputs_1.loc[0,"Scen_Part_bed_share"]= True
 elif dropdown_var == "Geen beddendeling":
-    inputs["Scen_shared_beds_Full"] = False
-    inputs["Scen_Total_Sharing"] = False
-    inputs["Scen_Triage_ward"] = False
-    inputs["Scen_NO_Sharing"] = True
-    inputs["Scen_Part_bed_share"] = False
+    Inputs_1.loc[0,"Scen_shared_beds_Full"] = False
+    Inputs_1.loc[0,"Scen_Total_Sharing"] = False
+    Inputs_1.loc[0,"Scen_Triage_ward"] = False
+    Inputs_1.loc[0,"Scen_NO_Sharing"] = True
+    Inputs_1.loc[0,"Scen_Part_bed_share"] = False
 
 # Checkbox for Priority
 Priority = st.checkbox("Priority")
-inputs["Priority"] = Priority
+Inputs_1.loc[0,"Priority"] = Priority
 
 # Dropdown menu for Preference
 preference_options = ["FCFS", "Voorkeur", "Model"]
 preference = st.selectbox("Allocatie", preference_options)
-inputs["preference"] = preference
+Inputs_1.loc[0,"preference"] = preference
 
 # Expanders for grouped variables
 for group_name, group_vars in groups.items():
     with st.expander(group_name):
         for var in group_vars:
-            inputs[var] = st.number_input(var, value=0)
+            Inputs_1.loc[0,var] = st.number_input(var, value=0)
 
  
 # if bed_share == "Volledige beddeldeling":
@@ -6130,7 +6130,7 @@ for group_name, group_vars in groups.items():
 # Button to display the dataframe
 if st.button('Display DataFrame'):
     # Convert the inputs dictionary to a DataFrame
-    df1 = inputs
+    df1 = inputs_1
     # output_df = simulate(df1)
     # st.write(output_df)
     st.write(df1)
