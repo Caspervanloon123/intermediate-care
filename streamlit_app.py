@@ -83,7 +83,7 @@ default_values = {
 
 
 # Titel van de applicatie
-st.title("STRC Waiting Time Calculator")
+st.title("ELV SIMULATIE")
 
 # List of scenario variables
 scenario_vars_1 = [
@@ -117,7 +117,6 @@ groups = {
 }
 
 # Streamlit interface
-st.title('Simulation Inputs')
 
 # Input for number of locations (integer only)
 Inputs_1 = pd.DataFrame()
