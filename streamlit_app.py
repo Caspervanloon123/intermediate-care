@@ -1,6 +1,19 @@
 import streamlit as st 
 import pandas as pd
 
+# Function to initialize session state
+def init_session_state():
+    return {
+        "inputs": pd.DataFrame()
+    }
+
+# Initialize session state
+if "session_state" not in st.session_state:
+    st.session_state["session_state"] = init_session_state()
+
+# Retrieve inputs from session state
+inputs = st.session_state.session_state["inputs"]
+
 # Inject custom CSS
 st.markdown("""
     <style>
@@ -17,14 +30,11 @@ st.markdown("""
         cursor: pointer;
         border-radius: 8px;
     }
-   
     </style>
     """, unsafe_allow_html=True)
 
 # Titel van de applicatie
 st.title("STRC Waiting Time Calculator")
-
-
 
 # List of scenario variables
 scenario_vars_1 = [
@@ -57,14 +67,13 @@ groups = {
     ]
 }
 
-# Dictionary to store the inputs
-inputs = pd.DataFrame()  # Initialize scenario variables to False
-
 # Streamlit interface
 st.title('Simulation Inputs')
+
 # Input for number of locations (integer only)
 n_loc = st.number_input("Aantal locaties", min_value=0, step=1, value=0, format="%d")
 inputs["n_loc"] = n_loc
+
 # Dropdown menu for the scenario variables
 dropdown_var = st.selectbox("Beddeling", scenario_vars_1)
 bed_share = dropdown_var
@@ -99,15 +108,13 @@ elif dropdown_var == "Geen beddendeling":
     inputs["Scen_NO_Sharing"] = True
     inputs["Scen_Part_bed_share"] = False
 
-
-
 # Checkbox for Priority
 Priority = st.checkbox("Priority")
 inputs["Priority"] = Priority
 
 # Dropdown menu for Preference
 preference_options = ["FCFS", "Voorkeur", "Model"]
-preference =st.selectbox("Allocatie", preference_options)
+preference = st.selectbox("Allocatie", preference_options)
 inputs["preference"] = preference
 
 # Expanders for grouped variables
@@ -115,6 +122,9 @@ for group_name, group_vars in groups.items():
     with st.expander(group_name):
         for var in group_vars:
             inputs[var] = st.number_input(var, value=0)
+
+# Update session state
+st.session_state.session_state["inputs"] = inputs
 
  
 # if bed_share == "Volledige beddeldeling":
