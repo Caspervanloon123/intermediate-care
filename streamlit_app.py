@@ -136,19 +136,19 @@ if bed_share == "Volledige beddeldeling":
         beds_EMRD.append(beds_ELV_EMRD)
     inputs["elv_high_complex_beds"]  = beds_High
     inputs["elv_low_complex_beds"] = beds_Low
-    inputs["high_complex_beds"] = listofzeros
-    inputs["grz_beds"] = listofzeros
-    inputs["shared_beds"] =listofzeros
-    inputs["trw_beds"] = listofzeros
-    inputs["total_beds"] = listofzeros
+    # inputs["high_complex_beds"] = listofzeros
+    # inputs["grz_beds"] = listofzeros
+    # inputs["shared_beds"] =listofzeros
+    # inputs["trw_beds"] = listofzeros
+    # inputs["total_beds"] = listofzeros
     
     inputs["elv_high_complex_nurses"] = nurs_high
     inputs["elv_low_complex_nurses"] = nurs_low
-    inputs["high_complex_nurses"] = listofzeros
-    inputs["grz_nurses"] = listofzeros
-    inputs["shared_nurses"] = listofzeros
-    inputs["trw_nurses"] = listofzeros
-    inputs["total_nurses"] = listofzeros
+    # inputs["high_complex_nurses"] = listofzeros
+    # inputs["grz_nurses"] = listofzeros
+    # inputs["shared_nurses"] = listofzeros
+    # inputs["trw_nurses"] = listofzeros
+    # inputs["total_nurses"] = listofzeros
 
     inputs["emergency_beds"] = beds_EMRD
 
@@ -178,21 +178,21 @@ elif bed_share == "Geen beddendeling":
         nurs_high.append(nurs_High_Complex)
         beds_EMRD.append(beds_ELV_EMRD)
         
-    inputs["elv_high_complex_beds"]  = listofzeros
+    # inputs["elv_high_complex_beds"]  = listofzeros
     inputs["elv_low_complex_beds"] = beds_low
     inputs["high_complex_beds"] = beds_High
     inputs["grz_beds"] = beds_G
-    inputs["shared_beds"] =listofzeros
-    inputs["trw_beds"] = listofzeros
-    inputs["total_beds"] = listofzeros
+    # inputs["shared_beds"] =listofzeros
+    # inputs["trw_beds"] = listofzeros
+    # inputs["total_beds"] = listofzeros
     
-    inputs["elv_high_complex_nurses"] = listofzeros
+    # inputs["elv_high_complex_nurses"] = listofzeros
     inputs["elv_low_complex_nurses"] = nurs_low
     inputs["high_complex_nurses"] = nurs_high
     inputs["grz_nurses"] = nurs_G
-    inputs["shared_nurses"] = listofzeros
-    inputs["trw_nurses"] = listofzeros
-    inputs["total_nurses"] = listofzeros
+    # inputs["shared_nurses"] = listofzeros
+    # inputs["trw_nurses"] = listofzeros
+    # inputs["total_nurses"] = listofzeros
  
     inputs["emergency_beds"] = beds_EMRD
 elif bed_share == "Partiële beddendeling":
@@ -223,21 +223,21 @@ elif bed_share == "Partiële beddendeling":
         nurs_high.append(nurs_High_Complex)
         beds_shared.append(beds_ELV_Shared)
         beds_EMRD.append(beds_ELV_EMRD)
-    inputs["elv_high_complex_beds"]  = listofzeros
+    # inputs["elv_high_complex_beds"]  = listofzeros
     inputs["elv_low_complex_beds"] = beds_low
     inputs["high_complex_beds"] = beds_High
     inputs["grz_beds"] = beds_G
     inputs["shared_beds"] =beds_shared
-    inputs["trw_beds"] = listofzeros
-    inputs["total_beds"] = listofzeros
+    # inputs["trw_beds"] = listofzeros
+    # inputs["total_beds"] = listofzeros
     
-    inputs["elv_high_complex_nurses"] = listofzeros
+    # inputs["elv_high_complex_nurses"] = listofzeros
     inputs["elv_low_complex_nurses"] = nurs_low
     inputs["high_complex_nurses"] = nurs_high
     inputs["grz_nurses"] = nurs_G
-    inputs["shared_nurses"] = listofzeros
-    inputs["trw_nurses"] = listofzeros
-    inputs["total_nurses"] = listofzeros
+    # inputs["shared_nurses"] = listofzeros
+    # inputs["trw_nurses"] = listofzeros
+    # inputs["total_nurses"] = listofzeros
 
     inputs["emergency_beds"] = beds_EMRD
 elif bed_share == "Observatiebedden":
@@ -268,21 +268,21 @@ elif bed_share == "Observatiebedden":
         nurs_high.append(nurs_High_Complex)
         beds_TRW.append(beds_ELV_TRW)
         beds_EMRD.append(beds_ELV_EMRD)
-    inputs["elv_high_complex_beds"]  = listofzeros
+    # inputs["elv_high_complex_beds"]  = listofzeros
     inputs["elv_low_complex_beds"] = beds_low
     inputs["high_complex_beds"] = beds_High
     inputs["grz_beds"] = beds_G
-    inputs["shared_beds"] =listofzeros
+    # inputs["shared_beds"] =listofzeros
     inputs["trw_beds"] = beds_TRW
-    inputs["total_beds"] = listofzeros
+    # inputs["total_beds"] = listofzeros
     
-    inputs["elv_high_complex_nurses"] = listofzeros
+    # inputs["elv_high_complex_nurses"] = listofzeros
     inputs["elv_low_complex_nurses"] = nurs_low
     inputs["high_complex_nurses"] = nurs_high
     inputs["grz_nurses"] = nurs_G
-    inputs["shared_nurses"] = listofzeros
-    inputs["trw_nurses"] = listofzeros
-    inputs["total_nurses"] = listofzeros
+    # inputs["shared_nurses"] = listofzeros
+    # inputs["trw_nurses"] = listofzeros
+    # inputs["total_nurses"] = listofzeros
 
     inputs["emergency_beds"] = beds_EMRD
 elif bed_share == "Totale beddendeling":
@@ -298,20 +298,20 @@ elif bed_share == "Totale beddendeling":
         beds_Total.append(beds_ELV_Total)
         nurs_Total.append(beds_ELV_Total) 
         beds_EMRD.append(beds_ELV_EMRD)
-    inputs["elv_high_complex_beds"]  = listofzeros
-    inputs["elv_low_complex_beds"] = listofzeros
-    inputs["high_complex_beds"] = listofzeros
-    inputs["grz_beds"] = listofzeros
-    inputs["shared_beds"] =listofzeros
-    inputs["trw_beds"] = listofzeros
+    # inputs["elv_high_complex_beds"]  = listofzeros
+    # inputs["elv_low_complex_beds"] = listofzeros
+    # inputs["high_complex_beds"] = listofzeros
+    # inputs["grz_beds"] = listofzeros
+    # inputs["shared_beds"] =listofzeros
+    # inputs["trw_beds"] = listofzeros
     inputs["total_beds"] = beds_Total
     
-    inputs["elv_high_complex_nurses"] = listofzeros
-    inputs["elv_low_complex_nurses"] = listofzeros
-    inputs["high_complex_nurses"] = listofzeros
-    inputs["grz_nurses"] = listofzeros
-    inputs["shared_nurses"] = listofzeros
-    inputs["trw_nurses"] = listofzeros
+    # inputs["elv_high_complex_nurses"] = listofzeros
+    # inputs["elv_low_complex_nurses"] = listofzeros
+    # inputs["high_complex_nurses"] = listofzeros
+    # inputs["grz_nurses"] = listofzeros
+    # inputs["shared_nurses"] = listofzeros
+    # inputs["trw_nurses"] = listofzeros
     inputs["total_nurses"] = nurs_Total
 
     inputs["emergency_beds"] = beds_EMRD
