@@ -134,7 +134,7 @@ with col1:
     
     # Streamlit interface
 
-    # Input for number of locations (integer only)
+    # Input for number of Locaties (integer only)
     Inputs_1 = pd.DataFrame()
     inputs = pd.DataFrame()
     
@@ -203,14 +203,14 @@ with col2:
         nurs_high = []
         beds_EMRD = []
         for i in range(0, n_loc):
-            with st.expander(st.text_input("",value="Location "+str(i+1))):
-                # st.text_input("Location name",value="Location "+str(i+1))
-                #st.title('Location ' + str(i+1))
-                beds_ELV_High = st.number_input(f"Number of ELV High Complex beds location {i+1} ", min_value=0, step=1, value=0, format="%d" )
-                nurs_ELV_High = st.number_input(f"Number of ELV High Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d" )
-                beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d" )
-                nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d" )
-                beds_ELV_EMRD = st.number_input(f"Number of Emergency beds location {i+1}", min_value=0, step=1, value=0, format="%d" )   
+            with st.expander(st.text_input("",value="Locatie "+str(i+1))):
+                # st.text_input("Locatie name",value="Locatie "+str(i+1))
+                #st.title('Locatie ' + str(i+1))
+                beds_ELV_High = st.number_input(f"Number of ELV High Complex beds Locatie {i+1} ", min_value=0, step=1, value=0, format="%d" )
+                nurs_ELV_High = st.number_input(f"Number of ELV High Complex nurses Locatie {i+1}", min_value=0, step=1, value=0, format="%d" )
+                beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d" )
+                nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses Locatie {i+1}", min_value=0, step=1, value=0, format="%d" )
+                beds_ELV_EMRD = st.number_input(f"Number of Emergency beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d" )   
                 beds_High.append(beds_ELV_High)
                 beds_Low.append(beds_ELV_Low) 
                 nurs_low.append(nurs_ELV_Low)
@@ -248,14 +248,14 @@ with col2:
         nurs_G = []
         beds_EMRD = []
         for i in range(0, n_loc):
-            with st.expander(st.text_input("",value="Location "+str(i+1))):
-                beds_GRZ = st.number_input(f"Number of GRZ beds location {i+1}", min_value=0, step=1, value=0, format="%d" )
-                nurs_GRZ = st.number_input(f"Number of GRZ nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
-                beds_High_Complex = st.number_input(f"Number of High Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-                nurs_High_Complex = st.number_input(f"Number of High Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
-                beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-                nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
-                beds_ELV_EMRD = st.number_input(f"Number of Emergency beds location {i+1}", min_value=0, step=1, value=0, format="%d")
+            with st.expander(st.text_input("",value="Locatie "+str(i+1))):
+                beds_GRZ = st.number_input(f"Number of GRZ beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d" )
+                nurs_GRZ = st.number_input(f"Number of GRZ nurses Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
+                beds_High_Complex = st.number_input(f"Number of High Complex beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
+                nurs_High_Complex = st.number_input(f"Number of High Complex nurses Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
+                beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
+                nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
+                beds_ELV_EMRD = st.number_input(f"Number of Emergency beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
                 beds_High.append(beds_High_Complex)
                 beds_low.append(beds_ELV_Low)
                 beds_G.append(beds_GRZ)
@@ -296,16 +296,16 @@ with col2:
         beds_shared = []
         beds_EMRD = []
         for i in range(0, n_loc):
-            with st.expander(st.text_input("",value="Location "+str(i+1))):
+            with st.expander(st.text_input("",value="Locatie "+str(i+1))):
                 
-                beds_GRZ = st.number_input(f"Number of GRZ beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-                nurs_GRZ = st.number_input(f"Number of GRZ nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
-                beds_High_Complex = st.number_input(f"Number of High Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-                nurs_High_Complex = st.number_input(f"Number of High Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
-                beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-                nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
-                beds_ELV_Shared = st.number_input(f"Number of Shared beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-                beds_ELV_EMRD = st.number_input(f"Number of Emergency beds location {i+1}", min_value=0, step=1, value=0, format="%d")
+                beds_GRZ = st.number_input(f"Number of GRZ beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
+                nurs_GRZ = st.number_input(f"Number of GRZ nurses Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
+                beds_High_Complex = st.number_input(f"Number of High Complex beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
+                nurs_High_Complex = st.number_input(f"Number of High Complex nurses Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
+                beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
+                nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
+                beds_ELV_Shared = st.number_input(f"Number of Shared beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
+                beds_ELV_EMRD = st.number_input(f"Number of Emergency beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
                 beds_High.append(beds_High_Complex)
                 beds_low.append(beds_ELV_Low)
                 beds_G.append(beds_GRZ)
@@ -346,16 +346,16 @@ with col2:
         beds_TRW = []
         beds_EMRD = []
         for i in range(0, n_loc):
-           with st.expander(st.text_input("",value="Location "+str(i+1))):
+           with st.expander(st.text_input("",value="Locatie "+str(i+1))):
                 
-                beds_GRZ = st.number_input(f"Number of GRZ beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-                nurs_GRZ = st.number_input(f"Number of GRZ nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
-                beds_High_Complex = st.number_input(f"Number of High Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-                nurs_High_Complex = st.number_input(f"Number of High Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
-                beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-                nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
-                beds_ELV_TRW = st.number_input(f"Number of Observation beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-                beds_ELV_EMRD = st.number_input(f"Number of Emergency beds location {i+1}", min_value=0, step=1, value=0, format="%d")
+                beds_GRZ = st.number_input(f"Number of GRZ beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
+                nurs_GRZ = st.number_input(f"Number of GRZ nurses Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
+                beds_High_Complex = st.number_input(f"Number of High Complex beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
+                nurs_High_Complex = st.number_input(f"Number of High Complex nurses Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
+                beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
+                nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
+                beds_ELV_TRW = st.number_input(f"Number of Observation beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
+                beds_ELV_EMRD = st.number_input(f"Number of Emergency beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
                 beds_High.append(beds_High_Complex)
                 beds_low.append(beds_ELV_Low)
                 beds_G.append(beds_GRZ)
@@ -391,11 +391,11 @@ with col2:
         nurs_Total = []
         beds_EMRD = []
         for i in range(0, n_loc):
-            with st.expander(st.text_input("",value="Location "+str(i+1))):
+            with st.expander(st.text_input("",value="Locatie "+str(i+1))):
                 
-                beds_ELV_Total = st.number_input(f"Number of ELV Total beds location {i+1}", min_value=0, step=1, value=0, format="%d")
-                nurs_ELV_Total = st.number_input(f"Number of ELV Total nurses location {i+1}", min_value=0, step=1, value=0, format="%d")
-                beds_ELV_EMRD = st.number_input(f"Number of Emergency beds location {i+1}", min_value=0, step=1, value=0, format="%d")   
+                beds_ELV_Total = st.number_input(f"Number of ELV Total beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
+                nurs_ELV_Total = st.number_input(f"Number of ELV Total nurses Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
+                beds_ELV_EMRD = st.number_input(f"Number of Emergency beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")   
                 beds_Total.append(beds_ELV_Total)
                 nurs_Total.append(beds_ELV_Total) 
                 beds_EMRD.append(beds_ELV_EMRD)
@@ -516,7 +516,7 @@ with col2:
             Scen_Total_Sharing = input.loc[loop_nr,'Scen_Total_Sharing']
             priority = input.loc[loop_nr,'Priority']
             Project = ''#input.loc[loop_nr,'Project']
-            Preference = input.loc[loop_nr,'preference'] #Pref = pref_model, FCFS = FCFS, NO = Only fav location
+            Preference = input.loc[loop_nr,'preference'] #Pref = pref_model, FCFS = FCFS, NO = Only fav Locatie
             n_patients_per_nurse = input.loc[loop_nr,'Aantal patienten per verpleegkundige']
             
             
@@ -664,33 +664,33 @@ with col2:
             def count_patients(loc):
                 parts = loc.split("_")
                 cur_nr_loc = 0
-                location = ''
+                Locatie = ''
                 if len(parts) ==2:
-                    location = loc + '_' + str(extract_number(target_client))
-                    n_aanw_excl_end_time = len([k for (k,v) in client_dict.items() if location in v['journey'] and v['j_times'][v['journey'].index(location)] <= current_time and len(v['j_times'])<= v['journey'].index(location)+ 1])
-                    n_aanw_incl_end_time = len([k for (k,v) in client_dict.items() if location in v['journey'] and k not in output_dict.keys() and v['j_times'][v['journey'].index(location)] <= current_time and len(v['j_times'])> v['journey'].index(location)+ 1 and current_time <= v['j_times'][v['journey'].index(location)+1]])
-                    n_aanw_al_in_output = len([k for (k,v) in output_dict.items() if location in v['journey'] and v['j_times'][v['journey'].index(location)] <= current_time and len(v['j_times'])> v['journey'].index(location)+ 1 and current_time <= v['j_times'][v['journey'].index(location)+1]])
+                    Locatie = loc + '_' + str(extract_number(target_client))
+                    n_aanw_excl_end_time = len([k for (k,v) in client_dict.items() if Locatie in v['journey'] and v['j_times'][v['journey'].index(Locatie)] <= current_time and len(v['j_times'])<= v['journey'].index(Locatie)+ 1])
+                    n_aanw_incl_end_time = len([k for (k,v) in client_dict.items() if Locatie in v['journey'] and k not in output_dict.keys() and v['j_times'][v['journey'].index(Locatie)] <= current_time and len(v['j_times'])> v['journey'].index(Locatie)+ 1 and current_time <= v['j_times'][v['journey'].index(Locatie)+1]])
+                    n_aanw_al_in_output = len([k for (k,v) in output_dict.items() if Locatie in v['journey'] and v['j_times'][v['journey'].index(Locatie)] <= current_time and len(v['j_times'])> v['journey'].index(Locatie)+ 1 and current_time <= v['j_times'][v['journey'].index(Locatie)+1]])
                     cur_nr_loc = n_aanw_excl_end_time + n_aanw_incl_end_time + n_aanw_al_in_output
                 
             
                 elif len(parts) == 3:
-                    location = loc
-                    n_aanw_excl_end_time = len([k for (k,v) in client_dict.items() if location in v['journey'] and v['j_times'][v['journey'].index(location)] <= current_time and len(v['j_times'])<= v['journey'].index(location)+ 1])
-                    n_aanw_incl_end_time = len([k for (k,v) in client_dict.items() if location in v['journey'] and k not in output_dict.keys() and v['j_times'][v['journey'].index(location)] <= current_time and len(v['j_times'])> v['journey'].index(location)+ 1 and current_time <= v['j_times'][v['journey'].index(location)+1]])
-                    n_aanw_al_in_output = len([k for (k,v) in output_dict.items() if location in v['journey'] and v['j_times'][v['journey'].index(location)] <= current_time and len(v['j_times'])> v['journey'].index(location)+ 1 and current_time <= v['j_times'][v['journey'].index(location)+1]])
+                    Locatie = loc
+                    n_aanw_excl_end_time = len([k for (k,v) in client_dict.items() if Locatie in v['journey'] and v['j_times'][v['journey'].index(Locatie)] <= current_time and len(v['j_times'])<= v['journey'].index(Locatie)+ 1])
+                    n_aanw_incl_end_time = len([k for (k,v) in client_dict.items() if Locatie in v['journey'] and k not in output_dict.keys() and v['j_times'][v['journey'].index(Locatie)] <= current_time and len(v['j_times'])> v['journey'].index(Locatie)+ 1 and current_time <= v['j_times'][v['journey'].index(Locatie)+1]])
+                    n_aanw_al_in_output = len([k for (k,v) in output_dict.items() if Locatie in v['journey'] and v['j_times'][v['journey'].index(Locatie)] <= current_time and len(v['j_times'])> v['journey'].index(Locatie)+ 1 and current_time <= v['j_times'][v['journey'].index(Locatie)+1]])
                     cur_nr_loc = n_aanw_excl_end_time + n_aanw_incl_end_time + n_aanw_al_in_output
             
                 
                 return cur_nr_loc
             def count_place_reserved(loc):
                 parts = loc.split("_")
-                location = ''
+                Locatie = ''
                 if len(parts) ==2:
-                    location = loc + '_' + str(extract_number(target_client))
+                    Locatie = loc + '_' + str(extract_number(target_client))
                 elif len(parts) == 3:
-                    location = loc
-                place_reserved = len([k for (k,v) in client_dict.items() if v['journey'][-1] == location and v['j_times'][v['journey'].index(location)] > current_time])   
-                #len([k for (k, v) in client_dict.items() if location in v['journey']  and v['j_times'][v['journey'].index(location)] > current_time]) 
+                    Locatie = loc
+                place_reserved = len([k for (k,v) in client_dict.items() if v['journey'][-1] == Locatie and v['j_times'][v['journey'].index(Locatie)] > current_time])   
+                #len([k for (k, v) in client_dict.items() if Locatie in v['journey']  and v['j_times'][v['journey'].index(Locatie)] > current_time]) 
                 return place_reserved
             def move_to_TRW_High(target_client, time_until_placement):
                 
@@ -1081,21 +1081,21 @@ with col2:
                 High_list = ['HOS_High', 'GPR_High', 'EMD']
                 GRZ_list = ['HOS_GRZ']
                 tot_patients = 0
-                location = 'ELV_High_' +str(extract_number(target_client))
+                Locatie = 'ELV_High_' +str(extract_number(target_client))
                 if any(item in department for item in High_list):
-                    n_aanw_excl_end_time = len([k for (k,v) in client_dict.items() if v['journey'][0] in High_list and location in v['journey'] and v['j_times'][v['journey'].index(location)] <= current_time and len(v['j_times'])<= v['journey'].index(location)+ 1])
-                    n_aanw_incl_end_time = len([k for (k,v) in client_dict.items() if v['journey'][0] in High_list and location in v['journey'] and k not in output_dict.keys() and v['j_times'][v['journey'].index(location)] <= current_time and len(v['j_times'])> v['journey'].index(location)+ 1 and current_time <= v['j_times'][v['journey'].index(location)+1]])
-                    n_aanw_al_in_output = len([k for (k,v) in output_dict.items() if v['journey'][0] in High_list and location in v['journey'] and v['j_times'][v['journey'].index(location)] <= current_time and len(v['j_times'])> v['journey'].index(location)+ 1 and current_time <= v['j_times'][v['journey'].index(location)+1]])
-                    n_plek_gedibst = len([k for (k,v) in client_dict.items() if v['journey'][0] in High_list and v['journey'][-1] == location and v['j_times'][v['journey'].index(location)] > current_time])   
+                    n_aanw_excl_end_time = len([k for (k,v) in client_dict.items() if v['journey'][0] in High_list and Locatie in v['journey'] and v['j_times'][v['journey'].index(Locatie)] <= current_time and len(v['j_times'])<= v['journey'].index(Locatie)+ 1])
+                    n_aanw_incl_end_time = len([k for (k,v) in client_dict.items() if v['journey'][0] in High_list and Locatie in v['journey'] and k not in output_dict.keys() and v['j_times'][v['journey'].index(Locatie)] <= current_time and len(v['j_times'])> v['journey'].index(Locatie)+ 1 and current_time <= v['j_times'][v['journey'].index(Locatie)+1]])
+                    n_aanw_al_in_output = len([k for (k,v) in output_dict.items() if v['journey'][0] in High_list and Locatie in v['journey'] and v['j_times'][v['journey'].index(Locatie)] <= current_time and len(v['j_times'])> v['journey'].index(Locatie)+ 1 and current_time <= v['j_times'][v['journey'].index(Locatie)+1]])
+                    n_plek_gedibst = len([k for (k,v) in client_dict.items() if v['journey'][0] in High_list and v['journey'][-1] == Locatie and v['j_times'][v['journey'].index(Locatie)] > current_time])   
                     cur_nr_loc = n_aanw_excl_end_time + n_aanw_incl_end_time + n_aanw_al_in_output +n_plek_gedibst
                     # if cur_nr_loc >=105:
                     #     cur_nr_loc = 105
                 elif any(item in department for item in GRZ_list):
                   
-                    n_aanw_excl_end_time = len([k for (k,v) in client_dict.items() if v['journey'][0] in GRZ_list and location in v['journey'] and v['j_times'][v['journey'].index(location)] <= current_time and len(v['j_times'])<= v['journey'].index(location)+ 1])
-                    n_aanw_incl_end_time = len([k for (k,v) in client_dict.items() if v['journey'][0] in GRZ_list and location in v['journey'] and k not in output_dict.keys() and v['j_times'][v['journey'].index(location)] <= current_time and len(v['j_times'])> v['journey'].index(location)+ 1 and current_time <= v['j_times'][v['journey'].index(location)+1]])
-                    n_aanw_al_in_output = len([k for (k,v) in output_dict.items() if v['journey'][0] in GRZ_list and location in v['journey'] and v['j_times'][v['journey'].index(location)] <= current_time and len(v['j_times'])> v['journey'].index(location)+ 1 and current_time <= v['j_times'][v['journey'].index(location)+1]])
-                    n_plek_gedibst = len([k for (k,v) in client_dict.items() if v['journey'][0] in GRZ_list and v['journey'][-1] == location and v['j_times'][v['journey'].index(location)] > current_time])   
+                    n_aanw_excl_end_time = len([k for (k,v) in client_dict.items() if v['journey'][0] in GRZ_list and Locatie in v['journey'] and v['j_times'][v['journey'].index(Locatie)] <= current_time and len(v['j_times'])<= v['journey'].index(Locatie)+ 1])
+                    n_aanw_incl_end_time = len([k for (k,v) in client_dict.items() if v['journey'][0] in GRZ_list and Locatie in v['journey'] and k not in output_dict.keys() and v['j_times'][v['journey'].index(Locatie)] <= current_time and len(v['j_times'])> v['journey'].index(Locatie)+ 1 and current_time <= v['j_times'][v['journey'].index(Locatie)+1]])
+                    n_aanw_al_in_output = len([k for (k,v) in output_dict.items() if v['journey'][0] in GRZ_list and Locatie in v['journey'] and v['j_times'][v['journey'].index(Locatie)] <= current_time and len(v['j_times'])> v['journey'].index(Locatie)+ 1 and current_time <= v['j_times'][v['journey'].index(Locatie)+1]])
+                    n_plek_gedibst = len([k for (k,v) in client_dict.items() if v['journey'][0] in GRZ_list and v['journey'][-1] == Locatie and v['j_times'][v['journey'].index(Locatie)] > current_time])   
                     cur_nr_loc = n_aanw_excl_end_time + n_aanw_incl_end_time + n_aanw_al_in_output +n_plek_gedibst
                     # if cur_nr_loc >=20:
                     #     cur_nr_loc = 20
@@ -1112,7 +1112,7 @@ with col2:
                 print('---------------------------------------------------')
                 print('-------------------Check balanced system----------------')
                 for i in range(n_loc):
-                    print("For location, ", i)
+                    print("For Locatie, ", i)
                     arrival_High = (arr_HOS_High +arr_GPR_High + arr_EMD +arr_HOS_GRZ)/n_loc
                     service_High = serv_Home_High * out_p_Home_High +serv_Dead_High * out_p_Dead_High + out_p_GRZV_High * serv_GRZV_High + out_p_WLZ_High * serv_WLZ_High + out_p_Pall_High * serv_Pall_High + out_p_WMO_High * serv_WMO_High
                     service_GRZ = serv_Home_GRZ * out_p_Home_GRZ +serv_Dead_GRZ * out_p_Dead_GRZ + out_p_GRZV_GRZ * serv_GRZV_GRZ + out_p_WLZ_GRZ * serv_WLZ_GRZ + out_p_Pall_GRZ * serv_Pall_GRZ + out_p_WMO_GRZ * serv_WMO_GRZ
@@ -1263,120 +1263,120 @@ with col2:
                 # If the prefix is not found in any element, return None
                 return None
             
-            def remove_and_sort(numbers, Current_location):
-                 # Find the index of nearest_location in the original list
-                index = numbers.index(Current_location)
-                # Remove nearest_location from the list if it exists
-                if Current_location in numbers:
-                    numbers.remove(Current_location)
+            def remove_and_sort(numbers, Current_Locatie):
+                 # Find the index of nearest_Locatie in the original list
+                index = numbers.index(Current_Locatie)
+                # Remove nearest_Locatie from the list if it exists
+                if Current_Locatie in numbers:
+                    numbers.remove(Current_Locatie)
                 
                
                 
-                # Rotate the list so that it starts from the value after nearest_location
+                # Rotate the list so that it starts from the value after nearest_Locatie
                 sorted_numbers = numbers[index+1:] + numbers[:index+1]
                 return sorted_numbers
             
-            def Check_beds_free_other_location(Current_location, n_loc, target_client,TRW):
+            def Check_beds_free_other_Locatie(Current_Locatie, n_loc, target_client,TRW):
                 if n_loc ==0 or n_loc ==1:
-                    #print("only 1 location")
+                    #print("only 1 Locatie")
                     return False,'none'
                 else:
                     Locs = [i for i in range(n_loc)]
-                    Locations = remove_and_sort(Locs, Current_location)
-                    for loc in Locations:
+                    Locaties = remove_and_sort(Locs, Current_Locatie)
+                    for loc in Locaties:
                         if any(item in client_dict[target_client]['journey'] for item in ['GPR_High', 'EMD', 'HOS_High','HOS_GRZ']):
                             if Scen_shared_beds_Full:
                                 if TRW == True:
                                     if (count_patients('TRW') + count_place_reserved('TRW')) < n_beds_TRW[loc]:
-                #                         print("Patient transfer to location, ", loc)
-                    #                    change_target_client_location(target_client,loc)
+                #                         print("Patient transfer to Locatie, ", loc)
+                    #                    change_target_client_Locatie(target_client,loc)
                                         return True,loc
                                 else: 
                                     if any(item in client_dict[target_client]['journey'] for item in ['GPR_High', 'EMD', 'HOS_High','HOS_GRZ']):
                                         if (count_patients('ELV_High') + count_place_reserved('ELV_High')) < n_beds_ELV_High_list[loc]:
-                    #                         print("Patient transfer to location, ", loc)
-                        #                    change_target_client_location(target_client,loc)
+                    #                         print("Patient transfer to Locatie, ", loc)
+                        #                    change_target_client_Locatie(target_client,loc)
                                             return True,loc
                                     
                             #return False
                             elif Scen_NO_Sharing:
                                 if TRW == True:
                                     if (count_patients('TRW') + count_place_reserved('TRW')) < n_beds_TRW[loc]:
-                #                         print("Patient transfer to location, ", loc)
-                    #                    change_target_client_location(target_client,loc)
+                #                         print("Patient transfer to Locatie, ", loc)
+                    #                    change_target_client_Locatie(target_client,loc)
                                         return True,loc
                                 else:
                                     if 'GPR_High' in client_dict[target_client]['journey']:
                                         if Check_space_partial_beds('GPR_High')< n_beds_High_Complex_list[loc]:
-                    #                         print("Patient transfer to location, ", loc)
-                        #                     change_target_client_location(target_client,loc)
+                    #                         print("Patient transfer to Locatie, ", loc)
+                        #                     change_target_client_Locatie(target_client,loc)
                                             return True,loc
                                     elif 'EMD' in client_dict[target_client]['journey']:
                                         if Check_space_partial_beds('EMD')<n_beds_High_Complex_list[loc]:
-                    #                         print("Patient transfer to location, ", loc)
-                        #                     change_target_client_location(target_client,loc)
+                    #                         print("Patient transfer to Locatie, ", loc)
+                        #                     change_target_client_Locatie(target_client,loc)
                                             return True,loc
                                     if 'HOS_High' in client_dict[target_client]['journey']:
                                         if Check_space_partial_beds('HOS_High')< n_beds_High_Complex_list[loc]:
-                    #                         print("Patient transfer to location, ", loc)
-                        #                     change_target_client_location(target_client,loc)
+                    #                         print("Patient transfer to Locatie, ", loc)
+                        #                     change_target_client_Locatie(target_client,loc)
                                             return True,loc
                                     if 'HOS_GRZ' in client_dict[target_client]['journey']:
                                         if Check_space_partial_beds('HOS_GRZ')< n_beds_GRZ_list[loc]:
-                    #                         print("Patient transfer to location, ", loc)
-                        #                     change_target_client_location(target_client,loc)
+                    #                         print("Patient transfer to Locatie, ", loc)
+                        #                     change_target_client_Locatie(target_client,loc)
                                             return True,loc
                                     
                             #return False
                             elif Scen_part_bed_Share:
                                 if TRW == True:
                                     if (count_patients('TRW') + count_place_reserved('TRW')) < n_beds_TRW[loc]:
-                #                         print("Patient transfer to location, ", loc)
-                    #                    change_target_client_location(target_client,loc)
+                #                         print("Patient transfer to Locatie, ", loc)
+                    #                    change_target_client_Locatie(target_client,loc)
                                         return True,loc
                                 else:
                                     if 'GPR_High' in client_dict[target_client]['journey']:
                                         if Check_space_partial_beds('GPR_High')< n_beds_High_Complex_list[loc]:
-                    #                         print("Patient transfer to location, ", loc)
-                        #                     change_target_client_location(target_client,loc)
+                    #                         print("Patient transfer to Locatie, ", loc)
+                        #                     change_target_client_Locatie(target_client,loc)
                                             return True,loc
                                         elif count_patients('ELV_part') +count_place_reserved('ELV_part') < n_beds_shared_High_list[loc]:
-                    #                         print("Patient transfer to location, ", loc)
-                        #                     change_target_client_location(target_client,loc)
+                    #                         print("Patient transfer to Locatie, ", loc)
+                        #                     change_target_client_Locatie(target_client,loc)
                                             return True,loc
                                     elif 'EMD' in client_dict[target_client]['journey']:
                                         if Check_space_partial_beds('EMD')< n_beds_High_Complex_list[loc]:
-                    #                         print("Patient transfer to location, ", loc)
-                        #                     change_target_client_location(target_client,loc)
+                    #                         print("Patient transfer to Locatie, ", loc)
+                        #                     change_target_client_Locatie(target_client,loc)
                                             return True,loc
                                         elif count_patients('ELV_part') +count_place_reserved('ELV_part') < n_beds_shared_High_list[loc]:
-                    #                         print("Patient transfer to location, ", loc)
-                        #                     change_target_client_location(target_client,loc)
+                    #                         print("Patient transfer to Locatie, ", loc)
+                        #                     change_target_client_Locatie(target_client,loc)
                                             return True,loc
                                     if 'HOS_High' in client_dict[target_client]['journey']:
                                         if Check_space_partial_beds('HOS_High')< n_beds_High_Complex_list[loc]:
-                    #                         print("Patient transfer to location, ", loc)
-                        #                     change_target_client_location(target_client,loc)
+                    #                         print("Patient transfer to Locatie, ", loc)
+                        #                     change_target_client_Locatie(target_client,loc)
                                             return True,loc
                                         elif count_patients('ELV_part') +count_place_reserved('ELV_part') < n_beds_shared_High_list[loc]:
-                    #                         print("Patient transfer to location, ", loc)
-                        #                     change_target_client_location(target_client,loc)
+                    #                         print("Patient transfer to Locatie, ", loc)
+                        #                     change_target_client_Locatie(target_client,loc)
                                             return True,loc
                                     if 'HOS_GRZ' in client_dict[target_client]['journey']:
                                         if Check_space_partial_beds('HOS_GRZ')< n_beds_GRZ_list[loc]:
-                                            print("Patient transfer to location, ", loc)
-                        #                     change_target_client_location(target_client,loc)
+                                            print("Patient transfer to Locatie, ", loc)
+                        #                     change_target_client_Locatie(target_client,loc)
                                             return True,loc
                                         elif count_patients('ELV_part') +count_place_reserved('ELV_part') < n_beds_shared_High_list[loc]:
-                                            print("Patient transfer to location, ", loc)
-                        #                     change_target_client_location(target_client,loc)
+                                            print("Patient transfer to Locatie, ", loc)
+                        #                     change_target_client_Locatie(target_client,loc)
                                             return True,loc
                                    
                             elif Scen_Total_Sharing:
                                 if TRW == True:
                                     if (count_patients('TRW') + count_place_reserved('TRW')) < n_beds_TRW[loc]:
-                #                         print("Patient transfer to location, ", loc)
-                    #                    change_target_client_location(target_client,loc)
+                #                         print("Patient transfer to Locatie, ", loc)
+                    #                    change_target_client_Locatie(target_client,loc)
                                         return True,loc
                                 else:
                                     if count_patients('ELV_TOT')+count_place_reserved('ELV_TOT')< n_beds_ELV_total_list[loc]:
@@ -1385,26 +1385,26 @@ with col2:
                         elif any(item in client_dict[target_client]['journey'] for item in ['GPR_Low']):
                             if Scen_NO_Sharing or Scen_part_bed_Share or Scen_shared_beds_Full:
                                 if (count_patients('ELV_Low') + count_place_reserved('ELV_Low')) < n_beds_ELV_Low_list[loc]:
-                        #                         print("Patient transfer to location, ", loc)
-                            #                     change_target_client_location(target_client,loc)
+                        #                         print("Patient transfer to Locatie, ", loc)
+                            #                     change_target_client_Locatie(target_client,loc)
                                     return True,loc
                             elif Scen_Total_Sharing:
                                 if (count_patients('ELV_Low') + count_place_reserved('ELV_Low')) < n_beds_ELV_Low_list[loc]:
-                        #                         print("Patient transfer to location, ", loc)
-                            #                     change_target_client_location(target_client,loc)
+                        #                         print("Patient transfer to Locatie, ", loc)
+                            #                     change_target_client_Locatie(target_client,loc)
                                     return True,loc
                             
                 return False,'none'
                         
-            def change_target_client_location(target_client,nearest_location,Event):
+            def change_target_client_Locatie(target_client,nearest_Locatie,Event):
                 
                 # Split the target_client string by underscores
                 parts = target_client.split('_')
                 
                 # Check if there are at least three parts (e.g., c, 001, 1)
                 if len(parts) >= 3:
-                    # Update the value after the second underscore with nearest_location
-                    parts[2] = nearest_location
+                    # Update the value after the second underscore with nearest_Locatie
+                    parts[2] = nearest_Locatie
                     
                     # Join the parts back into a single string using underscores
                     updated_target_client = '_'.join(map(str, parts))
@@ -1430,35 +1430,35 @@ with col2:
                     
                     #print('Add ',target_client)
                     Strength = 0
-                    Alternative_location = False
+                    Alternative_Locatie = False
                     Pos_loc = 0
                     if n_loc ==1:
                         Strength = -1
                     else:
                         if Preference == 'FCFS':
                             Strength = -1 
-                            Alternative_location = True
+                            Alternative_Locatie = True
                         elif Preference == 'NO':
                             Strength = 10000000000000000000
-                            Alternative_location = False
+                            Alternative_Locatie = False
                         elif Preference == 'Pref':
                             Strength = random.choice([10,30,50,70,90,100000000000])
-                            Alternative_location = False
+                            Alternative_Locatie = False
                 
                     
                         
                     wait_dict_temp = {target_client: {
-                    'Preferred location' :extract_number(target_client),
+                    'Preferred Locatie' :extract_number(target_client),
                     'Arrival_time':current_time,
                     'Waiting time':0,
                     "Utility":5,
-                    'Alternative location':Alternative_location,
+                    'Alternative Locatie':Alternative_Locatie,
                     'Strength': Strength,
                     'Extra waiting time':0,
                     'Skipped':False,
                     'Timestamp_skipped': 0,
                     'Times_skipped':0,
-                    'Possible_locations': Show_possible_locations(target_client),
+                    'Possible_Locaties': Show_possible_Locaties(target_client),
                     }}
                     wait_list_dict.update(wait_dict_temp)
                     wait_list_dict1 = dict(sorted(wait_list_dict.items(),key=lambda x: x[1]['Arrival_time']))
@@ -1471,9 +1471,9 @@ with col2:
                     wait_list_dict[key]['Waiting time'] = current_time-wait_list_dict[key]['Arrival_time']
                     wait_list_dict[key]['Utility'] = wait_list_dict[key]['Waiting time']
                     if wait_list_dict[key]['Utility'] > wait_list_dict[key]['Strength']:
-                        wait_list_dict[key]['Alternative location'] = True
+                        wait_list_dict[key]['Alternative Locatie'] = True
                     else:
-                        wait_list_dict[key]['Alternative location'] = False
+                        wait_list_dict[key]['Alternative Locatie'] = False
                         
                     if wait_list_dict[key]['Skipped'] and Preference != 'FCFS':
                         wait_list_dict[key]['Extra waiting time'] =  current_time - wait_list_dict[key]['Timestamp_skipped']
@@ -1500,13 +1500,13 @@ with col2:
                     if key in output_dict:
                         del wait_list_dict[key]
             
-            def check_first_pref_client(wait_list_dict,location):
+            def check_first_pref_client(wait_list_dict,Locatie):
                 update_wait_list_dict(wait_list_dict,current_time)
                 for key in list(wait_list_dict.keys()):
-                    if wait_list_dict[key]['Preferred location'] == location:
+                    if wait_list_dict[key]['Preferred Locatie'] == Locatie:
                         return key
-                    elif (location in wait_list_dict[key]['Possible_locations'] and wait_list_dict[key]['Alternative location']):
-                        change_target_client_location(key,location,True)
+                    elif (Locatie in wait_list_dict[key]['Possible_Locaties'] and wait_list_dict[key]['Alternative Locatie']):
+                        change_target_client_Locatie(key,Locatie,True)
                         #trans_list.append(key)
                         return key
             def check_zero_indexes(lst):
@@ -1533,7 +1533,7 @@ with col2:
                         non_zero_indices.append(i)
                 return non_zero_indices
             
-            def Show_possible_locations(target_client):
+            def Show_possible_Locaties(target_client):
                 client_pref = extract_number(target_client)
                 if any(item in client_dict[target_client]['journey'] for item in ['GPR_High', 'EMD', 'HOS_High', 'HOS_GRZ']):
                     if Scen_shared_beds_Full:
@@ -1568,15 +1568,15 @@ with col2:
                         loc = check_zero_indexes(n_beds_ELV_total_list)
                         return loc
             
-            def Give_possible_locations(next_event):
+            def Give_possible_Locaties(next_event):
                 import random
                 
                 if next_event[4:12] == 'GPR_High' or next_event[4:12] == 'HOS_High' or next_event[4:7] == 'EMD' or next_event[4:11] == 'HOS_GRZ':
                     if Scen_shared_beds_Full:
                         if next_event[4:12] == 'GPR_High' or next_event[4:12] == 'HOS_High' or next_event[4:7] == 'EMD' or next_event[4:11] == 'HOS_GRZ':
                             loc = (check_zero_indexes(n_beds_ELV_High_list))
-                            #change_target_client_location(target_client,loc,False)
-                                #print('changed location from ',client_pref, 'to, ', loc)
+                            #change_target_client_Locatie(target_client,loc,False)
+                                #print('changed Locatie from ',client_pref, 'to, ', loc)
                             #print(loc)
                             return loc
                         
@@ -1584,12 +1584,12 @@ with col2:
                         if next_event[4:12] == 'GPR_High' or next_event[4:12] == 'HOS_High' or next_event[4:7] == 'EMD':
                 
                             loc = (check_zero_indexes(n_beds_ELV_High_list))
-                                #change_target_client_location(target_client,loc,False)
+                                #change_target_client_Locatie(target_client,loc,False)
                             return loc
                         elif next_event[4:11] == 'HOS_GRZ':
                 
                             loc = (check_zero_indexes(n_beds_GRZ_list))
-                #                     change_target_client_location(target_client,loc,False)
+                #                     change_target_client_Locatie(target_client,loc,False)
                             return loc
                         
                     elif Scen_part_bed_Share:
@@ -1597,24 +1597,24 @@ with col2:
                         if next_event[4:12] == 'GPR_High' or next_event[4:12] == 'HOS_High' or next_event[4:7] == 'EMD':
                 
                             loc = (non_zero_indexes(n_beds_ELV_High_list,n_beds_shared_High_list))
-                                #change_target_client_location(target_client,loc,False)
+                                #change_target_client_Locatie(target_client,loc,False)
                             return loc  
                         elif next_event[4:11] == 'HOS_GRZ':
                 
                 
                             loc = (non_zero_indexes(n_beds_GRZ_list,n_beds_shared_High_list))
-                                #change_target_client_location(target_client,loc,False)
+                                #change_target_client_Locatie(target_client,loc,False)
                             return loc
                         
                     elif Scen_Total_Sharing:
                 
                         loc = (check_zero_indexes(n_beds_ELV_total_list))
-                            #change_target_client_location(target_client,loc,False)
+                            #change_target_client_Locatie(target_client,loc,False)
                         return loc
                 elif next_event[4:11] == 'GPR_Low':
                     if Scen_shared_beds_Full or Scen_part_bed_Share or Scen_NO_Sharing:
                         loc = (check_zero_indexes(n_beds_ELV_Low_list))
-                            #change_target_client_location(target_client,loc,False)
+                            #change_target_client_Locatie(target_client,loc,False)
                     elif Scen_Total_Sharing:
                         loc = (check_zero_indexes(n_beds_ELV_total_list))
                     return loc
@@ -1672,7 +1672,7 @@ with col2:
                     for i in range(len(n_beds_ELV_total_list)):
                         if n_beds_ELV_total_list[i]-(total_nurses[i]*n_pat_per_nurse) ==0:
                             n_beds_ELV_total_list[i] = n_beds_ELV_total_list[i]
-                            print('Location',i, 'Number of total shared beds available: ',n_beds_ELV_total_list[i], '      Number of effective beds:',  (total_nurses[i]*n_pat_per_nurse))
+                            print('Locatie',i, 'Number of total shared beds available: ',n_beds_ELV_total_list[i], '      Number of effective beds:',  (total_nurses[i]*n_pat_per_nurse))
                         elif n_beds_ELV_total_list[i]-(total_nurses[i]*n_pat_per_nurse) >0:
                             
                             print('Number of total shared beds available: ',n_beds_ELV_total_list[i], '      Number of effective total shared beds:',  (total_nurses[i]*n_pat_per_nurse), ' So, ', n_beds_ELV_total_list[i]-(total_nurses[i]*n_pat_per_nurse), 'Beds lost')
@@ -1687,28 +1687,28 @@ with col2:
             
                         if n_beds_ELV_High_list[i]-(elv_high_complex_nurses[i]*n_pat_per_nurse) == 0:
                             n_beds_ELV_High_list[i] =n_beds_ELV_High_list[i]
-                            print('Location',i,'Number of ELV high complex beds available: ',n_beds_ELV_High_list[i], '      Number of ELV High complex effective beds:',  (elv_high_complex_nurses[i]*n_pat_per_nurse))
+                            print('Locatie',i,'Number of ELV high complex beds available: ',n_beds_ELV_High_list[i], '      Number of ELV High complex effective beds:',  (elv_high_complex_nurses[i]*n_pat_per_nurse))
                         elif n_beds_ELV_High_list[i]-(elv_high_complex_nurses[i]*n_pat_per_nurse) >0:
                             
-                            print('Location',i,'Number of ELV high complex beds available: ',n_beds_ELV_High_list[i], '      Number of ELV high complex effective beds:',  (elv_high_complex_nurses[i]*n_pat_per_nurse), ' So, ', n_beds_ELV_High_list[i]-(elv_high_complex_nurses[i]*n_pat_per_nurse), 'Beds lost')
+                            print('Locatie',i,'Number of ELV high complex beds available: ',n_beds_ELV_High_list[i], '      Number of ELV high complex effective beds:',  (elv_high_complex_nurses[i]*n_pat_per_nurse), ' So, ', n_beds_ELV_High_list[i]-(elv_high_complex_nurses[i]*n_pat_per_nurse), 'Beds lost')
                            
                             n_beds_ELV_High_list[i] = (elv_high_complex_nurses[i]*n_pat_per_nurse)
                         else:
-                            print('Location',i,'Number of ELV high complex beds available: ',n_beds_ELV_High_list[i], '      Number of ELV high complex effective beds:',  (elv_high_complex_nurses[i]*n_pat_per_nurse), ' So, ', -(n_beds_ELV_High_list[i]-(elv_high_complex_nurses[i]*n_pat_per_nurse)), 'To many')
+                            print('Locatie',i,'Number of ELV high complex beds available: ',n_beds_ELV_High_list[i], '      Number of ELV high complex effective beds:',  (elv_high_complex_nurses[i]*n_pat_per_nurse), ' So, ', -(n_beds_ELV_High_list[i]-(elv_high_complex_nurses[i]*n_pat_per_nurse)), 'To many')
                             
                             
                             n_beds_ELV_High_list[i] = n_beds_ELV_High_list[i]
                     for i in range(len(n_beds_ELV_Low_list)):
                         if n_beds_ELV_Low_list[i]-(elv_low_complex_nurses[i]*n_pat_per_nurse) == 0:
                             n_beds_ELV_Low_list[i] =n_beds_ELV_Low_list[i]
-                            print('Location',i,'Number of ELV Low complex beds available: ',n_beds_ELV_Low_list[i], '      Number of ELV Low effective beds:',  (elv_low_complex_nurses[i]*n_pat_per_nurse))
+                            print('Locatie',i,'Number of ELV Low complex beds available: ',n_beds_ELV_Low_list[i], '      Number of ELV Low effective beds:',  (elv_low_complex_nurses[i]*n_pat_per_nurse))
                         elif n_beds_ELV_Low_list[i]-(elv_low_complex_nurses[i]*n_pat_per_nurse) >0:
                             
-                            print('Location',i, 'Number of ELV Low beds available: ',n_beds_ELV_Low_list[i], '      Number of ELV Low effective beds',  (elv_low_complex_nurses[i]*n_pat_per_nurse), ' So, ', n_beds_ELV_Low_list[i]-(elv_low_complex_nurses[i]*n_pat_per_nurse), 'Beds lost')
+                            print('Locatie',i, 'Number of ELV Low beds available: ',n_beds_ELV_Low_list[i], '      Number of ELV Low effective beds',  (elv_low_complex_nurses[i]*n_pat_per_nurse), ' So, ', n_beds_ELV_Low_list[i]-(elv_low_complex_nurses[i]*n_pat_per_nurse), 'Beds lost')
                             n_beds_ELV_Low_list[i] =elv_low_complex_nurses[i]*n_pat_per_nurse
                         else:
                             
-                            print('Location',i, 'Number of ELV Low beds available: ',n_beds_ELV_Low_list[i], '      Number of ELV Low effective beds',  (elv_low_complex_nurses[i]*n_pat_per_nurse), ' So, ', -(n_beds_ELV_Low_list[i]-(elv_low_complex_nurses[i]*n_pat_per_nurse)), 'To many')
+                            print('Locatie',i, 'Number of ELV Low beds available: ',n_beds_ELV_Low_list[i], '      Number of ELV Low effective beds',  (elv_low_complex_nurses[i]*n_pat_per_nurse), ' So, ', -(n_beds_ELV_Low_list[i]-(elv_low_complex_nurses[i]*n_pat_per_nurse)), 'To many')
                             n_beds_ELV_Low_list[i] =n_beds_ELV_Low_list[i]
                             
                 elif Scen_NO_Sharing or Scen_part_bed_Share:
@@ -1716,42 +1716,42 @@ with col2:
             
                         if n_beds_High_Complex_list[i]-(high_complex_nurses[i]*n_pat_per_nurse) == 0:
                             n_beds_High_Complex_list[i] =n_beds_High_Complex_list[i]
-                            print('Location',i, 'Number of High complex beds available: ',n_beds_High_Complex_list[i], '      Number of High complex effective beds:',  (high_complex_nurses[i]*n_pat_per_nurse))
+                            print('Locatie',i, 'Number of High complex beds available: ',n_beds_High_Complex_list[i], '      Number of High complex effective beds:',  (high_complex_nurses[i]*n_pat_per_nurse))
                         elif n_beds_High_Complex_list[i]-(high_complex_nurses[i]*n_pat_per_nurse) >0:
                             
-                            print('Location',i,'Number of High complex beds available: ',n_beds_High_Complex_list[i], '      Number of High complex effective beds:',  (high_complex_nurses[i]*n_pat_per_nurse), ' So, ', n_beds_High_Complex_list[i]-(high_complex_nurses[i]*n_pat_per_nurse), 'Beds lost')
+                            print('Locatie',i,'Number of High complex beds available: ',n_beds_High_Complex_list[i], '      Number of High complex effective beds:',  (high_complex_nurses[i]*n_pat_per_nurse), ' So, ', n_beds_High_Complex_list[i]-(high_complex_nurses[i]*n_pat_per_nurse), 'Beds lost')
                             
                             n_beds_High_Complex_list[i] = (high_complex_nurses[i]*n_pat_per_nurse)
                         else:
                             
-                            print('Location',i,'Number of High complex beds available: ',n_beds_High_Complex_list[i], '      Number of High complex effective beds:',  (high_complex_nurses[i]*n_pat_per_nurse), ' So, ', -(n_beds_High_Complex_list[i]-(high_complex_nurses[i]*n_pat_per_nurse)), 'To many')
+                            print('Locatie',i,'Number of High complex beds available: ',n_beds_High_Complex_list[i], '      Number of High complex effective beds:',  (high_complex_nurses[i]*n_pat_per_nurse), ' So, ', -(n_beds_High_Complex_list[i]-(high_complex_nurses[i]*n_pat_per_nurse)), 'To many')
                             n_beds_High_Complex_list[i] =n_beds_High_Complex_list[i]
                     for i in range(len(n_beds_GRZ_list)):
             
                         if n_beds_GRZ_list[i]-(grz_nurses[i]*n_pat_per_nurse) == 0:
                             n_beds_GRZ_list[i] =n_beds_GRZ_list[i]
-                            print('Location',i,'Number of GRZ beds available: ',n_beds_GRZ_list[i], '      Number of GRZ effective beds:',  (grz_nurses[i]*n_pat_per_nurse))
+                            print('Locatie',i,'Number of GRZ beds available: ',n_beds_GRZ_list[i], '      Number of GRZ effective beds:',  (grz_nurses[i]*n_pat_per_nurse))
                         elif n_beds_GRZ_list[i]-(grz_nurses[i]*n_pat_per_nurse) >0:
                             
                             
-                            print('Location',i,'Number of GRZ beds available: ',n_beds_GRZ_list[i], '       Number of GRZ effective beds:',  (grz_nurses[i]*n_pat_per_nurse), ' So, ', n_beds_GRZ_list[i]-(grz_nurses[i]*n_pat_per_nurse), 'Beds lost')
+                            print('Locatie',i,'Number of GRZ beds available: ',n_beds_GRZ_list[i], '       Number of GRZ effective beds:',  (grz_nurses[i]*n_pat_per_nurse), ' So, ', n_beds_GRZ_list[i]-(grz_nurses[i]*n_pat_per_nurse), 'Beds lost')
                             n_beds_GRZ_list[i] = (grz_nurses[i]*n_pat_per_nurse)
                         else:
                             
-                            print('Location',i,'Number of GRZ beds available: ',n_beds_GRZ_list[i], '       Number of GRZ effective beds:',  (grz_nurses[i]*n_pat_per_nurse), ' So, ', -(n_beds_GRZ_list[i]-(grz_nurses[i]*n_pat_per_nurse)), 'To many')
+                            print('Locatie',i,'Number of GRZ beds available: ',n_beds_GRZ_list[i], '       Number of GRZ effective beds:',  (grz_nurses[i]*n_pat_per_nurse), ' So, ', -(n_beds_GRZ_list[i]-(grz_nurses[i]*n_pat_per_nurse)), 'To many')
                             n_beds_GRZ_list[i] =n_beds_GRZ_list[i]
                             
                     for i in range(len(n_beds_ELV_Low_list)):
                         if n_beds_ELV_Low_list[i]-(elv_low_complex_nurses[i]*n_pat_per_nurse) == 0:
                             n_beds_ELV_Low_list[i] =n_beds_ELV_Low_list[i]
-                            print('Location',i,'Number of ELV Low beds available: ',n_beds_ELV_Low_list[i], '      Number of ELV Low effective beds:',  (elv_low_complex_nurses[i]*n_pat_per_nurse))
+                            print('Locatie',i,'Number of ELV Low beds available: ',n_beds_ELV_Low_list[i], '      Number of ELV Low effective beds:',  (elv_low_complex_nurses[i]*n_pat_per_nurse))
                         elif n_beds_ELV_Low_list[i]-(elv_low_complex_nurses[i]*n_pat_per_nurse) >0:
-                            print('Location',i,'Number of ELV Low beds available: ',n_beds_ELV_Low_list[i], '     Number of ELV Low effective beds:',  (elv_low_complex_nurses[i]*n_pat_per_nurse), ' So, ', n_beds_ELV_Low_list[i]-(elv_low_complex_nurses[i]*n_pat_per_nurse), 'Beds lost')
+                            print('Locatie',i,'Number of ELV Low beds available: ',n_beds_ELV_Low_list[i], '     Number of ELV Low effective beds:',  (elv_low_complex_nurses[i]*n_pat_per_nurse), ' So, ', n_beds_ELV_Low_list[i]-(elv_low_complex_nurses[i]*n_pat_per_nurse), 'Beds lost')
                             
                             n_beds_ELV_Low_list[i] =elv_low_complex_nurses[i]*n_pat_per_nurse
                         else:
                             
-                            print('Location',i,'Number of ELV Low beds available: ',n_beds_ELV_Low_list[i], '     Number of ELV Low effective beds:',  (elv_low_complex_nurses[i]*n_pat_per_nurse), ' So, ', -(n_beds_ELV_Low_list[i]-(elv_low_complex_nurses[i]*n_pat_per_nurse)), 'To many')
+                            print('Locatie',i,'Number of ELV Low beds available: ',n_beds_ELV_Low_list[i], '     Number of ELV Low effective beds:',  (elv_low_complex_nurses[i]*n_pat_per_nurse), ' So, ', -(n_beds_ELV_Low_list[i]-(elv_low_complex_nurses[i]*n_pat_per_nurse)), 'To many')
                             n_beds_ELV_Low_list[i] =n_beds_ELV_Low_list[i]
                             
                 print('----------------------------------------------------')
@@ -1894,11 +1894,11 @@ with col2:
                                 start_time_eval = current_time
                                 
                         n_client += 1
-                        loc = Give_possible_locations(next_event)
+                        loc = Give_possible_Locaties(next_event)
         #                 print(next_event)
         #                 print(loc)
-                        Location = random.choice(loc)
-                        target_client = 'c_' + str(n_client) + "_" + str(Location)
+                        Locatie = random.choice(loc)
+                        target_client = 'c_' + str(n_client) + "_" + str(Locatie)
                         
                         #print("target_client",target_client)
                         
@@ -1952,8 +1952,8 @@ with col2:
                                 if p_observation < 0.1:
                                     if count_patients('TRW') + count_place_reserved('TRW') >= beds_TRW_list[extract_number(target_client)]: # op wachtlijst
                                         if Preference == 'FCFS':
-                                            if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,True)[0] == True:
-                                                change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,True)[1],True)
+                                            if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,True)[0] == True:
+                                                change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,True)[1],True)
                                                 time_until_placement = exp(adm_days)    
         
                                                 p_acc_opn = np.random.uniform(0,1)
@@ -2065,8 +2065,8 @@ with col2:
                                         if next_event[4:12] == 'HOS_High':#3
                                             if Check_space_partial_beds('HOS_High') >= n_beds_High_Complex_list[extract_number(target_client)]:
                                                 if Preference == 'FCFS':
-                                                    if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[0] == True:
-                                                        change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[1],True)
+                                                    if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
+                                                        change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)
                                                         time_until_placement = exp(adm_days)    
             
                                                         p_acc_opn = np.random.uniform(0,1)
@@ -2142,8 +2142,8 @@ with col2:
                                         elif next_event[4:7] == 'EMD':
                                             if Check_space_partial_beds('EMD') >= n_beds_High_Complex_list[extract_number(target_client)]:
                                                 if Preference == 'FCFS':
-                                                    if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[0] == True:
-                                                        change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[1],True)
+                                                    if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
+                                                        change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)
                                                         time_until_placement = exp(adm_days)    
             
                                                         p_acc_opn = np.random.uniform(0,1)
@@ -2252,8 +2252,8 @@ with col2:
                                         elif next_event[4:12] == 'GPR_High':
                                             if Check_space_partial_beds('GPR_High') >= n_beds_High_Complex_list[extract_number(target_client)]:
                                                 if Preference == 'FCFS':
-                                                    if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[0] == True:
-                                                        change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[1],True)
+                                                    if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
+                                                        change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)
                                                         time_until_placement = exp(adm_days)    
             
                                                         p_acc_opn = np.random.uniform(0,1)
@@ -2326,8 +2326,8 @@ with col2:
                                             
                                             if Check_space_partial_beds('HOS_GRZ') >= n_beds_GRZ_list[extract_number(target_client)] :
                                                 if Preference == 'FCFS':
-                                                    if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[0] == True:
-                                                        change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[1],True)
+                                                    if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
+                                                        change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)
                                                         time_until_placement = exp(adm_days)    
             
                                                         p_acc_opn = np.random.uniform(0,1)
@@ -2400,8 +2400,8 @@ with col2:
                             elif next_event[4:11] == 'GPR_Low':
                                 if count_patients('ELV_Low') + count_place_reserved('ELV_Low') >= n_beds_ELV_Low_list[extract_number(target_client)]: # op wachtlijst
                                     if Preference == 'FCFS':
-                                        if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[0] == True:
-                                            change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[1],True)  
+                                        if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
+                                            change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)  
                                             time_until_placement = exp(adm_days)    
         
                                             p_acc_opn = np.random.uniform(0,1)
@@ -2512,8 +2512,8 @@ with col2:
                                 
                             else:
                                 if Preference == 'FCFS':
-                                    if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[0] == True:
-                                        change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[1],True)
+                                    if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
+                                        change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)
                                         time_until_placement = exp(adm_days)    
         
                                         p_acc_opn = np.random.uniform(0,1)
@@ -2605,8 +2605,8 @@ with col2:
                                 # if Scen_shared_beds_Full or Scen_part_bed_Share or Scen_NO_Sharing:
                                 if count_patients('ELV_Low') + count_place_reserved('ELV_Low') >= n_beds_ELV_Low_list[extract_number(target_client)]: # op wachtlijst
                                     if Preference == 'FCFS':
-                                        if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[0] == True:
-                                            change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[1],True)  
+                                        if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
+                                            change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)  
                                             time_until_placement = exp(adm_days)    
         
                                             p_acc_opn = np.random.uniform(0,1)
@@ -2689,8 +2689,8 @@ with col2:
                                     if next_event[4:12] == 'HOS_High' or next_event[4:12] == 'GPR_High' or next_event[4:7] == 'EMD' or next_event[4:11] == 'HOS_GRZ' :
                                         if count_patients('ELV_High') + count_place_reserved('ELV_High') >= n_beds_ELV_High_list[extract_number(target_client)]: # op wachtlijst
                                             if Preference == 'FCFS':
-                                                if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[0] == True:
-                                                    change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[1],True)
+                                                if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
+                                                    change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)
                                                     time_until_placement = exp(adm_days)    
         
                                                     p_acc_opn = np.random.uniform(0,1)
@@ -2826,8 +2826,8 @@ with col2:
                                         if next_event[4:12] == 'HOS_High':#3
                                             if Check_space_partial_beds('HOS_High') >= n_beds_High_Complex_list[extract_number(target_client)]:
                                                 if Preference == 'FCFS':
-                                                    if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[0] == True:
-                                                        change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[1],True)
+                                                    if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
+                                                        change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)
                                                         time_until_placement = exp(adm_days)    
             
                                                         p_acc_opn = np.random.uniform(0,1)
@@ -2903,8 +2903,8 @@ with col2:
                                         elif next_event[4:7] == 'EMD':
                                             if Check_space_partial_beds('EMD') >= n_beds_High_Complex_list[extract_number(target_client)]:
                                                 if Preference == 'FCFS':
-                                                    if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[0] == True:
-                                                        change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[1],True)
+                                                    if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
+                                                        change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)
                                                         time_until_placement = exp(adm_days)    
             
                                                         p_acc_opn = np.random.uniform(0,1)
@@ -3013,8 +3013,8 @@ with col2:
                                         elif next_event[4:12] == 'GPR_High':
                                             if Check_space_partial_beds('GPR_High') >= n_beds_High_Complex_list[extract_number(target_client)]:
                                                 if Preference == 'FCFS':
-                                                    if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[0] == True:
-                                                        change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[1],True)
+                                                    if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
+                                                        change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)
                                                         time_until_placement = exp(adm_days)    
             
                                                         p_acc_opn = np.random.uniform(0,1)
@@ -3087,8 +3087,8 @@ with col2:
                                             
                                             if Check_space_partial_beds('HOS_GRZ') >= n_beds_GRZ_list[extract_number(target_client)] :
                                                 if Preference == 'FCFS':
-                                                    if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[0] == True:
-                                                        change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[1],True)
+                                                    if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
+                                                        change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)
                                                         time_until_placement = exp(adm_days)    
             
                                                         p_acc_opn = np.random.uniform(0,1)
@@ -3193,8 +3193,8 @@ with col2:
                                                     move_to_ELV_partial_bed(target_client,time_until_placement)
                                                 else:
                                                     if Preference == 'FCFS':
-                                                        if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[0] == True:
-                                                            change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[1],True)
+                                                        if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
+                                                            change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)
                                                             time_until_placement = exp(adm_days)    
                 
                                                             p_acc_opn = np.random.uniform(0,1)
@@ -3299,8 +3299,8 @@ with col2:
                                                     move_to_ELV_partial_bed(target_client,time_until_placement)
                                                 else:
                                                     if Preference == 'FCFS':
-                                                        if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[0] == True:
-                                                            change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[1],True)
+                                                        if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
+                                                            change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)
                                                             time_until_placement = exp(adm_days)    
                 
                                                             p_acc_opn = np.random.uniform(0,1)
@@ -3439,8 +3439,8 @@ with col2:
                                                     move_to_ELV_partial_bed(target_client,time_until_placement)
                                                 else:
                                                     if Preference == 'FCFS':
-                                                        if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[0] == True:
-                                                            change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[1],True)
+                                                        if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
+                                                            change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)
                                                             time_until_placement = exp(adm_days)    
                 
                                                             p_acc_opn = np.random.uniform(0,1)
@@ -3543,8 +3543,8 @@ with col2:
                                                     move_to_ELV_partial_bed(target_client,time_until_placement)
                                                 else:
                                                     if Preference == 'FCFS':
-                                                        if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[0] == True:
-                                                            change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[1],True)
+                                                        if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
+                                                            change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)
                                                             time_until_placement = exp(adm_days)    
                 
                                                             p_acc_opn = np.random.uniform(0,1)
@@ -3636,7 +3636,7 @@ with col2:
                                 
                             target_client_found = False
                             if priority:
-                                if check_first_pref_client(w4_dict_TRW, extract_number(target_client)) and check_first_pref_client(w3_dict_TRW, extract_number(target_client)):#len(list({k:v['Preferred location']  for (k,v) in w3_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))>0 and len(list({k:v['Preferred location']  for (k,v) in w4_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))>0:#len(w2_dict_TRW) > 0: # priority
+                                if check_first_pref_client(w4_dict_TRW, extract_number(target_client)) and check_first_pref_client(w3_dict_TRW, extract_number(target_client)):#len(list({k:v['Preferred Locatie']  for (k,v) in w3_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))>0 and len(list({k:v['Preferred Locatie']  for (k,v) in w4_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))>0:#len(w2_dict_TRW) > 0: # priority
                                     client_4 = check_first_pref_client(w4_dict_TRW, extract_number(target_client))
                                     client_3 = check_first_pref_client(w3_dict_TRW, extract_number(target_client))
                                     min_of_wait = min(client_dict[client_2]['j_times'][-1], client_dict[client_3]['j_times'][-1])
@@ -3652,23 +3652,23 @@ with col2:
                                         target_client = check_first_pref_client(w4_dict_TRW,extract_number(target_client)) #w2_dict_TRW[0]
                                         target_client_found = True
                                         remove_from_wait_list(w4_dict_TRW,target_client,current_time,Fairness_list)
-                                elif check_first_pref_client(w4_dict_TRW,extract_number(target_client)):#len(list({k:v['Preferred location']  for (k,v) in w3_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))==0 and len(list({k:v['Preferred location']  for (k,v) in w4_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))>0:
+                                elif check_first_pref_client(w4_dict_TRW,extract_number(target_client)):#len(list({k:v['Preferred Locatie']  for (k,v) in w3_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))==0 and len(list({k:v['Preferred Locatie']  for (k,v) in w4_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))>0:
                                     target_client = check_first_pref_client(w4_dict_TRW,extract_number(target_client)) #w2_dict_TRW[0]
                                     target_client_found = True
                                     remove_from_wait_list(w4_dict_TRW,target_client,current_time,Fairness_list)
-                                elif check_first_pref_client(w3_dict_TRW,extract_number(target_client)):#len(list({k:v['Preferred location']  for (k,v) in w3_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))>0 and len(list({k:v['Preferred location']  for (k,v) in w4_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))==0:
+                                elif check_first_pref_client(w3_dict_TRW,extract_number(target_client)):#len(list({k:v['Preferred Locatie']  for (k,v) in w3_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))>0 and len(list({k:v['Preferred Locatie']  for (k,v) in w4_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))==0:
                                     target_client = check_first_pref_client(w3_dict_TRW,extract_number(target_client)) #w2_dict_TRW[0]
                                     target_client_found = True
                                     remove_from_wait_list(w3_dict_TRW,target_client,current_time,Fairness_list)
                                     if (client_dict[target_client]['journey'][0] == 'EMD' or client_dict[target_client]['journey'][0] == 'GPR_High')   and 'HOSP_adm_' +target_client in event_dict:#3
                                             del event_dict['HOSP_adm_' + target_client]
-                                elif check_first_pref_client(w2_dict_TRW,extract_number(target_client)):#len(list({k:v['Preferred location']  for (k,v) in w2_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))>0:#len(w3_dict_TRW) > 0:
+                                elif check_first_pref_client(w2_dict_TRW,extract_number(target_client)):#len(list({k:v['Preferred Locatie']  for (k,v) in w2_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))>0:#len(w3_dict_TRW) > 0:
                                     target_client = check_first_pref_client(w2_dict_TRW,extract_number(target_client)) #wait_list_3_TRW[0]   
                                     target_client_found = True
                                     remove_from_wait_list(w2_dict_TRW, target_client,current_time)
                                     #del wait_list_3_TRW[0]
                             else:
-                                if check_first_pref_client(w2_dict_TRW, extract_number(target_client)) and check_first_pref_client(w3_dict_TRW, extract_number(target_client)) and check_first_pref_client(w4_dict_TRW, extract_number(target_client)):#len(list({k:v['Preferred location']  for (k,v) in w2_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred location']  for (k,v) in w3_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred location']  for (k,v) in w4_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))>0:#len(w3_dict)>0 and len(w2_dict)>0:
+                                if check_first_pref_client(w2_dict_TRW, extract_number(target_client)) and check_first_pref_client(w3_dict_TRW, extract_number(target_client)) and check_first_pref_client(w4_dict_TRW, extract_number(target_client)):#len(list({k:v['Preferred Locatie']  for (k,v) in w2_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred Locatie']  for (k,v) in w3_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred Locatie']  for (k,v) in w4_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))>0:#len(w3_dict)>0 and len(w2_dict)>0:
                                     client_2 = check_first_pref_client(w2_dict_TRW, extract_number(target_client))
                                     client_3 = check_first_pref_client(w3_dict_TRW, extract_number(target_client))
                                     client_4 = check_first_pref_client(w4_dict_TRW, extract_number(target_client))
@@ -3691,7 +3691,7 @@ with col2:
                                         target_client = check_first_pref_client(w4_dict_TRW,extract_number(target_client)) #w2_dict_TRW[0]
                                         target_client_found = True
                                         remove_from_wait_list(w4_dict_TRW,target_client,current_time,Fairness_list)
-                                elif check_first_pref_client(w2_dict_TRW, extract_number(target_client)) and check_first_pref_client(w4_dict_TRW, extract_number(target_client)):#len(list({k:v['Preferred location']  for (k,v) in w2_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred location']  for (k,v) in w3_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))==0 and len(list({k:v['Preferred location']  for (k,v) in w4_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))>0:
+                                elif check_first_pref_client(w2_dict_TRW, extract_number(target_client)) and check_first_pref_client(w4_dict_TRW, extract_number(target_client)):#len(list({k:v['Preferred Locatie']  for (k,v) in w2_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred Locatie']  for (k,v) in w3_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))==0 and len(list({k:v['Preferred Locatie']  for (k,v) in w4_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))>0:
                                     client_2 = check_first_pref_client(w2_dict_TRW, extract_number(target_client))
                                     client_4 = check_first_pref_client(w4_dict_TRW, extract_number(target_client))
                                     min_of_wait = min(client_dict[client_2]['j_times'][-1],client_dict[client_4]['j_times'][-1])
@@ -3703,7 +3703,7 @@ with col2:
                                         target_client = check_first_pref_client(w4_dict_TRW,extract_number(target_client)) #w2_dict_TRW[0]
                                         target_client_found = True
                                         remove_from_wait_list(w4_dict_TRW,target_client,current_time,Fairness_list)
-                                elif check_first_pref_client(w2_dict_TRW, extract_number(target_client)) and check_first_pref_client(w3_dict_TRW, extract_number(target_client)):#len(list({k:v['Preferred location']  for (k,v) in w2_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred location']  for (k,v) in w3_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred location']  for (k,v) in w4_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))==0:
+                                elif check_first_pref_client(w2_dict_TRW, extract_number(target_client)) and check_first_pref_client(w3_dict_TRW, extract_number(target_client)):#len(list({k:v['Preferred Locatie']  for (k,v) in w2_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred Locatie']  for (k,v) in w3_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred Locatie']  for (k,v) in w4_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))==0:
                                     client_2 = check_first_pref_client(w2_dict_TRW, extract_number(target_client))
                                     client_3 = check_first_pref_client(w3_dict_TRW, extract_number(target_client))
                                     min_of_wait = min(client_dict[client_2]['j_times'][-1], client_dict[client_3]['j_times'][-1])
@@ -3717,7 +3717,7 @@ with col2:
                                         remove_from_wait_list(w3_dict_TRW,target_client,current_time,Fairness_list)
                                         if (client_dict[target_client]['journey'][0] == 'EMD' or client_dict[target_client]['journey'][0] == 'GPR_High')   and 'HOSP_adm_' +target_client in event_dict:#3
                                             del event_dict['HOSP_adm_' + target_client]
-                                elif check_first_pref_client(w4_dict_TRW, extract_number(target_client)) and check_first_pref_client(w3_dict_TRW, extract_number(target_client)):#len(list({k:v['Preferred location']  for (k,v) in w3_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred location']  for (k,v) in w4_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred location']  for (k,v) in w2_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))==0:
+                                elif check_first_pref_client(w4_dict_TRW, extract_number(target_client)) and check_first_pref_client(w3_dict_TRW, extract_number(target_client)):#len(list({k:v['Preferred Locatie']  for (k,v) in w3_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred Locatie']  for (k,v) in w4_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred Locatie']  for (k,v) in w2_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))==0:
                                     client_4 = check_first_pref_client(w4_dict_TRW, extract_number(target_client))
                                     client_3 = check_first_pref_client(w3_dict_TRW, extract_number(target_client))
                                     min_of_wait = min(client_dict[client_4]['j_times'][-1], client_dict[client_3]['j_times'][-1])
@@ -3731,17 +3731,17 @@ with col2:
                                         remove_from_wait_list(w3_dict_TRW,target_client,current_time,Fairness_list)
                                         if (client_dict[target_client]['journey'][0] == 'EMD' or client_dict[target_client]['journey'][0] == 'GPR_High')   and 'HOSP_adm_' +target_client in event_dict:#3
                                             del event_dict['HOSP_adm_' + target_client]
-                                elif check_first_pref_client(w3_dict_TRW,extract_number(target_client)):#len(list({k:v['Preferred location']  for (k,v) in w3_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred location']  for (k,v) in w4_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))==0 and len(list({k:v['Preferred location']  for (k,v) in w2_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))==0:
+                                elif check_first_pref_client(w3_dict_TRW,extract_number(target_client)):#len(list({k:v['Preferred Locatie']  for (k,v) in w3_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred Locatie']  for (k,v) in w4_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))==0 and len(list({k:v['Preferred Locatie']  for (k,v) in w2_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))==0:
                                     target_client = check_first_pref_client(w3_dict_TRW,extract_number(target_client)) #w2_dict_TRW[0]
                                     target_client_found = True
                                     remove_from_wait_list(w3_dict_TRW,target_client,current_time,Fairness_list)
                                     if (client_dict[target_client]['journey'][0] == 'EMD' or client_dict[target_client]['journey'][0] == 'GPR_High')   and 'HOSP_adm_' +target_client in event_dict:#3
                                         del event_dict['HOSP_adm_' + target_client]
-                                elif check_first_pref_client(w2_dict_TRW,extract_number(target_client)):#len(list({k:v['Preferred location']  for (k,v) in w2_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred location']  for (k,v) in w4_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))==0 and len(list({k:v['Preferred location']  for (k,v) in w3_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))==0:
+                                elif check_first_pref_client(w2_dict_TRW,extract_number(target_client)):#len(list({k:v['Preferred Locatie']  for (k,v) in w2_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred Locatie']  for (k,v) in w4_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))==0 and len(list({k:v['Preferred Locatie']  for (k,v) in w3_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))==0:
                                     target_client = check_first_pref_client(w2_dict_TRW,extract_number(target_client)) #w2_dict_TRW[0]
                                     target_client_found = True
                                     remove_from_wait_list(w2_dict_TRW,target_client,current_time,Fairness_list)
-                                elif check_first_pref_client(w4_dict_TRW, extract_number(target_client)):#len(list({k:v['Preferred location']  for (k,v) in w4_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred location']  for (k,v) in w2_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))==0 and len(list({k:v['Preferred location']  for (k,v) in w3_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))==0:
+                                elif check_first_pref_client(w4_dict_TRW, extract_number(target_client)):#len(list({k:v['Preferred Locatie']  for (k,v) in w4_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred Locatie']  for (k,v) in w2_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))==0 and len(list({k:v['Preferred Locatie']  for (k,v) in w3_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))==0:
                                     target_client = check_first_pref_client(w4_dict_TRW, extract_number(target_client))
                                     target_client_found = True
                                     remove_from_wait_list(w4_dict_TRW,target_client,current_time,Fairness_list)
@@ -4009,8 +4009,8 @@ with col2:
                                         if 'HOS_High' in client_dict[target_client]['journey'] or 'EMD' in client_dict[target_client]['journey']:
                                             if Check_space_partial_beds('HOS_High') >= n_beds_High_Complex_list[extract_number(target_client)]: #Waiting list
                                                 if Preference == 'FCFS':
-                                                    if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[0] == True:
-                                                        change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[1],True)
+                                                    if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
+                                                        change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)
                                                         p_acc_opn = np.random.uniform(0,1)
                                                         if (current_time - math.floor(current_time) <= time_max_opn_ELV and math.floor(current_time) % 7 in [1,2,3,4,5]and current_time-math.floor(current_time)>=ELV_start_time) or p_acc_opn <= p_opn_weekend: 
                                                             # voor 17h en geen weekend of prob accept!
@@ -4096,8 +4096,8 @@ with col2:
                                         elif 'HOS_GRZ' in client_dict[target_client]['journey']:
                                             if Check_space_partial_beds('HOS_GRZ') >= n_beds_GRZ_list[extract_number(target_client)]: #Waiting list
                                                 if Preference == 'FCFS':
-                                                    if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[0] == True:
-                                                        change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[1],True)
+                                                    if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
+                                                        change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)
                                                         p_acc_opn = np.random.uniform(0,1)
                                                         if (current_time - math.floor(current_time) <= time_max_opn_ELV and math.floor(current_time) % 7 in [1,2,3,4,5]and current_time-math.floor(current_time)>=ELV_start_time) or p_acc_opn <= p_opn_weekend: 
                                                             # voor 17h en geen weekend of prob accept!
@@ -4175,8 +4175,8 @@ with col2:
                             if Scen_shared_beds_Full:
                                 if count_patients('ELV_High') + count_place_reserved('ELV_High') >= n_beds_ELV_High_list[extract_number(target_client)]: # Full System
                                     if Preference == 'FCFS':
-                                        if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[0] == True:
-                                            change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[1],True)
+                                        if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
+                                            change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)
                                             p_acc_opn = np.random.uniform(0,1)
                                             if (current_time - math.floor(current_time) <= time_max_opn_ELV and math.floor(current_time) % 7 in [1,2,3,4,5]and current_time-math.floor(current_time)>=ELV_start_time) or p_acc_opn <= p_opn_weekend: 
                                                 # voor 17h en geen weekend of prob accept!
@@ -4266,8 +4266,8 @@ with col2:
                                     if 'HOS_High' in client_dict[target_client]['journey'] or 'EMD' in client_dict[target_client]['journey']:
                                         if Check_space_partial_beds('HOS_High') >= n_beds_High_Complex_list[extract_number(target_client)]: #Waiting list
                                             if Preference == 'FCFS':
-                                                if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[0] == True:
-                                                    change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[1],True)
+                                                if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
+                                                    change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)
                                                     p_acc_opn = np.random.uniform(0,1)
                                                     if (current_time - math.floor(current_time) <= time_max_opn_ELV and math.floor(current_time) % 7 in [1,2,3,4,5]and current_time-math.floor(current_time)>=ELV_start_time) or p_acc_opn <= p_opn_weekend: 
                                                         # voor 17h en geen weekend of prob accept!
@@ -4353,8 +4353,8 @@ with col2:
                                     elif 'HOS_GRZ' in client_dict[target_client]['journey']:
                                         if Check_space_partial_beds('HOS_GRZ') >= n_beds_GRZ_list[extract_number(target_client)]: #Waiting list
                                             if Preference == 'FCFS':
-                                                if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[0] == True:
-                                                    change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[1],True)
+                                                if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
+                                                    change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)
                                                     p_acc_opn = np.random.uniform(0,1)
                                                     if (current_time - math.floor(current_time) <= time_max_opn_ELV and math.floor(current_time) % 7 in [1,2,3,4,5]and current_time-math.floor(current_time)>=ELV_start_time) or p_acc_opn <= p_opn_weekend: 
                                                         # voor 17h en geen weekend of prob accept!
@@ -4458,8 +4458,8 @@ with col2:
                                                 move_to_ELV_partial_bed(target_client, time_until_placement)
                                             else: #45
                                                 if Preference == 'FCFS':
-                                                    if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[0] == True:
-                                                        change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[1],True)
+                                                    if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
+                                                        change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)
                                                         p_acc_opn = np.random.uniform(0,1)
                                                         if (current_time - math.floor(current_time) <= time_max_opn_ELV and math.floor(current_time) % 7 in [1,2,3,4,5]and current_time-math.floor(current_time)>=ELV_start_time) or p_acc_opn <= p_opn_weekend: 
                                                             # voor 17h en geen weekend of prob accept!
@@ -4565,8 +4565,8 @@ with col2:
                                                 move_to_ELV_partial_bed(target_client, time_until_placement)
                                             else: #455
                                                 if Preference == 'FCFS':
-                                                    if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[0] == True:
-                                                        change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[1],True)
+                                                    if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
+                                                        change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)
                                                         p_acc_opn = np.random.uniform(0,1)
                                                         if (current_time - math.floor(current_time) <= time_max_opn_ELV and math.floor(current_time) % 7 in [1,2,3,4,5]and current_time-math.floor(current_time)>=ELV_start_time) or p_acc_opn <= p_opn_weekend: 
                                                             # voor 17h en geen weekend of prob accept!
@@ -4676,8 +4676,8 @@ with col2:
                                         
                                     move_to_ELV_Total(target_client, time_until_placement)
                                 elif Preference == 'FCFS':
-                                    if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[0] == True:
-                                        change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[1],True)
+                                    if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
+                                        change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)
                                         p_acc_opn = np.random.uniform(0,1)
                                         if (current_time - math.floor(current_time) <= time_max_opn_ELV and math.floor(current_time) % 7 in [1,2,3,4,5]and current_time-math.floor(current_time)>=ELV_start_time) or p_acc_opn <= p_opn_weekend: 
                                             # voor 17h en geen weekend of prob accept!
@@ -4882,7 +4882,7 @@ with col2:
                             
                             target_client_found = False
                             if priority:
-                                if check_first_pref_client(w4_dict_TRW, extract_number(target_client)) and check_first_pref_client(w3_dict_TRW, extract_number(target_client)):#len(list({k:v['Preferred location']  for (k,v) in w3_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))>0 and len(list({k:v['Preferred location']  for (k,v) in w4_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))>0:#len(w2_dict_TRW) > 0: # priority
+                                if check_first_pref_client(w4_dict_TRW, extract_number(target_client)) and check_first_pref_client(w3_dict_TRW, extract_number(target_client)):#len(list({k:v['Preferred Locatie']  for (k,v) in w3_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))>0 and len(list({k:v['Preferred Locatie']  for (k,v) in w4_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))>0:#len(w2_dict_TRW) > 0: # priority
                                     client_4 = check_first_pref_client(w4_dict_TRW, extract_number(target_client))
                                     client_3 = check_first_pref_client(w3_dict_TRW, extract_number(target_client))
                                     min_of_wait = min(client_dict[client_2]['j_times'][-1], client_dict[client_3]['j_times'][-1])
@@ -4898,23 +4898,23 @@ with col2:
                                         target_client = check_first_pref_client(w4_dict_TRW,extract_number(target_client)) #w2_dict_TRW[0]
                                         target_client_found = True
                                         remove_from_wait_list(w4_dict_TRW,target_client,current_time,Fairness_list)
-                                elif check_first_pref_client(w4_dict_TRW,extract_number(target_client)):#len(list({k:v['Preferred location']  for (k,v) in w3_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))==0 and len(list({k:v['Preferred location']  for (k,v) in w4_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))>0:
+                                elif check_first_pref_client(w4_dict_TRW,extract_number(target_client)):#len(list({k:v['Preferred Locatie']  for (k,v) in w3_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))==0 and len(list({k:v['Preferred Locatie']  for (k,v) in w4_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))>0:
                                     target_client = check_first_pref_client(w4_dict_TRW,extract_number(target_client)) #w2_dict_TRW[0]
                                     target_client_found = True
                                     remove_from_wait_list(w4_dict_TRW,target_client,current_time,Fairness_list)
-                                elif check_first_pref_client(w3_dict_TRW,extract_number(target_client)):#len(list({k:v['Preferred location']  for (k,v) in w3_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))>0 and len(list({k:v['Preferred location']  for (k,v) in w4_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))==0:
+                                elif check_first_pref_client(w3_dict_TRW,extract_number(target_client)):#len(list({k:v['Preferred Locatie']  for (k,v) in w3_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))>0 and len(list({k:v['Preferred Locatie']  for (k,v) in w4_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))==0:
                                     target_client = check_first_pref_client(w3_dict_TRW,extract_number(target_client)) #w2_dict_TRW[0]
                                     target_client_found = True
                                     remove_from_wait_list(w3_dict_TRW,target_client,current_time,Fairness_list)
                                     if (client_dict[target_client]['journey'][0] == 'EMD' or client_dict[target_client]['journey'][0] == 'GPR_High')   and 'HOSP_adm_' +target_client in event_dict:#3
                                             del event_dict['HOSP_adm_' + target_client]
-                                elif check_first_pref_client(w2_dict_TRW,extract_number(target_client)):#len(list({k:v['Preferred location']  for (k,v) in w2_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))>0:#len(w3_dict_TRW) > 0:
+                                elif check_first_pref_client(w2_dict_TRW,extract_number(target_client)):#len(list({k:v['Preferred Locatie']  for (k,v) in w2_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))>0:#len(w3_dict_TRW) > 0:
                                     target_client = check_first_pref_client(w2_dict_TRW,extract_number(target_client)) #wait_list_3_TRW[0]   
                                     target_client_found = True
                                     remove_from_wait_list(w2_dict_TRW, target_client,current_time)
                                     #del wait_list_3_TRW[0]
                             else:
-                                if check_first_pref_client(w2_dict_TRW, extract_number(target_client)) and check_first_pref_client(w3_dict_TRW, extract_number(target_client)) and check_first_pref_client(w4_dict_TRW, extract_number(target_client)):#len(list({k:v['Preferred location']  for (k,v) in w2_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred location']  for (k,v) in w3_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred location']  for (k,v) in w4_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))>0:#len(w3_dict)>0 and len(w2_dict)>0:
+                                if check_first_pref_client(w2_dict_TRW, extract_number(target_client)) and check_first_pref_client(w3_dict_TRW, extract_number(target_client)) and check_first_pref_client(w4_dict_TRW, extract_number(target_client)):#len(list({k:v['Preferred Locatie']  for (k,v) in w2_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred Locatie']  for (k,v) in w3_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred Locatie']  for (k,v) in w4_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))>0:#len(w3_dict)>0 and len(w2_dict)>0:
                                     client_2 = check_first_pref_client(w2_dict_TRW, extract_number(target_client))
                                     client_3 = check_first_pref_client(w3_dict_TRW, extract_number(target_client))
                                     client_4 = check_first_pref_client(w4_dict_TRW, extract_number(target_client))
@@ -4937,7 +4937,7 @@ with col2:
                                         target_client = check_first_pref_client(w4_dict_TRW,extract_number(target_client)) #w2_dict_TRW[0]
                                         target_client_found = True
                                         remove_from_wait_list(w4_dict_TRW,target_client,current_time,Fairness_list)
-                                elif check_first_pref_client(w2_dict_TRW, extract_number(target_client)) and check_first_pref_client(w4_dict_TRW, extract_number(target_client)):#len(list({k:v['Preferred location']  for (k,v) in w2_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred location']  for (k,v) in w3_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))==0 and len(list({k:v['Preferred location']  for (k,v) in w4_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))>0:
+                                elif check_first_pref_client(w2_dict_TRW, extract_number(target_client)) and check_first_pref_client(w4_dict_TRW, extract_number(target_client)):#len(list({k:v['Preferred Locatie']  for (k,v) in w2_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred Locatie']  for (k,v) in w3_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))==0 and len(list({k:v['Preferred Locatie']  for (k,v) in w4_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))>0:
                                     client_2 = check_first_pref_client(w2_dict_TRW, extract_number(target_client))
                                     client_4 = check_first_pref_client(w4_dict_TRW, extract_number(target_client))
                                     min_of_wait = min(client_dict[client_2]['j_times'][-1],client_dict[client_4]['j_times'][-1])
@@ -4949,7 +4949,7 @@ with col2:
                                         target_client = check_first_pref_client(w4_dict_TRW,extract_number(target_client)) #w2_dict_TRW[0]
                                         target_client_found = True
                                         remove_from_wait_list(w4_dict_TRW,target_client,current_time,Fairness_list)
-                                elif check_first_pref_client(w2_dict_TRW, extract_number(target_client)) and check_first_pref_client(w3_dict_TRW, extract_number(target_client)):#len(list({k:v['Preferred location']  for (k,v) in w2_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred location']  for (k,v) in w3_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred location']  for (k,v) in w4_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))==0:
+                                elif check_first_pref_client(w2_dict_TRW, extract_number(target_client)) and check_first_pref_client(w3_dict_TRW, extract_number(target_client)):#len(list({k:v['Preferred Locatie']  for (k,v) in w2_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred Locatie']  for (k,v) in w3_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred Locatie']  for (k,v) in w4_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))==0:
                                     client_2 = check_first_pref_client(w2_dict_TRW, extract_number(target_client))
                                     client_3 = check_first_pref_client(w3_dict_TRW, extract_number(target_client))
                                     min_of_wait = min(client_dict[client_2]['j_times'][-1], client_dict[client_3]['j_times'][-1])
@@ -4963,7 +4963,7 @@ with col2:
                                         remove_from_wait_list(w3_dict_TRW,target_client,current_time,Fairness_list)
                                         if (client_dict[target_client]['journey'][0] == 'EMD' or client_dict[target_client]['journey'][0] == 'GPR_High')   and 'HOSP_adm_' +target_client in event_dict:#3
                                             del event_dict['HOSP_adm_' + target_client]
-                                elif check_first_pref_client(w4_dict_TRW, extract_number(target_client)) and check_first_pref_client(w3_dict_TRW, extract_number(target_client)):#len(list({k:v['Preferred location']  for (k,v) in w3_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred location']  for (k,v) in w4_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred location']  for (k,v) in w2_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))==0:
+                                elif check_first_pref_client(w4_dict_TRW, extract_number(target_client)) and check_first_pref_client(w3_dict_TRW, extract_number(target_client)):#len(list({k:v['Preferred Locatie']  for (k,v) in w3_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred Locatie']  for (k,v) in w4_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred Locatie']  for (k,v) in w2_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))==0:
                                     client_4 = check_first_pref_client(w4_dict_TRW, extract_number(target_client))
                                     client_3 = check_first_pref_client(w3_dict_TRW, extract_number(target_client))
                                     min_of_wait = min(client_dict[client_4]['j_times'][-1], client_dict[client_3]['j_times'][-1])
@@ -4977,17 +4977,17 @@ with col2:
                                         remove_from_wait_list(w3_dict_TRW,target_client,current_time,Fairness_list)
                                         if (client_dict[target_client]['journey'][0] == 'EMD' or client_dict[target_client]['journey'][0] == 'GPR_High')   and 'HOSP_adm_' +target_client in event_dict:#3
                                             del event_dict['HOSP_adm_' + target_client]
-                                elif check_first_pref_client(w3_dict_TRW,extract_number(target_client)):#len(list({k:v['Preferred location']  for (k,v) in w3_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred location']  for (k,v) in w4_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))==0 and len(list({k:v['Preferred location']  for (k,v) in w2_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))==0:
+                                elif check_first_pref_client(w3_dict_TRW,extract_number(target_client)):#len(list({k:v['Preferred Locatie']  for (k,v) in w3_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred Locatie']  for (k,v) in w4_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))==0 and len(list({k:v['Preferred Locatie']  for (k,v) in w2_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))==0:
                                     target_client = check_first_pref_client(w3_dict_TRW,extract_number(target_client)) #w2_dict_TRW[0]
                                     target_client_found = True
                                     remove_from_wait_list(w3_dict_TRW,target_client,current_time,Fairness_list)
                                     if (client_dict[target_client]['journey'][0] == 'EMD' or client_dict[target_client]['journey'][0] == 'GPR_High')   and 'HOSP_adm_' +target_client in event_dict:#3
                                         del event_dict['HOSP_adm_' + target_client]
-                                elif check_first_pref_client(w2_dict_TRW,extract_number(target_client)):#len(list({k:v['Preferred location']  for (k,v) in w2_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred location']  for (k,v) in w4_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))==0 and len(list({k:v['Preferred location']  for (k,v) in w3_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))==0:
+                                elif check_first_pref_client(w2_dict_TRW,extract_number(target_client)):#len(list({k:v['Preferred Locatie']  for (k,v) in w2_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred Locatie']  for (k,v) in w4_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))==0 and len(list({k:v['Preferred Locatie']  for (k,v) in w3_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))==0:
                                     target_client = check_first_pref_client(w2_dict_TRW,extract_number(target_client)) #w2_dict_TRW[0]
                                     target_client_found = True
                                     remove_from_wait_list(w2_dict_TRW,target_client,current_time,Fairness_list)
-                                elif check_first_pref_client(w4_dict_TRW, extract_number(target_client)):#len(list({k:v['Preferred location']  for (k,v) in w4_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred location']  for (k,v) in w2_dict_TRW.items()if v['Preferred location']==extract_number(prev)}.values()))==0 and len(list({k:v['Preferred location']  for (k,v) in w3_dict_TRW.items()if v['Preferred location']==extract_number(target_client)}.values()))==0:
+                                elif check_first_pref_client(w4_dict_TRW, extract_number(target_client)):#len(list({k:v['Preferred Locatie']  for (k,v) in w4_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))>0 and len(list({k:v['Preferred Locatie']  for (k,v) in w2_dict_TRW.items()if v['Preferred Locatie']==extract_number(prev)}.values()))==0 and len(list({k:v['Preferred Locatie']  for (k,v) in w3_dict_TRW.items()if v['Preferred Locatie']==extract_number(target_client)}.values()))==0:
                                     target_client = check_first_pref_client(w4_dict_TRW, extract_number(target_client))
                                     target_client_found = True
                                     remove_from_wait_list(w4_dict_TRW,target_client,current_time,Fairness_list)
@@ -5012,8 +5012,8 @@ with col2:
                                 if 'HOS_High' in client_dict[target_client]['journey'] or 'EMD' in client_dict[target_client]['journey']:
                                     if Check_space_partial_beds('HOS_High') >= n_beds_High_Complex_list[extract_number(target_client)]: #Waiting list
                                         if Preference == 'FCFS':
-                                            if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[0] == True:
-                                                change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[1],True)
+                                            if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
+                                                change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)
                                                 p_acc_opn = np.random.uniform(0,1)
                                                 if (current_time - math.floor(current_time) <= time_max_opn_ELV and math.floor(current_time) % 7 in [1,2,3,4,5]and current_time-math.floor(current_time)>=ELV_start_time) or p_acc_opn <= p_opn_weekend: 
                                                     # voor 17h en geen weekend of prob accept!
@@ -5099,8 +5099,8 @@ with col2:
                                 elif 'HOS_GRZ' in client_dict[target_client]['journey']:
                                     if Check_space_partial_beds('HOS_GRZ') >= n_beds_GRZ_list[extract_number(target_client)]: #Waiting list
                                         if Preference == 'FCFS':
-                                            if Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[0] == True:
-                                                change_target_client_location(target_client,Check_beds_free_other_location(extract_number(target_client),n_loc,target_client,False)[1],True)
+                                            if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
+                                                change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)
                                                 p_acc_opn = np.random.uniform(0,1)
                                                 if (current_time - math.floor(current_time) <= time_max_opn_ELV and math.floor(current_time) % 7 in [1,2,3,4,5]and current_time-math.floor(current_time)>=ELV_start_time) or p_acc_opn <= p_opn_weekend: 
                                                     # voor 17h en geen weekend of prob accept!
@@ -5268,7 +5268,7 @@ with col2:
         
                                 target_client_found = False
                                 if count_patients('ELV_TOT') + count_place_reserved('ELV_TOT') < n_beds_ELV_total_list[extract_number(prev)]:
-                                    if check_first_pref_client(w_tot_dict, extract_number(prev)):#len(list({k:v['Preferred location']  for (k,v) in w_tot_dict.items()if v['Preferred location']==extract_number(prev)}.values()))>0:#len(w_tot_dict)>0:
+                                    if check_first_pref_client(w_tot_dict, extract_number(prev)):#len(list({k:v['Preferred Locatie']  for (k,v) in w_tot_dict.items()if v['Preferred Locatie']==extract_number(prev)}.values()))>0:#len(w_tot_dict)>0:
                                         target_client_found = True
                                         target_client = check_first_pref_client(w_tot_dict, extract_number(prev))
                                         if target_client_found:
@@ -6182,8 +6182,8 @@ with col2:
                         'Scen_partial_bed_Sharing' : Scen_part_bed_Share,
                         'Scen_NO_bed_Sharing' : Scen_NO_Sharing ,
                         'Scen_Total_Sharing': Scen_Total_Sharing,                                     
-                        'Number of transfers between locations': nr_pat_trans_mean,
-                        'Number of Locations ELV': n_loc,    
+                        'Number of transfers between Locaties': nr_pat_trans_mean,
+                        'Number of Locaties ELV': n_loc,    
                         'Number of beds ELV_High': str(n_beds_ELV_High_list),
                         'Number of beds ELV_Low': str(n_beds_ELV_Low_list),
                         'Number of beds GRZ':str(n_beds_GRZ_list),
@@ -6236,7 +6236,7 @@ with col3:
         table3_right_names = ['Service level', 'Gemiddelde verplijfduur Hoog Complex', 'Gemiddelde verblijfduur Laag Complex', 'Bezettingsgraad totaal',
         'Bezettingsgraad Hoog Complex', 'Bezettingsgraad Laag Complex']
         
-        table4_columns = ['Number of Locations ELV', 'Number of beds ELV_High', 'Number of beds ELV_Low',
+        table4_columns = ['Number of Locaties ELV', 'Number of beds ELV_High', 'Number of beds ELV_Low',
         'Number of beds GRZ', 'Number of beds High Complex', 'Number of shared beds', 'Number of TRW beds', 'Number of beds ELV Total']
         table4_right_names = ['Aantal ELV Locaties', 'Aantal ELV Hoog Complex bedden', 'Aantal ELV Laag Complex bedden',
         'Aantal bedden Geriatrische Zorg', 'Aantal Hoog Complexe bedden', 'Aantal gedeelde bedden', 'Aantal bedden voor observatie', 'Aantal bedden ELV Totaal']
@@ -6256,7 +6256,7 @@ with col3:
         table2.rename(columns = {'Perc_with_HOSP_adm':'Percentage ziekenhuisopname vanaf spoedeisendehulp (%)', 'Number with hosp adm EMD':'Aantal ziekenhuisopname vanaf spoedeisendehulp', 'Perc_with_HOSP_adm_HOSP':'Percentage ziekenhuisopname vanaf het ziekenhuis (%)','Number with hosp adm HOSP':'Aantal ziekenhuisopname vanaf het ziekenhuis', 'nr_pat_repl':'Aantal verplaatsingen'}, inplace = True)
         table3.rename(columns = {'serv_level':'Service level (Geholpen < 3 dagen) (%)', 'los_ELV_High':'Gemiddelde verblijfduur Hoog Complex', 'los_ELV_Low':'Gemiddelde verblijfduur Laag Complex', 'bez_gr_total':'Bezettingsgraad totaal (%)',
         'bez_gr_High':'Bezettingsgraad Hoog Complex (%)', 'bez_gr_Low':'Bezettingsgraad Laag Complex (%)'}, inplace =True)
-        table4.rename(columns = {'Number of Locations ELV':'Aantal ELV Locaties', 'Number of beds ELV_High':'Aantal ELV Hoog Complex bedden', 'Number of beds ELV_Low':'Aantal ELV Laag Complex bedden',
+        table4.rename(columns = {'Number of Locaties ELV':'Aantal ELV Locaties', 'Number of beds ELV_High':'Aantal ELV Hoog Complex bedden', 'Number of beds ELV_Low':'Aantal ELV Laag Complex bedden',
         'Number of beds GRZ':'Aantal bedden Geriatrische Zorg', 'Number of beds High Complex':'Aantal Hoog Complexe bedden', 'Number of shared beds':'Aantal gedeelde bedden', 'Number of TRW beds':'Aantal bedden voor observatie', 'Number of beds ELV Total':'Aantal bedden ELV Totaal'},inplace =True)
         table1.index = ['Wachttijd (dagen)']
         table2.index = ['Aantallen']
