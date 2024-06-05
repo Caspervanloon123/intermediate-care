@@ -29,7 +29,7 @@ with col1:
         <style>
         .stButton>button {
             background-color: #4CAF50;
-            color: white;
+            color: salmon;
             border: none;
             padding: 10px 20px;
             text-align: center;
