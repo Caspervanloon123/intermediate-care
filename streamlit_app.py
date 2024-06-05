@@ -143,7 +143,7 @@ with col1:
     # Dropdown menu for the scenario variables
     dropdown_var = st.selectbox("Beddeling", scenario_vars_1)
     bed_share = dropdown_var
-    if dropdown_var == "Volledige beddeldeling":
+    if dropdown_var == "Volledige beddendeling":
         Inputs_1.loc[0,"Scen_shared_beds_Full"] = True
         Inputs_1.loc[0,"Scen_Total_Sharing"] = False
         Inputs_1.loc[0,"Scen_Triage_ward"] = False
