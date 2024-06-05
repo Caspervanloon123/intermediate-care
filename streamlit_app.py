@@ -6217,6 +6217,7 @@ with col3:
     if st.button('Start Simualtie'):
         # Convert the inputs dictionary to a DataFrame
         df1 = df_tot
+        st.spinner(text="In progress...")
         output_df = simulate(df1)
  
         table1_columns = [ 'Wt_from_HOSP_GRZ',
