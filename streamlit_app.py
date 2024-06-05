@@ -6266,7 +6266,7 @@ with col3:
         #with col3:
         with st.expander("Wachttijden"):
             st.write(table1.T)
-            st.bar_chart(table1.T, y = 'Wachttijd (dagen)',use_container_width = True)
+            st.bar_chart(table1.T, y = 'Wachttijd (dagen)',use_container_width = True, color = 'salmon')
         with st.expander("Ziekenhuisopnames"):
             st.write(table2.T)
         with st.expander("Verblijven"):
