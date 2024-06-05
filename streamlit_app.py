@@ -205,11 +205,11 @@ with col2:
             with st.expander(st.text_input("",value="Location "+str(i+1))):
                 # st.text_input("Location name",value="Location "+str(i+1))
                 #st.title('Location ' + str(i+1))
-                beds_ELV_High = st.number_input(f"Number of ELV High Complex beds {i+1} ", min_value=0, step=1, value=0, format="%d" )
-                nurs_ELV_High = st.number_input(f"Number of ELV High Complex nurses {i+1}", min_value=0, step=1, value=0, format="%d" )
-                beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds {i+1}", min_value=0, step=1, value=0, format="%d" )
-                nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses {i+1}", min_value=0, step=1, value=0, format="%d" )
-                beds_ELV_EMRD = st.number_input(f"Number of Emergency beds {i+1}", min_value=0, step=1, value=0, format="%d" )   
+                beds_ELV_High = st.number_input(f"Number of ELV High Complex beds location {i+1} ", min_value=0, step=1, value=0, format="%d" )
+                nurs_ELV_High = st.number_input(f"Number of ELV High Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d" )
+                beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds location {i+1}", min_value=0, step=1, value=0, format="%d" )
+                nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses location {i+1}", min_value=0, step=1, value=0, format="%d" )
+                beds_ELV_EMRD = st.number_input(f"Number of Emergency beds location {i+1}", min_value=0, step=1, value=0, format="%d" )   
                 beds_High.append(beds_ELV_High)
                 beds_Low.append(beds_ELV_Low) 
                 nurs_low.append(nurs_ELV_Low)
@@ -6214,7 +6214,7 @@ with col2:
     
     # Button to display the dataframe
 with col3:
-    if st.button('Start Simulation'):
+    if st.button('Start Simualtie'):
         # Convert the inputs dictionary to a DataFrame
         df1 = df_tot
         output_df = simulate(df1)
