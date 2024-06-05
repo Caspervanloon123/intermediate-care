@@ -6263,11 +6263,14 @@ with col3:
         table4.index = ['Aantal bedden ELV']
         #st.write(df1)
         #with col3:
-        st.write(table1.T)
-        st.bar_chart(table1.T, y = 'Wachttijd (dagen)',use_container_width = True)
-
-        st.write(table2.T)
-        st.write(table3.T)
-        st.write(table4.T)
+        with st.expander("Wachttijden"):
+            st.write(table1.T)
+            st.bar_chart(table1.T, y = 'Wachttijd (dagen)',use_container_width = True)
+        with st.expander("Ziekenhuisopnames"):
+            st.write(table2.T)
+        with st.expander("Verblijven"):
+            st.write(table3.T)
+        with st.expander("Aantal bedden"):
+            st.write(table4.T)
    
 
