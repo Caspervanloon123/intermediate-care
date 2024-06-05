@@ -23,7 +23,7 @@ st.title("ELV SIMULATIE")
 col1, col2, col3 = st.columns((2, 2, 3)) 
 
 with col1:
-    st.sidebar.image("/Users/caspe/Documents/Studie/Studie/master/Business analytics/Thesis/Deliverables/Code/Simulations/VU.png", use_column_width=True) 
+    #st.sidebar.image("/Users/caspe/Documents/Studie/Studie/master/Business analytics/Thesis/Deliverables/Code/Simulations/VU.png", use_column_width=True) 
     # Inject custom CSS
     st.markdown("""
         <style>
