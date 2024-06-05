@@ -102,7 +102,7 @@ with col1:
     
     # List of scenario variables
     scenario_vars_1 = [
-        "Volledige beddeldeling", "Geen beddendeling", "Partiële beddendeling", "Observatiebedden", "Totale beddendeling"
+        "Volledige beddendeling", "Geen beddendeling", "Partiële beddendeling", "Observatiebedden", "Totale beddendeling"
     ]
     scenario_vars = [
         "Scen_shared_beds_Full","Scen_Total_Sharing","Scen_Triage_ward","Scen_NO_Sharing","Scen_Part_bed_share"
@@ -194,7 +194,7 @@ with col1:
     #st.button('Start Simulation')
 with col2:
     # with col2:
-    if bed_share == "Volledige beddeldeling":
+    if bed_share == "Volledige beddendeling":
         listofzeros = 0
         beds_High = []
         beds_Low = []
