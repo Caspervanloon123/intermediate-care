@@ -28,8 +28,8 @@ with col1:
     st.markdown("""
         <style>
         .stButton>button {
-            background-color: #4CAF50;
-            color: salmon;
+            background-color: #DD7788;
+            color: white;
             border: none;
             padding: 10px 20px;
             text-align: center;
