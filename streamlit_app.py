@@ -98,6 +98,7 @@ with col1:
         "Aantal subruns": 1,
         "Aantal patienten per subrun": 1000,
         "Aantal patienten voor warming": 500,
+        "observation probability": 10,
     }
     
     
@@ -128,7 +129,7 @@ with col1:
             "Sluittijd Huisarts", "Opname in het weekend", "Openingstijd ELV", "Sluitingstijd ELV"
         ],
         "Overig": [
-            "Aantal patienten per verpleegkundige", "Transfertijd", "Maximaal aantal dagen observatie", "Aantal subruns", "Aantal patienten per subrun", "Aantal patienten voor warming"
+            "Aantal patienten per verpleegkundige", "Transfertijd", "Maximaal aantal dagen observatie", "Aantal subruns", "Aantal patienten per subrun", "Aantal patienten voor warming", "Observatiekans"
         ]
     }
     
@@ -542,6 +543,8 @@ with col2:
             serv_Pall_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg naar Huis met aanpassingen']
             serv_WMO_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg WMO']
             serv_WLZ_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg WLZ']
+
+            observation_prob = input.loc[loop_nr,'Observatiekans']/100
         
             # start simulatie
             
@@ -1949,7 +1952,7 @@ with col2:
                                     p_observation = np.random.uniform(0,1)
                                 else: 
                                     p_observation = 1
-                                if p_observation < 0.1:
+                                if p_observation < observation_prob:
                                     if count_patients('TRW') + count_place_reserved('TRW') >= beds_TRW_list[extract_number(target_client)]: # op wachtlijst
                                         if Preference == 'FCFS':
                                             if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,True)[0] == True:
@@ -3952,7 +3955,7 @@ with col2:
                                     p_observation = np.random.uniform(0,1)
                                 else: 
                                     p_observation = 1
-                                if p_observation < 0.1:
+                                if p_observation < observation_prob:
                                     if count_patients('TRW') + count_place_reserved('TRW') >= beds_TRW_list[extract_number(target_client)]: # op wachtlijst
                                         if target_client in w3_dict.items():
                                             remove_from_wait_list(w3_dict,target_client,current_time)
