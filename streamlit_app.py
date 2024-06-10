@@ -6409,7 +6409,7 @@ with col2:
         eff_beds_ELV_Low = []
         eff_beds_total = []
 
-        
+        st.text('stabiel wanneer de load per bed kleiner is dan 1.')
         if Scen_shared_beds_Full:
             st.header("ELV Hoog Complex")
             for i in range(len(elv_high_complex_nurses)):
