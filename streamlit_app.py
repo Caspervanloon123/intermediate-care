@@ -6233,7 +6233,7 @@ with col2:
         eff_beds_ELV_Low = []
         eff_beds_total = []
         if Scen_shared_beds_Full:
-            st.wite("ELV Hoog Complex")
+            st.write("ELV Hoog Complex")
             for i in range(len(elv_high_complex_nurses)):
               eff_beds_ELV_High.append(elv_high_complex_nurses[i]*n_pat_per_nurse)  
               eff_beds_ELV_Low.append(elv_low_complex_nurses[i]*n_pat_per_nurse)
@@ -6247,7 +6247,7 @@ with col2:
                     st.write("Aantal ELV Hoog Complex bedden ", elv_high_complex_beds[i], " op locatie ", i+1)
                     st.write("Aantal effectieve bedden ELV Hoog Complex ", eff_beds_ELV_High[i]," op locatie ",i+1)
                     st.write("Dus geen verlies van capaciteit op locatie ", i+1)
-            st.wite("ELV Laag Complex")
+            st.write("ELV Laag Complex")
             for i in range(len(eff_beds_ELV_Low)):
                 if eff_beds_ELV_Low[i] < elv_high_complex_beds[i]:
                     st.write("Aantal ELV Laag Complex bedden ", elv_low_complex_beds[i], " op locatie ", i+1)
@@ -6259,7 +6259,7 @@ with col2:
                     st.write("Dus geen verlies van capaciteit op locatie ", i+1)
             
         elif Scen_NO_Sharing or Scen_part_bed_Share or Scen_tr_ward:
-            st.wite("Hoog Complex")
+            st.write("Hoog Complex")
             for i in range(len(high_complex_nurses)):
               eff_beds_HC.append(high_complex_nurses[i]*n_pat_per_nurse)  
               eff_beds_GRZ.append(grz_nurses[i]*n_pat_per_nurse)  
@@ -6274,7 +6274,7 @@ with col2:
                     st.write("Aantal Hoog Complex bedden ", high_complex_beds[i], " op locatie ", i+1)
                     st.write("Aantal effectieve bedden Hoog Complex ", eff_beds_HC[i]," op locatie ",i+1)
                     st.write("Dus een verlies in capaciteit van ", i+1)
-            st.wite("GRZ")
+            st.write("GRZ")
             for i in range(len(eff_beds_GRZ)):
                 st.write("Locatie ", i+1)
                 if eff_beds_GRZ[i] < grz_beds[i]:
@@ -6285,7 +6285,7 @@ with col2:
                     st.write("Aantal GRZ bedden ", grz_beds[i], " op locatie ", i+1)
                     st.write("Aantal effectieve bedden GRZ ", eff_beds_GRZ[i]," op locatie ",i+1)
                     st.write("Dus een verlies in capaciteit op locatie ", i+1)
-            st.wite("ELV Laag Complex")
+            st.write("ELV Laag Complex")
             for i in range(len(eff_beds_ELV_Low)):
                 st.write("Locatie ", i+1)
                 if eff_beds_ELV_Low[i] < elv_high_complex_beds[i]:
@@ -6299,7 +6299,7 @@ with col2:
             
 
         elif Scen_Total_Sharing:
-            st.wite("ELV Totaal")
+            st.write("ELV Totaal")
             for i in range(len(total_nurses)):
               eff_beds_total.append(total_nurses[i]*n_pat_per_nurse)  
               
