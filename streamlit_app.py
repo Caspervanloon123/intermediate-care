@@ -98,7 +98,7 @@ with col1:
         "Aantal subruns": 1,
         "Aantal patienten per subrun": 1000,
         "Aantal patienten voor warming": 500,
-        "observation probability": 10,
+        "Observatiekans": 10,
     }
     
     
