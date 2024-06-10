@@ -1772,37 +1772,21 @@ with col2:
                 # Return the new_event_dict without the events containing the target_client
                 return new_event_dict
             elv_high_complex_beds = input.loc[loop_nr,'elv_high_complex_beds']
-            
-            #elv_high_complex_beds = change_string_to_list(elv_high_complex_beds)
             high_complex_beds = input.loc[loop_nr, 'high_complex_beds']
-            #high_complex_beds = change_string_to_list(high_complex_beds)
             grz_beds = input.loc[loop_nr,'grz_beds']
-            #grz_beds = change_string_to_list(grz_beds)
             shared_beds = input.loc[loop_nr,'shared_beds']
-            #shared_beds = change_string_to_list(shared_beds)
             elv_low_complex_beds = input.loc[loop_nr,'elv_low_complex_beds']
-            #elv_low_complex_beds = change_string_to_list(elv_low_complex_beds)
             beds_TRW_list = input.loc[loop_nr,'trw_beds']
-            #beds_TRW_list = change_string_to_list(beds_TRW_list)
             total_beds = input.loc[loop_nr,'total_beds']
-            #total_beds = change_string_to_list(total_beds)
             beds_Emergency_list = input.loc[loop_nr,'emergency_beds']
-            #beds_Emergency_list = change_string_to_list(beds_Emergency_list)
         
             elv_high_complex_nurses = input.loc[loop_nr,'elv_high_complex_nurses']
-            #elv_high_complex_nurses = change_string_to_list(elv_high_complex_nurses)
             high_complex_nurses = input.loc[loop_nr,'high_complex_nurses']
-            #high_complex_nurses = change_string_to_list(high_complex_nurses)
             grz_nurses = input.loc[loop_nr,'grz_nurses']
-            #grz_nurses = change_string_to_list(grz_nurses)
             shared_nurses = input.loc[loop_nr,'shared_nurses']
-            #shared_nurses = change_string_to_list(shared_nurses)
             elv_low_complex_nurses = input.loc[loop_nr,'elv_low_complex_nurses']
-            #elv_low_complex_nurses = change_string_to_list(elv_low_complex_nurses)
             trw_nurses = input.loc[loop_nr,'trw_nurses']
-            #trw_nurses = change_string_to_list(trw_nurses)
             total_nurses = input.loc[loop_nr,'total_nurses']
-            #total_nurses = change_string_to_list(total_nurses)
             
             if Scen_shared_beds_Full:
         #         bed_list = bed_list_Full
@@ -6216,12 +6200,116 @@ with col2:
     
         
     
-    # Button to display the dataframe
+    def stability(input):
+        elv_high_complex_nurses = input.loc[loop_nr,'elv_high_complex_nurses']
+        high_complex_nurses = input.loc[loop_nr,'high_complex_nurses']
+        grz_nurses = input.loc[loop_nr,'grz_nurses']
+        shared_nurses = input.loc[loop_nr,'shared_nurses']
+        elv_low_complex_nurses = input.loc[loop_nr,'elv_low_complex_nurses']
+        trw_nurses = input.loc[loop_nr,'trw_nurses']
+        total_nurses = input.loc[loop_nr,'total_nurses']
+        Scen_tr_ward = input.loc[loop_nr,'Scen_Triage_ward']
+        Scen_shared_beds_Full = input.loc[loop_nr,'Scen_shared_beds_Full']
+        Scen_NO_Sharing = input.loc[loop_nr,'Scen_NO_Sharing']
+        Scen_part_bed_Share = input.loc[loop_nr,'Scen_Part_bed_share']
+        Scen_Total_Sharing = input.loc[loop_nr,'Scen_Total_Sharing']
+        elv_high_complex_beds = input.loc[loop_nr,'elv_high_complex_beds']
+        high_complex_beds = input.loc[loop_nr, 'high_complex_beds']
+        grz_beds = input.loc[loop_nr,'grz_beds']
+        shared_beds = input.loc[loop_nr,'shared_beds']
+        elv_low_complex_beds = input.loc[loop_nr,'elv_low_complex_beds']
+        beds_TRW_list = input.loc[loop_nr,'trw_beds']
+        total_beds = input.loc[loop_nr,'total_beds']
+        beds_Emergency_list = input.loc[loop_nr,'emergency_beds']
+        arr_HOS_High =  input.loc[loop_nr,'Aankomst Hoog Complex vanuit ziekenhuis per dag']
+        arr_HOS_GRZ = input.loc[loop_nr,'Aankomst Geriatrische Zorg in Ziekenhuis per dag']
+        arr_GPR_High = input.loc[loop_nr,'Aankomst vanaf Huisarts Hoog Complex per dag']
+        arr_GPR_Low = input.loc[loop_nr,'Aankomst Laag Complexe zorg vanaf de Huisarts']
+        arr_EMD = input.loc[loop_nr,'Aankomst vanaf de Spoedeisendehulp per dag']
+        n_pat_per_nurse= input.loc[loop_nr,'Aantal patienten per verpleegkundige']
+        eff_beds_ELV_High = []
+        eff_beds_GRZ = []
+        eff_beds_HC = []
+        eff_beds_ELV_Low = []
+        eff_beds_total = []
+        if Scen_shared_beds_Full:
+            for i in range(len(elv_high_complex_nurses)):
+              eff_beds_ELV_High.append(elv_high_complex_nurses[i]*n_pat_per_nurse)  
+              eff_beds_ELV_Low.append(elv_low_complex_nurses[i]*n_pat_per_nurse)
+            for i in range(len(eff_beds_ELV_High)):
+                if eff_beds_ELV_High[i] < elv_high_complex_beds[i]:
+                    print("Aantal ELV Hoog Complex bedden ", elv_high_complex_beds[i], " op locatie ", i)
+                    print("Aantal effectieve bedden ELV Hoog Complex ", eff_beds_ELV_High[i]," op locatie ",i)
+                    print("Dus een verlies aan capaciteit van, ",elv_high_complex_beds[i]-eff_beds_ELV_High[i]," op locatie ", i)
+                else:
+                    print("Aantal ELV Hoog Complex bedden ", elv_high_complex_beds[i], " op locatie ", i)
+                    print("Aantal effectieve bedden ELV Hoog Complex ", eff_beds_ELV_High[i]," op locatie ",i)
+                    print("Dus geen verlies van capaciteit op locatie ", i)
+            for i in range(len(eff_beds_ELV_Low)):
+                if eff_beds_ELV_Low[i] < elv_high_complex_beds[i]:
+                    print("Aantal ELV Laag Complex bedden ", elv_low_complex_beds[i], " op locatie ", i)
+                    print("Aantal effectieve bedden ELV Laag Complex ", eff_beds_ELV_Low[i]," op locatie ",i)
+                    print("Dus een verlies in capaciteit van, ",elv_low_complex_beds[i]-eff_beds_ELV_Low[i]," op locatie ", i)
+                else:
+                    print("Aantal ELV Laag Complex bedden ", elv_low_complex_beds[i], " op locatie ", i)
+                    print("Aantal effectieve bedden ELV Laag Complex ", eff_beds_ELV_Low[i]," op locatie ",i)
+                    print("Dus geen verlies van capaciteit op locatie ", i)
+            
+        elif Scen_NO_Sharing or Scen_part_bed_Share or Scen_tr_ward:
+            for i in range(len(high_complex_nurses)):
+              eff_beds_HC.append(high_complex_nurses[i]*n_pat_per_nurse)  
+              eff_beds_GRZ.append(grz_nurses[i]*n_pat_per_nurse)  
+              eff_beds_ELV_Low.append(elv_low_complex_nurses[i]*n_pat_per_nurse)
+            for i in range(len(eff_beds_HC)):
+                if eff_beds_HC[i] < high_complex_beds[i]:
+                    print("Aantal Hoog Complex bedden ", high_complex_beds[i], " op locatie ", i)
+                    print("Aantal effectieve bedden Hoog Complex ", eff_beds_HC[i]," op locatie ",i)
+                    print("Dus een verlies in capaciteit van ",high_complex_beds[i]-eff_beds_HC[i]," op locatie ", i)
+                else:
+                    print("Aantal Hoog Complex bedden ", high_complex_beds[i], " op locatie ", i)
+                    print("Aantal effectieve bedden Hoog Complex ", eff_beds_HC[i]," op locatie ",i)
+                    print("Dus een verlies in capaciteit van ", i)
+            for i in range(len(eff_beds_GRZ)):
+                if eff_beds_GRZ[i] < grz_beds[i]:
+                    print("Aantal GRZ bedden ", grz_beds[i], " op locatie ", i)
+                    print("Aantal effectieve bedden GRZ ", eff_beds_GRZ[i]," op locatie ",i)
+                    print("Dus een verlies in capaciteit van ",grz_beds[i]-eff_beds_GRZ[i]," op locatie ", i)
+                else:
+                    print("Aantal GRZ bedden ", grz_beds[i], " op locatie ", i)
+                    print("Aantal effectieve bedden GRZ ", eff_beds_GRZ[i]," op locatie ",i)
+                    print("Dus een verlies in capaciteit op locatie ", i)
+            for i in range(len(eff_beds_ELV_Low)):
+                if eff_beds_ELV_Low[i] < elv_high_complex_beds[i]:
+                    print("Aantal ELV Laag Complex bedden ", elv_low_complex_beds[i], " op locatie ", i)
+                    print("Aantal effectieve bedden ELV Laag Complex ", eff_beds_ELV_Low[i]," op locatie ",i)
+                    print("Dus een verlies in capaciteit van, ",elv_low_complex_beds[i]-eff_beds_ELV_Low[i]," op locatie ", i)
+                else:
+                    print("Aantal ELV Laag Complex bedden ", elv_low_complex_beds[i], " op locatie ", i)
+                    print("Aantal effectieve bedden ELV Laag Complex ", eff_beds_ELV_Low[i]," op locatie ",i)
+                    print("Dus geen verlies van capaciteit op locatie ", i)
+            
+
+        elif Scen_Total_Sharing:
+            for i in range(len(total_nurses)):
+              eff_beds_total.append(total_nurses[i]*n_pat_per_nurse)  
+              
+            for i in range(len(eff_beds_total)):
+                if eff_beds_total[i] < total_beds[i]:
+                    print("Aantal ELV totaal bedden ", total_beds[i], " op locatie ", i)
+                    print("Aantal effectieve bedden ELV totaal ", eff_beds_total[i]," op locatie ",i)
+                    print("Dus een verlies in capaciteit van ",total_beds[i]-eff_beds_total[i]," op locatie ", i)
+                else:
+                    print("Aantal ELV totaal bedden ", total_beds[i], " op locatie ", i)
+                    print("Aantal effectieve bedden ELV totaal ", eff_beds_total[i]," op locatie ",i)
+                    print("Dus geen verlies van capaciteit op locatie ", i)
+
+        
+            
 with col3:
     if st.button('Start Simualtie'):
         # Convert the inputs dictionary to a DataFrame
         df1 = df_tot
-        
+        stability(df_tot)
         # output_df = simulate(df1)[0]
         # stop_flag = st.session_state.get('stop_flag', None)
         # if stop_flag is None:
