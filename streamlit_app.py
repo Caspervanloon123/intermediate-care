@@ -12,7 +12,7 @@ import sys
 # background-repeat: no-repeat;
 # background-attachment: local; 
 # }}
-# [data-testid="stHeader"] {{
+# [data-testid="stheader"] {{
 # background: rgba(0,0,0,0);
 # }}
 # </style>
@@ -6326,10 +6326,10 @@ with col3:
         df1 = df_tot
         st_out = st.empty()
         sys.stdout = st_out
-        st.Header("Checks")
+        st.header("Checks")
         with st.expander("Effectieve bedden check"):
             stability(df_tot)
-        st.Header("Resultaten")
+        st.header("Resultaten")
         with st.spinner('Running...'):
             output_df = simulate(df1)[0]
             result = simulate(df1)[1]
