@@ -6315,8 +6315,10 @@ with col2:
                     st.write("Aantal effectieve bedden ELV totaal ", eff_beds_total[i]," op locatie ",i+1)
                     st.write("Dus geen verlies van capaciteit op locatie ", i+1)  
 
+    
     def Stability(input):
         loop_nr = 0
+        n_loc = int(input.loc[loop_nr,'n_loc'])
         elv_high_complex_nurses = input.loc[loop_nr,'elv_high_complex_nurses']
         high_complex_nurses = input.loc[loop_nr,'high_complex_nurses']
         grz_nurses = input.loc[loop_nr,'grz_nurses']
@@ -6390,9 +6392,9 @@ with col2:
         serv_WLZ_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex WLZ']
 
         arr_ELV_High = arr_HOS_High+arr_GPR_High+arr_HOS_GRZ+arr_EMD
-        arr_HC = arr_HOS_High+arr_GPR_High+arr_EMD
-        arr_GRZ = arr_HOS_GRZ
-        arr_ELV_Low = arr_GPR_Low
+        arr_HC = (arr_HOS_High+arr_GPR_High+arr_EMD)/n_loc
+        arr_GRZ = arr_HOS_GRZ/n_loc
+        arr_ELV_Low = arr_GPR_Low/n_loc
         arr_Tot = arr_ELV_Low +arr_ELV_High
         serv_ELV_Low = out_p_Home_Low*serv_Home_Low + out_p_Dead_Low*serv_Dead_Low + out_p_WMO_Low*serv_WMO_Low + out_p_WLZ_Low*serv_WLZ_Low + out_p_GRZV_Low*serv_GRZV_Low + out_p_Pall_Low*serv_Pall_Low
         serv_GRZ = out_p_Home_GRZ*serv_Home_GRZ + out_p_Dead_GRZ*serv_Dead_GRZ + out_p_WMO_GRZ*serv_WMO_GRZ + out_p_WLZ_GRZ*serv_WLZ_GRZ + out_p_GRZV_GRZ*serv_GRZV_GRZ + out_p_Pall_GRZ*serv_Pall_GRZ
@@ -6405,6 +6407,8 @@ with col2:
         eff_beds_HC = []
         eff_beds_ELV_Low = []
         eff_beds_total = []
+
+        
         if Scen_shared_beds_Full:
             st.header("ELV Hoog Complex")
             for i in range(len(elv_high_complex_nurses)):
