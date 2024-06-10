@@ -6199,7 +6199,7 @@ with col2:
             
         return output_df, "Succes!"
     
-    def stability(input):
+    def Effective_beds(input):
         loop_nr = 0
         elv_high_complex_nurses = input.loc[loop_nr,'elv_high_complex_nurses']
         high_complex_nurses = input.loc[loop_nr,'high_complex_nurses']
@@ -6314,6 +6314,167 @@ with col2:
                     st.write("Aantal ELV totaal bedden ", total_beds[i], " op locatie ", i+1)
                     st.write("Aantal effectieve bedden ELV totaal ", eff_beds_total[i]," op locatie ",i+1)
                     st.write("Dus geen verlies van capaciteit op locatie ", i+1)  
+
+    def Stability(input):
+        loop_nr = 0
+        elv_high_complex_nurses = input.loc[loop_nr,'elv_high_complex_nurses']
+        high_complex_nurses = input.loc[loop_nr,'high_complex_nurses']
+        grz_nurses = input.loc[loop_nr,'grz_nurses']
+        shared_nurses = input.loc[loop_nr,'shared_nurses']
+        elv_low_complex_nurses = input.loc[loop_nr,'elv_low_complex_nurses']
+        trw_nurses = input.loc[loop_nr,'trw_nurses']
+        total_nurses = input.loc[loop_nr,'total_nurses']
+        Scen_tr_ward = input.loc[loop_nr,'Scen_Triage_ward']
+        Scen_shared_beds_Full = input.loc[loop_nr,'Scen_shared_beds_Full']
+        Scen_NO_Sharing = input.loc[loop_nr,'Scen_NO_Sharing']
+        Scen_part_bed_Share = input.loc[loop_nr,'Scen_Part_bed_share']
+        Scen_Total_Sharing = input.loc[loop_nr,'Scen_Total_Sharing']
+        elv_high_complex_beds = input.loc[loop_nr,'elv_high_complex_beds']
+        high_complex_beds = input.loc[loop_nr, 'high_complex_beds']
+        grz_beds = input.loc[loop_nr,'grz_beds']
+        shared_beds = input.loc[loop_nr,'shared_beds']
+        elv_low_complex_beds = input.loc[loop_nr,'elv_low_complex_beds']
+        beds_TRW_list = input.loc[loop_nr,'trw_beds']
+        total_beds = input.loc[loop_nr,'total_beds']
+        beds_Emergency_list = input.loc[loop_nr,'emergency_beds']
+        arr_HOS_High =  input.loc[loop_nr,'Aankomst Hoog Complex vanuit ziekenhuis per dag']
+        arr_HOS_GRZ = input.loc[loop_nr,'Aankomst Geriatrische Zorg in Ziekenhuis per dag']
+        arr_GPR_High = input.loc[loop_nr,'Aankomst vanaf Huisarts Hoog Complex per dag']
+        arr_GPR_Low = input.loc[loop_nr,'Aankomst Laag Complexe zorg vanaf de Huisarts']
+        arr_EMD = input.loc[loop_nr,'Aankomst vanaf de Spoedeisendehulp per dag']
+        n_pat_per_nurse= input.loc[loop_nr,'Aantal patienten per verpleegkundige']
+        
+        out_p_Home_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg naar Huis']
+        out_p_Dead_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg Dood']
+        out_p_WMO_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg WMO']
+        out_p_WLZ_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg WLZ']
+        out_p_GRZV_GRZ = 0# input.loc[loop_nr,'Percentage Geriatrische Zorg GRZ care GRZ']
+        out_p_Pall_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg naar Huis met aanpassingen']
+        
+        serv_Home_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg naar Huis']
+        serv_Dead_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg Dood']
+        serv_GRZV_GRZ = 0#1/input.loc[loop_nr,'serv_GRZV_GRZ']
+        serv_Pall_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg naar Huis met aanpassingen']
+        serv_WMO_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg WMO']
+        serv_WLZ_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg WLZ']
+        
+        
+        out_p_Home_High = input.loc[loop_nr,'Percentage Hoog Complex naar Huis']
+        out_p_Dead_High = input.loc[loop_nr,'Percentage Hoog Complex Dood']
+        out_p_WMO_High = input.loc[loop_nr,'Percentage Hoog Complex WMO']
+        out_p_WLZ_High = input.loc[loop_nr,'Percentage Hoog Complex WLZ']
+        out_p_GRZV_High = input.loc[loop_nr,'Percentage Hoog Complex naar Geriatrische Zorg']
+        out_p_Pall_High = input.loc[loop_nr,'Percentage Hoog Complex naar Huis met aanpassingen']
+        
+        out_p_Home_Low = input.loc[loop_nr,'Percentage Laag Complex naar Huis']
+        out_p_Dead_Low = input.loc[loop_nr,'Percentage Laag Complex Dood']
+        out_p_WMO_Low = input.loc[loop_nr,'Percentage Laag Complex WMO']
+        out_p_WLZ_Low = input.loc[loop_nr,'Percentage Laag Complex WLZ']
+        out_p_GRZV_Low = input.loc[loop_nr,'Percentage Laag Complex naar Geriatrische Zorg']
+        out_p_Pall_Low = input.loc[loop_nr,'Percentage Laag Complex naar Huis met aanpassingen']
+        
+        serv_Home_High = 1/input.loc[loop_nr,'Ligduur Hoog Complex naar Huis']
+        serv_Dead_High = 1/input.loc[loop_nr,'Ligduur Hoog Complex Dood']
+        
+        serv_GRZV_High = 1/input.loc[loop_nr,'Ligduur Hoog Complex naar Geriatrische Zorg']
+        serv_Pall_High = 1/input.loc[loop_nr,'Ligduur Hoog Complex naar Huis met aanpassingen']
+        serv_WMO_High = 1/input.loc[loop_nr,'Ligduur Hoog Complex WMO']
+        serv_WLZ_High = 1/input.loc[loop_nr,'Ligduur Hoog Complex WLZ']
+        
+        serv_Home_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex naar Huis']
+        serv_Dead_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex Dood']
+        
+        serv_GRZV_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex Geriatrische Zorg']
+        serv_Pall_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex naar Huis met aanpassingen']
+        serv_WMO_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex WMO']
+        serv_WLZ_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex WLZ']
+
+        arr_ELV_High = arr_HOS_High+arr_GPR_High+arr_HOS_GRZ+arr_EMD
+        arr_HC = arr_HOS_High+arr_GPR_High+arr_EMD
+        arr_GRZ = arr_HOS_GRZ
+        arr_ELV_Low = arr_GPR_Low
+        arr_Tot = arr_ELV_Low +arr_ELV_High
+        serv_ELV_Low = out_p_Home_Low*serv_Home_Low + out_p_Dead_Low*serv_Dead_Low + out_p_WMO_Low*serv_WMO_Low + out_p_WLZ_Low*serv_WLZ_Low + out_p_GRZV_Low*serv_GRZV_Low + out_p_Pall_Low*serv_Pall_Low
+        serv_GRZ = out_p_Home_GRZ*serv_Home_GRZ + out_p_Dead_GRZ*serv_Dead_GRZ + out_p_WMO_GRZ*serv_WMO_GRZ + out_p_WLZ_GRZ*serv_WLZ_GRZ + out_p_GRZV_GRZ*serv_GRZV_GRZ + out_p_Pall_GRZ*serv_Pall_GRZ
+        serv_HC = out_p_Home_High*serv_Home_High + out_p_Dead_GRZ*serv_Dead_High + out_p_WMO_High*serv_WMO_High + out_p_WLZ_GRZ*serv_WLZ_High + out_p_GRZV_High*serv_GRZV_High + out_p_Pall_High*serv_Pall_High
+        serv_ELV_High = (serv_GRZ+serv_HC)/2
+        serv_Tot = (serv_ELV_High+serv_ELV_Low)/2
+        
+        eff_beds_ELV_High = []
+        eff_beds_GRZ = []
+        eff_beds_HC = []
+        eff_beds_ELV_Low = []
+        eff_beds_total = []
+        if Scen_shared_beds_Full:
+            st.header("ELV Hoog Complex")
+            for i in range(len(elv_high_complex_nurses)):
+              eff_beds_ELV_High.append(elv_high_complex_nurses[i]*n_pat_per_nurse)  
+              eff_beds_ELV_Low.append(elv_low_complex_nurses[i]*n_pat_per_nurse)
+            for i in range(len(eff_beds_ELV_High)):
+                st.subheader("Locatie " + str(i+1))
+                num_beds = min(eff_beds_ELV_High[i],elv_high_complex_beds[i])
+                if arr_ELV_High/(num_beds*serv_ELV_High)>=1:
+                    st.write("Op locatie ", i+1, "is het systeem niet stabiel voor ELV Hoog Complex, load per bed is, " arr_ELV_High/(num_beds*serv_ELV_High))
+                else:
+                    st.write("Op locatie ", i+1, "is het systeem stabiel voor ELV Hoog Complex, load per bed is, " arr_ELV_High/(num_beds*serv_ELV_High))
+                    
+            st.header("ELV Laag Complex")
+            for i in range(len(eff_beds_ELV_Low)):
+                st.subheader("Locatie "+ str(i+1))
+                num_beds = min(eff_beds_ELV_Low[i],elv_low_complex_beds[i])
+                if arr_ELV_Low/(num_beds*serv_ELV_Low)>=1:
+                    st.write("Op locatie ", i+1, "is het systeem niet stabiel voor ELV Laag Complex, load per bed is, " arr_ELV_Low/(num_beds*serv_ELV_Low))
+                else:
+                    st.write("Op locatie ", i+1, "is het systeem stabiel voor ELV Hoog Complex, load per bed is, " arr_ELV_Low/(num_beds*serv_ELV_Low))
+                
+            
+        elif Scen_NO_Sharing or Scen_part_bed_Share or Scen_tr_ward:
+            st.header("Hoog Complex")
+            for i in range(len(high_complex_nurses)):
+              eff_beds_HC.append(high_complex_nurses[i]*n_pat_per_nurse)  
+              eff_beds_GRZ.append(grz_nurses[i]*n_pat_per_nurse)  
+              eff_beds_ELV_Low.append(elv_low_complex_nurses[i]*n_pat_per_nurse)
+            for i in range(len(eff_beds_HC)):
+                st.subheader("Locatie "+ str(i+1))
+                num_beds = min(eff_beds_HC[i],high_complex_beds[i])
+                if arr_HC/(num_beds*serv_HC)>=1:
+                    st.write("Op locatie ", i+1, "is het systeem niet stabiel voor Hoog Complex, load per bed is, " arr_HC/(num_beds*serv_HC))
+                else:
+                    st.write("Op locatie ", i+1, "is het systeem stabiel voor Hoog Complex, load per bed is, " arr_HC/(num_beds*serv_HC))
+                
+            st.header("GRZ")
+            for i in range(len(eff_beds_GRZ)):
+                st.subheader("Locatie "+ str(i+1))
+                num_beds = min(eff_beds_GRZ[i],grz_beds[i])
+                if arr_GRZ/(num_beds*serv_GRZ)>=1:
+                    st.write("Op locatie ", i+1, "is het systeem niet stabiel voor GRZ, load per bed is, "  arr_GRZ/(num_beds*serv_GRZ))
+                else:
+                    st.write("Op locatie ", i+1, "is het systeem stabiel voor GRZ, load per bed is, "  arr_GRZ/(num_beds*serv_GRZ))
+                
+            st.header("ELV Laag Complex")
+            for i in range(len(eff_beds_ELV_Low)):
+                st.subheader("Locatie "+ str(i+1))
+                num_beds = min(eff_beds_ELV_Low[i],elv_low_complex_beds[i])
+                if arr_ELV_Low/(num_beds*serv_ELV_Low)>=1:
+                    st.write("Op locatie ", i+1, "is het systeem niet stabiel voor ELV Laag Complex, load per bed is, " arr_ELV_Low/(num_beds*serv_ELV_Low))
+                else:
+                    st.write("Op locatie ", i+1, "is het systeem stabiel voor ELV Hoog Complex, load per bed is, " arr_ELV_Low/(num_beds*serv_ELV_Low))
+                
+            if Scen_part_bed_Share or Scen_tr_ward:
+                st.subheader("Observatiebedden en partiële bedden zijn niet meegenomen in deze berekeningen.")
+
+        elif Scen_Total_Sharing:
+            st.header("ELV Totaal")
+            for i in range(len(total_nurses)):
+              eff_beds_total.append(total_nurses[i]*n_pat_per_nurse)  
+              
+            for i in range(len(eff_beds_total)):
+                st.subheader("Locatie "+ str(i+1))
+                num_beds = min(eff_beds_total[i],total_beds[i])
+                if arr_Tot/(num_beds*serv_Tot)>=1:
+                    st.write("Op locatie ", i+1, "is het systeem niet stabiel voor ELV Totaal, load per bed is, "  arr_Tot/(num_beds*serv_Tot))
+                else:
+                    st.write("Op locatie ", i+1, "is het systeem stabiel voor ELV Totaal, load per bed is, "  arr_Tot/(num_beds*serv_Tot))
     
      
         
@@ -6328,7 +6489,9 @@ with col3:
         sys.stdout = st_out
         st.header("Checks")
         with st.expander("Effectieve bedden check"):
-            stability(df_tot)
+            Effective_beds(df_tot)
+        with st.expander("Stabiliteits check"):
+            Stability(df_tot)
         st.header("Resultaten")
         with st.spinner('Running...'):
             output_df = simulate(df1)[0]
