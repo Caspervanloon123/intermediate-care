@@ -6392,9 +6392,9 @@ with col2:
         serv_WLZ_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex WLZ']
 
         arr_ELV_High = arr_HOS_High+arr_GPR_High+arr_HOS_GRZ+arr_EMD
-        arr_HC = (arr_HOS_High+arr_GPR_High+arr_EMD)/n_loc
-        arr_GRZ = arr_HOS_GRZ/n_loc
-        arr_ELV_Low = arr_GPR_Low/n_loc
+        arr_HC = (arr_HOS_High+arr_GPR_High+arr_EMD)
+        arr_GRZ = arr_HOS_GRZ
+        arr_ELV_Low = arr_GPR_Low
         arr_Tot = arr_ELV_Low +arr_ELV_High
         serv_ELV_Low = out_p_Home_Low*serv_Home_Low + out_p_Dead_Low*serv_Dead_Low + out_p_WMO_Low*serv_WMO_Low + out_p_WLZ_Low*serv_WLZ_Low + out_p_GRZV_Low*serv_GRZV_Low + out_p_Pall_Low*serv_Pall_Low
         serv_GRZ = out_p_Home_GRZ*serv_Home_GRZ + out_p_Dead_GRZ*serv_Dead_GRZ + out_p_WMO_GRZ*serv_WMO_GRZ + out_p_WLZ_GRZ*serv_WLZ_GRZ + out_p_GRZV_GRZ*serv_GRZV_GRZ + out_p_Pall_GRZ*serv_Pall_GRZ
@@ -6414,24 +6414,24 @@ with col2:
             for i in range(len(elv_high_complex_nurses)):
               eff_beds_ELV_High.append(elv_high_complex_nurses[i]*n_pat_per_nurse)  
               eff_beds_ELV_Low.append(elv_low_complex_nurses[i]*n_pat_per_nurse)
-            for i in range(len(eff_beds_ELV_High)):
-                st.subheader("Locatie " + str(i+1))
+            
+            
+            
+            num_beds = min(sum(eff_beds_ELV_High),sum(elv_high_complex_beds))
+            if arr_ELV_High/(num_beds*serv_ELV_High)>=1:
                 
-                num_beds = min(eff_beds_ELV_High[i],elv_high_complex_beds[i])
-                if arr_ELV_High/(num_beds*serv_ELV_High)>=1:
-                    
-                    st.write("Op locatie ", i+1, "is het systeem niet stabiel voor ELV Hoog Complex, load per bed is, ", arr_ELV_High/(num_beds*serv_ELV_High))
-                else:
-                    st.write("Op locatie ", i+1, "is het systeem stabiel voor ELV Hoog Complex, load per bed is, ", arr_ELV_High/(num_beds*serv_ELV_High))
+                st.write("Het systeem niet stabiel voor ELV Hoog Complex, load per bed is, ", arr_ELV_High/(num_beds*serv_ELV_High))
+            else:
+                st.write("Het systeem stabiel voor ELV Hoog Complex, load per bed is, ", arr_ELV_High/(num_beds*serv_ELV_High))
                     
             st.header("ELV Laag Complex")
-            for i in range(len(eff_beds_ELV_Low)):
-                st.subheader("Locatie "+ str(i+1))
-                num_beds = min(eff_beds_ELV_Low[i],elv_low_complex_beds[i])
-                if arr_ELV_Low/(num_beds*serv_ELV_Low)>=1:
-                    st.write("Op locatie ", i+1, "is het systeem niet stabiel voor ELV Laag Complex, load per bed is, ", arr_ELV_Low/(num_beds*serv_ELV_Low))
-                else:
-                    st.write("Op locatie ", i+1, "is het systeem stabiel voor ELV Laag Complex, load per bed is, ", arr_ELV_Low/(num_beds*serv_ELV_Low))
+            
+                
+            num_beds = min(sum(eff_beds_ELV_Low),sum(elv_low_complex_beds))
+            if arr_ELV_Low/(num_beds*serv_ELV_Low)>=1:
+                st.write("Het systeem niet stabiel voor ELV Laag Complex, load per bed is, ", arr_ELV_Low/(num_beds*serv_ELV_Low))
+            else:
+                st.write("Het systeem stabiel voor ELV Laag Complex, load per bed is, ", arr_ELV_Low/(num_beds*serv_ELV_Low))
                 
             
         elif Scen_NO_Sharing or Scen_part_bed_Share or Scen_tr_ward:
@@ -6440,31 +6440,29 @@ with col2:
               eff_beds_HC.append(high_complex_nurses[i]*n_pat_per_nurse)  
               eff_beds_GRZ.append(grz_nurses[i]*n_pat_per_nurse)  
               eff_beds_ELV_Low.append(elv_low_complex_nurses[i]*n_pat_per_nurse)
-            for i in range(len(eff_beds_HC)):
-                st.subheader("Locatie "+ str(i+1))
-                num_beds = min(eff_beds_HC[i],high_complex_beds[i])
-                if arr_HC/(num_beds*serv_HC)>=1:
-                    st.write("Op locatie ", i+1, "is het systeem niet stabiel voor Hoog Complex, load per bed is, ", arr_HC/(num_beds*serv_HC))
-                else:
-                    st.write("Op locatie ", i+1, "is het systeem stabiel voor Hoog Complex, load per bed is, ", arr_HC/(num_beds*serv_HC))
+            
+            num_beds = min(sum(eff_beds_HC),sum(high_complex_beds))
+            if arr_HC/(num_beds*serv_HC)>=1:
+                st.write("Het systeem niet stabiel voor Hoog Complex, load per bed is, ", arr_HC/(num_beds*serv_HC))
+            else:
+                st.write("Het systeem stabiel voor Hoog Complex, load per bed is, ", arr_HC/(num_beds*serv_HC))
                 
             st.header("GRZ")
-            for i in range(len(eff_beds_GRZ)):
-                st.subheader("Locatie "+ str(i+1))
-                num_beds = min(eff_beds_GRZ[i],grz_beds[i])
-                if arr_GRZ/(num_beds*serv_GRZ)>=1:
-                    st.write("Op locatie ", i+1, "is het systeem niet stabiel voor GRZ, load per bed is, ",  arr_GRZ/(num_beds*serv_GRZ))
-                else:
-                    st.write("Op locatie ", i+1, "is het systeem stabiel voor GRZ, load per bed is, " , arr_GRZ/(num_beds*serv_GRZ))
+            
+            num_beds = min(eff_beds_GRZ[i],grz_beds[i])
+            if arr_GRZ/(num_beds*serv_GRZ)>=1:
+                st.write("Het systeem niet stabiel voor GRZ, load per bed is, ",  arr_GRZ/(num_beds*serv_GRZ))
+            else:
+                st.write("Het systeem stabiel voor GRZ, load per bed is, " , arr_GRZ/(num_beds*serv_GRZ))
                 
             st.header("ELV Laag Complex")
-            for i in range(len(eff_beds_ELV_Low)):
-                st.subheader("Locatie "+ str(i+1))
-                num_beds = min(eff_beds_ELV_Low[i],elv_low_complex_beds[i])
-                if arr_ELV_Low/(num_beds*serv_ELV_Low)>=1:
-                    st.write("Op locatie ", i+1, "is het systeem niet stabiel voor ELV Laag Complex, load per bed is, ", arr_ELV_Low/(num_beds*serv_ELV_Low))
-                else:
-                    st.write("Op locatie ", i+1, "is het systeem stabiel voor ELV Laag Complex, load per bed is, ", arr_ELV_Low/(num_beds*serv_ELV_Low))
+            
+                
+            num_beds = min(sum(eff_beds_ELV_Low),sum(elv_low_complex_beds))
+            if arr_ELV_Low/(num_beds*serv_ELV_Low)>=1:
+                st.write("Het systeem niet stabiel voor ELV Laag Complex, load per bed is, ", arr_ELV_Low/(num_beds*serv_ELV_Low))
+            else:
+                st.write("Het systeem stabiel voor ELV Laag Complex, load per bed is, ", arr_ELV_Low/(num_beds*serv_ELV_Low))v
                 
             if Scen_part_bed_Share or Scen_tr_ward:
                 st.subheader("Observatiebedden en partiële bedden zijn niet meegenomen in deze berekeningen.")
@@ -6474,14 +6472,13 @@ with col2:
             for i in range(len(total_nurses)):
               eff_beds_total.append(total_nurses[i]*n_pat_per_nurse)  
               
-            for i in range(len(eff_beds_total)):
-                st.subheader("Locatie "+ str(i+1))
-                num_beds = min(eff_beds_total[i],total_beds[i])
-                if arr_Tot/(num_beds*serv_Tot)>=1:
-                    st.write("Op locatie ", i+1, "is het systeem niet stabiel voor ELV Totaal, load per bed is, ",  arr_Tot/(num_beds*serv_Tot))
-                else:
-                    st.write("Op locatie ", i+1, "is het systeem stabiel voor ELV Totaal, load per bed is, ",  arr_Tot/(num_beds*serv_Tot))
-    
+            
+            num_beds = min(sum(eff_beds_total),sum(total_beds))
+            if arr_Tot/(num_beds*serv_Tot)>=1:
+                st.write("Het systeem niet stabiel voor ELV Totaal, load per bed is, ",  arr_Tot/(num_beds*serv_Tot))
+            else:
+                st.write("Het systeem stabiel voor ELV Totaal, load per bed is, ",  arr_Tot/(num_beds*serv_Tot))
+
      
         
             
