@@ -1,7 +1,7 @@
 #import matplotlib.pyplot as plt
 import streamlit as st 
 import pandas as pd
-#import sys
+import sys
 
 # page_bg_img = """
 # <style>
@@ -20,7 +20,7 @@ import pandas as pd
 # st.markdown(page_bg_img,unsafe_allow_html = True)
 
 st.set_page_config(layout="wide")
-st.title("ELV SIMULATIE 3")
+st.title("ELV SIMULATIE")
 col1, col2, col3 = st.columns((2, 2, 3)) 
 
 with col1:
@@ -6312,6 +6312,8 @@ with col3:
 
         # Convert the inputs dictionary to a DataFrame
         df1 = df_tot
+        st_out = st.empty()
+        sys.stdout = st_out
         stability(df_tot)
         
         with st.spinner('Running...'):
@@ -6374,6 +6376,7 @@ with col3:
             with st.expander("Aantal bedden"):
                 st.write(table4.T)
             st.success(result)
+            sys.stdout = sys.__stdout__
            
    
 
