@@ -6326,9 +6326,10 @@ with col3:
         df1 = df_tot
         st_out = st.empty()
         sys.stdout = st_out
+        st.Header("Checks")
         with st.expander("Effectieve bedden check"):
             stability(df_tot)
-        
+        st.Header("Resultaten")
         with st.spinner('Running...'):
             output_df = simulate(df1)[0]
             result = simulate(df1)[1]
