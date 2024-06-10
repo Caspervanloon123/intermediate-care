@@ -6199,7 +6199,7 @@ with col2:
             
         return output_df, "Succes!"
     
-      def stability(input):
+    def stability(input):
         elv_high_complex_nurses = input.loc[loop_nr,'elv_high_complex_nurses']
         high_complex_nurses = input.loc[loop_nr,'high_complex_nurses']
         grz_nurses = input.loc[loop_nr,'grz_nurses']
