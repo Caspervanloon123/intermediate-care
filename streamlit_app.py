@@ -1831,8 +1831,8 @@ with col2:
                 
                 if math.floor(n_subrun/n_subruns*100) > perc_compl:
                     perc_compl = math.floor(n_subrun/n_subruns*100)
-                    if perc_compl % 10 ==0:
-                        st.write(perc_compl, '% completed')
+                    
+                    st.write(perc_compl, '% completed')
                 
                 n_subrun += 1
                 n_evaluated_current_run = 0
