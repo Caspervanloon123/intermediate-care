@@ -1,6 +1,7 @@
 #import matplotlib.pyplot as plt
 import streamlit as st 
 import pandas as pd
+import sys
 
 # page_bg_img = """
 # <style>
@@ -6307,6 +6308,9 @@ with col2:
             
 with col3:
     if st.button('Start Simualtie'):
+        # Redirect stdout to the Streamlit app output area
+        st_out = st.empty()
+        sys.stdout = st_out
         # Convert the inputs dictionary to a DataFrame
         df1 = df_tot
         stability(df_tot)
@@ -6377,5 +6381,6 @@ with col3:
             with st.expander("Aantal bedden"):
                 st.write(table4.T)
             st.success(result)
+            sys.stdout = sys.__stdout__
    
 
