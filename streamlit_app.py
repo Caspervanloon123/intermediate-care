@@ -6227,7 +6227,14 @@ with col3:
         with st.spinner('Running...'):
             output_df = simulate(df1)[0]
             result = simulate(df1)[1]
-            st.success(result)
+            # Create a flag to control the simulation loop
+            stop_flag = st.session_state.get('stop_flag', None)
+            if stop_flag is None:
+                stop_flag = st.session_state['stop_flag'] = threading.Event()
+            
+            if st.button('Stop'):
+                # Set the flag to stop the simulation
+                stop_flag.set()
             table1_columns = [ 'Wt_from_HOSP_GRZ',
             'Wt_from_HOSP_High', 'Wt_from_GPR_High', 'Wt_from_GPR_Low', 'Wt_to_TRW', 'WT_from_EMD']
             table1_right_names = [ 'Ziekenhuis GRZ',
@@ -6280,5 +6287,6 @@ with col3:
                 st.write(table3.T)
             with st.expander("Aantal bedden"):
                 st.write(table4.T)
+            st.success(result)
    
 
