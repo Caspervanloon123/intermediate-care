@@ -6418,7 +6418,6 @@ with col2:
                 st.subheader("Locatie " + str(i+1))
                 
                 num_beds = min(eff_beds_ELV_High[i],elv_high_complex_beds[i])
-                st.write(arr_ELV_High, num_beds, serv_ELV_High)
                 if arr_ELV_High/(num_beds*serv_ELV_High)>=1:
                     
                     st.write("Op locatie ", i+1, "is het systeem niet stabiel voor ELV Hoog Complex, load per bed is, ", arr_ELV_High/(num_beds*serv_ELV_High))
@@ -6429,7 +6428,6 @@ with col2:
             for i in range(len(eff_beds_ELV_Low)):
                 st.subheader("Locatie "+ str(i+1))
                 num_beds = min(eff_beds_ELV_Low[i],elv_low_complex_beds[i])
-                st.write(arr_ELV_Low, num_beds, serv_ELV_Low)
                 if arr_ELV_Low/(num_beds*serv_ELV_Low)>=1:
                     st.write("Op locatie ", i+1, "is het systeem niet stabiel voor ELV Laag Complex, load per bed is, ", arr_ELV_Low/(num_beds*serv_ELV_Low))
                 else:
