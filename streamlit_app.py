@@ -6462,7 +6462,7 @@ with col2:
             if arr_ELV_Low/(num_beds*serv_ELV_Low)>=1:
                 st.write("Het systeem niet stabiel voor ELV Laag Complex, load per bed is, ", arr_ELV_Low/(num_beds*serv_ELV_Low))
             else:
-                st.write("Het systeem stabiel voor ELV Laag Complex, load per bed is, ", arr_ELV_Low/(num_beds*serv_ELV_Low))v
+                st.write("Het systeem stabiel voor ELV Laag Complex, load per bed is, ", arr_ELV_Low/(num_beds*serv_ELV_Low))
                 
             if Scen_part_bed_Share or Scen_tr_ward:
                 st.subheader("Observatiebedden en partiële bedden zijn niet meegenomen in deze berekeningen.")
