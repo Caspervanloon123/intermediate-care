@@ -6313,7 +6313,7 @@ with col3:
         sys.stdout = st_out
         # Convert the inputs dictionary to a DataFrame
         df1 = df_tot
-        stability(df_tot)
+        #stability(df_tot)
         # output_df = simulate(df1)[0]
         # stop_flag = st.session_state.get('stop_flag', None)
         # if stop_flag is None:
