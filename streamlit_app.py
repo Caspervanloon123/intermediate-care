@@ -469,19 +469,19 @@ with col2:
             
             
             
-            out_p_Home_High = input.loc[loop_nr,'Percentage Hoog Complex naar Huis']
-            out_p_Dead_High = input.loc[loop_nr,'Percentage Hoog Complex Dood']
-            out_p_WMO_High = input.loc[loop_nr,'Percentage Hoog Complex WMO']
-            out_p_WLZ_High = input.loc[loop_nr,'Percentage Hoog Complex WLZ']
-            out_p_GRZV_High = input.loc[loop_nr,'Percentage Hoog Complex naar Geriatrische Zorg']
-            out_p_Pall_High = input.loc[loop_nr,'Percentage Hoog Complex naar Huis met aanpassingen']
+            out_p_Home_High = input.loc[loop_nr,'Percentage Hoog Complex naar Huis']/100
+            out_p_Dead_High = input.loc[loop_nr,'Percentage Hoog Complex Dood']/100
+            out_p_WMO_High = input.loc[loop_nr,'Percentage Hoog Complex WMO']/100
+            out_p_WLZ_High = input.loc[loop_nr,'Percentage Hoog Complex WLZ']/100
+            out_p_GRZV_High = input.loc[loop_nr,'Percentage Hoog Complex naar Geriatrische Zorg']/100
+            out_p_Pall_High = input.loc[loop_nr,'Percentage Hoog Complex naar Huis met aanpassingen']/100
             
-            out_p_Home_Low = input.loc[loop_nr,'Percentage Laag Complex naar Huis']
-            out_p_Dead_Low = input.loc[loop_nr,'Percentage Laag Complex Dood']
-            out_p_WMO_Low = input.loc[loop_nr,'Percentage Laag Complex WMO']
-            out_p_WLZ_Low = input.loc[loop_nr,'Percentage Laag Complex WLZ']
-            out_p_GRZV_Low = input.loc[loop_nr,'Percentage Laag Complex naar Geriatrische Zorg']
-            out_p_Pall_Low = input.loc[loop_nr,'Percentage Laag Complex naar Huis met aanpassingen']
+            out_p_Home_Low = input.loc[loop_nr,'Percentage Laag Complex naar Huis']/100
+            out_p_Dead_Low = input.loc[loop_nr,'Percentage Laag Complex Dood']/100
+            out_p_WMO_Low = input.loc[loop_nr,'Percentage Laag Complex WMO']/100
+            out_p_WLZ_Low = input.loc[loop_nr,'Percentage Laag Complex WLZ']/100
+            out_p_GRZV_Low = input.loc[loop_nr,'Percentage Laag Complex naar Geriatrische Zorg']/100
+            out_p_Pall_Low = input.loc[loop_nr,'Percentage Laag Complex naar Huis met aanpassingen']/100
             
             serv_Home_High = 1/input.loc[loop_nr,'Ligduur Hoog Complex naar Huis']
             serv_Dead_High = 1/input.loc[loop_nr,'Ligduur Hoog Complex Dood']
@@ -531,12 +531,12 @@ with col2:
         
         
             
-            out_p_Home_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg naar Huis']
-            out_p_Dead_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg Dood']
-            out_p_WMO_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg WMO']
-            out_p_WLZ_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg WLZ']
-            out_p_GRZV_GRZ = 0# input.loc[loop_nr,'Percentage Geriatrische Zorg GRZ care GRZ']
-            out_p_Pall_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg naar Huis met aanpassingen']
+            out_p_Home_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg naar Huis']/100
+            out_p_Dead_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg Dood']/100
+            out_p_WMO_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg WMO']/100
+            out_p_WLZ_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg WLZ']/100
+            out_p_GRZV_GRZ = 0# input.loc[loop_nr,'Percentage Geriatrische Zorg GRZ care GRZ']/100
+            out_p_Pall_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg naar Huis met aanpassingen']/100
             
             serv_Home_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg naar Huis']
             serv_Dead_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg Dood']
@@ -6346,12 +6346,12 @@ with col2:
         arr_EMD = input.loc[loop_nr,'Aankomst vanaf de Spoedeisendehulp per dag']
         n_pat_per_nurse= input.loc[loop_nr,'Aantal patienten per verpleegkundige']
         
-        out_p_Home_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg naar Huis']
-        out_p_Dead_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg Dood']
-        out_p_WMO_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg WMO']
-        out_p_WLZ_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg WLZ']
-        out_p_GRZV_GRZ = 0# input.loc[loop_nr,'Percentage Geriatrische Zorg GRZ care GRZ']
-        out_p_Pall_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg naar Huis met aanpassingen']
+        out_p_Home_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg naar Huis']/100
+        out_p_Dead_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg Dood']/100
+        out_p_WMO_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg WMO']/100
+        out_p_WLZ_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg WLZ']/100
+        out_p_GRZV_GRZ = 0# input.loc[loop_nr,'Percentage Geriatrische Zorg GRZ care GRZ']/100
+        out_p_Pall_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg naar Huis met aanpassingen']/100
         
         serv_Home_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg naar Huis']
         serv_Dead_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg Dood']
@@ -6361,19 +6361,19 @@ with col2:
         serv_WLZ_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg WLZ']
         
         
-        out_p_Home_High = input.loc[loop_nr,'Percentage Hoog Complex naar Huis']
-        out_p_Dead_High = input.loc[loop_nr,'Percentage Hoog Complex Dood']
-        out_p_WMO_High = input.loc[loop_nr,'Percentage Hoog Complex WMO']
-        out_p_WLZ_High = input.loc[loop_nr,'Percentage Hoog Complex WLZ']
-        out_p_GRZV_High = input.loc[loop_nr,'Percentage Hoog Complex naar Geriatrische Zorg']
-        out_p_Pall_High = input.loc[loop_nr,'Percentage Hoog Complex naar Huis met aanpassingen']
+        out_p_Home_High = input.loc[loop_nr,'Percentage Hoog Complex naar Huis']/100
+        out_p_Dead_High = input.loc[loop_nr,'Percentage Hoog Complex Dood']/100
+        out_p_WMO_High = input.loc[loop_nr,'Percentage Hoog Complex WMO']/100
+        out_p_WLZ_High = input.loc[loop_nr,'Percentage Hoog Complex WLZ']/100
+        out_p_GRZV_High = input.loc[loop_nr,'Percentage Hoog Complex naar Geriatrische Zorg']/100
+        out_p_Pall_High = input.loc[loop_nr,'Percentage Hoog Complex naar Huis met aanpassingen']/100
         
-        out_p_Home_Low = input.loc[loop_nr,'Percentage Laag Complex naar Huis']
-        out_p_Dead_Low = input.loc[loop_nr,'Percentage Laag Complex Dood']
-        out_p_WMO_Low = input.loc[loop_nr,'Percentage Laag Complex WMO']
-        out_p_WLZ_Low = input.loc[loop_nr,'Percentage Laag Complex WLZ']
-        out_p_GRZV_Low = input.loc[loop_nr,'Percentage Laag Complex naar Geriatrische Zorg']
-        out_p_Pall_Low = input.loc[loop_nr,'Percentage Laag Complex naar Huis met aanpassingen']
+        out_p_Home_Low = input.loc[loop_nr,'Percentage Laag Complex naar Huis']/100
+        out_p_Dead_Low = input.loc[loop_nr,'Percentage Laag Complex Dood']/100
+        out_p_WMO_Low = input.loc[loop_nr,'Percentage Laag Complex WMO']/100
+        out_p_WLZ_Low = input.loc[loop_nr,'Percentage Laag Complex WLZ']/100
+        out_p_GRZV_Low = input.loc[loop_nr,'Percentage Laag Complex naar Geriatrische Zorg']/100
+        out_p_Pall_Low = input.loc[loop_nr,'Percentage Laag Complex naar Huis met aanpassingen']/100
         
         serv_Home_High = 1/input.loc[loop_nr,'Ligduur Hoog Complex naar Huis']
         serv_Dead_High = 1/input.loc[loop_nr,'Ligduur Hoog Complex Dood']
