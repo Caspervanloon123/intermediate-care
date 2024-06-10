@@ -6212,7 +6212,7 @@ with col2:
         #         else:
         #             output_df = pd.concat([output_df,output_df_temp])
             
-        return output_df
+        return output_df, "Succes!"
     
         
     
@@ -6222,8 +6222,11 @@ with col3:
         # Convert the inputs dictionary to a DataFrame
         df1 = df_tot
         
-        output_df = simulate(df1)
- 
+        output_df = simulate(df1)[0]
+        
+        with st.spinner('Running...'):
+            result = simulate(df1)[1]
+            st.success(result)
         table1_columns = [ 'Wt_from_HOSP_GRZ',
         'Wt_from_HOSP_High', 'Wt_from_GPR_High', 'Wt_from_GPR_Low', 'Wt_to_TRW', 'WT_from_EMD']
         table1_right_names = [ 'Ziekenhuis GRZ',
