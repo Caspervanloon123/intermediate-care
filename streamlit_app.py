@@ -6223,14 +6223,14 @@ with col3:
         df1 = df_tot
         
         # output_df = simulate(df1)[0]
-        
+        stop_flag = st.session_state.get('stop_flag', None)
+        if stop_flag is None:
+            stop_flag = st.session_state['stop_flag'] = threading.Event()
         with st.spinner('Running...'):
             output_df = simulate(df1)[0]
             result = simulate(df1)[1]
             # Create a flag to control the simulation loop
-            stop_flag = st.session_state.get('stop_flag', None)
-            if stop_flag is None:
-                stop_flag = st.session_state['stop_flag'] = threading.Event()
+            
             
             if st.button('Stop'):
                 # Set the flag to stop the simulation
