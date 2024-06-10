@@ -6250,7 +6250,7 @@ with col2:
             st.header("ELV Laag Complex")
             for i in range(len(eff_beds_ELV_Low)):
                 st.subheader("Locatie "+ str(i+1))
-                if eff_beds_ELV_Low[i] < elv_high_complex_beds[i]:
+                if eff_beds_ELV_Low[i] < elv_low_complex_beds[i]:
                     st.write("Aantal ELV Laag Complex bedden ", elv_low_complex_beds[i], " op locatie ", i+1)
                     st.write("Aantal effectieve bedden ELV Laag Complex ", eff_beds_ELV_Low[i]," op locatie ",i+1)
                     st.write("Dus een verlies in capaciteit van, ",elv_low_complex_beds[i]-eff_beds_ELV_Low[i]," op locatie ", i+1)
@@ -6289,7 +6289,7 @@ with col2:
             st.header("ELV Laag Complex")
             for i in range(len(eff_beds_ELV_Low)):
                 st.subheader("Locatie "+ str(i+1))
-                if eff_beds_ELV_Low[i] < elv_high_complex_beds[i]:
+                if eff_beds_ELV_Low[i] < elv_low_complex_beds[i]:
                     st.write("Aantal ELV Laag Complex bedden ", elv_low_complex_beds[i], " op locatie ", i+1)
                     st.write("Aantal effectieve bedden ELV Laag Complex ", eff_beds_ELV_Low[i]," op locatie ",i+1)
                     st.write("Dus een verlies in capaciteit van, ",elv_low_complex_beds[i]-eff_beds_ELV_Low[i]," op locatie ", i+1)
