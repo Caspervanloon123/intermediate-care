@@ -100,6 +100,7 @@ with col1:
         "Aantal patienten per subrun": 1000,
         "Aantal patienten voor warming": 500,
         "Observatiekans": 10,
+        "Maximaal wachten (model)": 30,
     }
     
     
@@ -130,7 +131,7 @@ with col1:
             "Sluittijd Huisarts", "Opname in het weekend", "Openingstijd ELV", "Sluitingstijd ELV"
         ],
         "Overig": [
-            "Aantal patienten per verpleegkundige", "Transfertijd", "Maximaal aantal dagen observatie", "Aantal subruns", "Aantal patienten per subrun", "Aantal patienten voor warming", "Observatiekans"
+            "Aantal patienten per verpleegkundige", "Transfertijd", "Maximaal aantal dagen observatie", "Aantal subruns", "Aantal patienten per subrun", "Aantal patienten voor warming", "Observatiekans", "Maximaal wachten (model)"
         ]
     }
     
@@ -520,7 +521,7 @@ with col2:
             Project = ''#input.loc[loop_nr,'Project']
             Preference = input.loc[loop_nr,'preference'] #Pref = pref_model, FCFS = FCFS, NO = Only fav Locatie
             n_patients_per_nurse = input.loc[loop_nr,'Aantal patienten per verpleegkundige']
-            
+            max_wait_time_model = input.loc[loop_nr,'Maximaal wachten (model)']
             
             
             
