@@ -358,7 +358,7 @@ with col2:
         loc_name = [0]*n_loc
         for i in range(0, n_loc):
             loc_name[i] = st.text_input("",value="Locatie "+str(i+1))
-           with st.expander(st.text_input("",value="Locatie "+str(i+1))):
+            with st.expander(st.text_input("",value="Locatie "+str(i+1))):
                 
                 beds_GRZ = st.number_input(f"Number of GRZ beds {loc_name[i]}", min_value=0, step=1, value=0, format="%d")
                 nurs_GRZ = st.number_input(f"Number of GRZ nurses {loc_name[i]}", min_value=0, step=1, value=0, format="%d")
