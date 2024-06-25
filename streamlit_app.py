@@ -535,7 +535,7 @@ with col2:
             Project = ''#input.loc[loop_nr,'Project']
             Preference = input.loc[loop_nr,'preference'] #Pref = pref_model, FCFS = FCFS, NO = Only fav Locatie
             n_patiënts_per_nurse = input.loc[loop_nr,'Maximaal aantal patiënten per verpleegkundige']
-            max_wait_time_model = input.loc[loop_nr,'Maximaal wachten voor patiënt van voorkeur verandert (in allocatiemodel)']
+            max_wait_time_model = input.loc[loop_nr,'Maximaal aantal dagen wachten voor patiënt van voorkeur verandert (in allocatiemodel)']
             
             
             
