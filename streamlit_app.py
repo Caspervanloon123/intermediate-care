@@ -486,15 +486,15 @@ with col2:
             
             out_p_Home_High = input.loc[loop_nr,'Percentage Hoog Complex patiënten die naar huis gaan']/100
             out_p_Dead_High = input.loc[loop_nr,'Percentage Hoog Complex patiënten dat komt te overlijden']/100
-            out_p_patiënten die naar WMO gaan_High = input.loc[loop_nr,'Percentage Hoog Complex patiënten die naar WMO gaan']/100
-            out_p_patiënten die naar WLZ gaan_High = input.loc[loop_nr,'Percentage Hoog Complex patiënten die naar WLZ gaan']/100
+            out_p_WMO_High = input.loc[loop_nr,'Percentage Hoog Complex patiënten die naar WMO gaan']/100
+            out_p_WLZ_High = input.loc[loop_nr,'Percentage Hoog Complex patiënten die naar WLZ gaan']/100
             out_p_GRZV_High = input.loc[loop_nr,'Percentage Hoog Complex naar Geriatrische Zorg']/100
             out_p_Pall_High = input.loc[loop_nr,'Percentage Hoog Complex patiënten die naar huis gaan met aanpassingen']/100
             
             out_p_Home_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar huis gaan']/100
             out_p_Dead_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten dat komt te overlijden']/100
-            out_p_patiënten die naar WMO gaan_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar WMO gaan']/100
-            out_p_patiënten die naar WLZ gaan_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar WLZ gaan']/100
+            out_p_WMO_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar WMO gaan']/100
+            out_p_WLZ_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar WLZ gaan']/100
             out_p_GRZV_Low = input.loc[loop_nr,'Percentage Laag Complex naar Geriatrische Zorg']/100
             out_p_Pall_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar huis gaan met aanpassingen']/100
             
@@ -503,16 +503,16 @@ with col2:
             
             serv_GRZV_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex naar Geriatrische Zorg']
             serv_Pall_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar huis gaan met aanpassingen']
-            serv_patiënten die naar WMO gaan_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar WMO gaan']
-            serv_patiënten die naar WLZ gaan_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar WLZ gaan']
+            serv_WMO_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar WMO gaan']
+            serv_WLZ_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar WLZ gaan']
             
             serv_Home_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar huis gaan']
             serv_Dead_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten dat komt te overlijden']
             
             serv_GRZV_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex Geriatrische Zorg']
             serv_Pall_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar huis gaan met aanpassingen']
-            serv_patiënten die naar WMO gaan_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar WMO gaan']
-            serv_patiënten die naar WLZ gaan_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar WLZ gaan']
+            serv_WMO_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar WMO gaan']
+            serv_WLZ_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar WLZ gaan']
         
             
             time_max_opn_ELV = input.loc[loop_nr,'Sluitingstijd ELV ']/24
@@ -548,8 +548,8 @@ with col2:
             
             out_p_Home_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg patiënten die naar huis gaan']/100
             out_p_Dead_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg patiënten dat komt te overlijden']/100
-            out_p_patiënten die naar WMO gaan_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg patiënten die naar WMO gaan']/100
-            out_p_patiënten die naar WLZ gaan_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg patiënten die naar WLZ gaan']/100
+            out_p_WMO_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg patiënten die naar WMO gaan']/100
+            out_p_WLZ_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg patiënten die naar WLZ gaan']/100
             out_p_GRZV_GRZ = 0# input.loc[loop_nr,'Percentage Geriatrische Zorg GRZ care GRZ']/100
             out_p_Pall_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg patiënten die naar huis gaan met aanpassingen']/100
             
@@ -557,8 +557,8 @@ with col2:
             serv_Dead_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten dat komt te overlijden']
             serv_GRZV_GRZ = 0#1/input.loc[loop_nr,'serv_GRZV_GRZ']
             serv_Pall_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar huis gaan met aanpassingen']
-            serv_patiënten die naar WMO gaan_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar WMO gaan']
-            serv_patiënten die naar WLZ gaan_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar WLZ gaan']
+            serv_WMO_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar WMO gaan']
+            serv_WLZ_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar WLZ gaan']
 
             observation_prob = input.loc[loop_nr,'Kans dat patiënt observatie nodig heeft']/100
         
@@ -724,7 +724,7 @@ with col2:
                 High_list = ['HOS_High','GPR_High','EMD']
                 GRZ_list = ['HOS_GRZ']
                 if any(item in client_dict[target_client]['journey'] for item in High_list):
-                    discharge_dest = rd.choices(['Home', 'Dead', 'patiënten die naar WMO gaan', 'patiënten die naar WLZ gaan', 'GRZV', 'Pall'], [out_p_Home_High,out_p_Dead_High,out_p_patiënten die naar WMO gaan_High,out_p_patiënten die naar WLZ gaan_High,out_p_GRZV_High, out_p_Pall_High])[0]
+                    discharge_dest = rd.choices(['Home', 'Dead', 'WMO', 'WLZ', 'GRZV', 'Pall'], [out_p_Home_High,out_p_Dead_High,out_p_WMO_High,out_p_WLZ_High,out_p_GRZV_High, out_p_Pall_High])[0]
                     client_dict[target_client]['TRW_discharge_dest'] = discharge_dest
             
                     if discharge_dest == 'Home':
@@ -744,7 +744,7 @@ with col2:
                         else: 
                             client_dict[target_client]['to_ELV_High'] = False
                     elif discharge_dest == 'patiënten die naar WMO gaan':
-                        event_dict['TRW_discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WMO gaan_High)
+                        event_dict['TRW_discharge_' + target_client] = current_time + time_until_placement + exp(serv_WMO_High)
                         if event_dict['TRW_discharge_' + target_client] - current_time - time_until_placement > max_days_TRW: # moet nog verplaatsen naar ELV
                             client_dict[target_client]['to_ELV_High'] = True
                             client_dict[target_client]['ELV_High_dist_time'] = event_dict['TRW_discharge_' + target_client]
@@ -752,7 +752,7 @@ with col2:
                         else: 
                             client_dict[target_client]['to_ELV_High'] = False
                     elif discharge_dest == 'patiënten die naar WLZ gaan':
-                        event_dict['TRW_discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WLZ gaan_High)
+                        event_dict['TRW_discharge_' + target_client] = current_time + time_until_placement + exp(serv_WLZ_High)
                         if event_dict['TRW_discharge_' + target_client] - current_time - time_until_placement > max_days_TRW: # moet nog verplaatsen naar ELV
                             client_dict[target_client]['to_ELV_High'] = True
                             client_dict[target_client]['ELV_High_dist_time'] = event_dict['TRW_discharge_' + target_client]
@@ -779,7 +779,7 @@ with col2:
             
                 if any(item in client_dict[target_client]['journey'] for item in GRZ_list):
                 
-                    discharge_dest = rd.choices(['Home', 'Dead', 'patiënten die naar WMO gaan', 'patiënten die naar WLZ gaan', 'GRZV', 'Pall'], [out_p_Home_GRZ,out_p_Dead_GRZ,out_p_patiënten die naar WMO gaan_GRZ,out_p_patiënten die naar WLZ gaan_GRZ,out_p_GRZV_GRZ, out_p_Pall_GRZ])[0]
+                    discharge_dest = rd.choices(['Home', 'Dead', 'WMO', 'WLZ', 'GRZV', 'Pall'], [out_p_Home_GRZ,out_p_Dead_GRZ,out_p_WMO_GRZ,out_p_WLZ_GRZ,out_p_GRZV_GRZ, out_p_Pall_GRZ])[0]
                     client_dict[target_client]['TRW_discharge_dest'] = discharge_dest
             
                     if discharge_dest == 'Home':
@@ -799,7 +799,7 @@ with col2:
                         else: 
                             client_dict[target_client]['to_ELV_High'] = False
                     elif discharge_dest == 'patiënten die naar WMO gaan':
-                        event_dict['TRW_discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WMO gaan_GRZ)
+                        event_dict['TRW_discharge_' + target_client] = current_time + time_until_placement + exp(serv_WMO_GRZ)
                         if event_dict['TRW_discharge_' + target_client] - current_time - time_until_placement > max_days_TRW: # moet nog verplaatsen naar ELV
                             client_dict[target_client]['to_ELV_High'] = True
                             client_dict[target_client]['ELV_High_dist_time'] = event_dict['TRW_discharge_' + target_client]
@@ -807,7 +807,7 @@ with col2:
                         else: 
                             client_dict[target_client]['to_ELV_High'] = False
                     elif discharge_dest == 'patiënten die naar WLZ gaan':
-                        event_dict['TRW_discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WLZ gaan_GRZ)
+                        event_dict['TRW_discharge_' + target_client] = current_time + time_until_placement + exp(servWLZ_GRZ)
                         if event_dict['TRW_discharge_' + target_client] - current_time - time_until_placement > max_days_TRW: # moet nog verplaatsen naar ELV
                             client_dict[target_client]['to_ELV_High'] = True
                             client_dict[target_client]['ELV_High_dist_time'] = event_dict['TRW_discharge_' + target_client]
@@ -862,7 +862,7 @@ with col2:
                 High_list = ['HOS_High','GPR_High','EMD']
                 GRZ_list = ['HOS_GRZ']
                 if any(item in client_dict[target_client]['journey'] for item in High_list):
-                    discharge_dest = rd.choices(['Home', 'Dead', 'patiënten die naar WMO gaan', 'patiënten die naar WLZ gaan', 'GRZV', 'Pall'], [out_p_Home_High,out_p_Dead_High,out_p_patiënten die naar WMO gaan_High,out_p_patiënten die naar WLZ gaan_High,out_p_GRZV_High, out_p_Pall_High])[0]
+                    discharge_dest = rd.choices(['Home', 'Dead', 'WMO', 'WLZ', 'GRZV', 'Pall'], [out_p_Home_High,out_p_Dead_High,out_p_WMO_High,out_p_WLZ_High,out_p_GRZV_High, out_p_Pall_High])[0]
                     client_dict[target_client]['discharge_dest'] = discharge_dest
                 
                     if discharge_dest == 'Home':
@@ -870,16 +870,16 @@ with col2:
                     elif discharge_dest == 'Dead':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Dead_High)    
                     elif discharge_dest == 'patiënten die naar WMO gaan':
-                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WMO gaan_High)
+                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WMO_High)
                     elif discharge_dest == 'patiënten die naar WLZ gaan':
-                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WLZ gaan_High)
+                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WLZ_High)
                     elif discharge_dest == 'GRZV':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_GRZV_High)
                     elif discharge_dest == 'Pall':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Pall_High)
                 
                 elif any(item in client_dict[target_client]['journey'] for item in GRZ_list):
-                    discharge_dest = rd.choices(['Home', 'Dead', 'patiënten die naar WMO gaan', 'patiënten die naar WLZ gaan', 'GRZV', 'Pall'], [out_p_Home_GRZ,out_p_Dead_GRZ,out_p_patiënten die naar WMO gaan_GRZ,out_p_patiënten die naar WLZ gaan_GRZ,out_p_GRZV_GRZ, out_p_Pall_GRZ])[0]
+                    discharge_dest = rd.choices(['Home', 'Dead', 'WMO', 'WLZ', 'GRZV', 'Pall'], [out_p_Home_GRZ,out_p_Dead_GRZ,out_p_WMO_GRZ,out_p_WLZ_GRZ,out_p_GRZV_GRZ, out_p_Pall_GRZ])[0]
                     client_dict[target_client]['discharge_dest'] = discharge_dest
             
                     if discharge_dest == 'Home':
@@ -887,9 +887,9 @@ with col2:
                     elif discharge_dest == 'Dead':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Dead_GRZ)    
                     elif discharge_dest == 'patiënten die naar WMO gaan':
-                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WMO gaan_GRZ)
+                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WMO_GRZ)
                     elif discharge_dest == 'patiënten die naar WLZ gaan':
-                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WLZ gaan_GRZ)
+                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(servWLZ_GRZ)
                     elif discharge_dest == 'GRZV':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_GRZV_GRZ)
                     elif discharge_dest == 'Pall':
@@ -907,7 +907,7 @@ with col2:
                 
                 # discharge ook erin zetten
                 
-                discharge_dest = rd.choices(['Home', 'Dead', 'patiënten die naar WMO gaan', 'patiënten die naar WLZ gaan', 'GRZV', 'Pall'], [out_p_Home_High,out_p_Dead_High,out_p_patiënten die naar WMO gaan_High,out_p_patiënten die naar WLZ gaan_High,out_p_GRZV_High, out_p_Pall_High])[0]
+                discharge_dest = rd.choices(['Home', 'Dead', 'WMO', 'WLZ', 'GRZV', 'Pall'], [out_p_Home_High,out_p_Dead_High,out_p_WMO_High,out_p_WLZ_High,out_p_GRZV_High, out_p_Pall_High])[0]
                 client_dict[target_client]['discharge_dest'] = discharge_dest
                 
                 if discharge_dest == 'Home':
@@ -915,9 +915,9 @@ with col2:
                 elif discharge_dest == 'Dead':
                     event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Dead_High)    
                 elif discharge_dest == 'patiënten die naar WMO gaan':
-                    event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WMO gaan_High)
+                    event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WMO_High)
                 elif discharge_dest == 'patiënten die naar WLZ gaan':
-                    event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WLZ gaan_High)
+                    event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WLZ_High)
                 elif discharge_dest == 'GRZV':
                     event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_GRZV_High)
                 elif discharge_dest == 'Pall':
@@ -941,7 +941,7 @@ with col2:
                 
                 if any(item in client_dict[target_client]['journey'] for item in High_list):
                 
-                    discharge_dest = rd.choices(['Home', 'Dead', 'patiënten die naar WMO gaan', 'patiënten die naar WLZ gaan', 'GRZV', 'Pall'], [out_p_Home_High,out_p_Dead_High,out_p_patiënten die naar WMO gaan_High,out_p_patiënten die naar WLZ gaan_High,out_p_GRZV_High, out_p_Pall_High])[0]
+                    discharge_dest = rd.choices(['Home', 'Dead', 'WMO', 'WLZ', 'GRZV', 'Pall'], [out_p_Home_High,out_p_Dead_High,out_p_WMO_High,out_p_WLZ_High,out_p_GRZV_High, out_p_Pall_High])[0]
                     client_dict[target_client]['discharge_dest'] = discharge_dest
             
                     if discharge_dest == 'Home':
@@ -949,9 +949,9 @@ with col2:
                     elif discharge_dest == 'Dead':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Dead_High)    
                     elif discharge_dest == 'patiënten die naar WMO gaan':
-                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WMO gaan_High)
+                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WMO_High)
                     elif discharge_dest == 'patiënten die naar WLZ gaan':
-                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WLZ gaan_High)
+                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WLZ_High)
                     elif discharge_dest == 'GRZV':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_GRZV_High)
                     elif discharge_dest == 'Pall':
@@ -959,7 +959,7 @@ with col2:
                         
                 elif any(item in client_dict[target_client]['journey'] for item in Low_list):
                     
-                    discharge_dest = rd.choices(['Home', 'Dead', 'patiënten die naar WMO gaan', 'patiënten die naar WLZ gaan', 'GRZV', 'Pall'], [out_p_Home_Low,out_p_Dead_Low,out_p_patiënten die naar WMO gaan_Low,out_p_patiënten die naar WLZ gaan_Low,out_p_GRZV_Low, out_p_Pall_Low])[0]
+                    discharge_dest = rd.choices(['Home', 'Dead', 'patiënten die naar WMO gaan', 'patiënten die naar WLZ gaan', 'GRZV', 'Pall'], [out_p_Home_Low,out_p_Dead_Low,out_p_WMO_Low,out_p_WLZ_Low,out_p_GRZV_Low, out_p_Pall_Low])[0]
                     client_dict[target_client]['discharge_dest'] = discharge_dest
             
                     if discharge_dest == 'Home':
@@ -967,15 +967,15 @@ with col2:
                     elif discharge_dest == 'Dead':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Dead_Low)    
                     elif discharge_dest == 'patiënten die naar WMO gaan':
-                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WMO gaan_Low)
+                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WMO_Low)
                     elif discharge_dest == 'patiënten die naar WLZ gaan':
-                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WLZ gaan_Low)
+                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WLZ_Low)
                     elif discharge_dest == 'GRZV':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_GRZV_Low)
                     elif discharge_dest == 'Pall':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Pall_Low)
                 elif any(item in client_dict[target_client]['journey'] for item in GRZ_list):
-                    discharge_dest = rd.choices(['Home', 'Dead', 'patiënten die naar WMO gaan', 'patiënten die naar WLZ gaan', 'GRZV', 'Pall'], [out_p_Home_GRZ,out_p_Dead_GRZ,out_p_patiënten die naar WMO gaan_GRZ,out_p_patiënten die naar WLZ gaan_GRZ,out_p_GRZV_GRZ, out_p_Pall_GRZ])[0]
+                    discharge_dest = rd.choices(['Home', 'Dead', 'patiënten die naar WMO gaan', 'patiënten die naar WLZ gaan', 'GRZV', 'Pall'], [out_p_Home_GRZ,out_p_Dead_GRZ,out_p_WMO_GRZ,out_p_WLZ_GRZ,out_p_GRZV_GRZ, out_p_Pall_GRZ])[0]
                     client_dict[target_client]['discharge_dest'] = discharge_dest
             
                     if discharge_dest == 'Home':
@@ -983,9 +983,9 @@ with col2:
                     elif discharge_dest == 'Dead':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Dead_GRZ)    
                     elif discharge_dest == 'patiënten die naar WMO gaan':
-                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WMO gaan_GRZ)
+                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WMO_GRZ)
                     elif discharge_dest == 'patiënten die naar WLZ gaan':
-                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WLZ gaan_GRZ)
+                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(servWLZ_GRZ)
                     elif discharge_dest == 'GRZV':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_GRZV_GRZ)
                     elif discharge_dest == 'Pall':
@@ -1003,20 +1003,20 @@ with col2:
                 
                 out_p_Home_TOT = (out_p_Home_High+out_p_Home_GRZ+out_p_Home_Low)/3
                 out_p_Dead_TOT = (out_p_Dead_High+out_p_Dead_GRZ+out_p_Dead_Low)/3
-                out_p_patiënten die naar WMO gaan_TOT = (out_p_patiënten die naar WMO gaan_High+out_p_patiënten die naar WMO gaan_GRZ+out_p_patiënten die naar WMO gaan_Low)/3
-                out_p_patiënten die naar WLZ gaan_TOT = (out_p_patiënten die naar WLZ gaan_High+out_p_patiënten die naar WLZ gaan_GRZ+out_p_patiënten die naar WLZ gaan_Low)/3
+                out_p_WMO_TOT = (out_p_WMO_High+out_p_WMO_GRZ+out_p_WMO_Low)/3
+                out_p_WLZ_TOT = (out_p_WLZ_High+out_p_WLZ_GRZ+out_p_WLZ_Low)/3
                 out_p_GRZV_TOT = (out_p_GRZV_High+out_p_GRZV_GRZ+out_p_GRZV_Low)/3
                 out_p_Pall_TOT = (out_p_Pall_High+out_p_Pall_GRZ+out_p_Pall_Low)/3
             
                 serv_Home_TOT = (serv_Home_High+serv_Home_GRZ+serv_Home_Low)/3
                 serv_Dead_TOT = (serv_Home_High+serv_Home_GRZ+serv_Home_Low)/3
-                serv_patiënten die naar WMO gaan_TOT = (serv_Home_High+serv_Home_GRZ+serv_Home_Low)/3
-                serv_patiënten die naar WLZ gaan_TOT = (serv_Home_High+serv_Home_GRZ+serv_Home_Low)/3
+                serv_WMO_TOT = (serv_Home_High+serv_Home_GRZ+serv_Home_Low)/3
+                serv_WLZ_TOT = (serv_Home_High+serv_Home_GRZ+serv_Home_Low)/3
                 serv_GRZV_TOT = (serv_Home_High+serv_Home_GRZ+serv_Home_Low)/3
                 serv_Pall_TOT = (serv_Home_High+serv_Home_GRZ+serv_Home_Low)/3
                 
                 
-                discharge_dest = rd.choices(['Home', 'Dead', 'patiënten die naar WMO gaan', 'patiënten die naar WLZ gaan', 'GRZV', 'Pall'], [out_p_Home_TOT,out_p_Dead_TOT,out_p_patiënten die naar WMO gaan_TOT,out_p_patiënten die naar WLZ gaan_TOT,out_p_GRZV_TOT, out_p_Pall_TOT])[0]
+                discharge_dest = rd.choices(['Home', 'Dead', 'WMO', 'WLZ', 'GRZV', 'Pall'], [out_p_Home_TOT,out_p_Dead_TOT,out_p_WMO_TOT,out_p_WLZ_TOT,out_p_GRZV_TOT, out_p_Pall_TOT])[0]
                 client_dict[target_client]['discharge_dest'] = discharge_dest
             
                 if discharge_dest == 'Home':
@@ -1024,9 +1024,9 @@ with col2:
                 elif discharge_dest == 'Dead':
                     event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Dead_TOT)    
                 elif discharge_dest == 'patiënten die naar WMO gaan':
-                    event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WMO gaan_TOT)
+                    event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WMO_TOT)
                 elif discharge_dest == 'patiënten die naar WLZ gaan':
-                    event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WLZ gaan_TOT)
+                    event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(servWLZ_TOT)
                 elif discharge_dest == 'GRZV':
                     event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_GRZV_TOT)
                 elif discharge_dest == 'Pall':
@@ -1045,7 +1045,7 @@ with col2:
                 
                 # discharge ook erin zetten
                 
-                discharge_dest = rd.choices(['Home', 'Dead', 'patiënten die naar WMO gaan', 'patiënten die naar WLZ gaan', 'GRZV', 'Pall'], [out_p_Home_Low,out_p_Dead_Low,out_p_patiënten die naar WMO gaan_Low,out_p_patiënten die naar WLZ gaan_Low,out_p_GRZV_Low, out_p_Pall_Low])[0]
+                discharge_dest = rd.choices(['Home', 'Dead', 'WMO', 'WLZ', 'GRZV', 'Pall'], [out_p_Home_Low,out_p_Dead_Low,out_p_WMO_Low,out_p_WLZ_Low,out_p_GRZV_Low, out_p_Pall_Low])[0]
                 client_dict[target_client]['discharge_dest'] = discharge_dest
                 
                 if discharge_dest == 'Home':
@@ -1053,9 +1053,9 @@ with col2:
                 elif discharge_dest == 'Dead':
                     event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Dead_Low)    
                 elif discharge_dest == 'patiënten die naar WMO gaan':
-                    event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WMO gaan_Low)
+                    event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WMO_Low)
                 elif discharge_dest == 'patiënten die naar WLZ gaan':
-                    event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WLZ gaan_Low)
+                    event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WLZ_Low)
                 elif discharge_dest == 'GRZV':
                     event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_GRZV_Low)
                 elif discharge_dest == 'Pall':
@@ -1133,11 +1133,11 @@ with col2:
                 for i in range(n_loc):
                     print("For Locatie, ", i)
                     arrival_High = (arr_HOS_High +arr_GPR_High + arr_EMD +arr_HOS_GRZ)/n_loc
-                    service_High = serv_Home_High * out_p_Home_High +serv_Dead_High * out_p_Dead_High + out_p_GRZV_High * serv_GRZV_High + out_p_patiënten die naar WLZ gaan_High * serv_patiënten die naar WLZ gaan_High + out_p_Pall_High * serv_Pall_High + out_p_patiënten die naar WMO gaan_High * serv_patiënten die naar WMO gaan_High
-                    service_GRZ = serv_Home_GRZ * out_p_Home_GRZ +serv_Dead_GRZ * out_p_Dead_GRZ + out_p_GRZV_GRZ * serv_GRZV_GRZ + out_p_patiënten die naar WLZ gaan_GRZ * serv_patiënten die naar WLZ gaan_GRZ + out_p_Pall_GRZ * serv_Pall_GRZ + out_p_patiënten die naar WMO gaan_GRZ * serv_patiënten die naar WMO gaan_GRZ
+                    service_High = serv_Home_High * out_p_Home_High +serv_Dead_High * out_p_Dead_High + out_p_GRZV_High * serv_GRZV_High + out_p_WLZ_High * serv_WLZ_High + out_p_Pall_High * serv_Pall_High + out_p_WMO_High * serv_WMO_High
+                    service_GRZ = serv_Home_GRZ * out_p_Home_GRZ +serv_Dead_GRZ * out_p_Dead_GRZ + out_p_GRZV_GRZ * serv_GRZV_GRZ + out_p_WLZ_GRZ * servWLZ_GRZ + out_p_Pall_GRZ * serv_Pall_GRZ + out_p_WMO_GRZ * serv_WMO_GRZ
                     service_ELV_high = (service_High+service_GRZ)/2
                     arrival_Low = arr_GPR_Low/n_loc
-                    service_Low = serv_Home_Low * out_p_Home_Low +serv_Dead_Low * out_p_Dead_Low + out_p_GRZV_Low * serv_GRZV_Low + out_p_patiënten die naar WLZ gaan_Low * serv_patiënten die naar WLZ gaan_Low + out_p_Pall_Low * serv_Pall_Low + out_p_patiënten die naar WMO gaan_Low * serv_patiënten die naar WMO gaan_Low
+                    service_Low = serv_Home_Low * out_p_Home_Low +serv_Dead_Low * out_p_Dead_Low + out_p_GRZV_Low * serv_GRZV_Low + out_p_WLZ_Low * serv_WLZ_Low + out_p_Pall_Low * serv_Pall_Low + out_p_WMO_Low * serv_WMO_Low
                     
             
             
@@ -6364,8 +6364,8 @@ with col2:
         
         out_p_Home_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg patiënten die naar huis gaan']/100
         out_p_Dead_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg patiënten dat komt te overlijden']/100
-        out_p_patiënten die naar WMO gaan_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg patiënten die naar WMO gaan']/100
-        out_p_patiënten die naar WLZ gaan_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg patiënten die naar WLZ gaan']/100
+        out_p_WMO_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg patiënten die naar WMO gaan']/100
+        out_p_WLZ_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg patiënten die naar WLZ gaan']/100
         out_p_GRZV_GRZ = 0# input.loc[loop_nr,'Percentage Geriatrische Zorg GRZ care GRZ']/100
         out_p_Pall_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg patiënten die naar huis gaan met aanpassingen']/100
         
@@ -6373,21 +6373,21 @@ with col2:
         serv_Dead_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten dat komt te overlijden']
         serv_GRZV_GRZ = 0#1/input.loc[loop_nr,'serv_GRZV_GRZ']
         serv_Pall_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar huis gaan met aanpassingen']
-        serv_patiënten die naar WMO gaan_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar WMO gaan']
-        serv_patiënten die naar WLZ gaan_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar WLZ gaan']
+        serv_WMO_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar WMO gaan']
+        servWLZ_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar WLZ gaan']
         
         
         out_p_Home_High = input.loc[loop_nr,'Percentage Hoog Complex patiënten die naar huis gaan']/100
         out_p_Dead_High = input.loc[loop_nr,'Percentage Hoog Complex patiënten dat komt te overlijden']/100
-        out_p_patiënten die naar WMO gaan_High = input.loc[loop_nr,'Percentage Hoog Complex patiënten die naar WMO gaan']/100
-        out_p_patiënten die naar WLZ gaan_High = input.loc[loop_nr,'Percentage Hoog Complex patiënten die naar WLZ gaan']/100
+        out_p_WMO_High = input.loc[loop_nr,'Percentage Hoog Complex patiënten die naar WMO gaan']/100
+        out_p_WLZ_High = input.loc[loop_nr,'Percentage Hoog Complex patiënten die naar WLZ gaan']/100
         out_p_GRZV_High = input.loc[loop_nr,'Percentage Hoog Complex naar Geriatrische Zorg']/100
         out_p_Pall_High = input.loc[loop_nr,'Percentage Hoog Complex patiënten die naar huis gaan met aanpassingen']/100
         
         out_p_Home_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar huis gaan']/100
         out_p_Dead_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten dat komt te overlijden']/100
-        out_p_patiënten die naar WMO gaan_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar WMO gaan']/100
-        out_p_patiënten die naar WLZ gaan_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar WLZ gaan']/100
+        out_p_WMO_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar WMO gaan']/100
+        out_p_WLZ_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar WLZ gaan']/100
         out_p_GRZV_Low = input.loc[loop_nr,'Percentage Laag Complex naar Geriatrische Zorg']/100
         out_p_Pall_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar huis gaan met aanpassingen']/100
         
@@ -6396,25 +6396,25 @@ with col2:
         
         serv_GRZV_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex naar Geriatrische Zorg']
         serv_Pall_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar huis gaan met aanpassingen']
-        serv_patiënten die naar WMO gaan_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar WMO gaan']
-        serv_patiënten die naar WLZ gaan_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar WLZ gaan']
+        serv_WMO_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar WMO gaan']
+        serv_WLZ_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar WLZ gaan']
         
         serv_Home_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar huis gaan']
         serv_Dead_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten dat komt te overlijden']
         
         serv_GRZV_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex Geriatrische Zorg']
         serv_Pall_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar huis gaan met aanpassingen']
-        serv_patiënten die naar WMO gaan_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar WMO gaan']
-        serv_patiënten die naar WLZ gaan_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar WLZ gaan']
+        serv_WMO_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar WMO gaan']
+        serv_WLZ_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar WLZ gaan']
 
         arr_ELV_High = arr_HOS_High+arr_GPR_High+arr_HOS_GRZ+arr_EMD
         arr_HC = (arr_HOS_High+arr_GPR_High+arr_EMD)
         arr_GRZ = arr_HOS_GRZ
         arr_ELV_Low = arr_GPR_Low
         arr_Tot = arr_ELV_Low +arr_ELV_High
-        serv_ELV_Low = out_p_Home_Low*serv_Home_Low + out_p_Dead_Low*serv_Dead_Low + out_p_patiënten die naar WMO gaan_Low*serv_patiënten die naar WMO gaan_Low + out_p_patiënten die naar WLZ gaan_Low*serv_patiënten die naar WLZ gaan_Low + out_p_GRZV_Low*serv_GRZV_Low + out_p_Pall_Low*serv_Pall_Low
-        serv_GRZ = out_p_Home_GRZ*serv_Home_GRZ + out_p_Dead_GRZ*serv_Dead_GRZ + out_p_patiënten die naar WMO gaan_GRZ*serv_patiënten die naar WMO gaan_GRZ + out_p_patiënten die naar WLZ gaan_GRZ*serv_patiënten die naar WLZ gaan_GRZ + out_p_GRZV_GRZ*serv_GRZV_GRZ + out_p_Pall_GRZ*serv_Pall_GRZ
-        serv_HC = out_p_Home_High*serv_Home_High + out_p_Dead_GRZ*serv_Dead_High + out_p_patiënten die naar WMO gaan_High*serv_patiënten die naar WMO gaan_High + out_p_patiënten die naar WLZ gaan_GRZ*serv_patiënten die naar WLZ gaan_High + out_p_GRZV_High*serv_GRZV_High + out_p_Pall_High*serv_Pall_High
+        serv_ELV_Low = out_p_Home_Low*serv_Home_Low + out_p_Dead_Low*serv_Dead_Low + out_p_WMO_Low*serv_WMO_Low + out_p_WLZ_Low*serv_WLZ_Low + out_p_GRZV_Low*serv_GRZV_Low + out_p_Pall_Low*serv_Pall_Low
+        serv_GRZ = out_p_Home_GRZ*serv_Home_GRZ + out_p_Dead_GRZ*serv_Dead_GRZ + out_p_WMO_GRZ*serv_WMO_GRZ + out_p_WLZ_GRZ*servWLZ_GRZ + out_p_GRZV_GRZ*serv_GRZV_GRZ + out_p_Pall_GRZ*serv_Pall_GRZ
+        serv_HC = out_p_Home_High*serv_Home_High + out_p_Dead_GRZ*serv_Dead_High + out_p_WMO_High*serv_WMO_High + out_p_WLZ_GRZ*serv_WLZ_High + out_p_GRZV_High*serv_GRZV_High + out_p_Pall_High*serv_Pall_High
         serv_ELV_High = (serv_GRZ+serv_HC)/2
         serv_Tot = (serv_ELV_High+serv_ELV_Low)/2
         
