@@ -6256,24 +6256,24 @@ with col2:
             for i in range(len(eff_beds_ELV_High)):
                 st.subheader(loc_name[i])
                 if eff_beds_ELV_High[i] < elv_high_complex_beds[i]:
-                    st.write("Aantal ELV Hoog Complex bedden ", elv_high_complex_beds[i], " op locatie ", i+1)
-                    st.write("Aantal effectieve bedden ELV Hoog Complex ", eff_beds_ELV_High[i]," op locatie ",i+1)
-                    st.write("Dus een verlies aan capaciteit van, ",elv_high_complex_beds[i]-eff_beds_ELV_High[i]," op locatie ", i+1)
+                    st.write("Aantal ELV Hoog Complex bedden ", elv_high_complex_beds[i], " op locatie ", loc_name[i])
+                    st.write("Aantal effectieve bedden ELV Hoog Complex ", eff_beds_ELV_High[i]," op locatie ",loc_name[i])
+                    st.write("Dus een verlies aan capaciteit van, ",elv_high_complex_beds[i]-eff_beds_ELV_High[i]," op locatie ", loc_name[i])
                 else:
-                    st.write("Aantal ELV Hoog Complex bedden ", elv_high_complex_beds[i], " op locatie ", i+1)
-                    st.write("Aantal effectieve bedden ELV Hoog Complex ", eff_beds_ELV_High[i]," op locatie ",i+1)
-                    st.write("Dus geen verlies van capaciteit op locatie ", i+1)
+                    st.write("Aantal ELV Hoog Complex bedden ", elv_high_complex_beds[i], " op locatie ", loc_name[i])
+                    st.write("Aantal effectieve bedden ELV Hoog Complex ", eff_beds_ELV_High[i]," op locatie ",loc_name[i])
+                    st.write("Dus geen verlies van capaciteit op locatie ", loc_name[i])
             st.header("ELV Laag Complex")
             for i in range(len(eff_beds_ELV_Low)):
                 st.subheader(loc_name[i])
                 if eff_beds_ELV_Low[i] < elv_low_complex_beds[i]:
-                    st.write("Aantal ELV Laag Complex bedden ", elv_low_complex_beds[i], " op locatie ", i+1)
-                    st.write("Aantal effectieve bedden ELV Laag Complex ", eff_beds_ELV_Low[i]," op locatie ",i+1)
-                    st.write("Dus een verlies in capaciteit van, ",elv_low_complex_beds[i]-eff_beds_ELV_Low[i]," op locatie ", i+1)
+                    st.write("Aantal ELV Laag Complex bedden ", elv_low_complex_beds[i], " op locatie ", loc_name[i])
+                    st.write("Aantal effectieve bedden ELV Laag Complex ", eff_beds_ELV_Low[i]," op locatie ",loc_name[i])
+                    st.write("Dus een verlies in capaciteit van, ",elv_low_complex_beds[i]-eff_beds_ELV_Low[i]," op locatie ", loc_name[i])
                 else:
-                    st.write("Aantal ELV Laag Complex bedden ", elv_low_complex_beds[i], " op locatie ", i+1)
-                    st.write("Aantal effectieve bedden ELV Laag Complex ", eff_beds_ELV_Low[i]," op locatie ",i+1)
-                    st.write("Dus geen verlies van capaciteit op locatie ", i+1)
+                    st.write("Aantal ELV Laag Complex bedden ", elv_low_complex_beds[i], " op locatie ", loc_name[i])
+                    st.write("Aantal effectieve bedden ELV Laag Complex ", eff_beds_ELV_Low[i]," op locatie ",v)
+                    st.write("Dus geen verlies van capaciteit op locatie ", loc_name[i])
             
         elif Scen_NO_Sharing or Scen_part_bed_Share or Scen_tr_ward:
             st.header("Hoog Complex")
@@ -6284,35 +6284,35 @@ with col2:
             for i in range(len(eff_beds_HC)):
                 st.subheader(loc_name[i])
                 if eff_beds_HC[i] < high_complex_beds[i]:
-                    st.write("Aantal Hoog Complex bedden ", high_complex_beds[i], " op locatie ", i+1)
-                    st.write("Aantal effectieve bedden Hoog Complex ", eff_beds_HC[i]," op locatie ",i+1)
-                    st.write("Dus een verlies in capaciteit van ",high_complex_beds[i]-eff_beds_HC[i]," op locatie ", i+1)
+                    st.write("Aantal Hoog Complex bedden ", high_complex_beds[i], " op locatie ", loc_name[i])
+                    st.write("Aantal effectieve bedden Hoog Complex ", eff_beds_HC[i]," op locatie ",loc_name[i])
+                    st.write("Dus een verlies in capaciteit van ",high_complex_beds[i]-eff_beds_HC[i]," op locatie ", loc_name[i])
                 else:
-                    st.write("Aantal Hoog Complex bedden ", high_complex_beds[i], " op locatie ", i+1)
-                    st.write("Aantal effectieve bedden Hoog Complex ", eff_beds_HC[i]," op locatie ",i+1)
-                    st.write("Dus een verlies in capaciteit van ", i+1)
+                    st.write("Aantal Hoog Complex bedden ", high_complex_beds[i], " op locatie ", loc_name[i])
+                    st.write("Aantal effectieve bedden Hoog Complex ", eff_beds_HC[i]," op locatie ",loc_name[i])
+                    st.write("Dus een verlies in capaciteit van ", loc_name[i])
             st.header("GRZ")
             for i in range(len(eff_beds_GRZ)):
                 st.subheader(loc_name[i])
                 if eff_beds_GRZ[i] < grz_beds[i]:
-                    st.write("Aantal GRZ bedden ", grz_beds[i], " op locatie ", i+1)
-                    st.write("Aantal effectieve bedden GRZ ", eff_beds_GRZ[i]," op locatie ",i+1)
-                    st.write("Dus een verlies in capaciteit van ",grz_beds[i]-eff_beds_GRZ[i]," op locatie ", i+1)
+                    st.write("Aantal GRZ bedden ", grz_beds[i], " op locatie ",loc_name[i])
+                    st.write("Aantal effectieve bedden GRZ ", eff_beds_GRZ[i]," op locatie ",loc_name[i])
+                    st.write("Dus een verlies in capaciteit van ",grz_beds[i]-eff_beds_GRZ[i]," op locatie ", loc_name[i])
                 else:
-                    st.write("Aantal GRZ bedden ", grz_beds[i], " op locatie ", i+1)
-                    st.write("Aantal effectieve bedden GRZ ", eff_beds_GRZ[i]," op locatie ",i+1)
-                    st.write("Dus een verlies in capaciteit op locatie ", i+1)
+                    st.write("Aantal GRZ bedden ", grz_beds[i], " op locatie ", loc_name[i])
+                    st.write("Aantal effectieve bedden GRZ ", eff_beds_GRZ[i]," op locatie ",loc_name[i])
+                    st.write("Dus een verlies in capaciteit op locatie ", loc_name[i])
             st.header("ELV Laag Complex")
             for i in range(len(eff_beds_ELV_Low)):
                 st.subheader(loc_name[i])
                 if eff_beds_ELV_Low[i] < elv_low_complex_beds[i]:
-                    st.write("Aantal ELV Laag Complex bedden ", elv_low_complex_beds[i], " op locatie ", i+1)
-                    st.write("Aantal effectieve bedden ELV Laag Complex ", eff_beds_ELV_Low[i]," op locatie ",i+1)
-                    st.write("Dus een verlies in capaciteit van, ",elv_low_complex_beds[i]-eff_beds_ELV_Low[i]," op locatie ", i+1)
+                    st.write("Aantal ELV Laag Complex bedden ", elv_low_complex_beds[i], " op locatie ",loc_name[i])
+                    st.write("Aantal effectieve bedden ELV Laag Complex ", eff_beds_ELV_Low[i]," op locatie ",loc_name[i])
+                    st.write("Dus een verlies in capaciteit van, ",elv_low_complex_beds[i]-eff_beds_ELV_Low[i]," op locatie ", loc_name[i])
                 else:
-                    st.write("Aantal ELV Laag Complex bedden ", elv_low_complex_beds[i], " op locatie ", i+1)
-                    st.write("Aantal effectieve bedden ELV Laag Complex ", eff_beds_ELV_Low[i]," op locatie ",i+1)
-                    st.write("Dus geen verlies van capaciteit op locatie ", i+1)
+                    st.write("Aantal ELV Laag Complex bedden ", elv_low_complex_beds[i], " op locatie ", loc_name[i])
+                    st.write("Aantal effectieve bedden ELV Laag Complex ", eff_beds_ELV_Low[i]," op locatie ",loc_name[i])
+                    st.write("Dus geen verlies van capaciteit op locatie ",loc_name[i])
             
 
         elif Scen_Total_Sharing:
@@ -6323,13 +6323,13 @@ with col2:
             for i in range(len(eff_beds_total)):
                 st.subheader(loc_name[i])
                 if eff_beds_total[i] < total_beds[i]:
-                    st.write("Aantal ELV totaal bedden ", total_beds[i], " op locatie ", i+1)
-                    st.write("Aantal effectieve bedden ELV totaal ", eff_beds_total[i]," op locatie ",i+1)
-                    st.write("Dus een verlies in capaciteit van ",total_beds[i]-eff_beds_total[i]," op locatie ", i+1)
+                    st.write("Aantal ELV totaal bedden ", total_beds[i], " op locatie ", loc_name[i])
+                    st.write("Aantal effectieve bedden ELV totaal ", eff_beds_total[i]," op locatie ",loc_name[i])
+                    st.write("Dus een verlies in capaciteit van ",total_beds[i]-eff_beds_total[i]," op locatie ", loc_name[i])
                 else:
-                    st.write("Aantal ELV totaal bedden ", total_beds[i], " op locatie ", i+1)
-                    st.write("Aantal effectieve bedden ELV totaal ", eff_beds_total[i]," op locatie ",i+1)
-                    st.write("Dus geen verlies van capaciteit op locatie ", i+1)  
+                    st.write("Aantal ELV totaal bedden ", total_beds[i], " op locatie ", loc_name[i])
+                    st.write("Aantal effectieve bedden ELV totaal ", eff_beds_total[i]," op locatie ",loc_name[i])
+                    st.write("Dus geen verlies van capaciteit op locatie ", loc_name[i])  
 
     
     def Stability(input):
