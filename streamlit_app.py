@@ -6272,7 +6272,7 @@ with col2:
                     st.write("Dus een verlies in capaciteit van, ",elv_low_complex_beds[i]-eff_beds_ELV_Low[i]," op locatie ", loc_name[i])
                 else:
                     st.write("Aantal ELV Laag Complex bedden ", elv_low_complex_beds[i], " op locatie ", loc_name[i])
-                    st.write("Aantal effectieve bedden ELV Laag Complex ", eff_beds_ELV_Low[i]," op locatie ",v)
+                    st.write("Aantal effectieve bedden ELV Laag Complex ", eff_beds_ELV_Low[i]," op locatie ",loc_name[i])
                     st.write("Dus geen verlies van capaciteit op locatie ", loc_name[i])
             
         elif Scen_NO_Sharing or Scen_part_bed_Share or Scen_tr_ward:
