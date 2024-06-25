@@ -213,10 +213,10 @@ with col2:
                 # st.text_input("Locatie name",value="Locatie "+str(i+1))
                 #st.title('Locatie ' + str(i+1))
                 beds_ELV_High = st.number_input(f"Number of ELV High Complex beds {loc_name[i]}", min_value=0, step=1, value=0, format="%d" )
-                nurs_ELV_High = st.number_input(f"Number of ELV High Complex nurses Locatie {i+1}", min_value=0, step=1, value=0, format="%d" )
-                beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d" )
-                nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses Locatie {i+1}", min_value=0, step=1, value=0, format="%d" )
-                beds_ELV_EMRD = st.number_input(f"Number of Emergency beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d" )   
+                nurs_ELV_High = st.number_input(f"Number of ELV High Complex nurses {loc_name[i]}", min_value=0, step=1, value=0, format="%d" )
+                beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds {loc_name[i]}", min_value=0, step=1, value=0, format="%d" )
+                nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses {loc_name[i]}", min_value=0, step=1, value=0, format="%d" )
+                beds_ELV_EMRD = st.number_input(f"Number of Emergency beds {loc_name[i]}", min_value=0, step=1, value=0, format="%d" )   
                 beds_High.append(beds_ELV_High)
                 beds_Low.append(beds_ELV_Low) 
                 nurs_low.append(nurs_ELV_Low)
@@ -253,15 +253,17 @@ with col2:
         nurs_high = []
         nurs_G = []
         beds_EMRD = []
+        loc_name = [0]*n_loc
         for i in range(0, n_loc):
+            loc_name[i] = st.text_input("",value="Locatie "+str(i+1))
             with st.expander(st.text_input("",value="Locatie "+str(i+1))):
-                beds_GRZ = st.number_input(f"Number of GRZ beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d" )
-                nurs_GRZ = st.number_input(f"Number of GRZ nurses Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
-                beds_High_Complex = st.number_input(f"Number of High Complex beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
-                nurs_High_Complex = st.number_input(f"Number of High Complex nurses Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
-                beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
-                nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
-                beds_ELV_EMRD = st.number_input(f"Number of Emergency beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
+                beds_GRZ = st.number_input(f"Number of GRZ beds {loc_name[i]}", min_value=0, step=1, value=0, format="%d" )
+                nurs_GRZ = st.number_input(f"Number of GRZ nurses {loc_name[i]}", min_value=0, step=1, value=0, format="%d")
+                beds_High_Complex = st.number_input(f"Number of High Complex beds {loc_name[i]}", min_value=0, step=1, value=0, format="%d")
+                nurs_High_Complex = st.number_input(f"Number of High Complex nurses {loc_name[i]}", min_value=0, step=1, value=0, format="%d")
+                beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds {loc_name[i]}", min_value=0, step=1, value=0, format="%d")
+                nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses {loc_name[i]}", min_value=0, step=1, value=0, format="%d")
+                beds_ELV_EMRD = st.number_input(f"Number of Emergency beds {loc_name[i]}", min_value=0, step=1, value=0, format="%d")
                 beds_High.append(beds_High_Complex)
                 beds_low.append(beds_ELV_Low)
                 beds_G.append(beds_GRZ)
@@ -301,17 +303,19 @@ with col2:
         nurs_G = []
         beds_shared = []
         beds_EMRD = []
+        loc_name = [0]*n_loc
         for i in range(0, n_loc):
+            loc_name[i] = st.text_input("",value="Locatie "+str(i+1))
             with st.expander(st.text_input("",value="Locatie "+str(i+1))):
                 
-                beds_GRZ = st.number_input(f"Number of GRZ beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
-                nurs_GRZ = st.number_input(f"Number of GRZ nurses Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
-                beds_High_Complex = st.number_input(f"Number of High Complex beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
-                nurs_High_Complex = st.number_input(f"Number of High Complex nurses Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
-                beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
-                nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
-                beds_ELV_Shared = st.number_input(f"Number of Shared beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
-                beds_ELV_EMRD = st.number_input(f"Number of Emergency beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
+                beds_GRZ = st.number_input(f"Number of GRZ beds {loc_name[i]}", min_value=0, step=1, value=0, format="%d")
+                nurs_GRZ = st.number_input(f"Number of GRZ nurses {loc_name[i]}", min_value=0, step=1, value=0, format="%d")
+                beds_High_Complex = st.number_input(f"Number of High Complex beds {loc_name[i]}", min_value=0, step=1, value=0, format="%d")
+                nurs_High_Complex = st.number_input(f"Number of High Complex nurses {loc_name[i]}", min_value=0, step=1, value=0, format="%d")
+                beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds {loc_name[i]}", min_value=0, step=1, value=0, format="%d")
+                nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses {loc_name[i]}", min_value=0, step=1, value=0, format="%d")
+                beds_ELV_Shared = st.number_input(f"Number of Shared beds {loc_name[i]}", min_value=0, step=1, value=0, format="%d")
+                beds_ELV_EMRD = st.number_input(f"Number of Emergency beds {loc_name[i]}", min_value=0, step=1, value=0, format="%d")
                 beds_High.append(beds_High_Complex)
                 beds_low.append(beds_ELV_Low)
                 beds_G.append(beds_GRZ)
@@ -351,17 +355,19 @@ with col2:
         nurs_G = []
         beds_TRW = []
         beds_EMRD = []
+        loc_name = [0]*n_loc
         for i in range(0, n_loc):
+            loc_name[i] = st.text_input("",value="Locatie "+str(i+1))
            with st.expander(st.text_input("",value="Locatie "+str(i+1))):
                 
-                beds_GRZ = st.number_input(f"Number of GRZ beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
-                nurs_GRZ = st.number_input(f"Number of GRZ nurses Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
-                beds_High_Complex = st.number_input(f"Number of High Complex beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
-                nurs_High_Complex = st.number_input(f"Number of High Complex nurses Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
-                beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
-                nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
-                beds_ELV_TRW = st.number_input(f"Number of Observation beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
-                beds_ELV_EMRD = st.number_input(f"Number of Emergency beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
+                beds_GRZ = st.number_input(f"Number of GRZ beds {loc_name[i]}", min_value=0, step=1, value=0, format="%d")
+                nurs_GRZ = st.number_input(f"Number of GRZ nurses {loc_name[i]}", min_value=0, step=1, value=0, format="%d")
+                beds_High_Complex = st.number_input(f"Number of High Complex beds {loc_name[i]}", min_value=0, step=1, value=0, format="%d")
+                nurs_High_Complex = st.number_input(f"Number of High Complex nurses {loc_name[i]}", min_value=0, step=1, value=0, format="%d")
+                beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds {loc_name[i]}", min_value=0, step=1, value=0, format="%d")
+                nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses {loc_name[i]}", min_value=0, step=1, value=0, format="%d")
+                beds_ELV_TRW = st.number_input(f"Number of Observation beds {loc_name[i]}", min_value=0, step=1, value=0, format="%d")
+                beds_ELV_EMRD = st.number_input(f"Number of Emergency beds {loc_name[i]}", min_value=0, step=1, value=0, format="%d")
                 beds_High.append(beds_High_Complex)
                 beds_low.append(beds_ELV_Low)
                 beds_G.append(beds_GRZ)
@@ -396,12 +402,14 @@ with col2:
         beds_Total = []
         nurs_Total = []
         beds_EMRD = []
+        loc_name = [0]*n_loc
         for i in range(0, n_loc):
+            loc_name[i] = st.text_input("",value="Locatie "+str(i+1))
             with st.expander(st.text_input("",value="Locatie "+str(i+1))):
                 
-                beds_ELV_Total = st.number_input(f"Number of ELV Total beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
-                nurs_ELV_Total = st.number_input(f"Number of ELV Total nurses Locatie {i+1}", min_value=0, step=1, value=0, format="%d")
-                beds_ELV_EMRD = st.number_input(f"Number of Emergency beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d")   
+                beds_ELV_Total = st.number_input(f"Number of ELV Total beds {loc_name[i]}", min_value=0, step=1, value=0, format="%d")
+                nurs_ELV_Total = st.number_input(f"Number of ELV Total nurses {loc_name[i]}", min_value=0, step=1, value=0, format="%d")
+                beds_ELV_EMRD = st.number_input(f"Number of Emergency beds {loc_name[i]}", min_value=0, step=1, value=0, format="%d")   
                 beds_Total.append(beds_ELV_Total)
                 nurs_Total.append(beds_ELV_Total) 
                 beds_EMRD.append(beds_ELV_EMRD)
