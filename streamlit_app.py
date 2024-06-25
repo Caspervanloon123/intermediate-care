@@ -539,7 +539,7 @@ with col2:
             
             
             
-            adm_days = 1/input.loc[loop_nr,'Transfertijd tussen opname en het bieden van zorg']
+            adm_days = 1/input.loc[loop_nr,'Transfertijd tussen opname en het bieden van zorg (dagen)']
         
             
             max_days_TRW = input.loc[loop_nr,'Maximaal aantal dagen in observatie']
