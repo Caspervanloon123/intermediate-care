@@ -52,55 +52,55 @@ with col1:
         "Aankomst vanaf de Spoedeisendehulp per dag": 0.83,
         "Aankomst Geriatrische Zorg in Ziekenhuis per dag": 0.54,
         "Aankomst Laag Complexe zorg vanaf de Huisarts": 1.91,
-        "Ligduur Hoog Complex naar Huis": 31.1,
-        "Ligduur Geriatrische Zorg naar Huis": 31.1,
-        "Ligduur Hoog Complex Dood": 22.9,
-        "Ligduur Geriatrische Zorg Dood": 22.9,
-        "Ligduur Hoog Complex naar Geriatrische Zorg": 29.8,
-        "Ligduur Hoog Complex naar Huis met aanpassingen": 43.9,
-        "Ligduur Geriatrische Zorg naar Huis met aanpassingen": 43.9,
-        "Ligduur Hoog Complex WMO": 22.9,
-        "Ligduur Hoog Complex WLZ": 47.8,
-        "Ligduur Geriatrische Zorg WMO": 22.9,
-        "Ligduur Geriatrische Zorg WLZ": 47.8,
-        "Ligduur Laag Complex naar Huis": 31.1,
-        "Ligduur Laag Complex Dood": 22.9,
-        "Ligduur Laag Complex Geriatrische Zorg": 29.8,
-        "Ligduur Laag Complex naar Huis met aanpassingen": 43.9,
-        "Ligduur Laag Complex WMO": 22.9,
-        "Ligduur Laag Complex WLZ": 47.8,
-        "Percentage Hoog Complex naar Huis": 57.8,
-        "Percentage Geriatrische Zorg naar Huis": 60.0,
-        "Percentage Hoog Complex Dood": 6.0,
-        "Percentage Geriatrische Zorg Dood": 6.0,
-        "Percentage Hoog Complex WMO": 2.3,
-        "Percentage Geriatrische Zorg WMO": 2.3,
-        "Percentage Hoog Complex WLZ": 19.8,
-        "Percentage Geriatrische Zorg WLZ": 21.0,
+        "Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar huis gaan": 31.1,
+        "Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar huis gaan": 31.1,
+        "Gemiddelde ligduur in dagen van  Hoog Complex patiënten dat komt te overlijden": 22.9,
+        "Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten dat komt te overlijden": 22.9,
+        "Gemiddelde ligduur in dagen van  Hoog Complex naar Geriatrische Zorg": 29.8,
+        "Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar huis gaan met aanpassingen": 43.9,
+        "Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar huis gaan met aanpassingen": 43.9,
+        "Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar WMO gaan": 22.9,
+        "Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar WLZ gaan": 47.8,
+        "Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar WMO gaan": 22.9,
+        "Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar WLZ gaan": 47.8,
+        "Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar huis gaan": 31.1,
+        "Gemiddelde ligduur in dagen van  Laag Complex patiënten dat komt te overlijden": 22.9,
+        "Gemiddelde ligduur in dagen van  Laag Complex Geriatrische Zorg": 29.8,
+        "Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar huis gaan met aanpassingen": 43.9,
+        "Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar WMO gaan": 22.9,
+        "Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar WLZ gaan": 47.8,
+        "Percentage Hoog Complex patiënten die naar huis gaan": 57.8,
+        "Percentage Geriatrische Zorg patiënten die naar huis gaan": 60.0,
+        "Percentage Hoog Complex patiënten dat komt te overlijden": 6.0,
+        "Percentage Geriatrische Zorg patiënten dat komt te overlijden": 6.0,
+        "Percentage Hoog Complex patiënten die naar WMO gaan": 2.3,
+        "Percentage Geriatrische Zorg patiënten die naar WMO gaan": 2.3,
+        "Percentage Hoog Complex patiënten die naar WLZ gaan": 19.8,
+        "Percentage Geriatrische Zorg patiënten die naar WLZ gaan": 21.0,
         "Percentage Hoog Complex naar Geriatrische Zorg": 3.4,
-        "Percentage Hoog Complex naar Huis met aanpassingen": 10.7,
-        "Percentage Geriatrische Zorg naar Huis met aanpassingen": 10.7,
-        "Percentage Laag Complex naar Huis": 70.0,
-        "Percentage Laag Complex Dood": 2.0,
-        "Percentage Laag Complex WMO": 2.0,
-        "Percentage Laag Complex WLZ": 10.0,
+        "Percentage Hoog Complex patiënten die naar huis gaan met aanpassingen": 10.7,
+        "Percentage Geriatrische Zorg patiënten die naar huis gaan met aanpassingen": 10.7,
+        "Percentage Laag Complex patiënten die naar huis gaan": 70.0,
+        "Percentage Laag Complex patiënten dat komt te overlijden": 2.0,
+        "Percentage Laag Complex patiënten die naar WMO gaan": 2.0,
+        "Percentage Laag Complex patiënten die naar WLZ gaan": 10.0,
         "Percentage Laag Complex naar Geriatrische Zorg": 2.0,
-        "Percentage Laag Complex naar Huis met aanpassingen": 14.0,
-        "Spoedeisendehulp openingstijd (0 correpondeert met 00:00, en 24 correspondeert met 23:59)": 0,
-        "Spoedeisendehulp sluitingstijd (0 correpondeert met 00:00, en 24 correspondeert met 23:59)": 24,
-        "Openingstijd Huisarts (0 correpondeert met 00:00, en 24 correspondeert met 23:59)": 8.0,
-        "Sluittijd Huisarts (0 correpondeert met 00:00, en 24 correspondeert met 23:59)": 17.0,
+        "Percentage Laag Complex patiënten die naar huis gaan met aanpassingen": 14.0,
+        "Spoedeisendehulp openingstijd ": 0,
+        "Spoedeisendehulp sluitingstijd ": 24,
+        "Openingstijd Huisarts ": 8.0,
+        "Sluittijd Huisarts ": 17.0,
         "Opnamemogelijkheid in het weekend": False,
-        "Openingstijd ELV (0 correpondeert met 00:00, en 24 correspondeert met 23:59)": 8.0,
-        "Sluitingstijd ELV (0 correpondeert met 00:00, en 24 correspondeert met 23:59)": 17.0,
-        "Maximaal aantal patienten per verpleegkundige": 3,
+        "Openingstijd ELV ": 8.0,
+        "Sluitingstijd ELV ": 17.0,
+        "Maximaal aantal patiënten per verpleegkundige": 3,
         "Transfertijd tussen opname en het bieden van zorg": 1.5,
         "Maximaal aantal dagen in observatie": 14.0,
         "Aantal subruns": 1,
-        "Aantal patienten per subrun": 1000,
-        "Aantal patienten voor warming": 500,
-        "Kans dat patient observatie nodig heeft": 10,
-        "Maximaal wachten voor patient van voorkeur verandert (in allocatiemodel)": 30,
+        "Aantal patiënten per subrun": 1000,
+        "Aantal patiënten voor warming": 500,
+        "Kans dat patiënt observatie nodig heeft": 10,
+        "Maximaal wachten voor patiënt van voorkeur verandert (in allocatiemodel)": 30,
     }
     
     
@@ -114,27 +114,27 @@ with col1:
     
     # Grouped variables
     groups = {
-        "Aankomst": ["Aankomst Hoog Complex vanuit ziekenhuis per dag", "Aankomst vanaf Huisarts Hoog Complex per dag", "Aankomst vanaf de Spoedeisendehulp per dag", "Aankomst Geriatrische Zorg in Ziekenhuis per dag", "Aankomst Laag Complexe zorg vanaf de Huisarts"],
-        "Ligduur": [
-            "Ligduur Hoog Complex naar Huis", "Ligduur Geriatrische Zorg naar Huis", "Ligduur Hoog Complex Dood", "Ligduur Geriatrische Zorg Dood", "Ligduur Hoog Complex naar Geriatrische Zorg",
-             "Ligduur Hoog Complex naar Huis met aanpassingen", "Ligduur Geriatrische Zorg naar Huis met aanpassingen", "Ligduur Hoog Complex WMO", "Ligduur Hoog Complex WLZ", "Ligduur Geriatrische Zorg WMO",
-            "Ligduur Geriatrische Zorg WLZ", "Ligduur Laag Complex naar Huis", "Ligduur Laag Complex Dood", "Ligduur Laag Complex Geriatrische Zorg", "Ligduur Laag Complex naar Huis met aanpassingen", "Ligduur Laag Complex WMO",
-            "Ligduur Laag Complex WLZ"
+        "Aankomsten": ["Aankomst Hoog Complex vanuit ziekenhuis per dag", "Aankomst vanaf Huisarts Hoog Complex per dag", "Aankomst vanaf de Spoedeisendehulp per dag", "Aankomst Geriatrische Zorg in Ziekenhuis per dag", "Aankomst Laag Complexe zorg vanaf de Huisarts"],
+        "Gemiddelde ligduur in dagen van ": [
+            "Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar huis gaan", "Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar huis gaan", "Gemiddelde ligduur in dagen van  Hoog Complex patiënten dat komt te overlijden", "Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten dat komt te overlijden", "Gemiddelde ligduur in dagen van  Hoog Complex naar Geriatrische Zorg",
+             "Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar huis gaan met aanpassingen", "Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar huis gaan met aanpassingen", "Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar WMO gaan", "Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar WLZ gaan", "Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar WMO gaan",
+            "Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar WLZ gaan", "Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar huis gaan", "Gemiddelde ligduur in dagen van  Laag Complex patiënten dat komt te overlijden", "Gemiddelde ligduur in dagen van  Laag Complex Geriatrische Zorg", "Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar huis gaan met aanpassingen", "Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar WMO gaan",
+            "Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar WLZ gaan"
         ],
-        "Uitstroomkansen": [
-            "Percentage Hoog Complex naar Huis", "Percentage Geriatrische Zorg naar Huis", "Percentage Hoog Complex Dood", "Percentage Geriatrische Zorg Dood", "Percentage Hoog Complex WMO", "Percentage Geriatrische Zorg WMO",
-            "Percentage Hoog Complex WLZ", "Percentage Geriatrische Zorg WLZ", "Percentage Hoog Complex naar Geriatrische Zorg", "Percentage Hoog Complex naar Huis met aanpassingen", "Percentage Geriatrische Zorg naar Huis met aanpassingen",
-            "Percentage Laag Complex naar Huis", "Percentage Laag Complex Dood", "Percentage Laag Complex WMO", "Percentage Laag Complex WLZ", "Percentage Laag Complex naar Geriatrische Zorg", "Percentage Laag Complex naar Huis met aanpassingen"
+        "Uitstroomkansen (%)": [
+            "Percentage Hoog Complex patiënten die naar huis gaan", "Percentage Geriatrische Zorg patiënten die naar huis gaan", "Percentage Hoog Complex patiënten dat komt te overlijden", "Percentage Geriatrische Zorg patiënten dat komt te overlijden", "Percentage Hoog Complex patiënten die naar WMO gaan", "Percentage Geriatrische Zorg patiënten die naar WMO gaan",
+            "Percentage Hoog Complex patiënten die naar WLZ gaan", "Percentage Geriatrische Zorg patiënten die naar WLZ gaan", "Percentage Hoog Complex naar Geriatrische Zorg", "Percentage Hoog Complex patiënten die naar huis gaan met aanpassingen", "Percentage Geriatrische Zorg patiënten die naar huis gaan met aanpassingen",
+            "Percentage Laag Complex patiënten die naar huis gaan", "Percentage Laag Complex patiënten dat komt te overlijden", "Percentage Laag Complex patiënten die naar WMO gaan", "Percentage Laag Complex patiënten die naar WLZ gaan", "Percentage Laag Complex naar Geriatrische Zorg", "Percentage Laag Complex patiënten die naar huis gaan met aanpassingen"
         ],
-        "Openingstijden": [
-            "Spoedeisendehulp openingstijd (0 correpondeert met 00:00, en 24 correspondeert met 23:59)", "Spoedeisendehulp sluitingstijd (0 correpondeert met 00:00, en 24 correspondeert met 23:59)", "Openingstijd Huisarts (0 correpondeert met 00:00, en 24 correspondeert met 23:59)",
-            "Sluittijd Huisarts (0 correpondeert met 00:00, en 24 correspondeert met 23:59)", "Opnamemogelijkheid in het weekend", "Openingstijd ELV (0 correpondeert met 00:00, en 24 correspondeert met 23:59)", "Sluitingstijd ELV (0 correpondeert met 00:00, en 24 correspondeert met 23:59)"
+        "Openingstijden (0 correpondeert met 00:00, en 24 correspondeert met 23:59)": [
+            "Spoedeisendehulp openingstijd ", "Spoedeisendehulp sluitingstijd ", "Openingstijd Huisarts ",
+            "Sluittijd Huisarts ", "Opnamemogelijkheid in het weekend", "Openingstijd ELV ", "Sluitingstijd ELV "
         ],
         "Overig": [
-            "Maximaal aantal patienten per verpleegkundige", "Transfertijd tussen opname en het bieden van zorg", "Maximaal aantal dagen in observatie",  "Kans dat patient observatie nodig heeft", "Maximaal wachten voor patient van voorkeur verandert (in allocatiemodel)"
+            "Maximaal aantal patiënten per verpleegkundige", "Transfertijd tussen opname en het bieden van zorg (dagen)", "Maximaal aantal dagen in observatie",  "Kans dat patiënt observatie nodig heeft (%)", "Maximaal aantal dagen wachten voor patiënt van voorkeur verandert (in allocatiemodel)"
         ],
         "Simulatie instellingen":[
-            "Aantal subruns", "Aantal patienten per subrun", "Aantal patienten voor warming",
+            "Aantal subruns", "Aantal patiënten per subrun", "Aantal patiënten voor warming",
         ]
     }
     
@@ -470,8 +470,8 @@ with col2:
             
             n_subruns = input.loc[loop_nr,'Aantal subruns']
             
-            n_clients_per_subrun = input.loc[loop_nr,'Aantal patienten per subrun']
-            n_clients_for_warming = input.loc[loop_nr,'Aantal patienten voor warming']
+            n_clients_per_subrun = input.loc[loop_nr,'Aantal patiënten per subrun']
+            n_clients_for_warming = input.loc[loop_nr,'Aantal patiënten voor warming']
         
             print_modus = False  
         
@@ -484,44 +484,44 @@ with col2:
             
             
             
-            out_p_Home_High = input.loc[loop_nr,'Percentage Hoog Complex naar Huis']/100
-            out_p_Dead_High = input.loc[loop_nr,'Percentage Hoog Complex Dood']/100
-            out_p_WMO_High = input.loc[loop_nr,'Percentage Hoog Complex WMO']/100
-            out_p_WLZ_High = input.loc[loop_nr,'Percentage Hoog Complex WLZ']/100
+            out_p_Home_High = input.loc[loop_nr,'Percentage Hoog Complex patiënten die naar huis gaan']/100
+            out_p_Dead_High = input.loc[loop_nr,'Percentage Hoog Complex patiënten dat komt te overlijden']/100
+            out_p_patiënten die naar WMO gaan_High = input.loc[loop_nr,'Percentage Hoog Complex patiënten die naar WMO gaan']/100
+            out_p_patiënten die naar WLZ gaan_High = input.loc[loop_nr,'Percentage Hoog Complex patiënten die naar WLZ gaan']/100
             out_p_GRZV_High = input.loc[loop_nr,'Percentage Hoog Complex naar Geriatrische Zorg']/100
-            out_p_Pall_High = input.loc[loop_nr,'Percentage Hoog Complex naar Huis met aanpassingen']/100
+            out_p_Pall_High = input.loc[loop_nr,'Percentage Hoog Complex patiënten die naar huis gaan met aanpassingen']/100
             
-            out_p_Home_Low = input.loc[loop_nr,'Percentage Laag Complex naar Huis']/100
-            out_p_Dead_Low = input.loc[loop_nr,'Percentage Laag Complex Dood']/100
-            out_p_WMO_Low = input.loc[loop_nr,'Percentage Laag Complex WMO']/100
-            out_p_WLZ_Low = input.loc[loop_nr,'Percentage Laag Complex WLZ']/100
+            out_p_Home_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar huis gaan']/100
+            out_p_Dead_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten dat komt te overlijden']/100
+            out_p_patiënten die naar WMO gaan_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar WMO gaan']/100
+            out_p_patiënten die naar WLZ gaan_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar WLZ gaan']/100
             out_p_GRZV_Low = input.loc[loop_nr,'Percentage Laag Complex naar Geriatrische Zorg']/100
-            out_p_Pall_Low = input.loc[loop_nr,'Percentage Laag Complex naar Huis met aanpassingen']/100
+            out_p_Pall_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar huis gaan met aanpassingen']/100
             
-            serv_Home_High = 1/input.loc[loop_nr,'Ligduur Hoog Complex naar Huis']
-            serv_Dead_High = 1/input.loc[loop_nr,'Ligduur Hoog Complex Dood']
+            serv_Home_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar huis gaan']
+            serv_Dead_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten dat komt te overlijden']
             
-            serv_GRZV_High = 1/input.loc[loop_nr,'Ligduur Hoog Complex naar Geriatrische Zorg']
-            serv_Pall_High = 1/input.loc[loop_nr,'Ligduur Hoog Complex naar Huis met aanpassingen']
-            serv_WMO_High = 1/input.loc[loop_nr,'Ligduur Hoog Complex WMO']
-            serv_WLZ_High = 1/input.loc[loop_nr,'Ligduur Hoog Complex WLZ']
+            serv_GRZV_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex naar Geriatrische Zorg']
+            serv_Pall_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar huis gaan met aanpassingen']
+            serv_patiënten die naar WMO gaan_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar WMO gaan']
+            serv_patiënten die naar WLZ gaan_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar WLZ gaan']
             
-            serv_Home_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex naar Huis']
-            serv_Dead_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex Dood']
+            serv_Home_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar huis gaan']
+            serv_Dead_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten dat komt te overlijden']
             
-            serv_GRZV_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex Geriatrische Zorg']
-            serv_Pall_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex naar Huis met aanpassingen']
-            serv_WMO_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex WMO']
-            serv_WLZ_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex WLZ']
+            serv_GRZV_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex Geriatrische Zorg']
+            serv_Pall_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar huis gaan met aanpassingen']
+            serv_patiënten die naar WMO gaan_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar WMO gaan']
+            serv_patiënten die naar WLZ gaan_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar WLZ gaan']
         
             
-            time_max_opn_ELV = input.loc[loop_nr,'Sluitingstijd ELV (0 correpondeert met 00:00, en 24 correspondeert met 23:59)']/24
-            ELV_start_time = input.loc[loop_nr,'Openingstijd ELV (0 correpondeert met 00:00, en 24 correspondeert met 23:59)']/24
+            time_max_opn_ELV = input.loc[loop_nr,'Sluitingstijd ELV ']/24
+            ELV_start_time = input.loc[loop_nr,'Openingstijd ELV ']/24
         
-            EMD_start_time = input.loc[loop_nr,'Spoedeisendehulp openingstijd (0 correpondeert met 00:00, en 24 correspondeert met 23:59)']/24
-            EMD_end_time = input.loc[loop_nr,'Spoedeisendehulp sluitingstijd (0 correpondeert met 00:00, en 24 correspondeert met 23:59)']/24
-            GPR_start_time = input.loc[loop_nr,'Openingstijd Huisarts (0 correpondeert met 00:00, en 24 correspondeert met 23:59)']/24
-            GPR_end_time = input.loc[loop_nr,'Sluittijd Huisarts (0 correpondeert met 00:00, en 24 correspondeert met 23:59)']/24
+            EMD_start_time = input.loc[loop_nr,'Spoedeisendehulp openingstijd ']/24
+            EMD_end_time = input.loc[loop_nr,'Spoedeisendehulp sluitingstijd ']/24
+            GPR_start_time = input.loc[loop_nr,'Openingstijd Huisarts ']/24
+            GPR_end_time = input.loc[loop_nr,'Sluittijd Huisarts ']/24
         
             
             p_opn_weekend = 1 if input.loc[loop_nr,'Opnamemogelijkheid in het weekend'] else 0
@@ -534,8 +534,8 @@ with col2:
             priority = input.loc[loop_nr,'Priority']
             Project = ''#input.loc[loop_nr,'Project']
             Preference = input.loc[loop_nr,'preference'] #Pref = pref_model, FCFS = FCFS, NO = Only fav Locatie
-            n_patients_per_nurse = input.loc[loop_nr,'Maximaal aantal patienten per verpleegkundige']
-            max_wait_time_model = input.loc[loop_nr,'Maximaal wachten voor patient van voorkeur verandert (in allocatiemodel)']
+            n_patiënts_per_nurse = input.loc[loop_nr,'Maximaal aantal patiënten per verpleegkundige']
+            max_wait_time_model = input.loc[loop_nr,'Maximaal wachten voor patiënt van voorkeur verandert (in allocatiemodel)']
             
             
             
@@ -546,21 +546,21 @@ with col2:
         
         
             
-            out_p_Home_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg naar Huis']/100
-            out_p_Dead_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg Dood']/100
-            out_p_WMO_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg WMO']/100
-            out_p_WLZ_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg WLZ']/100
+            out_p_Home_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg patiënten die naar huis gaan']/100
+            out_p_Dead_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg patiënten dat komt te overlijden']/100
+            out_p_patiënten die naar WMO gaan_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg patiënten die naar WMO gaan']/100
+            out_p_patiënten die naar WLZ gaan_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg patiënten die naar WLZ gaan']/100
             out_p_GRZV_GRZ = 0# input.loc[loop_nr,'Percentage Geriatrische Zorg GRZ care GRZ']/100
-            out_p_Pall_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg naar Huis met aanpassingen']/100
+            out_p_Pall_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg patiënten die naar huis gaan met aanpassingen']/100
             
-            serv_Home_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg naar Huis']
-            serv_Dead_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg Dood']
+            serv_Home_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar huis gaan']
+            serv_Dead_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten dat komt te overlijden']
             serv_GRZV_GRZ = 0#1/input.loc[loop_nr,'serv_GRZV_GRZ']
-            serv_Pall_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg naar Huis met aanpassingen']
-            serv_WMO_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg WMO']
-            serv_WLZ_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg WLZ']
+            serv_Pall_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar huis gaan met aanpassingen']
+            serv_patiënten die naar WMO gaan_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar WMO gaan']
+            serv_patiënten die naar WLZ gaan_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar WLZ gaan']
 
-            observation_prob = input.loc[loop_nr,'Kans dat patient observatie nodig heeft']/100
+            observation_prob = input.loc[loop_nr,'Kans dat patiënt observatie nodig heeft']/100
         
             # start simulatie
             
@@ -680,7 +680,7 @@ with col2:
                         new_list.append(index)
                     
                 return new_list
-            def count_patients(loc):
+            def count_patiënts(loc):
                 parts = loc.split("_")
                 cur_nr_loc = 0
                 Locatie = ''
@@ -724,7 +724,7 @@ with col2:
                 High_list = ['HOS_High','GPR_High','EMD']
                 GRZ_list = ['HOS_GRZ']
                 if any(item in client_dict[target_client]['journey'] for item in High_list):
-                    discharge_dest = rd.choices(['Home', 'Dead', 'WMO', 'WLZ', 'GRZV', 'Pall'], [out_p_Home_High,out_p_Dead_High,out_p_WMO_High,out_p_WLZ_High,out_p_GRZV_High, out_p_Pall_High])[0]
+                    discharge_dest = rd.choices(['Home', 'Dead', 'patiënten die naar WMO gaan', 'patiënten die naar WLZ gaan', 'GRZV', 'Pall'], [out_p_Home_High,out_p_Dead_High,out_p_patiënten die naar WMO gaan_High,out_p_patiënten die naar WLZ gaan_High,out_p_GRZV_High, out_p_Pall_High])[0]
                     client_dict[target_client]['TRW_discharge_dest'] = discharge_dest
             
                     if discharge_dest == 'Home':
@@ -743,16 +743,16 @@ with col2:
                             event_dict['TRW_discharge_' + target_client] = current_time + time_until_placement + max_days_TRW
                         else: 
                             client_dict[target_client]['to_ELV_High'] = False
-                    elif discharge_dest == 'WMO':
-                        event_dict['TRW_discharge_' + target_client] = current_time + time_until_placement + exp(serv_WMO_High)
+                    elif discharge_dest == 'patiënten die naar WMO gaan':
+                        event_dict['TRW_discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WMO gaan_High)
                         if event_dict['TRW_discharge_' + target_client] - current_time - time_until_placement > max_days_TRW: # moet nog verplaatsen naar ELV
                             client_dict[target_client]['to_ELV_High'] = True
                             client_dict[target_client]['ELV_High_dist_time'] = event_dict['TRW_discharge_' + target_client]
                             event_dict['TRW_discharge_' + target_client] = current_time + time_until_placement+ max_days_TRW
                         else: 
                             client_dict[target_client]['to_ELV_High'] = False
-                    elif discharge_dest == 'WLZ':
-                        event_dict['TRW_discharge_' + target_client] = current_time + time_until_placement + exp(serv_WLZ_High)
+                    elif discharge_dest == 'patiënten die naar WLZ gaan':
+                        event_dict['TRW_discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WLZ gaan_High)
                         if event_dict['TRW_discharge_' + target_client] - current_time - time_until_placement > max_days_TRW: # moet nog verplaatsen naar ELV
                             client_dict[target_client]['to_ELV_High'] = True
                             client_dict[target_client]['ELV_High_dist_time'] = event_dict['TRW_discharge_' + target_client]
@@ -779,7 +779,7 @@ with col2:
             
                 if any(item in client_dict[target_client]['journey'] for item in GRZ_list):
                 
-                    discharge_dest = rd.choices(['Home', 'Dead', 'WMO', 'WLZ', 'GRZV', 'Pall'], [out_p_Home_GRZ,out_p_Dead_GRZ,out_p_WMO_GRZ,out_p_WLZ_GRZ,out_p_GRZV_GRZ, out_p_Pall_GRZ])[0]
+                    discharge_dest = rd.choices(['Home', 'Dead', 'patiënten die naar WMO gaan', 'patiënten die naar WLZ gaan', 'GRZV', 'Pall'], [out_p_Home_GRZ,out_p_Dead_GRZ,out_p_patiënten die naar WMO gaan_GRZ,out_p_patiënten die naar WLZ gaan_GRZ,out_p_GRZV_GRZ, out_p_Pall_GRZ])[0]
                     client_dict[target_client]['TRW_discharge_dest'] = discharge_dest
             
                     if discharge_dest == 'Home':
@@ -798,16 +798,16 @@ with col2:
                             event_dict['TRW_discharge_' + target_client] = current_time + time_until_placement + max_days_TRW
                         else: 
                             client_dict[target_client]['to_ELV_High'] = False
-                    elif discharge_dest == 'WMO':
-                        event_dict['TRW_discharge_' + target_client] = current_time + time_until_placement + exp(serv_WMO_GRZ)
+                    elif discharge_dest == 'patiënten die naar WMO gaan':
+                        event_dict['TRW_discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WMO gaan_GRZ)
                         if event_dict['TRW_discharge_' + target_client] - current_time - time_until_placement > max_days_TRW: # moet nog verplaatsen naar ELV
                             client_dict[target_client]['to_ELV_High'] = True
                             client_dict[target_client]['ELV_High_dist_time'] = event_dict['TRW_discharge_' + target_client]
                             event_dict['TRW_discharge_' + target_client] = current_time + time_until_placement+ max_days_TRW
                         else: 
                             client_dict[target_client]['to_ELV_High'] = False
-                    elif discharge_dest == 'WLZ':
-                        event_dict['TRW_discharge_' + target_client] = current_time + time_until_placement + exp(serv_WLZ_GRZ)
+                    elif discharge_dest == 'patiënten die naar WLZ gaan':
+                        event_dict['TRW_discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WLZ gaan_GRZ)
                         if event_dict['TRW_discharge_' + target_client] - current_time - time_until_placement > max_days_TRW: # moet nog verplaatsen naar ELV
                             client_dict[target_client]['to_ELV_High'] = True
                             client_dict[target_client]['ELV_High_dist_time'] = event_dict['TRW_discharge_' + target_client]
@@ -862,34 +862,34 @@ with col2:
                 High_list = ['HOS_High','GPR_High','EMD']
                 GRZ_list = ['HOS_GRZ']
                 if any(item in client_dict[target_client]['journey'] for item in High_list):
-                    discharge_dest = rd.choices(['Home', 'Dead', 'WMO', 'WLZ', 'GRZV', 'Pall'], [out_p_Home_High,out_p_Dead_High,out_p_WMO_High,out_p_WLZ_High,out_p_GRZV_High, out_p_Pall_High])[0]
+                    discharge_dest = rd.choices(['Home', 'Dead', 'patiënten die naar WMO gaan', 'patiënten die naar WLZ gaan', 'GRZV', 'Pall'], [out_p_Home_High,out_p_Dead_High,out_p_patiënten die naar WMO gaan_High,out_p_patiënten die naar WLZ gaan_High,out_p_GRZV_High, out_p_Pall_High])[0]
                     client_dict[target_client]['discharge_dest'] = discharge_dest
                 
                     if discharge_dest == 'Home':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Home_High)
                     elif discharge_dest == 'Dead':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Dead_High)    
-                    elif discharge_dest == 'WMO':
-                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WMO_High)
-                    elif discharge_dest == 'WLZ':
-                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WLZ_High)
+                    elif discharge_dest == 'patiënten die naar WMO gaan':
+                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WMO gaan_High)
+                    elif discharge_dest == 'patiënten die naar WLZ gaan':
+                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WLZ gaan_High)
                     elif discharge_dest == 'GRZV':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_GRZV_High)
                     elif discharge_dest == 'Pall':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Pall_High)
                 
                 elif any(item in client_dict[target_client]['journey'] for item in GRZ_list):
-                    discharge_dest = rd.choices(['Home', 'Dead', 'WMO', 'WLZ', 'GRZV', 'Pall'], [out_p_Home_GRZ,out_p_Dead_GRZ,out_p_WMO_GRZ,out_p_WLZ_GRZ,out_p_GRZV_GRZ, out_p_Pall_GRZ])[0]
+                    discharge_dest = rd.choices(['Home', 'Dead', 'patiënten die naar WMO gaan', 'patiënten die naar WLZ gaan', 'GRZV', 'Pall'], [out_p_Home_GRZ,out_p_Dead_GRZ,out_p_patiënten die naar WMO gaan_GRZ,out_p_patiënten die naar WLZ gaan_GRZ,out_p_GRZV_GRZ, out_p_Pall_GRZ])[0]
                     client_dict[target_client]['discharge_dest'] = discharge_dest
             
                     if discharge_dest == 'Home':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Home_GRZ)
                     elif discharge_dest == 'Dead':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Dead_GRZ)    
-                    elif discharge_dest == 'WMO':
-                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WMO_GRZ)
-                    elif discharge_dest == 'WLZ':
-                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WLZ_GRZ)
+                    elif discharge_dest == 'patiënten die naar WMO gaan':
+                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WMO gaan_GRZ)
+                    elif discharge_dest == 'patiënten die naar WLZ gaan':
+                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WLZ gaan_GRZ)
                     elif discharge_dest == 'GRZV':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_GRZV_GRZ)
                     elif discharge_dest == 'Pall':
@@ -907,17 +907,17 @@ with col2:
                 
                 # discharge ook erin zetten
                 
-                discharge_dest = rd.choices(['Home', 'Dead', 'WMO', 'WLZ', 'GRZV', 'Pall'], [out_p_Home_High,out_p_Dead_High,out_p_WMO_High,out_p_WLZ_High,out_p_GRZV_High, out_p_Pall_High])[0]
+                discharge_dest = rd.choices(['Home', 'Dead', 'patiënten die naar WMO gaan', 'patiënten die naar WLZ gaan', 'GRZV', 'Pall'], [out_p_Home_High,out_p_Dead_High,out_p_patiënten die naar WMO gaan_High,out_p_patiënten die naar WLZ gaan_High,out_p_GRZV_High, out_p_Pall_High])[0]
                 client_dict[target_client]['discharge_dest'] = discharge_dest
                 
                 if discharge_dest == 'Home':
                     event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Home_High)
                 elif discharge_dest == 'Dead':
                     event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Dead_High)    
-                elif discharge_dest == 'WMO':
-                    event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WMO_High)
-                elif discharge_dest == 'WLZ':
-                    event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WLZ_High)
+                elif discharge_dest == 'patiënten die naar WMO gaan':
+                    event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WMO gaan_High)
+                elif discharge_dest == 'patiënten die naar WLZ gaan':
+                    event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WLZ gaan_High)
                 elif discharge_dest == 'GRZV':
                     event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_GRZV_High)
                 elif discharge_dest == 'Pall':
@@ -941,17 +941,17 @@ with col2:
                 
                 if any(item in client_dict[target_client]['journey'] for item in High_list):
                 
-                    discharge_dest = rd.choices(['Home', 'Dead', 'WMO', 'WLZ', 'GRZV', 'Pall'], [out_p_Home_High,out_p_Dead_High,out_p_WMO_High,out_p_WLZ_High,out_p_GRZV_High, out_p_Pall_High])[0]
+                    discharge_dest = rd.choices(['Home', 'Dead', 'patiënten die naar WMO gaan', 'patiënten die naar WLZ gaan', 'GRZV', 'Pall'], [out_p_Home_High,out_p_Dead_High,out_p_patiënten die naar WMO gaan_High,out_p_patiënten die naar WLZ gaan_High,out_p_GRZV_High, out_p_Pall_High])[0]
                     client_dict[target_client]['discharge_dest'] = discharge_dest
             
                     if discharge_dest == 'Home':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Home_High)
                     elif discharge_dest == 'Dead':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Dead_High)    
-                    elif discharge_dest == 'WMO':
-                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WMO_High)
-                    elif discharge_dest == 'WLZ':
-                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WLZ_High)
+                    elif discharge_dest == 'patiënten die naar WMO gaan':
+                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WMO gaan_High)
+                    elif discharge_dest == 'patiënten die naar WLZ gaan':
+                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WLZ gaan_High)
                     elif discharge_dest == 'GRZV':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_GRZV_High)
                     elif discharge_dest == 'Pall':
@@ -959,33 +959,33 @@ with col2:
                         
                 elif any(item in client_dict[target_client]['journey'] for item in Low_list):
                     
-                    discharge_dest = rd.choices(['Home', 'Dead', 'WMO', 'WLZ', 'GRZV', 'Pall'], [out_p_Home_Low,out_p_Dead_Low,out_p_WMO_Low,out_p_WLZ_Low,out_p_GRZV_Low, out_p_Pall_Low])[0]
+                    discharge_dest = rd.choices(['Home', 'Dead', 'patiënten die naar WMO gaan', 'patiënten die naar WLZ gaan', 'GRZV', 'Pall'], [out_p_Home_Low,out_p_Dead_Low,out_p_patiënten die naar WMO gaan_Low,out_p_patiënten die naar WLZ gaan_Low,out_p_GRZV_Low, out_p_Pall_Low])[0]
                     client_dict[target_client]['discharge_dest'] = discharge_dest
             
                     if discharge_dest == 'Home':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Home_Low)
                     elif discharge_dest == 'Dead':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Dead_Low)    
-                    elif discharge_dest == 'WMO':
-                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WMO_Low)
-                    elif discharge_dest == 'WLZ':
-                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WLZ_Low)
+                    elif discharge_dest == 'patiënten die naar WMO gaan':
+                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WMO gaan_Low)
+                    elif discharge_dest == 'patiënten die naar WLZ gaan':
+                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WLZ gaan_Low)
                     elif discharge_dest == 'GRZV':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_GRZV_Low)
                     elif discharge_dest == 'Pall':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Pall_Low)
                 elif any(item in client_dict[target_client]['journey'] for item in GRZ_list):
-                    discharge_dest = rd.choices(['Home', 'Dead', 'WMO', 'WLZ', 'GRZV', 'Pall'], [out_p_Home_GRZ,out_p_Dead_GRZ,out_p_WMO_GRZ,out_p_WLZ_GRZ,out_p_GRZV_GRZ, out_p_Pall_GRZ])[0]
+                    discharge_dest = rd.choices(['Home', 'Dead', 'patiënten die naar WMO gaan', 'patiënten die naar WLZ gaan', 'GRZV', 'Pall'], [out_p_Home_GRZ,out_p_Dead_GRZ,out_p_patiënten die naar WMO gaan_GRZ,out_p_patiënten die naar WLZ gaan_GRZ,out_p_GRZV_GRZ, out_p_Pall_GRZ])[0]
                     client_dict[target_client]['discharge_dest'] = discharge_dest
             
                     if discharge_dest == 'Home':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Home_GRZ)
                     elif discharge_dest == 'Dead':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Dead_GRZ)    
-                    elif discharge_dest == 'WMO':
-                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WMO_GRZ)
-                    elif discharge_dest == 'WLZ':
-                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WLZ_GRZ)
+                    elif discharge_dest == 'patiënten die naar WMO gaan':
+                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WMO gaan_GRZ)
+                    elif discharge_dest == 'patiënten die naar WLZ gaan':
+                        event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WLZ gaan_GRZ)
                     elif discharge_dest == 'GRZV':
                         event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_GRZV_GRZ)
                     elif discharge_dest == 'Pall':
@@ -1003,30 +1003,30 @@ with col2:
                 
                 out_p_Home_TOT = (out_p_Home_High+out_p_Home_GRZ+out_p_Home_Low)/3
                 out_p_Dead_TOT = (out_p_Dead_High+out_p_Dead_GRZ+out_p_Dead_Low)/3
-                out_p_WMO_TOT = (out_p_WMO_High+out_p_WMO_GRZ+out_p_WMO_Low)/3
-                out_p_WLZ_TOT = (out_p_WLZ_High+out_p_WLZ_GRZ+out_p_WLZ_Low)/3
+                out_p_patiënten die naar WMO gaan_TOT = (out_p_patiënten die naar WMO gaan_High+out_p_patiënten die naar WMO gaan_GRZ+out_p_patiënten die naar WMO gaan_Low)/3
+                out_p_patiënten die naar WLZ gaan_TOT = (out_p_patiënten die naar WLZ gaan_High+out_p_patiënten die naar WLZ gaan_GRZ+out_p_patiënten die naar WLZ gaan_Low)/3
                 out_p_GRZV_TOT = (out_p_GRZV_High+out_p_GRZV_GRZ+out_p_GRZV_Low)/3
                 out_p_Pall_TOT = (out_p_Pall_High+out_p_Pall_GRZ+out_p_Pall_Low)/3
             
                 serv_Home_TOT = (serv_Home_High+serv_Home_GRZ+serv_Home_Low)/3
                 serv_Dead_TOT = (serv_Home_High+serv_Home_GRZ+serv_Home_Low)/3
-                serv_WMO_TOT = (serv_Home_High+serv_Home_GRZ+serv_Home_Low)/3
-                serv_WLZ_TOT = (serv_Home_High+serv_Home_GRZ+serv_Home_Low)/3
+                serv_patiënten die naar WMO gaan_TOT = (serv_Home_High+serv_Home_GRZ+serv_Home_Low)/3
+                serv_patiënten die naar WLZ gaan_TOT = (serv_Home_High+serv_Home_GRZ+serv_Home_Low)/3
                 serv_GRZV_TOT = (serv_Home_High+serv_Home_GRZ+serv_Home_Low)/3
                 serv_Pall_TOT = (serv_Home_High+serv_Home_GRZ+serv_Home_Low)/3
                 
                 
-                discharge_dest = rd.choices(['Home', 'Dead', 'WMO', 'WLZ', 'GRZV', 'Pall'], [out_p_Home_TOT,out_p_Dead_TOT,out_p_WMO_TOT,out_p_WLZ_TOT,out_p_GRZV_TOT, out_p_Pall_TOT])[0]
+                discharge_dest = rd.choices(['Home', 'Dead', 'patiënten die naar WMO gaan', 'patiënten die naar WLZ gaan', 'GRZV', 'Pall'], [out_p_Home_TOT,out_p_Dead_TOT,out_p_patiënten die naar WMO gaan_TOT,out_p_patiënten die naar WLZ gaan_TOT,out_p_GRZV_TOT, out_p_Pall_TOT])[0]
                 client_dict[target_client]['discharge_dest'] = discharge_dest
             
                 if discharge_dest == 'Home':
                     event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Home_TOT)
                 elif discharge_dest == 'Dead':
                     event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Dead_TOT)    
-                elif discharge_dest == 'WMO':
-                    event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WMO_TOT)
-                elif discharge_dest == 'WLZ':
-                    event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WLZ_TOT)
+                elif discharge_dest == 'patiënten die naar WMO gaan':
+                    event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WMO gaan_TOT)
+                elif discharge_dest == 'patiënten die naar WLZ gaan':
+                    event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WLZ gaan_TOT)
                 elif discharge_dest == 'GRZV':
                     event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_GRZV_TOT)
                 elif discharge_dest == 'Pall':
@@ -1045,17 +1045,17 @@ with col2:
                 
                 # discharge ook erin zetten
                 
-                discharge_dest = rd.choices(['Home', 'Dead', 'WMO', 'WLZ', 'GRZV', 'Pall'], [out_p_Home_Low,out_p_Dead_Low,out_p_WMO_Low,out_p_WLZ_Low,out_p_GRZV_Low, out_p_Pall_Low])[0]
+                discharge_dest = rd.choices(['Home', 'Dead', 'patiënten die naar WMO gaan', 'patiënten die naar WLZ gaan', 'GRZV', 'Pall'], [out_p_Home_Low,out_p_Dead_Low,out_p_patiënten die naar WMO gaan_Low,out_p_patiënten die naar WLZ gaan_Low,out_p_GRZV_Low, out_p_Pall_Low])[0]
                 client_dict[target_client]['discharge_dest'] = discharge_dest
                 
                 if discharge_dest == 'Home':
                     event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Home_Low)
                 elif discharge_dest == 'Dead':
                     event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_Dead_Low)    
-                elif discharge_dest == 'WMO':
-                    event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WMO_Low)
-                elif discharge_dest == 'WLZ':
-                    event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_WLZ_Low)
+                elif discharge_dest == 'patiënten die naar WMO gaan':
+                    event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WMO gaan_Low)
+                elif discharge_dest == 'patiënten die naar WLZ gaan':
+                    event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_patiënten die naar WLZ gaan_Low)
                 elif discharge_dest == 'GRZV':
                     event_dict['discharge_' + target_client] = current_time + time_until_placement + exp(serv_GRZV_Low)
                 elif discharge_dest == 'Pall':
@@ -1099,7 +1099,7 @@ with col2:
             def Check_space_partial_beds(department):
                 High_list = ['HOS_High', 'GPR_High', 'EMD']
                 GRZ_list = ['HOS_GRZ']
-                tot_patients = 0
+                tot_patiënts = 0
                 Locatie = 'ELV_High_' +str(extract_number(target_client))
                 if any(item in department for item in High_list):
                     n_aanw_excl_end_time = len([k for (k,v) in client_dict.items() if v['journey'][0] in High_list and Locatie in v['journey'] and v['j_times'][v['journey'].index(Locatie)] <= current_time and len(v['j_times'])<= v['journey'].index(Locatie)+ 1])
@@ -1133,11 +1133,11 @@ with col2:
                 for i in range(n_loc):
                     print("For Locatie, ", i)
                     arrival_High = (arr_HOS_High +arr_GPR_High + arr_EMD +arr_HOS_GRZ)/n_loc
-                    service_High = serv_Home_High * out_p_Home_High +serv_Dead_High * out_p_Dead_High + out_p_GRZV_High * serv_GRZV_High + out_p_WLZ_High * serv_WLZ_High + out_p_Pall_High * serv_Pall_High + out_p_WMO_High * serv_WMO_High
-                    service_GRZ = serv_Home_GRZ * out_p_Home_GRZ +serv_Dead_GRZ * out_p_Dead_GRZ + out_p_GRZV_GRZ * serv_GRZV_GRZ + out_p_WLZ_GRZ * serv_WLZ_GRZ + out_p_Pall_GRZ * serv_Pall_GRZ + out_p_WMO_GRZ * serv_WMO_GRZ
+                    service_High = serv_Home_High * out_p_Home_High +serv_Dead_High * out_p_Dead_High + out_p_GRZV_High * serv_GRZV_High + out_p_patiënten die naar WLZ gaan_High * serv_patiënten die naar WLZ gaan_High + out_p_Pall_High * serv_Pall_High + out_p_patiënten die naar WMO gaan_High * serv_patiënten die naar WMO gaan_High
+                    service_GRZ = serv_Home_GRZ * out_p_Home_GRZ +serv_Dead_GRZ * out_p_Dead_GRZ + out_p_GRZV_GRZ * serv_GRZV_GRZ + out_p_patiënten die naar WLZ gaan_GRZ * serv_patiënten die naar WLZ gaan_GRZ + out_p_Pall_GRZ * serv_Pall_GRZ + out_p_patiënten die naar WMO gaan_GRZ * serv_patiënten die naar WMO gaan_GRZ
                     service_ELV_high = (service_High+service_GRZ)/2
                     arrival_Low = arr_GPR_Low/n_loc
-                    service_Low = serv_Home_Low * out_p_Home_Low +serv_Dead_Low * out_p_Dead_Low + out_p_GRZV_Low * serv_GRZV_Low + out_p_WLZ_Low * serv_WLZ_Low + out_p_Pall_Low * serv_Pall_Low + out_p_WMO_Low * serv_WMO_Low
+                    service_Low = serv_Home_Low * out_p_Home_Low +serv_Dead_Low * out_p_Dead_Low + out_p_GRZV_Low * serv_GRZV_Low + out_p_patiënten die naar WLZ gaan_Low * serv_patiënten die naar WLZ gaan_Low + out_p_Pall_Low * serv_Pall_Low + out_p_patiënten die naar WMO gaan_Low * serv_patiënten die naar WMO gaan_Low
                     
             
             
@@ -1306,110 +1306,110 @@ with col2:
                         if any(item in client_dict[target_client]['journey'] for item in ['GPR_High', 'EMD', 'HOS_High','HOS_GRZ']):
                             if Scen_shared_beds_Full:
                                 if TRW == True:
-                                    if (count_patients('TRW') + count_place_reserved('TRW')) < n_beds_TRW[loc]:
-                #                         print("Patient transfer to Locatie, ", loc)
+                                    if (count_patiënts('TRW') + count_place_reserved('TRW')) < n_beds_TRW[loc]:
+                #                         print("patiënt transfer to Locatie, ", loc)
                     #                    change_target_client_Locatie(target_client,loc)
                                         return True,loc
                                 else: 
                                     if any(item in client_dict[target_client]['journey'] for item in ['GPR_High', 'EMD', 'HOS_High','HOS_GRZ']):
-                                        if (count_patients('ELV_High') + count_place_reserved('ELV_High')) < n_beds_ELV_High_list[loc]:
-                    #                         print("Patient transfer to Locatie, ", loc)
+                                        if (count_patiënts('ELV_High') + count_place_reserved('ELV_High')) < n_beds_ELV_High_list[loc]:
+                    #                         print("patiënt transfer to Locatie, ", loc)
                         #                    change_target_client_Locatie(target_client,loc)
                                             return True,loc
                                     
                             #return False
                             elif Scen_NO_Sharing:
                                 if TRW == True:
-                                    if (count_patients('TRW') + count_place_reserved('TRW')) < n_beds_TRW[loc]:
-                #                         print("Patient transfer to Locatie, ", loc)
+                                    if (count_patiënts('TRW') + count_place_reserved('TRW')) < n_beds_TRW[loc]:
+                #                         print("patiënt transfer to Locatie, ", loc)
                     #                    change_target_client_Locatie(target_client,loc)
                                         return True,loc
                                 else:
                                     if 'GPR_High' in client_dict[target_client]['journey']:
                                         if Check_space_partial_beds('GPR_High')< n_beds_High_Complex_list[loc]:
-                    #                         print("Patient transfer to Locatie, ", loc)
+                    #                         print("patiënt transfer to Locatie, ", loc)
                         #                     change_target_client_Locatie(target_client,loc)
                                             return True,loc
                                     elif 'EMD' in client_dict[target_client]['journey']:
                                         if Check_space_partial_beds('EMD')<n_beds_High_Complex_list[loc]:
-                    #                         print("Patient transfer to Locatie, ", loc)
+                    #                         print("patiënt transfer to Locatie, ", loc)
                         #                     change_target_client_Locatie(target_client,loc)
                                             return True,loc
                                     if 'HOS_High' in client_dict[target_client]['journey']:
                                         if Check_space_partial_beds('HOS_High')< n_beds_High_Complex_list[loc]:
-                    #                         print("Patient transfer to Locatie, ", loc)
+                    #                         print("patiënt transfer to Locatie, ", loc)
                         #                     change_target_client_Locatie(target_client,loc)
                                             return True,loc
                                     if 'HOS_GRZ' in client_dict[target_client]['journey']:
                                         if Check_space_partial_beds('HOS_GRZ')< n_beds_GRZ_list[loc]:
-                    #                         print("Patient transfer to Locatie, ", loc)
+                    #                         print("patiënt transfer to Locatie, ", loc)
                         #                     change_target_client_Locatie(target_client,loc)
                                             return True,loc
                                     
                             #return False
                             elif Scen_part_bed_Share:
                                 if TRW == True:
-                                    if (count_patients('TRW') + count_place_reserved('TRW')) < n_beds_TRW[loc]:
-                #                         print("Patient transfer to Locatie, ", loc)
+                                    if (count_patiënts('TRW') + count_place_reserved('TRW')) < n_beds_TRW[loc]:
+                #                         print("patiënt transfer to Locatie, ", loc)
                     #                    change_target_client_Locatie(target_client,loc)
                                         return True,loc
                                 else:
                                     if 'GPR_High' in client_dict[target_client]['journey']:
                                         if Check_space_partial_beds('GPR_High')< n_beds_High_Complex_list[loc]:
-                    #                         print("Patient transfer to Locatie, ", loc)
+                    #                         print("patiënt transfer to Locatie, ", loc)
                         #                     change_target_client_Locatie(target_client,loc)
                                             return True,loc
-                                        elif count_patients('ELV_part') +count_place_reserved('ELV_part') < n_beds_shared_High_list[loc]:
-                    #                         print("Patient transfer to Locatie, ", loc)
+                                        elif count_patiënts('ELV_part') +count_place_reserved('ELV_part') < n_beds_shared_High_list[loc]:
+                    #                         print("patiënt transfer to Locatie, ", loc)
                         #                     change_target_client_Locatie(target_client,loc)
                                             return True,loc
                                     elif 'EMD' in client_dict[target_client]['journey']:
                                         if Check_space_partial_beds('EMD')< n_beds_High_Complex_list[loc]:
-                    #                         print("Patient transfer to Locatie, ", loc)
+                    #                         print("patiënt transfer to Locatie, ", loc)
                         #                     change_target_client_Locatie(target_client,loc)
                                             return True,loc
-                                        elif count_patients('ELV_part') +count_place_reserved('ELV_part') < n_beds_shared_High_list[loc]:
-                    #                         print("Patient transfer to Locatie, ", loc)
+                                        elif count_patiënts('ELV_part') +count_place_reserved('ELV_part') < n_beds_shared_High_list[loc]:
+                    #                         print("patiënt transfer to Locatie, ", loc)
                         #                     change_target_client_Locatie(target_client,loc)
                                             return True,loc
                                     if 'HOS_High' in client_dict[target_client]['journey']:
                                         if Check_space_partial_beds('HOS_High')< n_beds_High_Complex_list[loc]:
-                    #                         print("Patient transfer to Locatie, ", loc)
+                    #                         print("patiënt transfer to Locatie, ", loc)
                         #                     change_target_client_Locatie(target_client,loc)
                                             return True,loc
-                                        elif count_patients('ELV_part') +count_place_reserved('ELV_part') < n_beds_shared_High_list[loc]:
-                    #                         print("Patient transfer to Locatie, ", loc)
+                                        elif count_patiënts('ELV_part') +count_place_reserved('ELV_part') < n_beds_shared_High_list[loc]:
+                    #                         print("patiënt transfer to Locatie, ", loc)
                         #                     change_target_client_Locatie(target_client,loc)
                                             return True,loc
                                     if 'HOS_GRZ' in client_dict[target_client]['journey']:
                                         if Check_space_partial_beds('HOS_GRZ')< n_beds_GRZ_list[loc]:
-                                            print("Patient transfer to Locatie, ", loc)
+                                            print("patiënt transfer to Locatie, ", loc)
                         #                     change_target_client_Locatie(target_client,loc)
                                             return True,loc
-                                        elif count_patients('ELV_part') +count_place_reserved('ELV_part') < n_beds_shared_High_list[loc]:
-                                            print("Patient transfer to Locatie, ", loc)
+                                        elif count_patiënts('ELV_part') +count_place_reserved('ELV_part') < n_beds_shared_High_list[loc]:
+                                            print("patiënt transfer to Locatie, ", loc)
                         #                     change_target_client_Locatie(target_client,loc)
                                             return True,loc
                                    
                             elif Scen_Total_Sharing:
                                 if TRW == True:
-                                    if (count_patients('TRW') + count_place_reserved('TRW')) < n_beds_TRW[loc]:
-                #                         print("Patient transfer to Locatie, ", loc)
+                                    if (count_patiënts('TRW') + count_place_reserved('TRW')) < n_beds_TRW[loc]:
+                #                         print("patiënt transfer to Locatie, ", loc)
                     #                    change_target_client_Locatie(target_client,loc)
                                         return True,loc
                                 else:
-                                    if count_patients('ELV_TOT')+count_place_reserved('ELV_TOT')< n_beds_ELV_total_list[loc]:
+                                    if count_patiënts('ELV_TOT')+count_place_reserved('ELV_TOT')< n_beds_ELV_total_list[loc]:
                                         return True,loc
                                         
                         elif any(item in client_dict[target_client]['journey'] for item in ['GPR_Low']):
                             if Scen_NO_Sharing or Scen_part_bed_Share or Scen_shared_beds_Full:
-                                if (count_patients('ELV_Low') + count_place_reserved('ELV_Low')) < n_beds_ELV_Low_list[loc]:
-                        #                         print("Patient transfer to Locatie, ", loc)
+                                if (count_patiënts('ELV_Low') + count_place_reserved('ELV_Low')) < n_beds_ELV_Low_list[loc]:
+                        #                         print("patiënt transfer to Locatie, ", loc)
                             #                     change_target_client_Locatie(target_client,loc)
                                     return True,loc
                             elif Scen_Total_Sharing:
-                                if (count_patients('ELV_Low') + count_place_reserved('ELV_Low')) < n_beds_ELV_Low_list[loc]:
-                        #                         print("Patient transfer to Locatie, ", loc)
+                                if (count_patiënts('ELV_Low') + count_place_reserved('ELV_Low')) < n_beds_ELV_Low_list[loc]:
+                        #                         print("patiënt transfer to Locatie, ", loc)
                             #                     change_target_client_Locatie(target_client,loc)
                                     return True,loc
                             
@@ -1834,7 +1834,7 @@ with col2:
         
                 loc_ELV_High = (check_zero_indexes(n_beds_ELV_total_list))
                 loc_ELV_Low = (check_zero_indexes(n_beds_ELV_total_list))
-            Check_eff_beds_with_nurses(n_patients_per_nurse)
+            Check_eff_beds_with_nurses(n_patiënts_per_nurse)
             check_balanced_system(int(n_loc))  
             perc_compl = 0
             
@@ -1874,7 +1874,7 @@ with col2:
                     # --------------------------- START SIMULATION -------------------
                     # ----------------------------------------------------------------
         
-                    # het kan zijn dat je nog niemand hebt die dood kan gaan. 
+                    # het kan zijn dat je nog niemand hebt die patiënten dat komt te overlijden kan gaan. 
                     # Dan moet die ook niet 
                     # in de eventList
         
@@ -1954,7 +1954,7 @@ with col2:
                                 else: 
                                     p_observation = 1
                                 if p_observation < observation_prob:
-                                    if count_patients('TRW') + count_place_reserved('TRW') >= beds_TRW_list[extract_number(target_client)]: # op wachtlijst
+                                    if count_patiënts('TRW') + count_place_reserved('TRW') >= beds_TRW_list[extract_number(target_client)]: # op wachtlijst
                                         if Preference == 'FCFS':
                                             if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,True)[0] == True:
                                                 change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,True)[1],True)
@@ -2008,13 +2008,13 @@ with col2:
             
                                                 if next_event[4:7] == 'EMD':
                                     
-                                                    if (math.floor(current_time) % 7 in [6,0] or  current_time - math.floor(current_time) > time_max_opn_ELV )and (count_patients('ELV_EMDR')+count_place_reserved('ELV_EMDR') <beds_Emergency_list[extract_number(target_client)]): 
+                                                    if (math.floor(current_time) % 7 in [6,0] or  current_time - math.floor(current_time) > time_max_opn_ELV )and (count_patiënts('ELV_EMDR')+count_place_reserved('ELV_EMDR') <beds_Emergency_list[extract_number(target_client)]): 
                                                         move_to_ELV_Emergency(target_client,0)
                                                     else:
                                                         event_dict['HOSP_adm_' + target_client] = math.floor(current_time) + EMD_end_time
             
                                                         if print_modus:
-                                                            print('patient from seh en dus evt hosp opname om ', event_dict['HOSP_adm_' + target_client])
+                                                            print('patiënt from seh en dus evt hosp opname om ', event_dict['HOSP_adm_' + target_client])
             #                                     
                                         
                                                         
@@ -2040,7 +2040,7 @@ with col2:
             
                                             if next_event[0:7] == 'arr_EMD':
                                                 p_acc_opn = np.random.uniform(0,1)
-                                                if (math.floor(current_time) % 7 in [6,0] or  current_time - math.floor(current_time) > time_max_opn_ELV )and (count_patients('ELV_EMDR')+count_place_reserved('ELV_EMDR') <beds_Emergency_list[extract_number(target_client)]): 
+                                                if (math.floor(current_time) % 7 in [6,0] or  current_time - math.floor(current_time) > time_max_opn_ELV )and (count_patiënts('ELV_EMDR')+count_place_reserved('ELV_EMDR') <beds_Emergency_list[extract_number(target_client)]): 
                                                     move_to_ELV_Emergency(target_client,0)
                                                 
                                                 elif (current_time - math.floor(current_time) <= EMD_end_time and math.floor(current_time) % 7 in [1,2,3,4,5]) or p_acc_opn <= p_opn_weekend: # voor 17h
@@ -2048,12 +2048,12 @@ with col2:
                                                     event_dict['HOSP_adm_' + target_client] = math.floor(current_time) + EMD_end_time
         
                                                     if print_modus:
-                                                        print('patient from EMD en voor 17 doordeweeks dus evt HOSP opname om ', event_dict['HOSP_adm_' + target_client])
+                                                        print('patiënt from EMD en voor 17 doordeweeks dus evt HOSP opname om ', event_dict['HOSP_adm_' + target_client])
         
                                                 else: # na 17 uur of weekend meteen ziekenhuis opname
         
                                                     if print_modus:
-                                                        print('patient from EMD en na 17 of weekend dus HOSP opname')
+                                                        print('patiënt from EMD en na 17 of weekend dus HOSP opname')
         
                                                     move_to_HOSP(target_client)
             #                                
@@ -2178,7 +2178,7 @@ with col2:
                                                         move_to_ELV_High(target_client,time_until_placement)
                                                         
                                                         
-                                                    elif (math.floor(current_time) % 7 in [6,0] or  current_time - math.floor(current_time) > time_max_opn_ELV )and (count_patients('ELV_EMDR')+count_place_reserved('ELV_EMDR') <beds_Emergency_list[extract_number(target_client)]): 
+                                                    elif (math.floor(current_time) % 7 in [6,0] or  current_time - math.floor(current_time) > time_max_opn_ELV )and (count_patiënts('ELV_EMDR')+count_place_reserved('ELV_EMDR') <beds_Emergency_list[extract_number(target_client)]): 
                                                         move_to_ELV_Emergency(target_client,0)
                                                     else:#@!@
                                                         add_to_waiting_dict(w3_dict,target_client,current_time)
@@ -2190,19 +2190,19 @@ with col2:
                                                             event_dict['HOSP_adm_' + target_client] = math.floor(current_time) + EMD_end_time
             
                                                             if print_modus:
-                                                                print('patient from EMD en voor 17 doordeweeks dus evt HOSP opname om ', event_dict['HOSP_adm_' + target_client])
+                                                                print('patiënt from EMD en voor 17 doordeweeks dus evt HOSP opname om ', event_dict['HOSP_adm_' + target_client])
             
                                                         else:# na 17 uur of weekend meteen ziekenhuis opname
             
                                                             if print_modus:
-                                                                print('patient from EMD en na 17 of weekend dus HOSP opname')
+                                                                print('patiënt from EMD en na 17 of weekend dus HOSP opname')
             
                                                             move_to_HOSP(target_client)
                                                 elif Preference == 'NO' or Preference == 'Pref':
                                                     add_to_waiting_dict(w3_dict,target_client,current_time)
             
                                                     p_acc_opn = np.random.uniform(0,1)
-                                                    if (math.floor(current_time) % 7 in [6,0] or  current_time - math.floor(current_time) > time_max_opn_ELV )and (count_patients('ELV_EMDR')+count_place_reserved('ELV_EMDR') <beds_Emergency_list[extract_number(target_client)]): 
+                                                    if (math.floor(current_time) % 7 in [6,0] or  current_time - math.floor(current_time) > time_max_opn_ELV )and (count_patiënts('ELV_EMDR')+count_place_reserved('ELV_EMDR') <beds_Emergency_list[extract_number(target_client)]): 
                                                         move_to_ELV_Emergency(target_client,0)
                                                     
                                                     elif (current_time - math.floor(current_time) <= EMD_end_time and math.floor(current_time) % 7 in [1,2,3,4,5]) or p_acc_opn <= p_opn_weekend: # voor 17h
@@ -2210,12 +2210,12 @@ with col2:
                                                         event_dict['HOSP_adm_' + target_client] = math.floor(current_time) + EMD_end_time
             
                                                         if print_modus:
-                                                            print('patient from EMD en voor 17 doordeweeks dus evt HOSP opname om ', event_dict['HOSP_adm_' + target_client])
+                                                            print('patiënt from EMD en voor 17 doordeweeks dus evt HOSP opname om ', event_dict['HOSP_adm_' + target_client])
             
                                                     else:# na 17 uur of weekend meteen ziekenhuis opname
             
                                                         if print_modus:
-                                                            print('patient from EMD en na 17 of weekend dus HOSP opname')
+                                                            print('patiënt from EMD en na 17 of weekend dus HOSP opname')
             
                                                         move_to_HOSP(target_client)
                 #                                     
@@ -2402,7 +2402,7 @@ with col2:
             
                                                 move_to_ELV_High(target_client, time_until_placement)
                             elif next_event[4:11] == 'GPR_Low':
-                                if count_patients('ELV_Low') + count_place_reserved('ELV_Low') >= n_beds_ELV_Low_list[extract_number(target_client)]: # op wachtlijst
+                                if count_patiënts('ELV_Low') + count_place_reserved('ELV_Low') >= n_beds_ELV_Low_list[extract_number(target_client)]: # op wachtlijst
                                     if Preference == 'FCFS':
                                         if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
                                             change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)  
@@ -2483,7 +2483,7 @@ with col2:
                                     move_to_ELV_Low(target_client, time_until_placement)
                          
                         elif Scen_Total_Sharing:
-                            if count_patients('ELV_TOT') +count_place_reserved('ELV_TOT') < n_beds_ELV_total_list[extract_number(target_client)]: #Kan naar ELV_TOTAL
+                            if count_patiënts('ELV_TOT') +count_place_reserved('ELV_TOT') < n_beds_ELV_total_list[extract_number(target_client)]: #Kan naar ELV_TOTAL
                                 time_until_placement = exp(adm_days)    
         
                                 p_acc_opn = np.random.uniform(0,1)
@@ -2547,7 +2547,7 @@ with col2:
                                             # move to ELV vanaf time_until_placement
                                         move_to_ELV_Total(target_client,time_until_placement)
                                     if next_event[0:7] == 'arr_EMD':
-                                        if (math.floor(current_time) % 7 in [6,0] or  current_time - math.floor(current_time) > time_max_opn_ELV )and (count_patients('ELV_EMDR')+count_place_reserved('ELV_EMDR') <beds_Emergency_list[extract_number(target_client)]): 
+                                        if (math.floor(current_time) % 7 in [6,0] or  current_time - math.floor(current_time) > time_max_opn_ELV )and (count_patiënts('ELV_EMDR')+count_place_reserved('ELV_EMDR') <beds_Emergency_list[extract_number(target_client)]): 
                                             move_to_ELV_Emergency(target_client,0)
                                         else:#16
                                             
@@ -2558,12 +2558,12 @@ with col2:
                                                 event_dict['HOSP_adm_' + target_client] = math.floor(current_time) + EMD_end_time
         
                                                 if print_modus:
-                                                    print('patient from EMD en voor 17 doordeweeks dus evt HOSP opname om ', event_dict['HOSP_adm_' + target_client])
+                                                    print('patiënt from EMD en voor 17 doordeweeks dus evt HOSP opname om ', event_dict['HOSP_adm_' + target_client])
         
                                             else: # na 17 uur of weekend meteen ziekenhuis opname
         
                                                 if print_modus:
-                                                    print('patient from EMD en na 17 of weekend dus HOSP opname')
+                                                    print('patiënt from EMD en na 17 of weekend dus HOSP opname')
         
                                                 move_to_HOSP(target_client)
                                             
@@ -2580,7 +2580,7 @@ with col2:
                                 elif Preference == 'NO' or Preference == 'Pref':
                                     if next_event[0:7] == 'arr_EMD':
                                         p_acc_opn = np.random.uniform(0,1)
-                                        if (math.floor(current_time) % 7 in [6,0] or  current_time - math.floor(current_time) > time_max_opn_ELV )and (count_patients('ELV_EMDR')+count_place_reserved('ELV_EMDR') <beds_Emergency_list[extract_number(target_client)]): 
+                                        if (math.floor(current_time) % 7 in [6,0] or  current_time - math.floor(current_time) > time_max_opn_ELV )and (count_patiënts('ELV_EMDR')+count_place_reserved('ELV_EMDR') <beds_Emergency_list[extract_number(target_client)]): 
                                             move_to_ELV_Emergency(target_client,0)
                                         
                                         elif (current_time - math.floor(current_time) <= EMD_end_time and math.floor(current_time) % 7 in [1,2,3,4,5]) or p_acc_opn <= p_opn_weekend: # voor 17h
@@ -2588,12 +2588,12 @@ with col2:
                                             event_dict['HOSP_adm_' + target_client] = math.floor(current_time) + EMD_end_time
         
                                             if print_modus:
-                                                print('patient from EMD en voor 17 doordeweeks dus evt HOSP opname om ', event_dict['HOSP_adm_' + target_client])
+                                                print('patiënt from EMD en voor 17 doordeweeks dus evt HOSP opname om ', event_dict['HOSP_adm_' + target_client])
         
                                         else: # na 17 uur of weekend meteen ziekenhuis opname
         
                                             if print_modus:
-                                                print('patient from EMD en na 17 of weekend dus HOSP opname')
+                                                print('patiënt from EMD en na 17 of weekend dus HOSP opname')
         
                                             move_to_HOSP(target_client)
                                          
@@ -2607,7 +2607,7 @@ with col2:
                         elif Scen_NO_Sharing or Scen_part_bed_Share or Scen_shared_beds_Full:    
                             if next_event[4:11] == 'GPR_Low':
                                 # if Scen_shared_beds_Full or Scen_part_bed_Share or Scen_NO_Sharing:
-                                if count_patients('ELV_Low') + count_place_reserved('ELV_Low') >= n_beds_ELV_Low_list[extract_number(target_client)]: # op wachtlijst
+                                if count_patiënts('ELV_Low') + count_place_reserved('ELV_Low') >= n_beds_ELV_Low_list[extract_number(target_client)]: # op wachtlijst
                                     if Preference == 'FCFS':
                                         if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
                                             change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)  
@@ -2691,7 +2691,7 @@ with col2:
                             elif next_event[4:12] == 'HOS_High' or next_event[4:12] == 'GPR_High' or next_event[4:7] == 'EMD' or next_event[4:11] == 'HOS_GRZ':
                                 if Scen_shared_beds_Full:
                                     if next_event[4:12] == 'HOS_High' or next_event[4:12] == 'GPR_High' or next_event[4:7] == 'EMD' or next_event[4:11] == 'HOS_GRZ' :
-                                        if count_patients('ELV_High') + count_place_reserved('ELV_High') >= n_beds_ELV_High_list[extract_number(target_client)]: # op wachtlijst
+                                        if count_patiënts('ELV_High') + count_place_reserved('ELV_High') >= n_beds_ELV_High_list[extract_number(target_client)]: # op wachtlijst
                                             if Preference == 'FCFS':
                                                 if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
                                                     change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)
@@ -2739,7 +2739,7 @@ with col2:
                                                         client_dict[target_client]['j_times'].append(current_time)      
                                                     if next_event[0:7] == 'arr_EMD':
                                                         p_acc_opn = np.random.uniform(0,1)
-                                                        if (math.floor(current_time) % 7 in [6,0] or  current_time - math.floor(current_time) > time_max_opn_ELV )and (count_patients('ELV_EMDR')+count_place_reserved('ELV_EMDR') <beds_Emergency_list[extract_number(target_client)]): 
+                                                        if (math.floor(current_time) % 7 in [6,0] or  current_time - math.floor(current_time) > time_max_opn_ELV )and (count_patiënts('ELV_EMDR')+count_place_reserved('ELV_EMDR') <beds_Emergency_list[extract_number(target_client)]): 
                                                             move_to_ELV_Emergency(target_client,0)
                                                         
                                                         elif (current_time - math.floor(current_time) <= EMD_end_time and math.floor(current_time) % 7 in [1,2,3,4,5]) or p_acc_opn <= p_opn_weekend: # voor 17h
@@ -2747,12 +2747,12 @@ with col2:
                                                             event_dict['HOSP_adm_' + target_client] = math.floor(current_time) + EMD_end_time
                 
                                                             if print_modus:
-                                                                print('patient from EMD en voor 17 doordeweeks dus evt HOSP opname om ', event_dict['HOSP_adm_' + target_client])
+                                                                print('patiënt from EMD en voor 17 doordeweeks dus evt HOSP opname om ', event_dict['HOSP_adm_' + target_client])
                 
                                                         else: # na 17 uur of weekend meteen ziekenhuis opname
                 
                                                             if print_modus:
-                                                                print('patient from EMD en na 17 of weekend dus HOSP opname')
+                                                                print('patiënt from EMD en na 17 of weekend dus HOSP opname')
                 
                                                             move_to_HOSP(target_client)
                 #                                        
@@ -2772,7 +2772,7 @@ with col2:
                                                     client_dict[target_client]['j_times'].append(current_time)         
                                                 if next_event[0:7] == 'arr_EMD':
                                                     p_acc_opn = np.random.uniform(0,1)
-                                                    if (math.floor(current_time) % 7 in [6,0] or  current_time - math.floor(current_time) > time_max_opn_ELV )and (count_patients('ELV_EMDR')+count_place_reserved('ELV_EMDR') <beds_Emergency_list[extract_number(target_client)]): 
+                                                    if (math.floor(current_time) % 7 in [6,0] or  current_time - math.floor(current_time) > time_max_opn_ELV )and (count_patiënts('ELV_EMDR')+count_place_reserved('ELV_EMDR') <beds_Emergency_list[extract_number(target_client)]): 
                                                         move_to_ELV_Emergency(target_client,0)
                                                     
                                                     elif (current_time - math.floor(current_time) <= EMD_end_time and math.floor(current_time) % 7 in [1,2,3,4,5]) or p_acc_opn <= p_opn_weekend: # voor 17h
@@ -2780,12 +2780,12 @@ with col2:
                                                         event_dict['HOSP_adm_' + target_client] = math.floor(current_time) + EMD_end_time
             
                                                         if print_modus:
-                                                            print('patient from EMD en voor 17 doordeweeks dus evt HOSP opname om ', event_dict['HOSP_adm_' + target_client])
+                                                            print('patiënt from EMD en voor 17 doordeweeks dus evt HOSP opname om ', event_dict['HOSP_adm_' + target_client])
             
                                                     else: # na 17 uur of weekend meteen ziekenhuis opname
             
                                                         if print_modus:
-                                                            print('patient from EMD en na 17 of weekend dus HOSP opname')
+                                                            print('patiënt from EMD en na 17 of weekend dus HOSP opname')
             
                                                         move_to_HOSP(target_client)
                 #                                             
@@ -2939,7 +2939,7 @@ with col2:
                                                         move_to_ELV_High(target_client,time_until_placement)
                                                         
                                                         
-                                                    elif (math.floor(current_time) % 7 in [6,0] or  current_time - math.floor(current_time) > time_max_opn_ELV )and (count_patients('ELV_EMDR')+count_place_reserved('ELV_EMDR') <beds_Emergency_list[extract_number(target_client)]): 
+                                                    elif (math.floor(current_time) % 7 in [6,0] or  current_time - math.floor(current_time) > time_max_opn_ELV )and (count_patiënts('ELV_EMDR')+count_place_reserved('ELV_EMDR') <beds_Emergency_list[extract_number(target_client)]): 
                                                         move_to_ELV_Emergency(target_client,0)
                                                     else:#@!@
                                                         add_to_waiting_dict(w3_dict,target_client,current_time)
@@ -2951,19 +2951,19 @@ with col2:
                                                             event_dict['HOSP_adm_' + target_client] = math.floor(current_time) + EMD_end_time
             
                                                             if print_modus:
-                                                                print('patient from EMD en voor 17 doordeweeks dus evt HOSP opname om ', event_dict['HOSP_adm_' + target_client])
+                                                                print('patiënt from EMD en voor 17 doordeweeks dus evt HOSP opname om ', event_dict['HOSP_adm_' + target_client])
             
                                                         else:# na 17 uur of weekend meteen ziekenhuis opname
             
                                                             if print_modus:
-                                                                print('patient from EMD en na 17 of weekend dus HOSP opname')
+                                                                print('patiënt from EMD en na 17 of weekend dus HOSP opname')
             
                                                             move_to_HOSP(target_client)
                                                 elif Preference == 'NO' or Preference == 'Pref':
                                                     add_to_waiting_dict(w3_dict,target_client,current_time)
             
                                                     p_acc_opn = np.random.uniform(0,1)
-                                                    if (math.floor(current_time) % 7 in [6,0] or  current_time - math.floor(current_time) > time_max_opn_ELV )and (count_patients('ELV_EMDR')+count_place_reserved('ELV_EMDR') <beds_Emergency_list[extract_number(target_client)]): 
+                                                    if (math.floor(current_time) % 7 in [6,0] or  current_time - math.floor(current_time) > time_max_opn_ELV )and (count_patiënts('ELV_EMDR')+count_place_reserved('ELV_EMDR') <beds_Emergency_list[extract_number(target_client)]): 
                                                         move_to_ELV_Emergency(target_client,0)
                                                     
                                                     elif (current_time - math.floor(current_time) <= EMD_end_time and math.floor(current_time) % 7 in [1,2,3,4,5]) or p_acc_opn <= p_opn_weekend: # voor 17h
@@ -2971,12 +2971,12 @@ with col2:
                                                         event_dict['HOSP_adm_' + target_client] = math.floor(current_time) + EMD_end_time
             
                                                         if print_modus:
-                                                            print('patient from EMD en voor 17 doordeweeks dus evt HOSP opname om ', event_dict['HOSP_adm_' + target_client])
+                                                            print('patiënt from EMD en voor 17 doordeweeks dus evt HOSP opname om ', event_dict['HOSP_adm_' + target_client])
             
                                                     else:# na 17 uur of weekend meteen ziekenhuis opname
             
                                                         if print_modus:
-                                                            print('patient from EMD en na 17 of weekend dus HOSP opname')
+                                                            print('patiënt from EMD en na 17 of weekend dus HOSP opname')
             
                                                         move_to_HOSP(target_client)
                 #                                     
@@ -3166,7 +3166,7 @@ with col2:
                                     elif sum(n_beds_shared_High_list)>0:
                                         if next_event[4:12] == 'HOS_High':#3
                                             if Check_space_partial_beds('HOS_High') >= n_beds_High_Complex_list[extract_number(target_client)]:
-                                                if count_patients('ELV_part')+count_place_reserved('ELV_part') < n_beds_shared_High_list[extract_number(target_client)]:
+                                                if count_patiënts('ELV_part')+count_place_reserved('ELV_part') < n_beds_shared_High_list[extract_number(target_client)]:
                                                     time_until_placement = exp(adm_days)    
             
                                                     p_acc_opn = np.random.uniform(0,1)
@@ -3272,7 +3272,7 @@ with col2:
                                                 
                                         elif next_event[4:7] == 'EMD':
                                             if  Check_space_partial_beds('EMD') >= n_beds_High_Complex_list[extract_number(target_client)]: #Waiting line
-                                                if count_patients('ELV_part')+count_place_reserved('ELV_part') < n_beds_shared_High_list[extract_number(target_client)]:
+                                                if count_patiënts('ELV_part')+count_place_reserved('ELV_part') < n_beds_shared_High_list[extract_number(target_client)]:
                                                     time_until_placement = exp(adm_days)    
             
                                                     p_acc_opn = np.random.uniform(0,1)
@@ -3333,7 +3333,7 @@ with col2:
                             
                                                     # move to ELV vanaf time_until_placement
                                                             move_to_ELV_High(target_client,time_until_placement)
-                                                        elif (math.floor(current_time) % 7 in [6,0] or  current_time - math.floor(current_time) > time_max_opn_ELV )and (count_patients('ELV_EMDR')+count_place_reserved('ELV_EMDR') <beds_Emergency_list[extract_number(target_client)]): 
+                                                        elif (math.floor(current_time) % 7 in [6,0] or  current_time - math.floor(current_time) > time_max_opn_ELV )and (count_patiënts('ELV_EMDR')+count_place_reserved('ELV_EMDR') <beds_Emergency_list[extract_number(target_client)]): 
                                                             move_to_ELV_Emergency(target_client,0)
                                                         else:#@!@
                                                             add_to_waiting_dict(w3_dict,target_client,current_time)
@@ -3345,12 +3345,12 @@ with col2:
                                                                 event_dict['HOSP_adm_' + target_client] = math.floor(current_time) + EMD_end_time
                 
                                                                 if print_modus:
-                                                                    print('patient from EMD en voor 17 doordeweeks dus evt HOSP opname om ', event_dict['HOSP_adm_' + target_client])
+                                                                    print('patiënt from EMD en voor 17 doordeweeks dus evt HOSP opname om ', event_dict['HOSP_adm_' + target_client])
                 
                                                             else:# na 17 uur of weekend meteen ziekenhuis opname
                 
                                                                 if print_modus:
-                                                                    print('patient from EMD en na 17 of weekend dus HOSP opname')
+                                                                    print('patiënt from EMD en na 17 of weekend dus HOSP opname')
                 
                                                                 move_to_HOSP(target_client)
                                                     elif Preference == 'NO' or Preference == 'Pref':
@@ -3358,7 +3358,7 @@ with col2:
              
                                                        
                                                         p_acc_opn = np.random.uniform(0,1)
-                                                        if (math.floor(current_time) % 7 in [6,0] or  current_time - math.floor(current_time) > time_max_opn_ELV )and (count_patients('ELV_EMDR')+count_place_reserved('ELV_EMDR') <beds_Emergency_list[extract_number(target_client)]): 
+                                                        if (math.floor(current_time) % 7 in [6,0] or  current_time - math.floor(current_time) > time_max_opn_ELV )and (count_patiënts('ELV_EMDR')+count_place_reserved('ELV_EMDR') <beds_Emergency_list[extract_number(target_client)]): 
                                                             move_to_ELV_Emergency(target_client,0)
                                                     
                                                         elif (current_time - math.floor(current_time) <= EMD_end_time and math.floor(current_time) % 7 in [1,2,3,4,5]) or p_acc_opn <= p_opn_weekend: # voor 17h
@@ -3366,12 +3366,12 @@ with col2:
                                                             event_dict['HOSP_adm_' + target_client] = math.floor(current_time) + EMD_end_time
                 
                                                             if print_modus:
-                                                                print('patient from EMD en voor 17 doordeweeks dus evt HOSP opname om ', event_dict['HOSP_adm_' + target_client])
+                                                                print('patiënt from EMD en voor 17 doordeweeks dus evt HOSP opname om ', event_dict['HOSP_adm_' + target_client])
                 
                                                         else:# na 17 uur of weekend meteen ziekenhuis opname
                 
                                                             if print_modus:
-                                                                print('patient from EMD en na 17 of weekend dus HOSP opname')
+                                                                print('patiënt from EMD en na 17 of weekend dus HOSP opname')
                 
                                                             move_to_HOSP(target_client)
                 #                                     
@@ -3412,7 +3412,7 @@ with col2:
         
                                         elif next_event[4:12] == 'GPR_High':
                                             if Check_space_partial_beds('GPR_High') >= n_beds_High_Complex_list[extract_number(target_client)]:
-                                                if count_patients('ELV_part')+count_place_reserved('ELV_part') < n_beds_shared_High_list[extract_number(target_client)]:
+                                                if count_patiënts('ELV_part')+count_place_reserved('ELV_part') < n_beds_shared_High_list[extract_number(target_client)]:
                                                     time_until_placement = exp(adm_days)    
             
                                                     p_acc_opn = np.random.uniform(0,1)
@@ -3515,7 +3515,7 @@ with col2:
                                               
                                         elif next_event[4:11] == 'HOS_GRZ':
                                             if Check_space_partial_beds('HOS_GRZ') >= n_beds_GRZ_list[extract_number(target_client)] :
-                                                if count_patients('ELV_part')+count_place_reserved('ELV_part') < n_beds_shared_High_list[extract_number(target_client)]:
+                                                if count_patiënts('ELV_part')+count_place_reserved('ELV_part') < n_beds_shared_High_list[extract_number(target_client)]:
                                                 
                                                     time_until_placement = exp(adm_days)    
             
@@ -3634,7 +3634,7 @@ with col2:
                             print('>>> check_trw_beds <<<')
                             print('___________________________________________________')
                             
-                        if count_patients('TRW_'+str(extract_number(target_client))) + count_place_reserved('TRW_'+str(extract_number(target_client))) <beds_TRW_list[extract_number(target_client)] :
+                        if count_patiënts('TRW_'+str(extract_number(target_client))) + count_place_reserved('TRW_'+str(extract_number(target_client))) <beds_TRW_list[extract_number(target_client)] :
                         
                             # iemand doorschuiven
                                 
@@ -3900,7 +3900,7 @@ with col2:
                             if target_client in w2_dict_TRW.items() or w3_dict_TRW.items() or w4_dict_TRW.items():    
                             
                         
-                                if count_patients('TRW') + count_place_reserved('TRW') >= beds_TRW_list[extract_number(target_client)]: # op wachtlijst
+                                if count_patiënts('TRW') + count_place_reserved('TRW') >= beds_TRW_list[extract_number(target_client)]: # op wachtlijst
                                     if target_client in w3_dict.items():
                                         remove_from_wait_list(w3_dict,target_client,current_time)
                                         add_to_waiting_dict(w3_dict_TRW,target_client,current_time)
@@ -3957,7 +3957,7 @@ with col2:
                                 else: 
                                     p_observation = 1
                                 if p_observation < observation_prob:
-                                    if count_patients('TRW') + count_place_reserved('TRW') >= beds_TRW_list[extract_number(target_client)]: # op wachtlijst
+                                    if count_patiënts('TRW') + count_place_reserved('TRW') >= beds_TRW_list[extract_number(target_client)]: # op wachtlijst
                                         if target_client in w3_dict.items():
                                             remove_from_wait_list(w3_dict,target_client,current_time)
                                             add_to_waiting_dict(w3_dict_TRW,target_client,current_time)
@@ -4177,7 +4177,7 @@ with col2:
                             
                         else:#No triage ward
                             if Scen_shared_beds_Full:
-                                if count_patients('ELV_High') + count_place_reserved('ELV_High') >= n_beds_ELV_High_list[extract_number(target_client)]: # Full System
+                                if count_patiënts('ELV_High') + count_place_reserved('ELV_High') >= n_beds_ELV_High_list[extract_number(target_client)]: # Full System
                                     if Preference == 'FCFS':
                                         if Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[0] == True:
                                             change_target_client_Locatie(target_client,Check_beds_free_other_Locatie(extract_number(target_client),n_loc,target_client,False)[1],True)
@@ -4433,7 +4433,7 @@ with col2:
                                     if 'HOS_High' in client_dict[target_client]['journey'] or 'EMD' in client_dict[target_client]['journey']:
                                         if Check_space_partial_beds('HOS_High') >= n_beds_High_Complex_list[extract_number(target_client)]: #Waiting list
                                             
-                                            if count_patients('ELV_part')+ count_place_reserved('ELV_part')<n_beds_shared_High_list[extract_number(target_client)]:
+                                            if count_patiënts('ELV_part')+ count_place_reserved('ELV_part')<n_beds_shared_High_list[extract_number(target_client)]:
                                                 p_acc_opn = np.random.uniform(0,1)
                                                 if (current_time - math.floor(current_time) <= time_max_opn_ELV and math.floor(current_time) % 7 in [1,2,3,4,5]and current_time-math.floor(current_time)>=ELV_start_time) or p_acc_opn <= p_opn_weekend: 
                                                     # voor 17h en geen weekend of prob accept!
@@ -4540,7 +4540,7 @@ with col2:
                                     elif 'HOS_GRZ' in client_dict[target_client]['journey']:
                                         if Check_space_partial_beds('HOS_GRZ') >= n_beds_High_Complex_list[extract_number(target_client)]: #Waiting list
                                             
-                                            if count_patients('ELV_part')+ count_place_reserved('ELV_part')<n_beds_shared_High_list[extract_number(target_client)]:
+                                            if count_patiënts('ELV_part')+ count_place_reserved('ELV_part')<n_beds_shared_High_list[extract_number(target_client)]:
                                                 p_acc_opn = np.random.uniform(0,1)
                                                 if (current_time - math.floor(current_time) <= time_max_opn_ELV and math.floor(current_time) % 7 in [1,2,3,4,5]and current_time-math.floor(current_time)>=ELV_start_time) or p_acc_opn <= p_opn_weekend: 
                                                     # voor 17h en geen weekend of prob accept!
@@ -4651,7 +4651,7 @@ with col2:
                                     
                                     
                             elif Scen_Total_Sharing:
-                                if count_patients('ELV_TOT')+ count_place_reserved('ELV_TOT')<n_beds_ELV_total_list[extract_number(target_client)]:
+                                if count_patiënts('ELV_TOT')+ count_place_reserved('ELV_TOT')<n_beds_ELV_total_list[extract_number(target_client)]:
                                     p_acc_opn = np.random.uniform(0,1)
                                     if (current_time - math.floor(current_time) <= time_max_opn_ELV and math.floor(current_time) % 7 in [1,2,3,4,5]and current_time-math.floor(current_time)>=ELV_start_time) or p_acc_opn <= p_opn_weekend: 
                                         # voor 17h en geen weekend of prob accept!
@@ -4745,7 +4745,7 @@ with col2:
                             cur_nr_ELV_Tot = 0
                             
                             for i in range(n_loc):
-                                cur_nr_ELV_Tot+= count_patients('ELV_High_'+str(i)) + count_patients('ELV_Low_'+str(i)) +count_patients('ELV_part_'+str(i)) +count_patients('ELV_TOT_'+str(i)) +count_patients('ELV_EMDR_'+str(i))
+                                cur_nr_ELV_Tot+= count_patiënts('ELV_High_'+str(i)) + count_patiënts('ELV_Low_'+str(i)) +count_patiënts('ELV_part_'+str(i)) +count_patiënts('ELV_TOT_'+str(i)) +count_patiënts('ELV_EMDR_'+str(i))
                                 abs_aanw_list.append(cur_nr_ELV_Tot)
                                 if Scen_shared_beds_Full:
                                     if (cur_nr_ELV_Tot/(sum(n_beds_ELV_High_list) + sum(n_beds_ELV_Low_list) +sum(beds_Emergency_list)))>1:
@@ -4772,7 +4772,7 @@ with col2:
                             cur_nr_ELV_High =0
                             cur_nr_ELV_Total = 0
                             for i in range(n_loc):
-                                cur_nr_ELV_High += count_patients('ELV_High_'+str(i)) +count_patients('ELV_part_'+str(i)) +count_patients('ELV_EMDR_'+str(i))
+                                cur_nr_ELV_High += count_patiënts('ELV_High_'+str(i)) +count_patiënts('ELV_part_'+str(i)) +count_patiënts('ELV_EMDR_'+str(i))
                                 abs_aanw_High_list.append(cur_nr_ELV_High)
                             if Scen_Total_Sharing!= True and sum(n_beds_ELV_High_list) >0:
                                 bz_gr = cur_nr_ELV_High/sum(n_beds_ELV_High_list)
@@ -4794,21 +4794,21 @@ with col2:
                                     # check bezettingsgraad
                                     cur_nr_ELV_Low=0
                                     for i in range(n_loc):
-                                        cur_nr_ELV_Low += count_patients('ELV_Low')
+                                        cur_nr_ELV_Low += count_patiënts('ELV_Low')
                                     bez_gr_Low_list.append((cur_nr_ELV_Low/sum(n_beds_ELV_Low_list)))
                                     abs_aanw_Low_list.append(cur_nr_ELV_Low)
         
                             cur_nr_EMDR = 0
                             if sum(beds_Emergency_list)>0:
                                 for loc in range(n_loc):
-                                    cur_nr_EMDR += count_patients('ELV_EMDR_'+str(loc))
+                                    cur_nr_EMDR += count_patiënts('ELV_EMDR_'+str(loc))
                                 bez_gr_EMDR_list.append(cur_nr_EMDR/sum(beds_Emergency_list))
                             
                                 
                             #bezettingsgraad TRW
                             if Scen_tr_ward:
                                 for loc in range(n_loc):
-                                    cur_nr_TRW += count_patients('TRW_'+str(loc))
+                                    cur_nr_TRW += count_patiënts('TRW_'+str(loc))
                                 if sum(beds_TRW_list)>0:
                                     bez_gr_TRW_list.append(cur_nr_TRW/sum(beds_TRW_list))
                                 abs_aanw_TRW_list.append(cur_nr_TRW) 
@@ -4858,7 +4858,7 @@ with col2:
                         else:#48
                             target_loc = client_dict[target_client]['TRW_discharge_dest']
                         
-                        if target_loc != 'ELV_High': # diegene gaat dus na trw naar huis
+                        if target_loc != 'ELV_High': # diegene gaat dus na trw patiënten die naar huis gaan
         
                             client_dict[target_client]['journey'].append(target_loc)
                             client_dict[target_client]['j_times'].append(current_time)
@@ -5271,7 +5271,7 @@ with col2:
         
         
                                 target_client_found = False
-                                if count_patients('ELV_TOT') + count_place_reserved('ELV_TOT') < n_beds_ELV_total_list[extract_number(prev)]:
+                                if count_patiënts('ELV_TOT') + count_place_reserved('ELV_TOT') < n_beds_ELV_total_list[extract_number(prev)]:
                                     if check_first_pref_client(w_tot_dict, extract_number(prev)):#len(list({k:v['Preferred Locatie']  for (k,v) in w_tot_dict.items()if v['Preferred Locatie']==extract_number(prev)}.values()))>0:#len(w_tot_dict)>0:
                                         target_client_found = True
                                         target_client = check_first_pref_client(w_tot_dict, extract_number(prev))
@@ -5353,7 +5353,7 @@ with col2:
                                     time_until_placement = exp(adm_days)                 
         
                                     if target_client_found: #and 
-                                        if count_patients('ELV_Low')+count_place_reserved('ELV_Low')<n_beds_ELV_Low_list[extract_number(target_client)]:
+                                        if count_patiënts('ELV_Low')+count_place_reserved('ELV_Low')<n_beds_ELV_Low_list[extract_number(target_client)]:
                                             p_acc_opn = np.random.uniform(0,1)
             
                                             # als geen weekend of geen avond of p_acc_opn door toeval
@@ -5777,7 +5777,7 @@ with col2:
                                         
                                         elif Scen_shared_beds_Full :
                                     
-                                            if count_patients('ELV_High') + count_place_reserved('ELV_High') < n_beds_ELV_High_list[extract_number(prev)]:
+                                            if count_patiënts('ELV_High') + count_place_reserved('ELV_High') < n_beds_ELV_High_list[extract_number(prev)]:
                                                 p_acc_opn = np.random.uniform(0,1)
                 
                                                 # als geen weekend of geen avond of p_acc_opn door toeval
@@ -5875,7 +5875,7 @@ with col2:
             
                                                 move_to_ELV_High(target_client, time_until_placement)
                                             elif 'ELV_part_' +str(extract_number(prev)) in client_dict[target_client]['journey'] :#4
-                                                #if count_patients('ELV_part') + count_place_reserved('ELV_part') < n_beds_shared_High_list[extract_number(prev)]:
+                                                #if count_patiënts('ELV_part') + count_place_reserved('ELV_part') < n_beds_shared_High_list[extract_number(prev)]:
                                                 p_acc_opn = np.random.uniform(0,1)
             
                                                 # als geen weekend of geen avond of p_acc_opn door toeval
@@ -6072,7 +6072,7 @@ with col2:
                     perc_with_HOSP_adm_list.append(0)
                     number_with_HOSP_Adm_HOSP.append(0)
         
-                # nr patient replacements
+                # nr patiënt replacements
                 nr_pat_repl = np.mean(list({k:len((v['journey']))-1 for (k,v) in output_dict.items()\
                                    }.values()))
                 nr_pat_repl_list.append(nr_pat_repl)
@@ -6242,7 +6242,7 @@ with col2:
         arr_GPR_High = input.loc[loop_nr,'Aankomst vanaf Huisarts Hoog Complex per dag']
         arr_GPR_Low = input.loc[loop_nr,'Aankomst Laag Complexe zorg vanaf de Huisarts']
         arr_EMD = input.loc[loop_nr,'Aankomst vanaf de Spoedeisendehulp per dag']
-        n_pat_per_nurse= input.loc[loop_nr,'Maximaal aantal patienten per verpleegkundige']
+        n_pat_per_nurse= input.loc[loop_nr,'Maximaal aantal patiënten per verpleegkundige']
         eff_beds_ELV_High = []
         eff_beds_GRZ = []
         eff_beds_HC = []
@@ -6360,61 +6360,61 @@ with col2:
         arr_GPR_High = input.loc[loop_nr,'Aankomst vanaf Huisarts Hoog Complex per dag']
         arr_GPR_Low = input.loc[loop_nr,'Aankomst Laag Complexe zorg vanaf de Huisarts']
         arr_EMD = input.loc[loop_nr,'Aankomst vanaf de Spoedeisendehulp per dag']
-        n_pat_per_nurse= input.loc[loop_nr,'Maximaal aantal patienten per verpleegkundige']
+        n_pat_per_nurse= input.loc[loop_nr,'Maximaal aantal patiënten per verpleegkundige']
         
-        out_p_Home_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg naar Huis']/100
-        out_p_Dead_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg Dood']/100
-        out_p_WMO_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg WMO']/100
-        out_p_WLZ_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg WLZ']/100
+        out_p_Home_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg patiënten die naar huis gaan']/100
+        out_p_Dead_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg patiënten dat komt te overlijden']/100
+        out_p_patiënten die naar WMO gaan_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg patiënten die naar WMO gaan']/100
+        out_p_patiënten die naar WLZ gaan_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg patiënten die naar WLZ gaan']/100
         out_p_GRZV_GRZ = 0# input.loc[loop_nr,'Percentage Geriatrische Zorg GRZ care GRZ']/100
-        out_p_Pall_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg naar Huis met aanpassingen']/100
+        out_p_Pall_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg patiënten die naar huis gaan met aanpassingen']/100
         
-        serv_Home_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg naar Huis']
-        serv_Dead_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg Dood']
+        serv_Home_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar huis gaan']
+        serv_Dead_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten dat komt te overlijden']
         serv_GRZV_GRZ = 0#1/input.loc[loop_nr,'serv_GRZV_GRZ']
-        serv_Pall_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg naar Huis met aanpassingen']
-        serv_WMO_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg WMO']
-        serv_WLZ_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg WLZ']
+        serv_Pall_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar huis gaan met aanpassingen']
+        serv_patiënten die naar WMO gaan_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar WMO gaan']
+        serv_patiënten die naar WLZ gaan_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar WLZ gaan']
         
         
-        out_p_Home_High = input.loc[loop_nr,'Percentage Hoog Complex naar Huis']/100
-        out_p_Dead_High = input.loc[loop_nr,'Percentage Hoog Complex Dood']/100
-        out_p_WMO_High = input.loc[loop_nr,'Percentage Hoog Complex WMO']/100
-        out_p_WLZ_High = input.loc[loop_nr,'Percentage Hoog Complex WLZ']/100
+        out_p_Home_High = input.loc[loop_nr,'Percentage Hoog Complex patiënten die naar huis gaan']/100
+        out_p_Dead_High = input.loc[loop_nr,'Percentage Hoog Complex patiënten dat komt te overlijden']/100
+        out_p_patiënten die naar WMO gaan_High = input.loc[loop_nr,'Percentage Hoog Complex patiënten die naar WMO gaan']/100
+        out_p_patiënten die naar WLZ gaan_High = input.loc[loop_nr,'Percentage Hoog Complex patiënten die naar WLZ gaan']/100
         out_p_GRZV_High = input.loc[loop_nr,'Percentage Hoog Complex naar Geriatrische Zorg']/100
-        out_p_Pall_High = input.loc[loop_nr,'Percentage Hoog Complex naar Huis met aanpassingen']/100
+        out_p_Pall_High = input.loc[loop_nr,'Percentage Hoog Complex patiënten die naar huis gaan met aanpassingen']/100
         
-        out_p_Home_Low = input.loc[loop_nr,'Percentage Laag Complex naar Huis']/100
-        out_p_Dead_Low = input.loc[loop_nr,'Percentage Laag Complex Dood']/100
-        out_p_WMO_Low = input.loc[loop_nr,'Percentage Laag Complex WMO']/100
-        out_p_WLZ_Low = input.loc[loop_nr,'Percentage Laag Complex WLZ']/100
+        out_p_Home_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar huis gaan']/100
+        out_p_Dead_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten dat komt te overlijden']/100
+        out_p_patiënten die naar WMO gaan_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar WMO gaan']/100
+        out_p_patiënten die naar WLZ gaan_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar WLZ gaan']/100
         out_p_GRZV_Low = input.loc[loop_nr,'Percentage Laag Complex naar Geriatrische Zorg']/100
-        out_p_Pall_Low = input.loc[loop_nr,'Percentage Laag Complex naar Huis met aanpassingen']/100
+        out_p_Pall_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar huis gaan met aanpassingen']/100
         
-        serv_Home_High = 1/input.loc[loop_nr,'Ligduur Hoog Complex naar Huis']
-        serv_Dead_High = 1/input.loc[loop_nr,'Ligduur Hoog Complex Dood']
+        serv_Home_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar huis gaan']
+        serv_Dead_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten dat komt te overlijden']
         
-        serv_GRZV_High = 1/input.loc[loop_nr,'Ligduur Hoog Complex naar Geriatrische Zorg']
-        serv_Pall_High = 1/input.loc[loop_nr,'Ligduur Hoog Complex naar Huis met aanpassingen']
-        serv_WMO_High = 1/input.loc[loop_nr,'Ligduur Hoog Complex WMO']
-        serv_WLZ_High = 1/input.loc[loop_nr,'Ligduur Hoog Complex WLZ']
+        serv_GRZV_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex naar Geriatrische Zorg']
+        serv_Pall_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar huis gaan met aanpassingen']
+        serv_patiënten die naar WMO gaan_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar WMO gaan']
+        serv_patiënten die naar WLZ gaan_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar WLZ gaan']
         
-        serv_Home_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex naar Huis']
-        serv_Dead_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex Dood']
+        serv_Home_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar huis gaan']
+        serv_Dead_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten dat komt te overlijden']
         
-        serv_GRZV_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex Geriatrische Zorg']
-        serv_Pall_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex naar Huis met aanpassingen']
-        serv_WMO_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex WMO']
-        serv_WLZ_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex WLZ']
+        serv_GRZV_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex Geriatrische Zorg']
+        serv_Pall_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar huis gaan met aanpassingen']
+        serv_patiënten die naar WMO gaan_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar WMO gaan']
+        serv_patiënten die naar WLZ gaan_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar WLZ gaan']
 
         arr_ELV_High = arr_HOS_High+arr_GPR_High+arr_HOS_GRZ+arr_EMD
         arr_HC = (arr_HOS_High+arr_GPR_High+arr_EMD)
         arr_GRZ = arr_HOS_GRZ
         arr_ELV_Low = arr_GPR_Low
         arr_Tot = arr_ELV_Low +arr_ELV_High
-        serv_ELV_Low = out_p_Home_Low*serv_Home_Low + out_p_Dead_Low*serv_Dead_Low + out_p_WMO_Low*serv_WMO_Low + out_p_WLZ_Low*serv_WLZ_Low + out_p_GRZV_Low*serv_GRZV_Low + out_p_Pall_Low*serv_Pall_Low
-        serv_GRZ = out_p_Home_GRZ*serv_Home_GRZ + out_p_Dead_GRZ*serv_Dead_GRZ + out_p_WMO_GRZ*serv_WMO_GRZ + out_p_WLZ_GRZ*serv_WLZ_GRZ + out_p_GRZV_GRZ*serv_GRZV_GRZ + out_p_Pall_GRZ*serv_Pall_GRZ
-        serv_HC = out_p_Home_High*serv_Home_High + out_p_Dead_GRZ*serv_Dead_High + out_p_WMO_High*serv_WMO_High + out_p_WLZ_GRZ*serv_WLZ_High + out_p_GRZV_High*serv_GRZV_High + out_p_Pall_High*serv_Pall_High
+        serv_ELV_Low = out_p_Home_Low*serv_Home_Low + out_p_Dead_Low*serv_Dead_Low + out_p_patiënten die naar WMO gaan_Low*serv_patiënten die naar WMO gaan_Low + out_p_patiënten die naar WLZ gaan_Low*serv_patiënten die naar WLZ gaan_Low + out_p_GRZV_Low*serv_GRZV_Low + out_p_Pall_Low*serv_Pall_Low
+        serv_GRZ = out_p_Home_GRZ*serv_Home_GRZ + out_p_Dead_GRZ*serv_Dead_GRZ + out_p_patiënten die naar WMO gaan_GRZ*serv_patiënten die naar WMO gaan_GRZ + out_p_patiënten die naar WLZ gaan_GRZ*serv_patiënten die naar WLZ gaan_GRZ + out_p_GRZV_GRZ*serv_GRZV_GRZ + out_p_Pall_GRZ*serv_Pall_GRZ
+        serv_HC = out_p_Home_High*serv_Home_High + out_p_Dead_GRZ*serv_Dead_High + out_p_patiënten die naar WMO gaan_High*serv_patiënten die naar WMO gaan_High + out_p_patiënten die naar WLZ gaan_GRZ*serv_patiënten die naar WLZ gaan_High + out_p_GRZV_High*serv_GRZV_High + out_p_Pall_High*serv_Pall_High
         serv_ELV_High = (serv_GRZ+serv_HC)/2
         serv_Tot = (serv_ELV_High+serv_ELV_Low)/2
         
