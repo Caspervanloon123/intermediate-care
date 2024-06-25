@@ -99,7 +99,7 @@ with col1:
         "Aantal subruns": 1,
         "Aantal patienten per subrun": 1000,
         "Aantal patienten voor warming": 500,
-        "Observatiekans": 10,
+        "Kans dat patient observatie nodig heeft": 10,
         "Maximaal wachten voor patient van voorkeur verandert (in allocatiemodel)": 30,
     }
     
@@ -131,7 +131,7 @@ with col1:
             "Sluittijd Huisarts (0 correpondeert met 00:00, en 24 correspondeert met 23:59)", "Opnamemogelijkheid in het weekend", "Openingstijd ELV (0 correpondeert met 00:00, en 24 correspondeert met 23:59)", "Sluitingstijd ELV (0 correpondeert met 00:00, en 24 correspondeert met 23:59)"
         ],
         "Overig": [
-            "Maximaal aantal patienten per verpleegkundige", "Transfertijd tussen opname en het bieden van zorg", "Maximaal aantal dagen in observatie",  "Observatiekans", "Maximaal wachten voor patient van voorkeur verandert (in allocatiemodel)"
+            "Maximaal aantal patienten per verpleegkundige", "Transfertijd tussen opname en het bieden van zorg", "Maximaal aantal dagen in observatie",  "Kans dat patient observatie nodig heeft", "Maximaal wachten voor patient van voorkeur verandert (in allocatiemodel)"
         ],
         "Simulatie instellingen":[
             "Aantal subruns", "Aantal patienten per subrun", "Aantal patienten voor warming",
@@ -560,7 +560,7 @@ with col2:
             serv_WMO_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg WMO']
             serv_WLZ_GRZ = 1/input.loc[loop_nr,'Ligduur Geriatrische Zorg WLZ']
 
-            observation_prob = input.loc[loop_nr,'Observatiekans']/100
+            observation_prob = input.loc[loop_nr,'Kans dat patient observatie nodig heeft']/100
         
             # start simulatie
             
