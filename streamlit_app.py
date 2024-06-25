@@ -560,7 +560,7 @@ with col2:
             serv_WMO_GRZ = 1/input.loc[loop_nr,'Geriatrische Zorg patiënten die naar WMO gaan']
             serv_WLZ_GRZ = 1/input.loc[loop_nr,'Geriatrische Zorg patiënten die naar WLZ gaan']
 
-            observation_prob = input.loc[loop_nr,'Kans dat patiënt observatie nodig heeft']/100
+            observation_prob = input.loc[loop_nr,'Kans dat patiënt observatie nodig heeft (%)']/100
         
             # start simulatie
             
