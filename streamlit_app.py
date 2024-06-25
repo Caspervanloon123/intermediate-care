@@ -198,10 +198,7 @@ with col1:
     #st.button('Start Simulation')
 with col2:
     # with col2:
-    loc_names = []
-    for i in range(n_loc):
-        loc_name = st.text_input(f"Enter name for Locatie {i+1}", value=f"Locatie {i+1}")
-        loc_names.append(loc_name)
+    
     if bed_share == "Volledige beddendeling":
         listofzeros = 0
         beds_High = []
@@ -209,11 +206,13 @@ with col2:
         nurs_low = []
         nurs_high = []
         beds_EMRD = []
+        loc_name = [0]*n_loc
         for i in range(0, n_loc):
-            with st.expander(loc_names[i]):#st.expander(st.text_input("",value="Locatie "+str(i+1))):
+            loc_name[i] = st.expander(st.text_input("",value="Locatie "+str(i+1)))
+            with loc_name:
                 # st.text_input("Locatie name",value="Locatie "+str(i+1))
                 #st.title('Locatie ' + str(i+1))
-                beds_ELV_High = st.number_input(f"Number of ELV High Complex beds loc_names[i] ", min_value=0, step=1, value=0, format="%d" )
+                beds_ELV_High = st.number_input(f"Number of ELV High Complex beds {loc_name[i]} ", min_value=0, step=1, value=0, format="%d" )
                 nurs_ELV_High = st.number_input(f"Number of ELV High Complex nurses Locatie {i+1}", min_value=0, step=1, value=0, format="%d" )
                 beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds Locatie {i+1}", min_value=0, step=1, value=0, format="%d" )
                 nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses Locatie {i+1}", min_value=0, step=1, value=0, format="%d" )
