@@ -6504,6 +6504,7 @@ with col3:
 
         # Convert the inputs dictionary to a DataFrame
         df1 = df_tot
+        
         st_out = st.empty()
         sys.stdout = st_out
         st.header("Checks")
@@ -6515,6 +6516,16 @@ with col3:
         with st.spinner('Running...'):
             output_df = simulate(df1)[0]
             result = simulate(df1)[1]
+            # Function to check if a column is binomial
+            def is_binomial(series):
+                unique_values = series.dropna().unique()
+                return sorted(unique_values) in ([0, 1], [0.0, 1.0], [False, True])
+            
+            # Apply rounding only to float columns that are not binomial
+            for col in output_df.select_dtypes(include=['float']):
+                if not is_binomial(output_df[col]):
+                    output_df[col] = output_df[col].round(2)
+
             # Create a flag to control the simulation loop
             
             
