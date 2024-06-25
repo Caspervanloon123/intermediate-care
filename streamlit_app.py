@@ -65,7 +65,7 @@ with col1:
         "Geriatrische Zorg patiënten die naar WLZ gaan": 47.8,
         "Laag Complex patiënten die naar huis gaan": 31.1,
         "Laag Complex patiënten dat komt te overlijden": 22.9,
-        "Laag Complex die naar Geriatrische Zorg gaan": 29.8,
+        "Laag Complex patiënten die naar Geriatrische Zorg gaan": 29.8,
         "Laag Complex patiënten die naar huis gaan met aanpassingen": 43.9,
         "Laag Complex patiënten die naar WMO gaan": 22.9,
         "Laag Complex patiënten die naar WLZ gaan": 47.8,
@@ -84,7 +84,7 @@ with col1:
         "Percentage Laag Complex patiënten dat komt te overlijden": 2.0,
         "Percentage Laag Complex patiënten die naar WMO gaan": 2.0,
         "Percentage Laag Complex patiënten die naar WLZ gaan": 10.0,
-        "Percentage Laag Complex naar Geriatrische Zorg": 2.0,
+        "Percentage Laag Complex patiënten die naar Geriatrische Zorg gaan": 2.0,
         "Percentage Laag Complex patiënten die naar huis gaan met aanpassingen": 14.0,
         "Spoedeisendehulp openingstijd ": 0,
         "Spoedeisendehulp sluitingstijd ": 24,
@@ -118,13 +118,13 @@ with col1:
         "Gemiddelde ligduur in dagen van ": [
             "Hoog Complex patiënten die naar huis gaan", "Geriatrische Zorg patiënten die naar huis gaan", "Hoog Complex patiënten dat komt te overlijden", "Geriatrische Zorg patiënten dat komt te overlijden", "Hoog Complex die naar Geriatrische Zorg gaan",
              "Hoog Complex patiënten die naar huis gaan met aanpassingen", "Geriatrische Zorg patiënten die naar huis gaan met aanpassingen", "Hoog Complex patiënten die naar WMO gaan", "Hoog Complex patiënten die naar WLZ gaan", "Geriatrische Zorg patiënten die naar WMO gaan",
-            "Geriatrische Zorg patiënten die naar WLZ gaan", "Laag Complex patiënten die naar huis gaan", "Laag Complex patiënten dat komt te overlijden", "Laag Complex die naar Geriatrische Zorg gaan", "Laag Complex patiënten die naar huis gaan met aanpassingen", "Laag Complex patiënten die naar WMO gaan",
+            "Geriatrische Zorg patiënten die naar WLZ gaan", "Laag Complex patiënten die naar huis gaan", "Laag Complex patiënten dat komt te overlijden", "Laag Complex patiënten die naar Geriatrische Zorg gaan", "Laag Complex patiënten die naar huis gaan met aanpassingen", "Laag Complex patiënten die naar WMO gaan",
             "Laag Complex patiënten die naar WLZ gaan"
         ],
         "Uitstroomkansen (%)": [
             "Percentage Hoog Complex patiënten die naar huis gaan", "Percentage Geriatrische Zorg patiënten die naar huis gaan", "Percentage Hoog Complex patiënten dat komt te overlijden", "Percentage Geriatrische Zorg patiënten dat komt te overlijden", "Percentage Hoog Complex patiënten die naar WMO gaan", "Percentage Geriatrische Zorg patiënten die naar WMO gaan",
             "Percentage Hoog Complex patiënten die naar WLZ gaan", "Percentage Geriatrische Zorg patiënten die naar WLZ gaan", "Percentage Hoog Complex die naar Geriatrische Zorg gaan", "Percentage Hoog Complex patiënten die naar huis gaan met aanpassingen", "Percentage Geriatrische Zorg patiënten die naar huis gaan met aanpassingen",
-            "Percentage Laag Complex patiënten die naar huis gaan", "Percentage Laag Complex patiënten dat komt te overlijden", "Percentage Laag Complex patiënten die naar WMO gaan", "Percentage Laag Complex patiënten die naar WLZ gaan", "Percentage Laag Complex naar Geriatrische Zorg", "Percentage Laag Complex patiënten die naar huis gaan met aanpassingen"
+            "Percentage Laag Complex patiënten die naar huis gaan", "Percentage Laag Complex patiënten dat komt te overlijden", "Percentage Laag Complex patiënten die naar WMO gaan", "Percentage Laag Complex patiënten die naar WLZ gaan", "Percentage Laag Complex patiënten die naar Geriatrische Zorg gaan", "Percentage Laag Complex patiënten die naar huis gaan met aanpassingen"
         ],
         "Openingstijden (0 correpondeert met 00:00, en 24 correspondeert met 23:59)": [
             "Spoedeisendehulp openingstijd ", "Spoedeisendehulp sluitingstijd ", "Openingstijd Huisarts ",
@@ -495,7 +495,7 @@ with col2:
             out_p_Dead_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten dat komt te overlijden']/100
             out_p_WMO_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar WMO gaan']/100
             out_p_WLZ_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar WLZ gaan']/100
-            out_p_GRZV_Low = input.loc[loop_nr,'Percentage Laag Complex naar Geriatrische Zorg']/100
+            out_p_GRZV_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar Geriatrische Zorg gaan']/100
             out_p_Pall_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar huis gaan met aanpassingen']/100
             
             serv_Home_High = 1/input.loc[loop_nr,'Hoog Complex patiënten die naar huis gaan']
@@ -509,7 +509,7 @@ with col2:
             serv_Home_Low = 1/input.loc[loop_nr,'Laag Complex patiënten die naar huis gaan']
             serv_Dead_Low = 1/input.loc[loop_nr,'Laag Complex patiënten dat komt te overlijden']
             
-            serv_GRZV_Low = 1/input.loc[loop_nr,'Laag Complex die naar Geriatrische Zorg gaan']
+            serv_GRZV_Low = 1/input.loc[loop_nr,'Percentage Laag Complex patiënten die naar Geriatrische Zorg gaan']
             serv_Pall_Low = 1/input.loc[loop_nr,'Laag Complex patiënten die naar huis gaan met aanpassingen']
             serv_WMO_Low = 1/input.loc[loop_nr,'Laag Complex patiënten die naar WMO gaan']
             serv_WLZ_Low = 1/input.loc[loop_nr,'Laag Complex patiënten die naar WLZ gaan']
@@ -6388,7 +6388,7 @@ with col2:
         out_p_Dead_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten dat komt te overlijden']/100
         out_p_WMO_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar WMO gaan']/100
         out_p_WLZ_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar WLZ gaan']/100
-        out_p_GRZV_Low = input.loc[loop_nr,'Percentage Laag Complex naar Geriatrische Zorg']/100
+        out_p_GRZV_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar Geriatrische Zorg gaan']/100
         out_p_Pall_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar huis gaan met aanpassingen']/100
         
         serv_Home_High = 1/input.loc[loop_nr,'Hoog Complex patiënten die naar huis gaan']
@@ -6402,7 +6402,7 @@ with col2:
         serv_Home_Low = 1/input.loc[loop_nr,'Laag Complex patiënten die naar huis gaan']
         serv_Dead_Low = 1/input.loc[loop_nr,'Laag Complex patiënten dat komt te overlijden']
         
-        serv_GRZV_Low = 1/input.loc[loop_nr,'Laag Complex die naar Geriatrische Zorg gaan']
+        serv_GRZV_Low = 1/input.loc[loop_nr,'Percentage Laag Complex patiënten die naar Geriatrische Zorg gaan']
         serv_Pall_Low = 1/input.loc[loop_nr,'Laag Complex patiënten die naar huis gaan met aanpassingen']
         serv_WMO_Low = 1/input.loc[loop_nr,'Laag Complex patiënten die naar WMO gaan']
         serv_WLZ_Low = 1/input.loc[loop_nr,'Laag Complex patiënten die naar WLZ gaan']
