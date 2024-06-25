@@ -51,24 +51,24 @@ with col1:
         "Aankomst vanaf Huisarts Hoog Complex per dag": 1.34,
         "Aankomst vanaf de Spoedeisendehulp per dag": 0.83,
         "Aankomst Geriatrische Zorg in Ziekenhuis per dag": 0.54,
-        "Aankomst Laag Complexe zorg vanaf de Huisarts": 1.91,
-        "Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar huis gaan": 31.1,
-        "Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar huis gaan": 31.1,
-        "Gemiddelde ligduur in dagen van  Hoog Complex patiënten dat komt te overlijden": 22.9,
-        "Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten dat komt te overlijden": 22.9,
-        "Gemiddelde ligduur in dagen van  Hoog Complex die naar Geriatrische Zorg gaan": 29.8,
-        "Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar huis gaan met aanpassingen": 43.9,
-        "Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar huis gaan met aanpassingen": 43.9,
-        "Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar WMO gaan": 22.9,
-        "Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar WLZ gaan": 47.8,
-        "Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar WMO gaan": 22.9,
-        "Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar WLZ gaan": 47.8,
-        "Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar huis gaan": 31.1,
-        "Gemiddelde ligduur in dagen van  Laag Complex patiënten dat komt te overlijden": 22.9,
-        "Gemiddelde ligduur in dagen van  Laag Complex die naar Geriatrische Zorg gaan": 29.8,
-        "Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar huis gaan met aanpassingen": 43.9,
-        "Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar WMO gaan": 22.9,
-        "Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar WLZ gaan": 47.8,
+        "Aankomst Laag Complexe zorg vanaf de Huisarts per dag": 1.91,
+        "Ligduur in dagen van  Hoog Complex patiënten die naar huis gaan": 31.1,
+        "Ligduur in dagen van  Geriatrische Zorg patiënten die naar huis gaan": 31.1,
+        "Ligduur in dagen van  Hoog Complex patiënten dat komt te overlijden": 22.9,
+        "Ligduur in dagen van  Geriatrische Zorg patiënten dat komt te overlijden": 22.9,
+        "Ligduur in dagen van  Hoog Complex die naar Geriatrische Zorg gaan": 29.8,
+        "Ligduur in dagen van  Hoog Complex patiënten die naar huis gaan met aanpassingen": 43.9,
+        "Ligduur in dagen van  Geriatrische Zorg patiënten die naar huis gaan met aanpassingen": 43.9,
+        "Ligduur in dagen van  Hoog Complex patiënten die naar WMO gaan": 22.9,
+        "Ligduur in dagen van  Hoog Complex patiënten die naar WLZ gaan": 47.8,
+        "Ligduur in dagen van  Geriatrische Zorg patiënten die naar WMO gaan": 22.9,
+        "Ligduur in dagen van  Geriatrische Zorg patiënten die naar WLZ gaan": 47.8,
+        "Ligduur in dagen van  Laag Complex patiënten die naar huis gaan": 31.1,
+        "Ligduur in dagen van  Laag Complex patiënten dat komt te overlijden": 22.9,
+        "Ligduur in dagen van  Laag Complex die naar Geriatrische Zorg gaan": 29.8,
+        "Ligduur in dagen van  Laag Complex patiënten die naar huis gaan met aanpassingen": 43.9,
+        "Ligduur in dagen van  Laag Complex patiënten die naar WMO gaan": 22.9,
+        "Ligduur in dagen van  Laag Complex patiënten die naar WLZ gaan": 47.8,
         "Percentage Hoog Complex patiënten die naar huis gaan": 57.8,
         "Percentage Geriatrische Zorg patiënten die naar huis gaan": 60.0,
         "Percentage Hoog Complex patiënten dat komt te overlijden": 6.0,
@@ -114,12 +114,12 @@ with col1:
     
     # Grouped variables
     groups = {
-        "Aankomsten": ["Aankomst Hoog Complex vanuit ziekenhuis per dag", "Aankomst vanaf Huisarts Hoog Complex per dag", "Aankomst vanaf de Spoedeisendehulp per dag", "Aankomst Geriatrische Zorg in Ziekenhuis per dag", "Aankomst Laag Complexe zorg vanaf de Huisarts"],
+        "Aankomsten": ["Aankomst Hoog Complex vanuit ziekenhuis per dag", "Aankomst vanaf Huisarts Hoog Complex per dag", "Aankomst vanaf de Spoedeisendehulp per dag", "Aankomst Geriatrische Zorg in Ziekenhuis per dag", "Aankomst Laag Complexe zorg vanaf de Huisarts per dag"],
         "Gemiddelde ligduur in dagen van ": [
-            "Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar huis gaan", "Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar huis gaan", "Gemiddelde ligduur in dagen van  Hoog Complex patiënten dat komt te overlijden", "Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten dat komt te overlijden", "Gemiddelde ligduur in dagen van  Hoog Complex die naar Geriatrische Zorg gaan",
-             "Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar huis gaan met aanpassingen", "Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar huis gaan met aanpassingen", "Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar WMO gaan", "Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar WLZ gaan", "Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar WMO gaan",
-            "Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar WLZ gaan", "Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar huis gaan", "Gemiddelde ligduur in dagen van  Laag Complex patiënten dat komt te overlijden", "Gemiddelde ligduur in dagen van  Laag Complex die naar Geriatrische Zorg gaan", "Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar huis gaan met aanpassingen", "Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar WMO gaan",
-            "Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar WLZ gaan"
+            "Ligduur in dagen van  Hoog Complex patiënten die naar huis gaan", "Ligduur in dagen van  Geriatrische Zorg patiënten die naar huis gaan", "Ligduur in dagen van  Hoog Complex patiënten dat komt te overlijden", "Ligduur in dagen van  Geriatrische Zorg patiënten dat komt te overlijden", "Ligduur in dagen van  Hoog Complex die naar Geriatrische Zorg gaan",
+             "Ligduur in dagen van  Hoog Complex patiënten die naar huis gaan met aanpassingen", "Ligduur in dagen van  Geriatrische Zorg patiënten die naar huis gaan met aanpassingen", "Ligduur in dagen van  Hoog Complex patiënten die naar WMO gaan", "Ligduur in dagen van  Hoog Complex patiënten die naar WLZ gaan", "Ligduur in dagen van  Geriatrische Zorg patiënten die naar WMO gaan",
+            "Ligduur in dagen van  Geriatrische Zorg patiënten die naar WLZ gaan", "Ligduur in dagen van  Laag Complex patiënten die naar huis gaan", "Ligduur in dagen van  Laag Complex patiënten dat komt te overlijden", "Ligduur in dagen van  Laag Complex die naar Geriatrische Zorg gaan", "Ligduur in dagen van  Laag Complex patiënten die naar huis gaan met aanpassingen", "Ligduur in dagen van  Laag Complex patiënten die naar WMO gaan",
+            "Ligduur in dagen van  Laag Complex patiënten die naar WLZ gaan"
         ],
         "Uitstroomkansen (%)": [
             "Percentage Hoog Complex patiënten die naar huis gaan", "Percentage Geriatrische Zorg patiënten die naar huis gaan", "Percentage Hoog Complex patiënten dat komt te overlijden", "Percentage Geriatrische Zorg patiënten dat komt te overlijden", "Percentage Hoog Complex patiënten die naar WMO gaan", "Percentage Geriatrische Zorg patiënten die naar WMO gaan",
@@ -478,7 +478,7 @@ with col2:
             arr_HOS_High =  input.loc[loop_nr,'Aankomst Hoog Complex vanuit ziekenhuis per dag']
             arr_HOS_GRZ = input.loc[loop_nr,'Aankomst Geriatrische Zorg in Ziekenhuis per dag']
             arr_GPR_High = input.loc[loop_nr,'Aankomst vanaf Huisarts Hoog Complex per dag']
-            arr_GPR_Low = input.loc[loop_nr,'Aankomst Laag Complexe zorg vanaf de Huisarts']
+            arr_GPR_Low = input.loc[loop_nr,'Aankomst Laag Complexe zorg vanaf de Huisarts per dag']
         
             arr_EMD = input.loc[loop_nr,'Aankomst vanaf de Spoedeisendehulp per dag']
             
@@ -498,21 +498,21 @@ with col2:
             out_p_GRZV_Low = input.loc[loop_nr,'Percentage Laag Complex naar Geriatrische Zorg']/100
             out_p_Pall_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar huis gaan met aanpassingen']/100
             
-            serv_Home_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar huis gaan']
-            serv_Dead_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten dat komt te overlijden']
+            serv_Home_High = 1/input.loc[loop_nr,'Ligduur in dagen van  Hoog Complex patiënten die naar huis gaan']
+            serv_Dead_High = 1/input.loc[loop_nr,'Ligduur in dagen van  Hoog Complex patiënten dat komt te overlijden']
             
-            serv_GRZV_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex die naar Geriatrische Zorg gaan']
-            serv_Pall_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar huis gaan met aanpassingen']
-            serv_WMO_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar WMO gaan']
-            serv_WLZ_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar WLZ gaan']
+            serv_GRZV_High = 1/input.loc[loop_nr,'Ligduur in dagen van  Hoog Complex die naar Geriatrische Zorg gaan']
+            serv_Pall_High = 1/input.loc[loop_nr,'Ligduur in dagen van  Hoog Complex patiënten die naar huis gaan met aanpassingen']
+            serv_WMO_High = 1/input.loc[loop_nr,'Ligduur in dagen van  Hoog Complex patiënten die naar WMO gaan']
+            serv_WLZ_High = 1/input.loc[loop_nr,'Ligduur in dagen van  Hoog Complex patiënten die naar WLZ gaan']
             
-            serv_Home_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar huis gaan']
-            serv_Dead_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten dat komt te overlijden']
+            serv_Home_Low = 1/input.loc[loop_nr,'Ligduur in dagen van  Laag Complex patiënten die naar huis gaan']
+            serv_Dead_Low = 1/input.loc[loop_nr,'Ligduur in dagen van  Laag Complex patiënten dat komt te overlijden']
             
-            serv_GRZV_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex die naar Geriatrische Zorg gaan']
-            serv_Pall_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar huis gaan met aanpassingen']
-            serv_WMO_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar WMO gaan']
-            serv_WLZ_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar WLZ gaan']
+            serv_GRZV_Low = 1/input.loc[loop_nr,'Ligduur in dagen van  Laag Complex die naar Geriatrische Zorg gaan']
+            serv_Pall_Low = 1/input.loc[loop_nr,'Ligduur in dagen van  Laag Complex patiënten die naar huis gaan met aanpassingen']
+            serv_WMO_Low = 1/input.loc[loop_nr,'Ligduur in dagen van  Laag Complex patiënten die naar WMO gaan']
+            serv_WLZ_Low = 1/input.loc[loop_nr,'Ligduur in dagen van  Laag Complex patiënten die naar WLZ gaan']
         
             
             time_max_opn_ELV = input.loc[loop_nr,'Sluitingstijd ELV ']/24
@@ -553,12 +553,12 @@ with col2:
             out_p_GRZV_GRZ = 0# input.loc[loop_nr,'Percentage Geriatrische Zorg GRZ care GRZ']/100
             out_p_Pall_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg patiënten die naar huis gaan met aanpassingen']/100
             
-            serv_Home_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar huis gaan']
-            serv_Dead_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten dat komt te overlijden']
+            serv_Home_GRZ = 1/input.loc[loop_nr,'Ligduur in dagen van  Geriatrische Zorg patiënten die naar huis gaan']
+            serv_Dead_GRZ = 1/input.loc[loop_nr,'Ligduur in dagen van  Geriatrische Zorg patiënten dat komt te overlijden']
             serv_GRZV_GRZ = 0#1/input.loc[loop_nr,'serv_GRZV_GRZ']
-            serv_Pall_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar huis gaan met aanpassingen']
-            serv_WMO_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar WMO gaan']
-            serv_WLZ_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar WLZ gaan']
+            serv_Pall_GRZ = 1/input.loc[loop_nr,'Ligduur in dagen van  Geriatrische Zorg patiënten die naar huis gaan met aanpassingen']
+            serv_WMO_GRZ = 1/input.loc[loop_nr,'Ligduur in dagen van  Geriatrische Zorg patiënten die naar WMO gaan']
+            serv_WLZ_GRZ = 1/input.loc[loop_nr,'Ligduur in dagen van  Geriatrische Zorg patiënten die naar WLZ gaan']
 
             observation_prob = input.loc[loop_nr,'Kans dat patiënt observatie nodig heeft']/100
         
@@ -6240,7 +6240,7 @@ with col2:
         arr_HOS_High =  input.loc[loop_nr,'Aankomst Hoog Complex vanuit ziekenhuis per dag']
         arr_HOS_GRZ = input.loc[loop_nr,'Aankomst Geriatrische Zorg in Ziekenhuis per dag']
         arr_GPR_High = input.loc[loop_nr,'Aankomst vanaf Huisarts Hoog Complex per dag']
-        arr_GPR_Low = input.loc[loop_nr,'Aankomst Laag Complexe zorg vanaf de Huisarts']
+        arr_GPR_Low = input.loc[loop_nr,'Aankomst Laag Complexe zorg vanaf de Huisarts per dag']
         arr_EMD = input.loc[loop_nr,'Aankomst vanaf de Spoedeisendehulp per dag']
         n_pat_per_nurse= input.loc[loop_nr,'Maximaal aantal patiënten per verpleegkundige']
         eff_beds_ELV_High = []
@@ -6358,7 +6358,7 @@ with col2:
         arr_HOS_High =  input.loc[loop_nr,'Aankomst Hoog Complex vanuit ziekenhuis per dag']
         arr_HOS_GRZ = input.loc[loop_nr,'Aankomst Geriatrische Zorg in Ziekenhuis per dag']
         arr_GPR_High = input.loc[loop_nr,'Aankomst vanaf Huisarts Hoog Complex per dag']
-        arr_GPR_Low = input.loc[loop_nr,'Aankomst Laag Complexe zorg vanaf de Huisarts']
+        arr_GPR_Low = input.loc[loop_nr,'Aankomst Laag Complexe zorg vanaf de Huisarts per dag']
         arr_EMD = input.loc[loop_nr,'Aankomst vanaf de Spoedeisendehulp per dag']
         n_pat_per_nurse= input.loc[loop_nr,'Maximaal aantal patiënten per verpleegkundige']
         
@@ -6369,12 +6369,12 @@ with col2:
         out_p_GRZV_GRZ = 0# input.loc[loop_nr,'Percentage Geriatrische Zorg GRZ care GRZ']/100
         out_p_Pall_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg patiënten die naar huis gaan met aanpassingen']/100
         
-        serv_Home_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar huis gaan']
-        serv_Dead_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten dat komt te overlijden']
+        serv_Home_GRZ = 1/input.loc[loop_nr,'Ligduur in dagen van  Geriatrische Zorg patiënten die naar huis gaan']
+        serv_Dead_GRZ = 1/input.loc[loop_nr,'Ligduur in dagen van  Geriatrische Zorg patiënten dat komt te overlijden']
         serv_GRZV_GRZ = 0#1/input.loc[loop_nr,'serv_GRZV_GRZ']
-        serv_Pall_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar huis gaan met aanpassingen']
-        serv_WMO_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar WMO gaan']
-        servWLZ_GRZ = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Geriatrische Zorg patiënten die naar WLZ gaan']
+        serv_Pall_GRZ = 1/input.loc[loop_nr,'Ligduur in dagen van  Geriatrische Zorg patiënten die naar huis gaan met aanpassingen']
+        serv_WMO_GRZ = 1/input.loc[loop_nr,'Ligduur in dagen van  Geriatrische Zorg patiënten die naar WMO gaan']
+        servWLZ_GRZ = 1/input.loc[loop_nr,'Ligduur in dagen van  Geriatrische Zorg patiënten die naar WLZ gaan']
         
         
         out_p_Home_High = input.loc[loop_nr,'Percentage Hoog Complex patiënten die naar huis gaan']/100
@@ -6391,21 +6391,21 @@ with col2:
         out_p_GRZV_Low = input.loc[loop_nr,'Percentage Laag Complex naar Geriatrische Zorg']/100
         out_p_Pall_Low = input.loc[loop_nr,'Percentage Laag Complex patiënten die naar huis gaan met aanpassingen']/100
         
-        serv_Home_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar huis gaan']
-        serv_Dead_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten dat komt te overlijden']
+        serv_Home_High = 1/input.loc[loop_nr,'Ligduur in dagen van  Hoog Complex patiënten die naar huis gaan']
+        serv_Dead_High = 1/input.loc[loop_nr,'Ligduur in dagen van  Hoog Complex patiënten dat komt te overlijden']
         
-        serv_GRZV_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex die naar Geriatrische Zorg gaan']
-        serv_Pall_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar huis gaan met aanpassingen']
-        serv_WMO_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar WMO gaan']
-        serv_WLZ_High = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Hoog Complex patiënten die naar WLZ gaan']
+        serv_GRZV_High = 1/input.loc[loop_nr,'Ligduur in dagen van  Hoog Complex die naar Geriatrische Zorg gaan']
+        serv_Pall_High = 1/input.loc[loop_nr,'Ligduur in dagen van  Hoog Complex patiënten die naar huis gaan met aanpassingen']
+        serv_WMO_High = 1/input.loc[loop_nr,'Ligduur in dagen van  Hoog Complex patiënten die naar WMO gaan']
+        serv_WLZ_High = 1/input.loc[loop_nr,'Ligduur in dagen van  Hoog Complex patiënten die naar WLZ gaan']
         
-        serv_Home_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar huis gaan']
-        serv_Dead_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten dat komt te overlijden']
+        serv_Home_Low = 1/input.loc[loop_nr,'Ligduur in dagen van  Laag Complex patiënten die naar huis gaan']
+        serv_Dead_Low = 1/input.loc[loop_nr,'Ligduur in dagen van  Laag Complex patiënten dat komt te overlijden']
         
-        serv_GRZV_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex die naar Geriatrische Zorg gaan']
-        serv_Pall_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar huis gaan met aanpassingen']
-        serv_WMO_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar WMO gaan']
-        serv_WLZ_Low = 1/input.loc[loop_nr,'Gemiddelde ligduur in dagen van  Laag Complex patiënten die naar WLZ gaan']
+        serv_GRZV_Low = 1/input.loc[loop_nr,'Ligduur in dagen van  Laag Complex die naar Geriatrische Zorg gaan']
+        serv_Pall_Low = 1/input.loc[loop_nr,'Ligduur in dagen van  Laag Complex patiënten die naar huis gaan met aanpassingen']
+        serv_WMO_Low = 1/input.loc[loop_nr,'Ligduur in dagen van  Laag Complex patiënten die naar WMO gaan']
+        serv_WLZ_Low = 1/input.loc[loop_nr,'Ligduur in dagen van  Laag Complex patiënten die naar WLZ gaan']
 
         arr_ELV_High = arr_HOS_High+arr_GPR_High+arr_HOS_GRZ+arr_EMD
         arr_HC = (arr_HOS_High+arr_GPR_High+arr_EMD)
