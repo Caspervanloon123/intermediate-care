@@ -86,27 +86,27 @@ with col1:
         "Percentage Laag Complex WLZ": 10.0,
         "Percentage Laag Complex naar Geriatrische Zorg": 2.0,
         "Percentage Laag Complex naar Huis met aanpassingen": 14.0,
-        "Spoedeisendehulp openingstijd": 0,
-        "Spoedeisendehulp sluitingstijd": 24,
-        "Openingstijd Huisarts": 8.0,
-        "Sluittijd Huisarts": 17.0,
-        "Opname in het weekend": False,
-        "Openingstijd ELV": 8.0,
-        "Sluitingstijd ELV": 17.0,
-        "Aantal patienten per verpleegkundige": 3,
-        "Transfertijd": 1.5,
-        "Maximaal aantal dagen observatie": 14.0,
+        "Spoedeisendehulp openingstijd (0 correpondeert met 00:00, en 24 correspondeert met 23:59)": 0,
+        "Spoedeisendehulp sluitingstijd (0 correpondeert met 00:00, en 24 correspondeert met 23:59)": 24,
+        "Openingstijd Huisarts (0 correpondeert met 00:00, en 24 correspondeert met 23:59)": 8.0,
+        "Sluittijd Huisarts (0 correpondeert met 00:00, en 24 correspondeert met 23:59)": 17.0,
+        "Opnamemogelijkheid in het weekend": False,
+        "Openingstijd ELV (0 correpondeert met 00:00, en 24 correspondeert met 23:59)": 8.0,
+        "Sluitingstijd ELV (0 correpondeert met 00:00, en 24 correspondeert met 23:59)": 17.0,
+        "Maximaal aantal patienten per verpleegkundige": 3,
+        "Transfertijd tussen opname en het bieden van zorg": 1.5,
+        "Maximaal aantal dagen in observatie": 14.0,
         "Aantal subruns": 1,
         "Aantal patienten per subrun": 1000,
         "Aantal patienten voor warming": 500,
         "Observatiekans": 10,
-        "Maximaal wachten (model)": 30,
+        "Maximaal wachten voor patient van voorkeur verandert (in allocatiemodel)": 30,
     }
     
     
     # List of scenario variables
     scenario_vars_1 = [
-        "Volledige beddendeling", "Geen beddendeling", "Partiële beddendeling", "Observatiebedden", "Totale beddendeling"
+        "Volledige beddendeling (GR en Hoog complex gedeeld)", "Geen beddendeling", "Partiële beddendeling", "Observatiebedden", "Totale beddendeling"
     ]
     scenario_vars = [
         "Scen_shared_beds_Full","Scen_Total_Sharing","Scen_Triage_ward","Scen_NO_Sharing","Scen_Part_bed_share"
@@ -127,11 +127,14 @@ with col1:
             "Percentage Laag Complex naar Huis", "Percentage Laag Complex Dood", "Percentage Laag Complex WMO", "Percentage Laag Complex WLZ", "Percentage Laag Complex naar Geriatrische Zorg", "Percentage Laag Complex naar Huis met aanpassingen"
         ],
         "Openingstijden": [
-            "Spoedeisendehulp openingstijd", "Spoedeisendehulp sluitingstijd", "Openingstijd Huisarts",
-            "Sluittijd Huisarts", "Opname in het weekend", "Openingstijd ELV", "Sluitingstijd ELV"
+            "Spoedeisendehulp openingstijd (0 correpondeert met 00:00, en 24 correspondeert met 23:59)", "Spoedeisendehulp sluitingstijd (0 correpondeert met 00:00, en 24 correspondeert met 23:59)", "Openingstijd Huisarts (0 correpondeert met 00:00, en 24 correspondeert met 23:59)",
+            "Sluittijd Huisarts (0 correpondeert met 00:00, en 24 correspondeert met 23:59)", "Opnamemogelijkheid in het weekend", "Openingstijd ELV (0 correpondeert met 00:00, en 24 correspondeert met 23:59)", "Sluitingstijd ELV (0 correpondeert met 00:00, en 24 correspondeert met 23:59)"
         ],
         "Overig": [
-            "Aantal patienten per verpleegkundige", "Transfertijd", "Maximaal aantal dagen observatie", "Aantal subruns", "Aantal patienten per subrun", "Aantal patienten voor warming", "Observatiekans", "Maximaal wachten (model)"
+            "Maximaal aantal patienten per verpleegkundige", "Transfertijd tussen opname en het bieden van zorg", "Maximaal aantal dagen in observatie",  "Observatiekans", "Maximaal wachten voor patient van voorkeur verandert (in allocatiemodel)"
+        ],
+        "Simulatie instellingen":[
+            "Aantal subruns", "Aantal patienten per subrun", "Aantal patienten voor warming",
         ]
     }
     
@@ -147,7 +150,7 @@ with col1:
     # Dropdown menu for the scenario variables
     dropdown_var = st.selectbox("Beddeling", scenario_vars_1)
     bed_share = dropdown_var
-    if dropdown_var == "Volledige beddendeling":
+    if dropdown_var == "Volledige beddendeling (GR en Hoog complex gedeeld)":
         Inputs_1.loc[0,"Scen_shared_beds_Full"] = True
         Inputs_1.loc[0,"Scen_Total_Sharing"] = False
         Inputs_1.loc[0,"Scen_Triage_ward"] = False
@@ -191,7 +194,7 @@ with col1:
         with st.expander(group_name):
             for var in group_vars:
                 default_value = default_values[var]  # Get default value for the variable
-                if var == "Opname in het weekend":
+                if var == "Opnamemogelijkheid in het weekend":
                     Inputs_1.loc[0, var] = st.checkbox(var)
                 else:
                     Inputs_1.loc[0, var] = st.number_input(var, value=default_value)
@@ -199,7 +202,7 @@ with col1:
 with col2:
     # with col2:
     
-    if bed_share == "Volledige beddendeling":
+    if bed_share == "Volledige beddendeling (GR en Hoog complex gedeeld)":
         listofzeros = 0
         beds_High = []
         beds_Low = []
@@ -212,8 +215,8 @@ with col2:
             with st.expander(loc_name[i]):
                 # st.text_input("Locatie name",value="Locatie "+str(i+1))
                 #st.title('Locatie ' + str(i+1))
-                beds_ELV_High = st.number_input(f"Number of ELV High Complex beds {loc_name[i]}", min_value=0, step=1, value=0, format="%d" )
-                nurs_ELV_High = st.number_input(f"Number of ELV High Complex nurses {loc_name[i]}", min_value=0, step=1, value=0, format="%d" )
+                beds_ELV_High = st.number_input(f"Number of ELV High Complex (GR and High Complex) beds {loc_name[i]}", min_value=0, step=1, value=0, format="%d" )
+                nurs_ELV_High = st.number_input(f"Number of ELV High Complex (GR and High Complex) nurses {loc_name[i]}", min_value=0, step=1, value=0, format="%d" )
                 beds_ELV_Low = st.number_input(f"Number of ELV Low Complex beds {loc_name[i]}", min_value=0, step=1, value=0, format="%d" )
                 nurs_ELV_Low = st.number_input(f"Number of ELV Low Complex nurses {loc_name[i]}", min_value=0, step=1, value=0, format="%d" )
                 beds_ELV_EMRD = st.number_input(f"Number of Emergency beds {loc_name[i]}", min_value=0, step=1, value=0, format="%d" )   
@@ -512,16 +515,16 @@ with col2:
             serv_WLZ_Low = 1/input.loc[loop_nr,'Ligduur Laag Complex WLZ']
         
             
-            time_max_opn_ELV = input.loc[loop_nr,'Sluitingstijd ELV']/24
-            ELV_start_time = input.loc[loop_nr,'Openingstijd ELV']/24
+            time_max_opn_ELV = input.loc[loop_nr,'Sluitingstijd ELV (0 correpondeert met 00:00, en 24 correspondeert met 23:59)']/24
+            ELV_start_time = input.loc[loop_nr,'Openingstijd ELV (0 correpondeert met 00:00, en 24 correspondeert met 23:59)']/24
         
-            EMD_start_time = input.loc[loop_nr,'Spoedeisendehulp openingstijd']/24
-            EMD_end_time = input.loc[loop_nr,'Spoedeisendehulp sluitingstijd']/24
-            GPR_start_time = input.loc[loop_nr,'Openingstijd Huisarts']/24
-            GPR_end_time = input.loc[loop_nr,'Sluittijd Huisarts']/24
+            EMD_start_time = input.loc[loop_nr,'Spoedeisendehulp openingstijd (0 correpondeert met 00:00, en 24 correspondeert met 23:59)']/24
+            EMD_end_time = input.loc[loop_nr,'Spoedeisendehulp sluitingstijd (0 correpondeert met 00:00, en 24 correspondeert met 23:59)']/24
+            GPR_start_time = input.loc[loop_nr,'Openingstijd Huisarts (0 correpondeert met 00:00, en 24 correspondeert met 23:59)']/24
+            GPR_end_time = input.loc[loop_nr,'Sluittijd Huisarts (0 correpondeert met 00:00, en 24 correspondeert met 23:59)']/24
         
             
-            p_opn_weekend = 1 if input.loc[loop_nr,'Opname in het weekend'] else 0
+            p_opn_weekend = 1 if input.loc[loop_nr,'Opnamemogelijkheid in het weekend'] else 0
         
             Scen_tr_ward = input.loc[loop_nr,'Scen_Triage_ward']
             Scen_shared_beds_Full = input.loc[loop_nr,'Scen_shared_beds_Full']
@@ -531,15 +534,15 @@ with col2:
             priority = input.loc[loop_nr,'Priority']
             Project = ''#input.loc[loop_nr,'Project']
             Preference = input.loc[loop_nr,'preference'] #Pref = pref_model, FCFS = FCFS, NO = Only fav Locatie
-            n_patients_per_nurse = input.loc[loop_nr,'Aantal patienten per verpleegkundige']
-            max_wait_time_model = input.loc[loop_nr,'Maximaal wachten (model)']
+            n_patients_per_nurse = input.loc[loop_nr,'Maximaal aantal patienten per verpleegkundige']
+            max_wait_time_model = input.loc[loop_nr,'Maximaal wachten voor patient van voorkeur verandert (in allocatiemodel)']
             
             
             
-            adm_days = 1/input.loc[loop_nr,'Transfertijd']
+            adm_days = 1/input.loc[loop_nr,'Transfertijd tussen opname en het bieden van zorg']
         
             
-            max_days_TRW = input.loc[loop_nr,'Maximaal aantal dagen observatie']
+            max_days_TRW = input.loc[loop_nr,'Maximaal aantal dagen in observatie']
         
         
             
@@ -6239,7 +6242,7 @@ with col2:
         arr_GPR_High = input.loc[loop_nr,'Aankomst vanaf Huisarts Hoog Complex per dag']
         arr_GPR_Low = input.loc[loop_nr,'Aankomst Laag Complexe zorg vanaf de Huisarts']
         arr_EMD = input.loc[loop_nr,'Aankomst vanaf de Spoedeisendehulp per dag']
-        n_pat_per_nurse= input.loc[loop_nr,'Aantal patienten per verpleegkundige']
+        n_pat_per_nurse= input.loc[loop_nr,'Maximaal aantal patienten per verpleegkundige']
         eff_beds_ELV_High = []
         eff_beds_GRZ = []
         eff_beds_HC = []
@@ -6251,7 +6254,7 @@ with col2:
               eff_beds_ELV_High.append(elv_high_complex_nurses[i]*n_pat_per_nurse)  
               eff_beds_ELV_Low.append(elv_low_complex_nurses[i]*n_pat_per_nurse)
             for i in range(len(eff_beds_ELV_High)):
-                st.subheader("Locatie " + str(i+1))
+                st.subheader(loc_names[i])
                 if eff_beds_ELV_High[i] < elv_high_complex_beds[i]:
                     st.write("Aantal ELV Hoog Complex bedden ", elv_high_complex_beds[i], " op locatie ", i+1)
                     st.write("Aantal effectieve bedden ELV Hoog Complex ", eff_beds_ELV_High[i]," op locatie ",i+1)
@@ -6262,7 +6265,7 @@ with col2:
                     st.write("Dus geen verlies van capaciteit op locatie ", i+1)
             st.header("ELV Laag Complex")
             for i in range(len(eff_beds_ELV_Low)):
-                st.subheader("Locatie "+ str(i+1))
+                st.subheader(loc_names[i])
                 if eff_beds_ELV_Low[i] < elv_low_complex_beds[i]:
                     st.write("Aantal ELV Laag Complex bedden ", elv_low_complex_beds[i], " op locatie ", i+1)
                     st.write("Aantal effectieve bedden ELV Laag Complex ", eff_beds_ELV_Low[i]," op locatie ",i+1)
@@ -6279,7 +6282,7 @@ with col2:
               eff_beds_GRZ.append(grz_nurses[i]*n_pat_per_nurse)  
               eff_beds_ELV_Low.append(elv_low_complex_nurses[i]*n_pat_per_nurse)
             for i in range(len(eff_beds_HC)):
-                st.subheader("Locatie "+ str(i+1))
+                st.subheader(loc_names[i])
                 if eff_beds_HC[i] < high_complex_beds[i]:
                     st.write("Aantal Hoog Complex bedden ", high_complex_beds[i], " op locatie ", i+1)
                     st.write("Aantal effectieve bedden Hoog Complex ", eff_beds_HC[i]," op locatie ",i+1)
@@ -6290,7 +6293,7 @@ with col2:
                     st.write("Dus een verlies in capaciteit van ", i+1)
             st.header("GRZ")
             for i in range(len(eff_beds_GRZ)):
-                st.subheader("Locatie "+ str(i+1))
+                st.subheader(loc_names[i])
                 if eff_beds_GRZ[i] < grz_beds[i]:
                     st.write("Aantal GRZ bedden ", grz_beds[i], " op locatie ", i+1)
                     st.write("Aantal effectieve bedden GRZ ", eff_beds_GRZ[i]," op locatie ",i+1)
@@ -6301,7 +6304,7 @@ with col2:
                     st.write("Dus een verlies in capaciteit op locatie ", i+1)
             st.header("ELV Laag Complex")
             for i in range(len(eff_beds_ELV_Low)):
-                st.subheader("Locatie "+ str(i+1))
+                st.subheader(loc_names[i])
                 if eff_beds_ELV_Low[i] < elv_low_complex_beds[i]:
                     st.write("Aantal ELV Laag Complex bedden ", elv_low_complex_beds[i], " op locatie ", i+1)
                     st.write("Aantal effectieve bedden ELV Laag Complex ", eff_beds_ELV_Low[i]," op locatie ",i+1)
@@ -6318,7 +6321,7 @@ with col2:
               eff_beds_total.append(total_nurses[i]*n_pat_per_nurse)  
               
             for i in range(len(eff_beds_total)):
-                st.subheader("Locatie "+ str(i+1))
+                st.subheader(loc_names[i])
                 if eff_beds_total[i] < total_beds[i]:
                     st.write("Aantal ELV totaal bedden ", total_beds[i], " op locatie ", i+1)
                     st.write("Aantal effectieve bedden ELV totaal ", eff_beds_total[i]," op locatie ",i+1)
@@ -6357,7 +6360,7 @@ with col2:
         arr_GPR_High = input.loc[loop_nr,'Aankomst vanaf Huisarts Hoog Complex per dag']
         arr_GPR_Low = input.loc[loop_nr,'Aankomst Laag Complexe zorg vanaf de Huisarts']
         arr_EMD = input.loc[loop_nr,'Aankomst vanaf de Spoedeisendehulp per dag']
-        n_pat_per_nurse= input.loc[loop_nr,'Aantal patienten per verpleegkundige']
+        n_pat_per_nurse= input.loc[loop_nr,'Maximaal aantal patienten per verpleegkundige']
         
         out_p_Home_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg naar Huis']/100
         out_p_Dead_GRZ = input.loc[loop_nr,'Percentage Geriatrische Zorg Dood']/100
