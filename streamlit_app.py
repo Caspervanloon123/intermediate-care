@@ -6563,7 +6563,7 @@ with col3:
             'Aantal bedden Geriatrische Zorg', 'Aantal Hoog Complexe bedden', 'Aantal gedeelde bedden', 'Aantal bedden voor observatie', 'Aantal bedden ELV Totaal']
             # Create tables
             
-            table2 = pd.DataFrame(output_df)
+            table2 = pd.DataFrame(output_df[table2_columns])
             # Apply rounding only to float columns that are not binomial
             for col in output_df.select_dtypes(include=['float']):
                 if not is_binomial(output_df[col]):
