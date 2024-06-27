@@ -6516,17 +6516,17 @@ with col3:
         with st.spinner('Running...'):
             output_df = simulate(df1)[0]
             result = simulate(df1)[1]
-            # Function to check if a column is binomial
-            # def is_binomial(series):
-            #     unique_values = series.dropna().unique()
-            #     return sorted(unique_values) in ([0, 1], [0.0, 1.0], [False, True])
+            Function to check if a column is binomial
+            def is_binomial(series):
+                unique_values = series.dropna().unique()
+                return sorted(unique_values) in ([0, 1], [0.0, 1.0], [False, True])
             
-            # # Apply rounding only to float columns that are not binomial
-            # for col in output_df.select_dtypes(include=['float']):
-            #     if not is_binomial(output_df[col]):
-            #         output_df[col] = output_df[col].round(2)
+            # Apply rounding only to float columns that are not binomial
+            for col in output_df.select_dtypes(include=['float']):
+                if not is_binomial(output_df[col]):
+                    output_df[col] = output_df[col].round(2)
 
-            # Create a flag to control the simulation loop
+            Create a flag to control the simulation loop
             
             
             
@@ -6554,8 +6554,8 @@ with col3:
             table2 = pd.DataFrame(output_df[table2_columns])
             table3 = pd.DataFrame(output_df[table3_columns])
             table4 = pd.DataFrame(output_df[table4_columns])
-            table2['Perc_with_HOSP_adm'] = table2['Perc_with_HOSP_adm']*100
-            table2['Perc_with_HOSP_adm_HOSP'] = table2['Perc_with_HOSP_adm_HOSP']*100
+            # table2['Perc_with_HOSP_adm'] = table2['Perc_with_HOSP_adm']*100
+            # table2['Perc_with_HOSP_adm_HOSP'] = table2['Perc_with_HOSP_adm_HOSP']*100
             table3['serv_level'] = table3['serv_level']*100
             table3['bez_gr_total'] = table3['bez_gr_total']*100
             table3['bez_gr_High'] = table3['bez_gr_High']*100
