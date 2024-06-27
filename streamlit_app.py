@@ -97,7 +97,7 @@ with col1:
         "Transfertijd tussen opname en het bieden van zorg (dagen)": 1.5,
         "Maximaal aantal dagen in observatie": 14,
         "Aantal subruns": 1,
-        "Aantal patiënten per subrun": 1000,
+        "Aantal patiënten per subrun": 10,
         "Aantal patiënten voor warming": 500,
         "Kans dat patiënt observatie nodig heeft (%)": 10,
         "Maximaal aantal dagen wachten voor patiënt van voorkeur verandert (in allocatiemodel)": 30,
