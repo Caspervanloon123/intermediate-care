@@ -6516,7 +6516,7 @@ with col3:
         with st.spinner('Running...'):
             output_df = simulate(df1)[0]
             result = simulate(df1)[1]
-            Function to check if a column is binomial
+            # Function to check if a column is binomial
             def is_binomial(series):
                 unique_values = series.dropna().unique()
                 return sorted(unique_values) in ([0, 1], [0.0, 1.0], [False, True])
