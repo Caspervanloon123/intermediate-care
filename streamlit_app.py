@@ -6557,7 +6557,7 @@ with col3:
             table3_right_names = ['Service level', 'Gemiddelde verplijfduur Hoog Complex', 'Gemiddelde verblijfduur Laag Complex', 'Bezettingsgraad totaal',
             'Bezettingsgraad Hoog Complex', 'Bezettingsgraad Laag Complex']
             
-            table4_columns = ['Number of Locaties ELV', 'Number of beds ELV_High', 'Number of beds ELV_Low',
+            table4_columns = ['Number of Locaties ELV', 'Number of beds ELV_High', 'Number of beds ELV_Low', 
             'Number of beds GRZ', 'Number of beds High Complex', 'Number of shared beds', 'Number of TRW beds', 'Number of beds ELV Total']
             table4_right_names = ['Aantal ELV Locaties', 'Aantal ELV Hoog Complex bedden', 'Aantal ELV Laag Complex bedden',
             'Aantal bedden Geriatrische Zorg', 'Aantal Hoog Complexe bedden', 'Aantal gedeelde bedden', 'Aantal bedden voor observatie', 'Aantal bedden ELV Totaal']
