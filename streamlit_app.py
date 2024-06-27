@@ -6550,12 +6550,17 @@ with col3:
             table4_right_names = ['Aantal ELV Locaties', 'Aantal ELV Hoog Complex bedden', 'Aantal ELV Laag Complex bedden',
             'Aantal bedden Geriatrische Zorg', 'Aantal Hoog Complexe bedden', 'Aantal gedeelde bedden', 'Aantal bedden voor observatie', 'Aantal bedden ELV Totaal']
             # Create tables
-            table1 = pd.DataFrame(output_df[table1_columns])
+            
             table2 = pd.DataFrame(output_df[table2_columns])
+            # Apply rounding only to float columns that are not binomial
+            for col in output_df.select_dtypes(include=['float']):
+                if not is_binomial(output_df[col]):
+                    output_df[col] = output_df[col].round(2)
+            table1 = pd.DataFrame(output_df[table1_columns])
             table3 = pd.DataFrame(output_df[table3_columns])
             table4 = pd.DataFrame(output_df[table4_columns])
-            # table2['Perc_with_HOSP_adm'] = table2['Perc_with_HOSP_adm']*100
-            # table2['Perc_with_HOSP_adm_HOSP'] = table2['Perc_with_HOSP_adm_HOSP']*100
+            table2['Perc_with_HOSP_adm'] = table2['Perc_with_HOSP_adm']*100
+            table2['Perc_with_HOSP_adm_HOSP'] = table2['Perc_with_HOSP_adm_HOSP']*100
             table3['serv_level'] = table3['serv_level']*100
             table3['bez_gr_total'] = table3['bez_gr_total']*100
             table3['bez_gr_High'] = table3['bez_gr_High']*100
