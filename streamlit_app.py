@@ -43,7 +43,7 @@ with col1:
         }
         </style>
         """, unsafe_allow_html=True)
-    from decimal import Decimal
+    #from decimal import Decimal
     
     # Define default decimal values for all variables
     default_values = {
