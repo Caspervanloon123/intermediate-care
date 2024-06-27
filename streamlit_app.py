@@ -6526,20 +6526,20 @@ with col3:
                 if not is_binomial(output_df[col]):
                     output_df[col] = output_df[col].round(2)
 
-            # Create a flag to control the simulation loop
-            def convert_df(df):
-               return df.to_csv(index=False).encode('utf-8')
+            # # Create a flag to control the simulation loop
+            # def convert_df(df):
+            #    return df.to_csv(index=False).encode('utf-8')
             
             
-            csv = convert_df(output_df)
+            # csv = convert_df(output_df)
             
-            st.download_button(
-               "Press to Download",
-               csv,
-               "file.csv",
-               "text/csv",
-               key='download-csv'
-            )
+            # st.download_button(
+            #    "Press to Download",
+            #    csv,
+            #    "file.csv",
+            #    "text/csv",
+            #    key='download-csv'
+            # )
             
             
             table1_columns = [ 'Wt_from_HOSP_GRZ',
