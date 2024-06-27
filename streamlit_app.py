@@ -215,8 +215,8 @@ with col2:
             with st.expander(loc_name[i]):
                 # st.text_input("Locatie name",value="Locatie "+str(i+1))
                 #st.title('Locatie ' + str(i+1))
-                beds_ELV_High = st.number_input(f"Aantal ELV Hoog Complex (GR en High Complex) bedden bij locatie {loc_name[i]}", min_value=0, step=1, value=0, format="%d" )
-                nurs_ELV_High = st.number_input(f"Aantal ELV Hoog Complex (GR en High Complex) verpleegkundigen bij locatie {loc_name[i]}", min_value=0, step=1, value=0, format="%d" )
+                beds_ELV_High = st.number_input(f"Aantal ELV Hoog Complex (GR en Hoog Complex) bedden bij locatie {loc_name[i]}", min_value=0, step=1, value=0, format="%d" )
+                nurs_ELV_High = st.number_input(f"Aantal ELV Hoog Complex (GR en Hoog Complex) verpleegkundigen bij locatie {loc_name[i]}", min_value=0, step=1, value=0, format="%d" )
                 beds_ELV_Low = st.number_input(f"Aantal ELV Laag Complex bedden bij locatie {loc_name[i]}", min_value=0, step=1, value=0, format="%d" )
                 nurs_ELV_Low = st.number_input(f"Aantal ELV Laag Complex verpleegkundigen bij locatie {loc_name[i]}", min_value=0, step=1, value=0, format="%d" )
                 beds_ELV_EMRD = st.number_input(f"Aantal spoedbedden beds bij locatie {loc_name[i]}", min_value=0, step=1, value=0, format="%d" )   
