@@ -6525,22 +6525,6 @@ with col3:
             for col in output_df.select_dtypes(include=['float']):
                 if not is_binomial(output_df[col]):
                     output_df[col] = output_df[col].round(2)
-
-            # # Create a flag to control the simulation loop
-            # def convert_df(df):
-            #    return df.to_csv(index=False).encode('utf-8')
-            
-            
-            # csv = convert_df(output_df)
-            
-            # st.download_button(
-            #    "Press to Download",
-            #    csv,
-            #    "file.csv",
-            #    "text/csv",
-            #    key='download-csv'
-            # )
-            
             
             table1_columns = [ 'Wt_from_HOSP_GRZ',
             'Wt_from_HOSP_High', 'Wt_from_GPR_High', 'Wt_from_GPR_Low', 'Wt_to_TRW', 'WT_from_EMD']
