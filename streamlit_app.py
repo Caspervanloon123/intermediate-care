@@ -6552,6 +6552,10 @@ with col3:
             for col in output_df.select_dtypes(include=['float']):
                 if not is_binomial(output_df[col]):
                     output_df[col] = output_df[col].round(2)
+            if output_df[bez_gr_High] > 1:
+                output_df[bez_gr_High] = 1
+            if output_df[bez_gr_Low]>1:
+                output_df[bez_gr_Low] = 1
             table1 = pd.DataFrame(output_df[table1_columns])
             table3 = pd.DataFrame(output_df[table3_columns])
             table4 = pd.DataFrame(output_df[table4_columns])
